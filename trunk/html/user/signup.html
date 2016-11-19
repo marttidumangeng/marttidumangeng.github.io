@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>Central - Login</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        
+        <!-- caching -->
+        <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+        <meta name="robots" content="noindex,nofollow">
+        
+        <!-- icons -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="../resources/icons/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="../resources/icons/favicon.ico" />
+        <!-- iOS icon -->
+
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+        <!-- ================== BEGIN PACE LOADER ================== -->    
+        <script src="../resources/venders/pace/js/pace.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../resources/venders/pace/css/pace.minimal.css" />
+        <!-- ================== BEGIN BASE CSS STYLE ================== -->
+        <link rel="stylesheet" type="text/css" href="../resources/venders/jquery-ui/themes/base/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/animate/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
+        <!-- ================== END BASE CSS STYLE ================== -->
+        
+        <!-- ================== BEGIN BASE JS ================== -->
+        <script src="../resources/venders/jquery/jquery-1.9.1.min.js"></script>
+        <script src="../resources/venders/jquery/jquery-migrate-1.1.0.min.js"></script>
+        <script src="../resources/venders/jquery-ui/ui/jquery-ui.min.js"></script>
+        <script src="../resources/venders/bootstrap/js/bootstrap.min.js"></script>
+        <!--[if lt IE 9]>
+            <script src="../resources/venders/crossbrowserjs/html5shiv.js"></script>
+            <script src="../resources/venders/crossbrowserjs/respond.min.js"></script>
+            <script src="../resources/venders/crossbrowserjs/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="../resources/venders/slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
+        <script src="../resources/venders/parsley/parsley.min.js"></script>
+        <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <!-- ================== END BASE JS ================== -->
+        <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+        <script src="../resources/scripts/app.min.js"></script>
+        <!-- ================== END PAGE LEVEL JS ================== -->
+        <script>
+            $(document).ready(function() {
+                App.init();
+            });
+        </script>
+    </head>
+    <body class="boxed-layout">
+        <!-- begin #page-loader -->
+        <div id="page-loader" class="fade in"><span class="spinner"></span></div>
+        <!-- end #page-loader -->
+        <div class="login-cover">
+            <div class="login-cover-image"><img src="../resources/images/login-bg.jpg" data-id="login-cover-image" alt="" /></div>
+            <div class="login-cover-bg"></div>
+        </div>
+        <!-- begin #page-container -->
+        <div id="page-container" class="fade">
+            <!-- begin login -->
+            <div class="login login-v2" data-pageload-addclass="animated flipInX">
+                <div class="login-content">
+                    <form class="form-horizontal parsley-validate" name="mainForm" method="post" role="form" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend>Sign Up</legend>
+                            <div class="form-group">
+                                <label for="username" class="col-md-4 control-label">User Name</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="username" name="username" class="form-control" data-parsley-required="true"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="fullname" class="col-md-4 control-label">Full Name</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="fullname" name="fullname" class="form-control" data-parsley-required="true"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob" class="col-md-4 control-label">DOB</label>
+                                <div class="col-md-8">
+                                    <div class="input-group date">
+                                        <input type="text" id="dob" name="dob" class="form-control" data-parsley-required="true"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-md-4 control-label">Gender</label>
+                                <div class="col-md-8">
+                                    <select id="gender" name="gender" class="form-control selectpicker" data-parsley-required="true">
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailAddress" class="col-md-4 control-label">Email</label>
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@</span>
+                                        <input type="text" id="emailAddress" name="emailAddress" class="form-control" data-parsley-required="true" data-parsley-type="email"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="col-md-4 control-label">Phone Number</label>
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-phone-alt"></span>
+                                        </span>
+                                        <input type="text" id="phone" name="phone" class="form-control" data-parsley-required="true"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="identityCardNumber" class="col-md-4 control-label">IC</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="identityCardNumber" name="identityCardNumber" class="form-control"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="products" class="col-md-4 control-label">Product</label>
+                                <div class="col-md-8">
+                                    <select id="products" multiple="true" name="products" class="form-control selectpicker" data-parsley-required="true">
+                                        <option value="1">Lunch Actually</option>
+                                        <option value="2">Lunch Actually Academy</option>
+                                        <option value="3">Esynchrony</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="countries" class="col-md-4 control-label">Country</label>
+                                <div class="col-md-8">
+                                    <select id="countries" multiple="true" name="countries" class="form-control selectpicker" data-parsley-required="true">
+                                        <option value="1">Malaysia</option>
+                                        <option value="2">Indonesia</option>
+                                        <option value="3">Hong Kong</option>
+                                        <option value="4">Singapore</option>
+                                        <option value="5">Thailand</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-4 control-label">Password</label>
+                                <div class="col-md-8">
+                                    <input type="password" id="password" name="password" class="form-control" data-parsley-minlength="8" data-parsley-required="true"/>
+                                    <div id="passwordStrength" class="is0 m-t-5"></div>                                   
+                                </div>
+                            </div>                    
+                            <div class="form-group">
+                                <label for="repassword" class="col-md-4 control-label">Retype Password</label>
+                                <div class="col-md-8">
+                                    <input type="password" id="repassword" name="repassword" class="form-control" data-parsley-minlength="8" data-parsley-required="true"/>
+                                    <div id="rePasswordStrength" class="is0 m-t-5"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="securityQuestion" class="col-md-4 control-label">Security Question</label>
+                                <div class="col-md-8">
+                                    <select id="securityQuestion" name="securityQuestion.id" class="form-control selectpicker" data-parsley-required="true">
+                                        <option value="1">What is your favorite color?</option>
+                                        <option value="2">What is your favorite food?</option>
+                                        <option value="3">What is the name of your mother?</option>
+                                        <option value="4">What is the name of your father?</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="securityAnswer" class="col-md-4 control-label">Security Answer</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="securityAnswer" name="securityAnswer" class="form-control" data-parsley-required="true"/>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <a href="../login.html" class="btn btn-primary btn-block btn-lg">Save</a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <!-- end login -->
+            <link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" />
+            <script src="../resources/venders/password-indicator/js/password-indicator.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('#dob').datepicker({
+                        format: 'yyyy-mm-dd',
+                        todayHighlight: true,
+                        calendarWeeks: true,
+                        endDate: '-10y'
+                    });
+                    $('#password').passwordStrength({targetDiv: '#passwordStrength'});
+                    $('#repassword').passwordStrength({targetDiv: '#rePasswordStrength'});
+                });
+            </script>
+        </div>
+        <!-- end page container -->
+    </body>
+</html>
