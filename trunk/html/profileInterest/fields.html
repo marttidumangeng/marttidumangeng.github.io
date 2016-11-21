@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>Central - Login</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        
+        <!-- caching -->
+        <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+        <meta name="robots" content="noindex,nofollow">
+        
+        <!-- icons -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="../resources/icons/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="../resources/icons/favicon.ico" />
+        <!-- iOS icon -->
+
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+        <!-- ================== BEGIN PACE LOADER ================== -->    
+        <script src="../resources/venders/pace/js/pace.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../resources/venders/pace/css/pace.minimal.css" />
+        <!-- ================== BEGIN BASE CSS STYLE ================== -->
+        <link rel="stylesheet" type="text/css" href="../resources/venders/jquery-ui/themes/base/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/animate/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
+        <!-- ================== END BASE CSS STYLE ================== -->
+        
+        <!-- ================== BEGIN BASE JS ================== -->
+        <script src="../resources/venders/jquery/jquery-1.9.1.min.js"></script>
+        <script src="../resources/venders/jquery/jquery-migrate-1.1.0.min.js"></script>
+        <script src="../resources/venders/jquery-ui/ui/jquery-ui.min.js"></script>
+        <script src="../resources/venders/bootstrap/js/bootstrap.min.js"></script>
+        <!--[if lt IE 9]>
+            <script src="../resources/venders/crossbrowserjs/html5shiv.js"></script>
+            <script src="../resources/venders/crossbrowserjs/respond.min.js"></script>
+            <script src="../resources/venders/crossbrowserjs/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="../resources/venders/slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
+        <script src="../resources/venders/parsley/parsley.min.js"></script>
+        <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <!-- ================== END BASE JS ================== -->
+        <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+        <script src="../resources/scripts/app.min.js"></script>
+        <!-- ================== END PAGE LEVEL JS ================== -->
+        <script>
+            $(document).ready(function() {
+                App.init();
+            });
+        </script>
+    </head>
+    <body class="boxed-layout">
+        <!-- begin #page-loader -->
+        <div id="page-loader" class="fade in"><span class="spinner"></span></div>
+        <!-- end #page-loader -->
+        
+        <!-- begin #page-container -->
+        <div id="page-container" class="page-container fade page-with-top-menu page-header-fixed page-without-sidebar">
+            <!-- begin #header -->
+            <div id="header" class="header navbar navbar-default navbar-fixed-top">
+                <!-- begin container-fluid -->
+                <div class="container-fluid">
+                    <!-- begin mobile sidebar expand / collapse button -->
+                    <div class="navbar-header">
+                        <a href="" class="navbar-brand"><i class="fa fa-heart-o" aria-hidden="true"></i> Central</a>
+                        <button type="button" class="navbar-toggle" data-click="top-menu-toggled">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- end mobile sidebar expand / collapse button -->
+                    <!-- begin header navigation right -->
+                    <ul class="nav navbar-nav navbar-right ">
+                        <li>
+                            <form class="navbar-form full-width">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter keyword" />
+                                    <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="label">5</span>
+                            </a>
+                            <ul class="dropdown-menu media-list pull-right animated fadeInDown">
+                                <li class="dropdown-header">Notifications (5)</li>
+                                <li class="media">
+                                    <a href="javascript:;">
+                                        <div class="media-left"><i class="fa fa-bug media-object bg-red"></i></div>
+                                        <div class="media-body">
+                                            <h6 class="media-heading">Server Error Reports</h6>
+                                            <div class="text-muted f-s-11">3 minutes ago</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                 <li class="dropdown-footer text-center">
+                                    <a href="javascript:;">View more</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown navbar-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="../resources/images/photo.jpg" alt="" />
+                                <span class="hidden-xs">John Doe</span> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInLeft">
+                                <li class="arrow"></li>
+                                <li><a href="javascript:;">Edit Profile</a></li>
+                                <li><a href="javascript:;"><span class="badge badge-danger pull-right">2</span> Inbox</a></li>
+                                <li><a href="javascript:;">Calendar</a></li>
+                                <li><a href="javascript:;">Setting</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- end header navigation right -->
+                </div>
+                <!-- end container-fluid -->
+            </div>
+            <!-- end #header -->
+            <!-- begin #top-menu -->
+            <div id="top-menu" class="top-menu ">
+                <!-- begin top-menu nav -->
+                <ul class="nav pull-right" >
+                    <li class="has-sub ">
+                        <a href="javascript:;">
+                            <b class="caret pull-right"></b>
+                            <i class="fa fa-dot-circle-o"></i>
+                            <span>Leads</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Dashboard v1</a></li>
+                            <li><a href="#">Dashboard v2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret pull-right"></b>
+                            <i class="fa fa-inbox"></i> 
+                            <span>Email</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Inbox</a></li>
+                            <li><a href="#">Compose</a></li>
+                            <li><a href="#">Detail</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-tasks"></i>
+                            <span>Tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-calendar-check-o"></i>
+                            <span>Appointments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-leanpub"></i>
+                            <span>Session</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-comment"></i>
+                            <span>Feedback</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-money"></i>
+                            <span>Payment</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- end top-menu nav -->
+            </div>
+            <!-- end #top-menu -->
+
+            <!-- begin #content -->
+            <div id="content" class="content">
+                <!-- begin row -->
+                <div class="row">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <form class="form-horizontal parsley-validate" name="mainForm" method="post" role="form" enctype="multipart/form-data">
+                                <fieldset>
+                                    <legend>Profile Interest</legend>
+                                    <div class="row">
+                                        <!-- <div class="col-sm-3 pull-right">
+                                            <div class="profile-image">
+                                                <img src="../resources/images/photo.jpg">
+                                                <i class="fa fa-user hide"></i>
+                                            </div>
+                                            <input type="file" name="userphoto" />
+                                        </div> -->
+                                        <div class="col-sm-8 pull-left">
+                                            <div class="form-group">
+                                                <label for="products" class="col-md-4 control-label">Favorite Food</label>
+                                                <div class="col-md-8">
+                                                    <select id="foods" multiple="true" name="foods" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="1" selected="selected">Western</option>
+                                                        <option value="2" selected="selected">Chinese</option>
+                                                        <option value="3" selected="selected">Meat Lover</option>
+                                                        <option value="3" >Thai</option>
+                                                        <option value="3" >Sea Food</option>
+                                                        <option value="3" selected="selected">Pastry</option>
+                                                        <option value="3" selected="selected">Spicy Cuisine</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="hobbies" class="col-md-4 control-label">Hobbies</label>
+                                                <div class="col-md-8">
+                                                    <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="1" selected="selected">Collecting Phonecards</option>
+                                                        <option value="2">Snorkelling</option>
+                                                        <option value="3" selected="selected">Baking</option>
+                                                        <option value="4">Salsa</option>
+                                                        <option value="5">Resting at Home</option>
+                                                        <option value="5">Spa</option>
+                                                        <option value="5">Costuming & Trooping</option>
+                                                        <option value="5">Wall Climbing</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sports" class="col-md-4 control-label">Sports</label>
+                                                <div class="col-md-8">
+                                                    <select id="hobbies" multiple="true" name="sports" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="1" selected="selected">Mountain Climbing</option>
+                                                        <option value="2">Ice Skating</option>
+                                                        <option value="3" selected="selected">Roller Blading</option>
+                                                        <option value="4">Indoor Sports</option>
+                                                        <option value="5">Driving</option>
+                                                        <option value="5">Hockey</option>
+                                                        <option value="5">Scuba</option>
+                                                        <option value="5">Ballet</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="hobbies" class="col-md-4 control-label">Places of Patronage</label>
+                                                <div class="col-md-8">
+                                                    <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="1" selected="selected">Nature areas</option>
+                                                        <option value="2">Karaoke Centre</option>
+                                                        <option value="3" selected="selected">Golf Courses</option>
+                                                        <option value="4">Parks</option>
+                                                        <option value="5">Musical Library</option>
+                                                        <option value="5">Restaurants/ Eating Places</option>
+                                                        <option value="5">Trek (Mountain/ Hill)</option>
+                                                        <option value="5">Musical Library</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="hobbies" class="col-md-4 control-label">Type of Film</label>
+                                                <div class="col-md-8">
+                                                    <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="1" selected="selected">Comedy</option>
+                                                        <option value="2">Musical</option>
+                                                        <option value="3" selected="selected">Thriller</option>
+                                                        <option value="4">Non-Fiction</option>
+                                                        <option value="5">All Kinds</option>
+                                                        <option value="5">Animation</option>
+                                                        <option value="5">Art</option>
+                                                        <option value="5">Cartoon</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="hobbies" class="col-md-4 control-label">Taste of Music</label>
+                                                <div class="col-md-8">
+                                                    <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="1" selected="selected">Spiritual</option>
+                                                        <option value="2">Country</option>
+                                                        <option value="3" selected="selected">Lounge</option>
+                                                        <option value="4">Instrumental</option>
+                                                        <option value="5">Acoustic/ Live</option>
+                                                        <option value="5">Soundtracks</option>
+                                                        <option value="5">Alternatives</option>
+                                                        <option value="5">Mandarin Pop</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        	<div class="form-group">
+                                                <label for="hobbies" class="col-md-4 control-label">Holidays Destination </label>
+                                                <div class="col-md-8">
+                                                     <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="1" selected="selected">Paris</option>
+                                                        <option value="2">Rome</option>
+                                                        <option value="3" selected="selected">Budan</option>
+                                                        <option value="4">Brunei</option>
+                                                        <option value="5">Forests</option>
+                                                        <option value="5">Vienna</option>
+                                                        <option value="5">Athens</option>
+                                                        <option value="5">Argentina</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="hobbies" class="col-md-4 control-label">Holodays Activities </label>
+                                                <div class="col-md-8">
+                                                     <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="1" selected="selected">City Traveler</option>
+                                                        <option value="2">Dining</option>
+                                                        <option value="3" selected="selected">Cruises</option>
+                                                        <option value="4">Free & Easy</option>
+                                                        <option value="5">Cultural Traveler</option>
+                                                        <option value="5">Eco-trips</option>
+                                                        <option value="5">Family trips</option>
+                                                        <option value="5">All kinds of travel</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="hobbies" class="col-md-4 control-label">Pets</label>
+                                                <div class="col-md-8">
+                                                     <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="1" selected="selected">Otters</option>
+                                                        <option value="2">Horses</option>
+                                                        <option value="3" selected="selected">Hedgehog</option>
+                                                        <option value="4">Mammals</option>
+                                                        <option value="5">Small & furry animals</option>
+                                                        <option value="5">Birds</option>
+                                                        <option value="5">Cat & Fish</option>
+                                                        <option value="5">Dogs & Horse</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="gender" class="col-md-4 control-label">How Often do you exercise</label>
+                                                <div class="col-md-8">
+                                                    <select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option selected="selected">Never or very infrequent</option>
+                                                        <option>Once every 3 months</option>
+                                                        <option>Once a month</option>
+                                                        <option>A few times a month</option>
+                                                        <option>A few times a week</option>
+                                                        <option>Every day</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                             <div class="form-group">
+                                                <label for="gender" class="col-md-4 control-label">Importancy of Interest & hobbies for matching
+                                                </label>
+                                                <div class="col-md-8">
+                                                    <select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option selected="selected">Personal Coaching</option>
+                                                        <option>Movie Costume Creation</option>
+                                                        <option>Musicals, Theatres of Plays</option>
+                                                        <option>Ayurvedic Medicine</option>
+                                                        <option>Picnic</option>
+                                                        <option>Beach SunTanning</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+									
+                                </fieldset>
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group">
+                                                <div class="col-md-8 col-md-offset-4">
+                                                    <a href="list.html" class="btn btn-primary btn-lg">Save</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+                <link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" />
+                <script src="../resources/venders/password-indicator/js/password-indicator.js"></script>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('#dob').datepicker({
+                            format: 'yyyy-mm-dd',
+                            todayHighlight: true,
+                            calendarWeeks: true,
+                            endDate: '-10y'
+                        });
+                        $('#password').passwordStrength({targetDiv: '#passwordStrength'});
+                        $('#repassword').passwordStrength({targetDiv: '#rePasswordStrength'});
+                    });
+                </script>
+            </div>
+            <!-- end #content -->
+
+            <!-- begin scroll to top btn -->
+            <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+            <!-- end scroll to top btn -->
+        </div>
+        <!-- end page container -->
+    </body>
+</html>
