@@ -55,7 +55,8 @@ fiel
 <link rel="stylesheet" type="text/css"
 	href="../resources/css/style-responsive.min.css" />
 <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
-
+    <link rel="stylesheet" type="text/css"
+    href="../resources/venders/bootstrap3-editable/css/bootstrap-editable.css" />
 <link rel="stylesheet" type="text/css"
 	href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.css" />
 <link rel="stylesheet" type="text/css"
@@ -84,6 +85,7 @@ fiel
 	src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <script
 	src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+	<script src="../resources/venders/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 <script
 	src="../resources/venders/ionRangeSlider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
 	<script src="../resources/venders/switchery/switchery.min.js"></script>
@@ -273,8 +275,7 @@ fiel
 			<div class="row">
 				<div class="panel">
 					<div class="panel-body">
-
-						<div class="row">
+					<div class="row">
 							<div class="col-sm-12 m-b-20 m-t-m-30">
 								<div class="btn-group pull-right" role="group">
 									<a role="button" class="btn btn-white" href="#">Esynchrony</a>
@@ -284,740 +285,499 @@ fiel
 										Actually Academy</a>
 								</div>
 							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-3">
-								<div class="form-group">
-									<select id="status" name="profile.laMembership.status"
-										data-parsley-required="true" class="form-control selectpicker">
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<div class="form-group">
+								<select id="status" name="profile.laMembership.status"
+									data-parsley-required="true" class="form-control selectpicker">
 
-										<option path="model.profile.laMembership.status"
-											value="New Member">New Member</option>
+									<option path="model.profile.laMembership.status"
+										value="New Member">New Member</option>
 
-										<option path="model.profile.laMembership.status"
-											value="Pending Approval">Pending Approval</option>
+									<option path="model.profile.laMembership.status"
+										value="Pending Approval">Pending Approval</option>
 
-										<option path="model.profile.laMembership.status"
-											value="Active">Active</option>
+									<option path="model.profile.laMembership.status"
+										value="Active">Active</option>
 
-										<option path="model.profile.laMembership.status"
-											value="On Hold">On Hold</option>
+									<option path="model.profile.laMembership.status"
+										value="On Hold">On Hold</option>
 
-										<option path="model.profile.laMembership.status"
-											value="Refund">Refund</option>
+									<option path="model.profile.laMembership.status"
+										value="Refund">Refund</option>
 
-										<option path="model.profile.laMembership.status"
-											value="Expired">Expired</option>
+									<option path="model.profile.laMembership.status"
+										value="Expired">Expired</option>
 
-										<option path="model.profile.laMembership.status"
-											value="Terminated">Terminated</option>
+									<option path="model.profile.laMembership.status"
+										value="Terminated">Terminated</option>
 
-										<option path="model.profile.laMembership.status"
-											value="Renewal">Renewal</option>
+									<option path="model.profile.laMembership.status"
+										value="Renewal">Renewal</option>
 
-									</select>
-								</div>
-								<div class="profile-image">
-									<img src="../resources/images/photo.jpg"> <i
-										class="fa fa-user hide"></i> <input type="file"
-										name="userphoto" />
-								</div>
-								<div class="form-group">
-									<select id="mood" name="profile.laMembership.mood"
-										data-parsley-required="true" class="form-control selectpicker">
-
-										<option path="model.profile.laMembership.mood" value="Normal">Normal</option>
-
-										<option path="model.profile.laMembership.mood" value="Happy">Happy</option>
-
-										<option path="model.profile.laMembership.mood"
-											value="Complaint">Complaint</option>
-
-										<option path="model.profile.laMembership.mood" value="Refund">Refund</option>
-
-									</select>
-								</div>
+								</select>
 							</div>
+							<div class="profile-image">
+								<img src="../resources/images/photo.jpg"> <i
+									class="fa fa-user hide"></i> <input type="file"
+									name="userphoto" />
+							</div>
+							<div class="form-group">
+								<select id="mood" name="profile.laMembership.mood"
+									data-parsley-required="true" class="form-control selectpicker">
 
-						<div class="col-sm-9">
-                                <fieldset>
-                                    <legend>Profile</legend>
+									<option path="model.profile.laMembership.mood" value="Normal">Normal</option>
 
+									<option path="model.profile.laMembership.mood" value="Happy">Happy</option>
 
-                                    <div class="table-responsive">
-                        <table id="user" class="table  table">
-                            
-                            <tbody>
-                                <tr>
-                                    <td>Profile Name : </td>
-                                   <td> <a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
-                                     <td>Smokes : </td>
-                                     <td><input type="checkbox"  data-render="switchery"  data-theme="blue" checked /></td>
-                                    
-                                    
-                                </tr>
-                                 <tr>
-                                    <td>Profile Phone : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
-                                     <td>Drinks :</td> 
-                                      <td><input type="checkbox"  data-render="switchery"  data-theme="blue" checked /></td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td>Profile age : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
-                                     <td>Profile history : </td>
-                                      <td><input type="checkbox"  data-render="switchery"  data-theme="blue" checked /></td>
-                                    
-                                </tr>
+									<option path="model.profile.laMembership.mood"
+										value="Complaint">Complaint</option>
 
-                                <tr>
-                                    <td>Profile ethnicity : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">Indian </a></td>
-                                     <td>Dates Left : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">5 </a></td>
-                                </tr>
+									<option path="model.profile.laMembership.mood" value="Refund">Refund</option>
 
-                                <tr>
-                                    <td>Marital Status: </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">Unmarried </a></td>
-                                     <td>Free Dates : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">3 </a></td>
-                                </tr>
-                                <tr>
-                                    <td>Profile Income: </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">5 lakh </a></td>
-                                     <td>package Status : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">6 </a></td>
-                                </tr>
-
-                                <tr>
-                                    <td>Profile Education: </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">PhD and above </a></td>
-                                     <td>Sign Up date : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
-                                </tr>
-                            </tbody>
-                            </table>
-                            </div>
-                                </fieldset>
-                            </div>
+								</select>
+							</div>
 						</div>
-						<div class="row">
-							<form class="form-horizontal parsley-validate" name="mainForm"
-								method="post" role="form" enctype="multipart/form-data">
-								<fieldset>
-									<legend>Profile Preferences</legend>
-									<div class="row">
-										<div class="panel-group" id="accordion">
-											<div class="panel panel-inverse">
-												<div class="panel-heading">
-													<h3 class="panel-title">
-														<a class="accordion-toggle accordion-toggle-styled"
-															data-toggle="collapse" data-parent="#accordion"
-															href="#collapseOne"> <i
-															class="fa fa-plus-circle pull-right"></i> Profile
-															Attribute Preferences
-														</a>
-													</h3>
-												</div>
-												<div class="row">
-													<div class="col-sm-9 col-sm-offset-1">
-														<div id="collapseOne" class="panel-collapse collapse in">
-															<div class="row">
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>Attribute</th>
-																			</tr>
-																		</thead>
-																	</table>
-																</div>
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>First Preferences</th>
-																			</tr>
-																		</thead>
-																	</table>
-																</div>
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>Second Preferences</th>
-																			</tr>
-																		</thead>
-																	</table>
-																</div>
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>Flexibility</th>
-																			</tr>
-																		</thead>
-																	</table>
+						<div class="col-sm-9">
+                            <fieldset>
+                                <legend>Profile</legend>
+                                    <table id="user" class="table  table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Profile Name :</td>
+                                                <td><a href="#" id="profileName" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">Sohem </a></td>
+                                                <td>Smokes :</td>
+                                                <td><input type="checkbox" data-render="switchery"
+                                                    data-theme="blue" checked /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile Phone :</td>
+                                                <td><a href="#" id="phoneNumber" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">12243 </a></td>
+                                                <td>Drinks :</td>
+                                                <td><input type="checkbox" data-render="switchery"
+                                                    data-theme="blue" checked /></td>
+                                            <tr>
+                                                <td>Profile age :</td>
+                                                <td><a href="#" id="profileAge" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">23 </a></td>
+                                                <td>Profile history :</td>
+                                                <td><input type="checkbox" data-render="switchery"
+                                                    data-theme="blue" checked /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile ethnicity :</td>
+                                                <td><a href="#" id="profileEthnicity" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">Indian </a></td>
+                                                <td>Dates Left :</td>
+                                                <td><a href="#" id="datesLeft" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">5 </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marital Status:</td>
+                                                <td><a href="#" id="maritalStatus" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">Unmarried </a></td>
+                                                <td>Free Dates :</td>
+                                                <td><a href="#" id="freeDates" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">3 </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile Income:</td>
+                                                <td><a href="#" id="profileIncome" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">5 lakh </a></td>
+                                                <td>package Status :</td>
+                                                <td><a href="#" id="profileStatus" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">6 </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile Education:</td>
+                                                <td><a href="#" id="profileEducation" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">PhD and above
+                                                </a></td>
+                                                <td>Sign Up date :</td>
+                                                <td><a href="#" id="signUpDate" data-type="text"
+                                                    data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                            </fieldset>
+                        </div>
+					</div>
+					<div class="row">
+						<form class="form-horizontal parsley-validate" name="mainForm"
+							method="post" role="form" enctype="multipart/form-data">
+							<fieldset>
+								<legend>Profile Preferences</legend>
+								<div class="row">
+									<div class="panel-group" id="accordion">
+										<div class="panel panel-inverse">
+											<div class="panel-heading">
+												<h3 class="panel-title">
+													<a class="accordion-toggle accordion-toggle-styled"
+														data-toggle="collapse" data-parent="#accordion"
+														href="#collapseOne"> <i
+														class="fa fa-plus-circle pull-right"></i> Profile
+														Attribute Preferences
+													</a>
+												</h3>
+											</div>
+											<div class="row">
+												<div class="col-sm-9 col-sm-offset-1">
+													<div id="collapseOne" class="panel-collapse collapse in">
+														<div class="row">
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>Attribute</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>First Preferences</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>Second Preferences</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>Flexibility</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<label for="a" class="col-sm-offset-2 control-label"><strong>
+																			Age Range</strong></label>
 																</div>
 															</div>
-															<div class="row">
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<label for="a" class="col-sm-offset-2 control-label"><strong>
-																				Age Range</strong></label>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<div class="input-group ">
-																				<input type="text" class="form-control" name="start"
-																					placeholder="From" /> <span
-																					class="input-group-addon"></span><input type="text"
-																					class="form-control" name="end" placeholder="to" />
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<div class="input-group ">
-																				<input type="text" class="form-control" name="start"
-																					placeholder="From" /> <span
-																					class="input-group-addon"></span> <input
-																					type="text" class="form-control" name="end"
-																					placeholder="to" />
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider" name="ageFlexibility"
-																				type="text" value="" />
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<label for="updatAgePreference"
-																			class="col-sm-offset-2"><strong>Don't
-																				Update Age </br>Preference ?
-																		</strong></label>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isAgeUpdate" name="isAgeUpdate"
-																				value="" /> Yes
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<label for="a" class="col-sm-offset-2 control-label"><strong>Religion</strong>
-																		</label>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="religion" name="religion"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option selected="selected">Catholic</option>
-																				<option>Christian</option>
-																				<option>Hindu</option>
-																				<option>Atheist</option>
-																				<option>Muslim</option>
-																				<option>Sikh</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="religion" name="religion2"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option>Catholic</option>
-																				<option>Christian</option>
-																				<option selected="selected">Hindu</option>
-																				<option>Atheist</option>
-																				<option>Muslim</option>
-																				<option>Sikh</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider" name="religionFlexibility"
-																				type="text" value="" />
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<label for="a" class="col-sm-offset-2 control-label"><strong>
-																				Ethnicity </strong></label>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="religion" name="ethnicity"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option selected="selected">Chinese</option>
-																				<option>Malay</option>
-																				<option>Indonesian</option>
-																				<option>Myanmar</option>
-																				<option>Punjabi</option>
-																				<option>Indian</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="religion" name="ethnicity2"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option>Chinese</option>
-																				<option selected="selected">Malay</option>
-																				<option>Indonesian</option>
-																				<option>Myanmar</option>
-																				<option>Punjabi</option>
-																				<option>Indian</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider"
-																				name="ethnicityFlexibility" type="text" value="" />
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<label for="a" class="col-sm-offset-2 control-label"><strong>
-																				Education Level</strong> </label>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="religion" name="education"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option selected="selected">Junior college
-																					& below</option>
-																				<option>Polytechnic</option>
-																				<option>Master Degree</option>
-																				<option>Masters</option>
-																				<option>Phd & Above</option>
-																				<option>Professional Qualification</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="religion" name="education2"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option>Junior college & below</option>
-																				<option>Polytechnic</option>
-																				<option>Master Degree</option>
-																				<option selected="selected">Masters</option>
-																				<option>Phd & Above</option>
-																				<option>Professional Qualification</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider"
-																				name="educationFlexibility" type="text" value="" />
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<label for="a" class="col-sm-offset-2 control-label"><strong>
-																				Previous Marriage </strong></label>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="input-group">
-																		<span class="input-group-addon"> <input
-																			type="checkbox" name="isMarriage" />
-																		</span> <input type="text" name="marriage1"
-																			class="form-control" placeholder="" />
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="input-group">
-																		<span class="input-group-addon"> <input
-																			type="checkbox" name="isMarriage2" />
-																		</span> <input type="text" class="form-control"
-																			placeholder="" />
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider" name="marriageflexibility"
-																				type="text" value="" />
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<div class="input-group ">
+																			<input type="text" class="form-control" name="start"
+																				placeholder="From" /> <span
+																				class="input-group-addon"></span><input type="text"
+																				class="form-control" name="end" placeholder="to" />
 																		</div>
 																	</div>
 																</div>
 															</div>
 
-															<div class="row">
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<label for="a" class="col-sm-offset-2 control-label">
-																			<strong>kids from Previous Marriage</strong>
-																		</label>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="input-group">
-																		<span class="input-group-addon"> <input
-																			type="checkbox" />
-																		</span> <input type="text" class="form-control"
-																			placeholder="" />
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="input-group">
-																		<span class="input-group-addon"> <input
-																			type="checkbox" />
-																		</span> <input type="text" class="form-control"
-																			placeholder="" />
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider" name="kidsflexibility"
-																				type="text" value="" />
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<div class="input-group ">
+																			<input type="text" class="form-control" name="start"
+																				placeholder="From" /> <span
+																				class="input-group-addon"></span> <input
+																				type="text" class="form-control" name="end"
+																				placeholder="to" />
 																		</div>
 																	</div>
 																</div>
 															</div>
-
-															<div class="row">
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<label for="a" class="col-sm-offset-2 control-label">
-																			<strong>Smoking Habbit </strong>
-																		</label>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="religion" name="smoking"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option selected="selected">No
-																				<option>
-																				<option>Light / Social</option>
-																				<option>Yes</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="religion" name="smoking2"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option>No
-																				<option>
-																				<option selected="selected">Light / Social</option>
-																				<option>Yes</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider" name="smokingFlexibility"
-																				type="text" value="" />
-																		</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider" name="ageFlexibility"
+																			type="text" value="" />
 																	</div>
 																</div>
 															</div>
 														</div>
-													</div>
-												</div>
-											</div>
-											<!-- First Accordian End here-->
-
-											<!-- Second Accordian start here-->
-											<div class="panel panel-inverse">
-												<div class="panel-heading">
-													<h3 class="panel-title">
-														<a
-															class="accordion-toggle accordion-toggle-styled collapsed"
-															data-toggle="collapse" data-parent="#accordion"
-															href="#collapseTwo"> <i
-															class="fa fa-plus-circle pull-right"></i> Physical
-															Attribute Preferences
-														</a>
-													</h3>
-												</div>
-												<div class="row">
-													<div class="col-sm-9 col col-sm-offset-1">
-														<div id="collapseTwo" class="panel-collapse collapse">
-															<div class="row">
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>Attribute</th>
-																			</tr>
-																		</thead>
-																	</table>
-																</div>
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>First Preferences</th>
-																			</tr>
-																		</thead>
-																	</table>
-																</div>
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>Second Preferences</th>
-																			</tr>
-																		</thead>
-																	</table>
-																</div>
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>Flexibility</th>
-																			</tr>
-																		</thead>
-																	</table>
+														<div class="row">
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<label for="updatAgePreference"
+																		class="col-sm-offset-2"><strong>Don't
+																			Update Age </br>Preference ?
+																	</strong></label>
 																</div>
 															</div>
-															<div class="row">
-																<div class="col-sm-3">
-																	<label for="height"
-																		class="col-sm-offset-2 control-label"> <strong>Height</strong></label>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<div class="input-group ">
-																				<input type="text" class="form-control" name="start"
-																					placeholder="From" /> <span
-																					class="input-group-addon"></span> <input
-																					type="text" class="form-control" name="end"
-																					placeholder="to" />
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<div class="input-group ">
-																				<input type="text" class="form-control" name="start"
-																					placeholder="From" /> <span
-																					class="input-group-addon"></span> <input
-																					type="text" class="form-control" name="end"
-																					placeholder="to" />
-																			</div>
-																		</div>
-																	</div>
-																</div>
-
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider" name="heightFlexibility"
-																				type="text" value="" />
-																		</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isAgeUpdate" name="isAgeUpdate"
+																			value="" /> Yes
+																		</label>
 																	</div>
 																</div>
 															</div>
-															<div class="row">
-																<div class="col-sm-3">
-																	<label for="a" class="col-sm-offset-2 control-label">
-																		<strong>Build</strong>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<label for="a" class="col-sm-offset-2 control-label"><strong>Religion</strong>
 																	</label>
 																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="build" name="build"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option selected="selected">Slim
-																				<option>
-																				<option>Athletic</option>
-																				<option>Medium</option>
-																				<option>Slightly Overweight</option>
-																				<option>Plump</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="build" name="build"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option>Slim
-																				<option>
-																				<option selected="selected">Athletic</option>
-																				<option>Medium</option>
-																				<option>Slightly Overweight</option>
-																				<option>Plump</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider" name="buildFlexibility"
-																				type="text" value="" />
-																		</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="religion" name="religion"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option selected="selected">Catholic</option>
+																			<option>Christian</option>
+																			<option>Hindu</option>
+																			<option>Atheist</option>
+																			<option>Muslim</option>
+																			<option>Sikh</option>
+																		</select>
 																	</div>
 																</div>
 															</div>
-															<div class="row">
-																<div class="col-sm-3">
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="religion" name="religion2"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option>Catholic</option>
+																			<option>Christian</option>
+																			<option selected="selected">Hindu</option>
+																			<option>Atheist</option>
+																			<option>Muslim</option>
+																			<option>Sikh</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider" name="religionFlexibility"
+																			type="text" value="" />
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<div class="form-group">
 																	<label for="a" class="col-sm-offset-2 control-label"><strong>
-																			Style</strong> </label>
+																			Ethnicity </strong></label>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="religion" name="ethnicity"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option selected="selected">Chinese</option>
+																			<option>Malay</option>
+																			<option>Indonesian</option>
+																			<option>Myanmar</option>
+																			<option>Punjabi</option>
+																			<option>Indian</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="religion" name="ethnicity2"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option>Chinese</option>
+																			<option selected="selected">Malay</option>
+																			<option>Indonesian</option>
+																			<option>Myanmar</option>
+																			<option>Punjabi</option>
+																			<option>Indian</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider"
+																			name="ethnicityFlexibility" type="text" value="" />
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<label for="a" class="col-sm-offset-2 control-label"><strong>
+																			Education Level</strong> </label>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="religion" name="education"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option selected="selected">Junior college
+																				& below</option>
+																			<option>Polytechnic</option>
+																			<option>Master Degree</option>
+																			<option>Masters</option>
+																			<option>Phd & Above</option>
+																			<option>Professional Qualification</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
 
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="build" name="build"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option selected="selected">sophisticated
-																				<option>
-																				<option>classical</option>
-																				<option>trendy</option>
-																				<option>casual</option>
-																				<option>Sporty</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="build" name="build"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option>sophisticated
-																				<option>
-																				<option selected="selected">classical</option>
-																				<option>trendy</option>
-																				<option>casual</option>
-																				<option>Sporty</option>
-																			</select>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider" name="styleFlexibility"
-																				type="text" value="" />
-																		</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="religion" name="education2"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option>Junior college & below</option>
+																			<option>Polytechnic</option>
+																			<option>Master Degree</option>
+																			<option selected="selected">Masters</option>
+																			<option>Phd & Above</option>
+																			<option>Professional Qualification</option>
+																		</select>
 																	</div>
 																</div>
 															</div>
-															<div class="row">
-																<div class="col-sm-3">
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider"
+																			name="educationFlexibility" type="text" value="" />
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<div class="form-group">
 																	<label for="a" class="col-sm-offset-2 control-label"><strong>
-																			Hair </strong></label>
+																			Previous Marriage </strong></label>
 																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="build" name="build"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option selected="selected">Short
-																				<option>
-																				<option>Medium</option>
-																				<option>Long</option>
-																				<option>Bold</option>
-																			</select>
-																		</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="input-group">
+																	<span class="input-group-addon"> <input
+																		type="checkbox" name="isMarriage" />
+																	</span> <input type="text" name="marriage1"
+																		class="form-control" placeholder="" />
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="input-group">
+																	<span class="input-group-addon"> <input
+																		type="checkbox" name="isMarriage2" />
+																	</span> <input type="text" class="form-control"
+																		placeholder="" />
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider" name="marriageflexibility"
+																			type="text" value="" />
 																	</div>
 																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<select id="build" name="build"
-																				class="form-control selectpicker"
-																				data-parsley-required="true">
-																				<option>Short
-																				<option>
-																				<option selected="selected">Medium</option>
-																				<option>Long</option>
-																				<option>Bold</option>
-																			</select>
-																		</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<label for="a" class="col-sm-offset-2 control-label">
+																		<strong>kids from Previous Marriage</strong>
+																	</label>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="input-group">
+																	<span class="input-group-addon"> <input
+																		type="checkbox" />
+																	</span> <input type="text" class="form-control"
+																		placeholder="" />
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="input-group">
+																	<span class="input-group-addon"> <input
+																		type="checkbox" />
+																	</span> <input type="text" class="form-control"
+																		placeholder="" />
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider" name="kidsflexibility"
+																			type="text" value="" />
 																	</div>
 																</div>
-																<div class="col-sm-3">
-																	<div class="form-group">
-																		<div class="col-md-12">
-																			<input class="flex-slider" name="hairFlexibility"
-																				type="text" value="" />
-																		</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<label for="a" class="col-sm-offset-2 control-label">
+																		<strong>Smoking Habbit </strong>
+																	</label>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="religion" name="smoking"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option selected="selected">No
+																			<option>
+																			<option>Light / Social</option>
+																			<option>Yes</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="religion" name="smoking2"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option>No
+																			<option>
+																			<option selected="selected">Light / Social</option>
+																			<option>Yes</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider" name="smokingFlexibility"
+																			type="text" value="" />
 																	</div>
 																</div>
 															</div>
@@ -1025,263 +785,501 @@ fiel
 													</div>
 												</div>
 											</div>
-											<!-- Second Accordian End here-->
-
-											<!-- Third Accordian start here -->
-
-											<div class="panel panel-inverse">
-												<div class="panel-heading">
-													<h3 class="panel-title">
-														<a
-															class="accordion-toggle accordion-toggle-styled collapsed"
-															data-toggle="collapse" data-parent="#accordion"
-															href="#collapseThree"> <i
-															class="fa fa-plus-circle pull-right"></i> Personality
-															Attribute Preferences
-														</a>
-													</h3>
-												</div>
-												<div class="row">
-													<div class="col-sm-9 col-sm-offset-1">
-														<div id="collapseThree" class="panel-collapse collapse">
-															<div class="row">
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>Attribute</th>
-																			</tr>
-																		</thead>
-																	</table>
-																</div>
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>Very Important</th>
-																			</tr>
-																		</thead>
-																	</table>
-																</div>
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>Attribute</th>
-																			</tr>
-																		</thead>
-																	</table>
-																</div>
-																<div class="col-sm-3">
-																	<table class="table table-plain">
-																		<thead>
-																			<tr>
-																				<th>Very Important</th>
-																			</tr>
-																		</thead>
-																	</table>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-sm-4">
-
-																	<div class="btn-group">
-																		<button type="button" class="btn btn-primary active">Extrovert</button>
-																		<button type="button" class="btn btn-primary ">Introvert</button>
-																	</div>
-
-																</div>
-																<div class="col-sm-2">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isPersonalAttribute1"
-																				name="isPersonalAttribute1" value="" /> OK
-																			</label>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-4">
-																	<div class="btn-group">
-																		<button type="button" class="btn btn-primary active">Tactful</button>
-																		<button type="button" class="btn btn-primary ">Blunt</button>
-																	</div>
-																</div>
-																<div class="col-sm-2">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isPersonalAttribute1"
-																				name="isPersonalAttribute1" value="" /> OK
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-sm-4">
-																	<div class="btn-group">
-																		<button type="button" class="btn btn-primary">Spontaneous</button>
-																		<button type="button" class="btn btn-primary active">Organized</button>
-																	</div>
-																</div>
-																<div class="col-sm-2">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isPersonalAttribute1"
-																				name="isPersonalAttribute1" value="" /> OK
-																			</label>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-4">
-																	<div class="btn-group">
-																		<button type="button" class="btn btn-primary active">Intellectual</button>
-																		<button type="button" class="btn btn-primary ">Simple</button>
-																	</div>
-																</div>
-																<div class="col-sm-2">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isPersonalAttribute1"
-																				name="isPersonalAttribute1" value="" /> OK
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-sm-4">
-																	<div class="btn-group">
-																		<button type="button" class="btn btn-primary active">Serious</button>
-																		<button type="button" class="btn btn-primary ">Light
-																			Hearted</button>
-																	</div>
-																</div>
-																<div class="col-sm-2">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isPersonalAttribute1"
-																				name="isPersonalAttribute1" value="" /> OK
-																			</label>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-4">
-																	<div class="btn-group">
-																		<button type="button" class="btn btn-primary active">Worldly</button>
-																		<button type="button" class="btn btn-primary ">Localized</button>
-																	</div>
-																</div>
-																<div class="col-sm-2">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isPersonalAttribute1"
-																				name="isPersonalAttribute1" value="" /> OK
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div class="row">
-																<div class="col-sm-4">
-																	<div class="btn-group">
-																		<button type="button" class="btn btn-primary ">Indoor</button>
-																		<button type="button" class="btn btn-primary active">Outdoor</button>
-																	</div>
-																</div>
-																<div class="col-sm-2">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isPersonalAttribute1"
-																				name="isPersonalAttribute1" value="" /> OK
-																			</label>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-4">
-																	<div class="btn-group">
-																		<button type="button" class="btn btn-primary active">Artistic</button>
-																		<button type="button" class="btn btn-primary ">Coorporate</button>
-																	</div>
-																</div>
-																<div class="col-sm-2">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isPersonalAttribute1"
-																				name="isPersonalAttribute1" value="" /> OK
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-
-															<div class="row">
-																<div class="col-sm-4">
-																	<div class="btn-group">
-																		<button type="button" class="btn btn-primary">Generous</button>
-																		<button type="button" class="btn btn-primary active">Thrifty</button>
-																	</div>
-																</div>
-																<div class="col-sm-2">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isPersonalAttribute1"
-																				name="isPersonalAttribute1" value="" /> OK
-																			</label>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-4">
-																	<div class="form-group">
-
-																		<div class="col-sm-4 col-md-8">
-																			<input type="text" id="username" name="username"
-																				value="" class="form-control" />
-																		</div>
-																	</div>
-																</div>
-																<div class="col-sm-2">
-																	<div class="form-group">
-																		<div class="checkbox">
-																			<label class="col-md-4 control-label"> <input
-																				type="checkbox" id="isPersonalAttribute1"
-																				name="isPersonalAttribute1" value="" /> OK
-																			</label>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<!--Third Accordian end here-->
-
 										</div>
-								</fieldset>
-								<fieldset>
-									<div class="row">
-										<div class="col-sm-8">
-											<div class="form-group">
-												<div class="col-md-8 col-md-offset-4">
-													<a href="list.html" class="btn btn-primary btn-lg">Save</a>
+										<!-- First Accordian End here-->
+
+										<!-- Second Accordian start here-->
+										<div class="panel panel-inverse">
+											<div class="panel-heading">
+												<h3 class="panel-title">
+													<a
+														class="accordion-toggle accordion-toggle-styled collapsed"
+														data-toggle="collapse" data-parent="#accordion"
+														href="#collapseTwo"> <i
+														class="fa fa-plus-circle pull-right"></i> Physical
+														Attribute Preferences
+													</a>
+												</h3>
+											</div>
+											<div class="row">
+												<div class="col-sm-9 col col-sm-offset-1">
+													<div id="collapseTwo" class="panel-collapse collapse">
+														<div class="row">
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>Attribute</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>First Preferences</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>Second Preferences</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>Flexibility</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<label for="height"
+																	class="col-sm-offset-2 control-label"> <strong>Height</strong></label>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<div class="input-group ">
+																			<input type="text" class="form-control" name="start"
+																				placeholder="From" /> <span
+																				class="input-group-addon"></span> <input
+																				type="text" class="form-control" name="end"
+																				placeholder="to" />
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<div class="input-group ">
+																			<input type="text" class="form-control" name="start"
+																				placeholder="From" /> <span
+																				class="input-group-addon"></span> <input
+																				type="text" class="form-control" name="end"
+																				placeholder="to" />
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider" name="heightFlexibility"
+																			type="text" value="" />
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<label for="a" class="col-sm-offset-2 control-label">
+																	<strong>Build</strong>
+																</label>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="build" name="build"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option selected="selected">Slim
+																			<option>
+																			<option>Athletic</option>
+																			<option>Medium</option>
+																			<option>Slightly Overweight</option>
+																			<option>Plump</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="build" name="build"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option>Slim
+																			<option>
+																			<option selected="selected">Athletic</option>
+																			<option>Medium</option>
+																			<option>Slightly Overweight</option>
+																			<option>Plump</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider" name="buildFlexibility"
+																			type="text" value="" />
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<label for="a" class="col-sm-offset-2 control-label"><strong>
+																		Style</strong> </label>
+
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="build" name="build"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option selected="selected">sophisticated
+																			<option>
+																			<option>classical</option>
+																			<option>trendy</option>
+																			<option>casual</option>
+																			<option>Sporty</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="build" name="build"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option>sophisticated
+																			<option>
+																			<option selected="selected">classical</option>
+																			<option>trendy</option>
+																			<option>casual</option>
+																			<option>Sporty</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider" name="styleFlexibility"
+																			type="text" value="" />
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-3">
+																<label for="a" class="col-sm-offset-2 control-label"><strong>
+																		Hair </strong></label>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="build" name="build"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option selected="selected">Short
+																			<option>
+																			<option>Medium</option>
+																			<option>Long</option>
+																			<option>Bold</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<select id="build" name="build"
+																			class="form-control selectpicker"
+																			data-parsley-required="true">
+																			<option>Short
+																			<option>
+																			<option selected="selected">Medium</option>
+																			<option>Long</option>
+																			<option>Bold</option>
+																		</select>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-3">
+																<div class="form-group">
+																	<div class="col-md-12">
+																		<input class="flex-slider" name="hairFlexibility"
+																			type="text" value="" />
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
+											</div>
+										</div>
+										<!-- Second Accordian End here-->
+
+										<!-- Third Accordian start here -->
+
+										<div class="panel panel-inverse">
+											<div class="panel-heading">
+												<h3 class="panel-title">
+													<a
+														class="accordion-toggle accordion-toggle-styled collapsed"
+														data-toggle="collapse" data-parent="#accordion"
+														href="#collapseThree"> <i
+														class="fa fa-plus-circle pull-right"></i> Personality
+														Attribute Preferences
+													</a>
+												</h3>
+											</div>
+											<div class="row">
+												<div class="col-sm-9 col-sm-offset-1">
+													<div id="collapseThree" class="panel-collapse collapse">
+														<div class="row">
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>Attribute</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>Very Important</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>Attribute</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+															<div class="col-sm-3">
+																<table class="table table-plain">
+																	<thead>
+																		<tr>
+																			<th>Very Important</th>
+																		</tr>
+																	</thead>
+																</table>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-4">
+
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary active">Extrovert</button>
+																	<button type="button" class="btn btn-primary ">Introvert</button>
+																</div>
+
+															</div>
+															<div class="col-sm-2">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isPersonalAttribute1"
+																			name="isPersonalAttribute1" value="" /> OK
+																		</label>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary active">Tactful</button>
+																	<button type="button" class="btn btn-primary ">Blunt</button>
+																</div>
+															</div>
+															<div class="col-sm-2">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isPersonalAttribute1"
+																			name="isPersonalAttribute1" value="" /> OK
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary">Spontaneous</button>
+																	<button type="button" class="btn btn-primary active">Organized</button>
+																</div>
+															</div>
+															<div class="col-sm-2">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isPersonalAttribute1"
+																			name="isPersonalAttribute1" value="" /> OK
+																		</label>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary active">Intellectual</button>
+																	<button type="button" class="btn btn-primary ">Simple</button>
+																</div>
+															</div>
+															<div class="col-sm-2">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isPersonalAttribute1"
+																			name="isPersonalAttribute1" value="" /> OK
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary active">Serious</button>
+																	<button type="button" class="btn btn-primary ">Light
+																		Hearted</button>
+																</div>
+															</div>
+															<div class="col-sm-2">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isPersonalAttribute1"
+																			name="isPersonalAttribute1" value="" /> OK
+																		</label>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary active">Worldly</button>
+																	<button type="button" class="btn btn-primary ">Localized</button>
+																</div>
+															</div>
+															<div class="col-sm-2">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isPersonalAttribute1"
+																			name="isPersonalAttribute1" value="" /> OK
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary ">Indoor</button>
+																	<button type="button" class="btn btn-primary active">Outdoor</button>
+																</div>
+															</div>
+															<div class="col-sm-2">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isPersonalAttribute1"
+																			name="isPersonalAttribute1" value="" /> OK
+																		</label>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary active">Artistic</button>
+																	<button type="button" class="btn btn-primary ">Coorporate</button>
+																</div>
+															</div>
+															<div class="col-sm-2">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isPersonalAttribute1"
+																			name="isPersonalAttribute1" value="" /> OK
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="btn-group">
+																	<button type="button" class="btn btn-primary">Generous</button>
+																	<button type="button" class="btn btn-primary active">Thrifty</button>
+																</div>
+															</div>
+															<div class="col-sm-2">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isPersonalAttribute1"
+																			name="isPersonalAttribute1" value="" /> OK
+																		</label>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-4">
+																<div class="form-group">
+
+																	<div class="col-sm-4 col-md-8">
+																		<input type="text" id="username" name="username"
+																			value="" class="form-control" />
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-2">
+																<div class="form-group">
+																	<div class="checkbox">
+																		<label class="col-md-4 control-label"> <input
+																			type="checkbox" id="isPersonalAttribute1"
+																			name="isPersonalAttribute1" value="" /> OK
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!--Third Accordian end here-->
+
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="row">
+									<div class="col-sm-8">
+										<div class="form-group">
+											<div class="col-md-8 col-md-offset-4">
+												<a href="list.html" class="btn btn-primary btn-lg">Save</a>
 											</div>
 										</div>
 									</div>
-								</fieldset>
-							</form>
-						</div>
-
-					</div>
+								</div>
+							</fieldset>
+						</form>
+					</div></div>
 				</div>
 			</div>
 			<!-- end row -->
@@ -1313,8 +1311,20 @@ fiel
 										type : 'single',
 
 									});
-						
+						/** For Edit the profile value */
+									 $('#profileName').editable();
+                                     $('#phoneNumber').editable();
+                                     $('#profileAge').editable();
+                                     $('#profileEthnicity').editable();
+                                     $('#datesLeft').editable();
+                                     $('#maritalStatus').editable();
+                                     $('#freeDates').editable();
+                                     $('#profileIncome').editable();
+                                     $('#profileStatus').editable();
+                                     $('#profileEducation').editable();
+                                     $('#profileEthnicity').editable();
 
+                                     /** Finish the edit function for  profile */
 
 							if ($('[data-render=switchery]').length !== 0) {
 								$('[data-render=switchery]')
