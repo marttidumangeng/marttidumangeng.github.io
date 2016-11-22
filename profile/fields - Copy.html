@@ -39,7 +39,6 @@
         <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
-        <link rel="stylesheet" type="text/css" href="../resources/venders/switchery/switchery.css">
         <!-- ================== END BASE CSS STYLE ================== -->
         
         <!-- ================== BEGIN BASE JS ================== -->
@@ -60,23 +59,11 @@
         <!-- ================== END BASE JS ================== -->
         <!-- ================== BEGIN PAGE LEVEL JS ================== -->
         <script src="../resources/scripts/app.min.js"></script>
-        <script src="../resources/venders/switchery/switchery.min.js"></script>
-        
         <!-- ================== END PAGE LEVEL JS ================== -->
         <script>
             $(document).ready(function() {
                 App.init();
-                // Switchery code start
-                if ($('[data-render=In-out-switch]').length !== 0) {
-                    $('[data-render=In-out-switch]').each(function() {
-                        var option = {};
-                        option.secondaryColor = '#00acac';
-                        option.color = '#faab43';
-                        var switchery = new Switchery(this, option);
-                    });
-                }
-                // Switcher code end
-            });    
+            });
         </script>
     </head>
     <body class="boxed-layout">
@@ -305,122 +292,215 @@
                                         </fieldset>
                                     </form>
                                 </div>
-                                 <div class="col-sm-7">
+                                <div class="col-sm-7">
                                     <fieldset>
                                         <div id="profileWizard">
                                             <ul>
-                                                <li><a href="#tabProfileAction" data-toggle="tab">Log Actions</a></li>
+                                                <li><a href="#tabProfileAction" data-toggle="tab">Action</a></li>
                                                 <li><a href="#tabAppointment" data-toggle="tab">Appointment</a></li>
                                                 <li><a href="#tabTask" data-toggle="tab">Task</a></li>
                                                 <li><a href="#tabPayment" data-toggle="tab">Payment</a></li>
                                                 <li><a href="#tabEmail" data-toggle="tab">Email</a></li>
                                                 <li><a href="#tabSMS" data-toggle="tab">SMS</a></li>
+                                                <li><a href="#tabLogActions" data-toggle="tab">Log Actions</a></li>
                                             </ul>
                                             <div class="tab-content">
                                                 <div class="tab-pane" id="tabProfileAction">
                                                     <fieldset>
-                                                        <div class="row col-sm-12">
-                                                           <div class="col-sm-3 m-t-10">
-                                                                Call Back Result:
-                                                           </div> 
-                                                           <div class="col-sm-9">
-                                                                        <label class="radio-inline">
-                                                                            <input type="radio" name="profileAction" value="appointment" /> Phone
-                                                                        </label>
-                                                                        <label class="radio-inline">
-                                                                            <input type="radio" name="profileAction" value="phone" /> Drop By
-                                                                        </label>
-                                                                        <span class="text-muted m-l-10">In</span>
-                                                                         <input type="checkbox" data-render="In-out-switch" data-theme="default" checked/>
-                                                                        <span class="text-muted">Out</span>
-                                                                    
-                                                                </div>
-                                                        </div>
-                                                        <div class="row m-t-25">
-                                                            <div class="col-sm-6">
-                                                                <div class="form-group">
-                                                                    <label for="result" class="col-sm-4 control-label">Result</label>
-                                                                    <div class="col-sm-8">
-                                                                        <select class="form-control selectpicker" id="result" data-parsley-required="true">
-                                                                            <option value="">-Result-</option>
-                                                                            <option value="Did not Pick up">Did not Pick up</option>
-                                                                            <option value="Not Interested">Not Interested</option>
-                                                                            <option value="Follow up">Follow up</option>
-                                                                            <option value="Not Suitable">Not Suitable</option>
-                                                                            <option value="Spam">Spam</option>
-                                                                            <option value="Appointment Made">Appointment Made</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <div class="form-group">
-                                                                    <label for="result" class="col-sm-4 control-label">Reason</label>
-                                                                    <div class="col-sm-8">
-                                                                        <select class="form-control selectpicker" id="reason" data-parsley-required="true">
-                                                                            <option value="">-Reasons-</option>
-                                                                            <option value="Suitable for LAA">Suitable for LAA</option>
-                                                                            <option value="Suitable for eSync">Suitable for eSync</option>
-                                                                            <option value="Cant Afford">Cant Afford</option>
-                                                                            <option value="Wants Caucacian">Wants Caucacian</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row m-t-10">
-                                                            <div class="col-sm-11">
-                                                                <div class="form-group">
-                                                                    <div class="col-sm-12">
-                                                                        <textarea class="form-control" rows="3" cols="20"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-1">
-                                                                <div class="form-group">
-                                                                    <input type="checkbox" name="markImportant" id="markImportant" class="css-checkbox" title="Mark As Important" />
-                                                                    <label for="markImportant" class="css-label"></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row m-t-10">
-                                                            <div class="col-sm-4 pull-right">
-                                                                <div class="form-group">
-                                                                    <input type="button" class="btn btn-primary" name="save" value="Save">
-                                                                    <input type="button" class="btn btn-default" name="reset" value="Reset">
+                                                        <legend>Actions</legend>
+                                                        <div class="row">
+                                                            <div class="col-sm-12">
+                                                                <div class="radio">
+                                                                    <label class="radio-inline">
+                                                                        <input type="radio" name="profileAction" value="appointment" /> Appointment
+                                                                    </label>
+                                                                    <label class="radio-inline">
+                                                                        <input type="radio" name="profileAction" value="task" /> Task
+                                                                    </label>
+                                                                    <label class="radio-inline">
+                                                                        <input type="radio" name="profileAction" value="payment" /> Payment
+                                                                    </label>
+                                                                    <label class="radio-inline">
+                                                                        <input type="radio" name="profileAction" value="email" /> Email
+                                                                    </label>
+                                                                    <label class="radio-inline">
+                                                                        <input type="radio" name="profileAction" value="sms" /> SMS
+                                                                    </label>
+                                                                    <label class="radio-inline">
+                                                                        <input type="radio" name="profileAction" value="phone" /> Phone
+                                                                    </label>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </fieldset>
                                                 </div>
+                                                <div class="tab-pane" id="tabAppointment">
+                                                    <fieldset>
+                                                        <legend>New Appointment</legend>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="tab-pane" id="tabTask">
+                                                    <fieldset>
+                                                        <legend>New Task</legend>
+                                                        <form class="form-horizontal">
+                                                            <div class="row">
+                                                                <div class="col-sm-12">
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-12">
+                                                                            <div class="checkbox">
+                                                                                <label class="checkbox-inline">
+                                                                                    <input type="checkbox" name="taskcall" /> To Call
+                                                                                </label>
+                                                                                <label class="checkbox-inline">
+                                                                                    <input type="checkbox" name="tasksms" /> To SMS
+                                                                                </label>
+                                                                                <label class="checkbox-inline">
+                                                                                    <input type="checkbox" name="taskemail" /> To Email
+                                                                                </label>
+                                                                                <label class="checkbox-inline">
+                                                                                    <input type="checkbox" name="taskappointment" /> Appointment
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-4">
+                                                                    <div class="form-group">
+                                                                        <div class="col-md-12">
+                                                                            <div class="input-group">
+                                                                                <input type="text" id="taskdate" name="taskdate" class="form-control" data-parsley-required="true"/>
+                                                                                <span class="input-group-addon">
+                                                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="form-group">
+                                                                        <div class="col-md-12">
+                                                                            <div class="input-group">
+                                                                                <input type="text" id="tasktime" name="tasktime" class="form-control" data-parsley-required="true"/>
+                                                                                <span class="input-group-addon">
+                                                                                    <span class="glyphicon glyphicon-time"></span>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="form-group">
+                                                                        <div class="col-md-12">
+                                                                            <select class="form-control selectpicker" data-parsley-required="true">
+                                                                                <option value="">-Consultant-</option>
+                                                                                <option>John Doe</option>
+                                                                                <option>John Wilson</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="tab-pane" id="tabPayment">
+                                                    <fieldset>
+                                                        <legend>Payment</legend>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="tab-pane" id="tabEmail">
+                                                    <fieldset>
+                                                        <legend>Email</legend>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="tab-pane" id="tabSMS">
+                                                    <fieldset>
+                                                        <legend>SMS</legend>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="tab-pane" id="tabLogActions">
+                                                    <fieldset>
+                                                        <legend>Log Actions</legend>
+                                                        <form class="form-horizontal">
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label for="result" class="col-sm-4 control-label">Result</label>
+                                                                        <div class="col-sm-8">
+                                                                            <select class="form-control selectpicker" data-parsley-required="true">
+                                                                                <option value="-Select-">-Select-</option>
+                                                                                <option value="Did not Pick up">Did not Pick up</option>
+                                                                                <option value="Not Interested">Not Interested</option>
+                                                                                <option value="Follow up">Follow up</option>
+                                                                                <option value="Not Suitable">Not Suitable</option>
+                                                                                <option value="Spam">Spam</option>
+                                                                                <option value="Appointment Made">Appointment Made</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                        <label for="result" class="col-sm-4 control-label">Reason</label>
+                                                                        <div class="col-sm-8">
+                                                                            <select class="form-control selectpicker" data-parsley-required="true">
+                                                                                <option value="-Reasons-">-Reasons-</option>
+                                                                                <option value="Suitable for LAA">Suitable for LAA</option>
+                                                                                <option value="Suitable for eSync">Suitable for eSync</option>
+                                                                                <option value="Cant Afford">Cant Afford</option>
+                                                                                <option value="Wants Caucacian">Wants Caucacian</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-11">
+                                                                    <div class="form-group">
+                                                                        <div class="col-sm-12">
+                                                                            <textarea class="form-control" rows="3" cols="20"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-1">
+                                                                    <div class="form-group">
+                                                                        <input type="checkbox" name="markImportant" id="markImportant" class="css-checkbox" title="Mark As Important" />
+                                                                        <label for="markImportant" class="css-label"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-4">
+                                                                    <div class="form-group">
+                                                                        <input type="button" name="save" value="Save">
+                                                                        <input type="button" name="reset" value="Reset">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </fieldset>
+                                                </div>
+                                                <ul class="pager wizard">
+                                                    <li class="previous"><a href="#">Previous</a></li>
+                                                    <li class="next"><a href="#">Next</a></li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </fieldset>
-                                </div>                
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- end row -->
                 <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
-                <!-- Page Level JS -->
-                <!-- ================== BEGIN PAGE LEVEL JS ================== -->
-                <!-- End Page Level JS -->
                 <script src="../resources/venders/moment/moment-with-locales.min.js"></script>
                 <script src="../resources/venders/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
                 <script src="../resources/venders/bootstrap-wizard/js/jquery.bootstrap.wizard.min.js"></script>
                 <script type="text/javascript">
                     $(document).ready(function() {
-                         $('#result').bind('change', function() {
-                           var selectedValue = this.value;
-                            console.log('selectedValue'+selectedValue);
-                            if(selectedValue =='Not Suitable') {
-                                $('#reason').val("");
-                                $('#reason').prop('disabled', false);    
-                            } else {
-                                $('#reason').prop('disabled','disabled');    
-                            }
-                        });
                         $('#taskdate').datepicker({
                             format: 'yyyy-mm-dd',
                             todayHighlight: true,
