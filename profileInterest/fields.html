@@ -39,6 +39,8 @@
         <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
+        <link rel="stylesheet" type="text/css"
+     href="../resources/venders/switchery/switchery.min.css"/>
         <!-- ================== END BASE CSS STYLE ================== -->
         
         <!-- ================== BEGIN BASE JS ================== -->
@@ -56,6 +58,7 @@
         <script src="../resources/venders/parsley/parsley.min.js"></script>
         <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <script src="../resources/venders/switchery/switchery.min.js"></script>
         <!-- ================== END BASE JS ================== -->
         <!-- ================== BEGIN PAGE LEVEL JS ================== -->
         <script src="../resources/scripts/app.min.js"></script>
@@ -66,13 +69,13 @@
             });
         </script>
     </head>
-    <body class="boxed-layout">
+    <body class="layout">
         <!-- begin #page-loader -->
         <div id="page-loader" class="fade in"><span class="spinner"></span></div>
         <!-- end #page-loader -->
         
         <!-- begin #page-container -->
-        <div id="page-container" class="page-container fade page-with-top-menu page-header-fixed page-without-sidebar">
+        <div id="page-container" class="page-container fade page-with-top-menu page-header-fixed">
             <!-- begin #header -->
             <div id="header" class="header navbar navbar-default navbar-fixed-top">
                 <!-- begin container-fluid -->
@@ -139,7 +142,67 @@
                 <!-- end container-fluid -->
             </div>
             <!-- end #header -->
+            <!--begin sidebar-->
+        <div id="sidebar" class="sidebar">
+            <!--begin sidebar scrolling-->
+            <div data-scrollbar="true" data-height="100%">
+                <!--begin sidebar nav-->
+                <ul class="nav">
+                    <li class="has-sub"><a href="javascript:;"> <b
+                            class="caret pull-right"></b> <i class="fa fa-list-alt"></i> <span>Profile</span>
+                    </a>
+                        <ul class="sub-menu">
+                            <li><a href="../profilePersonalInfo/fields.html">Profile Info</a></li>
+                            <li><a href="../profilePreferences/fields.html">Preferences</a></li>
+                            <li><a href="../profileInterest/fields.html">Interest</a></li>
+                            <li><a href="javascript:;">Expactation</a></li>
+                            <li><a href="javascript:;">Assessment</a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                            <li><a href="javascript:;"></a></li>
+                        </ul></li>
+                    <li class="has-sub"><a href="javascript:;"> <b
+                            class="caret pull-right"></b> <i class="fa fa-wpforms"></i> <span>Website
+                                Content</span>
+                    </a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:;">Banners</a></li>
+                            <li><a href="javascript:;">Categories, Cities</a></li>
+                            <li><a href="javascript:;">Pages</a></li>
+                            <li><a href="javascript:;">Media Files</a></li>
+                            <li><a href="javascript:;">Navigation Menu</a></li>
+                            <li><a href="javascript:;">Special Events Page</a></li>
+                        </ul></li>
+                    <li class="has-sub"><a href="javascript:;"> <b
+                            class="caret pull-right"></b> <i class="fa fa-users"></i> <span>Clients
+                                Management</span>
+                    </a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:;">Profile to Approve</a></li>
+                            <li><a href="javascript:">Client Profile</a></li>
+                            <li><a href="javascript:;">Events Package Users</a></li>
+                            <li><a href="javascript:;">Add Client Profile</a></li>
+                            <li><a href="javascript:;">Unsubscribe</a></li>
+                            <li><a href="javascript:;">Database</a></li>
+                        </ul></li>
+                    <!-- begin sidebar minify button -->
+                    <li><a href="javascript:;" class="sidebar-minify-btn"
+                        data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
+                    <!-- end sidebar minify button -->
+                </ul>
+                <!--end sidebar navv-->
+            </div>
+            <!--end sidenbar scrolling-->
+        </div>
+        <!--end sidebar-->
+        <div class="sidebar-bg"></div>
+        <!-- begin #content -->
+
             <!-- begin #top-menu -->
+
+
+
             <div id="top-menu" class="top-menu ">
                 <!-- begin top-menu nav -->
                 <ul class="nav pull-right" >
@@ -202,22 +265,147 @@
             <!-- end #top-menu -->
 
             <!-- begin #content -->
-            <div id="content" class="content">
+            <div id="content" class="content m-t-10">
                 <!-- begin row -->
                 <div class="row">
                     <div class="panel">
                         <div class="panel-body">
+
+
+                        <div class="row">
+                            <div class="col-sm-12 m-b-20 m-t-m-30">
+                                <div class="btn-group pull-right" role="group">
+                                    <a role="button" class="btn btn-white" href="#">Esynchrony</a>
+                                    <button type="button" class="btn btn-white active">Lunch
+                                        Actually</button>
+                                    <a role="button" class="btn btn-white" href="#">Lunch
+                                        Actually Academy</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <select id="status" name="profile.laMembership.status"
+                                        data-parsley-required="true" class="form-control selectpicker">
+
+                                        <option path="model.profile.laMembership.status"
+                                            value="New Member">New Member</option>
+
+                                        <option path="model.profile.laMembership.status"
+                                            value="Pending Approval">Pending Approval</option>
+
+                                        <option path="model.profile.laMembership.status"
+                                            value="Active">Active</option>
+
+                                        <option path="model.profile.laMembership.status"
+                                            value="On Hold">On Hold</option>
+
+                                        <option path="model.profile.laMembership.status"
+                                            value="Refund">Refund</option>
+
+                                        <option path="model.profile.laMembership.status"
+                                            value="Expired">Expired</option>
+
+                                        <option path="model.profile.laMembership.status"
+                                            value="Terminated">Terminated</option>
+
+                                        <option path="model.profile.laMembership.status"
+                                            value="Renewal">Renewal</option>
+
+                                    </select>
+                                </div>
+                                <div class="profile-image">
+                                    <img src="../resources/images/photo.jpg"> <i
+                                        class="fa fa-user hide"></i> <input type="file"
+                                        name="userphoto" />
+                                </div>
+                                <div class="form-group">
+                                    <select id="mood" name="profile.laMembership.mood"
+                                        data-parsley-required="true" class="form-control selectpicker">
+
+                                        <option path="model.profile.laMembership.mood" value="Normal">Normal</option>
+
+                                        <option path="model.profile.laMembership.mood" value="Happy">Happy</option>
+
+                                        <option path="model.profile.laMembership.mood"
+                                            value="Complaint">Complaint</option>
+
+                                        <option path="model.profile.laMembership.mood" value="Refund">Refund</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                        <div class="col-sm-9">
+                                <fieldset>
+                                    <legend>Profile</legend>
+
+
+                                    <div class="table-responsive">
+                        <table id="user" class="table  table">
+                            
+                            <tbody>
+                                <tr>
+                                    <td>Profile Name : </td>
+                                   <td> <a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
+                                     <td>Smokes : </td>
+                                   <td><input type="checkbox"  data-render="switchery"  data-theme="blue" checked /></td>
+                                    
+                                </tr>
+                                 <tr>
+                                    <td>Profile Phone : </td>
+                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
+                                     <td>Drinks :</td> 
+                                    <td><input type="checkbox"  data-render="switchery"  data-theme="blue" checked /></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>Profile age : </td>
+                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
+                                     <td>Profile history : </td>
+                                    <td><input type="checkbox"  data-render="switchery"  data-theme="blue" checked /></td>
+                                    
+                                </tr>
+
+                                <tr>
+                                    <td>Profile ethnicity : </td>
+                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">Indian </a></td>
+                                     <td>Dates Left : </td>
+                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">5 </a></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Marital Status: </td>
+                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">Unmarried </a></td>
+                                     <td>Free Dates : </td>
+                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">3 </a></td>
+                                </tr>
+                                <tr>
+                                    <td>Profile Income: </td>
+                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">5 lakh </a></td>
+                                     <td>package Status : </td>
+                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">6 </a></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Profile Education: </td>
+                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">PhD and above </a></td>
+                                     <td>Sign Up date : </td>
+                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                                </fieldset>
+                            </div>
+                        </div>
                             <form class="form-horizontal parsley-validate" name="mainForm" method="post" role="form" enctype="multipart/form-data">
                                 <fieldset>
                                     <legend>Profile Interest</legend>
                                     <div class="row">
-                                        <!-- <div class="col-sm-3 pull-right">
-                                            <div class="profile-image">
-                                                <img src="../resources/images/photo.jpg">
-                                                <i class="fa fa-user hide"></i>
-                                            </div>
-                                            <input type="file" name="userphoto" />
-                                        </div> -->
+                                       
                                         <div class="col-sm-8 pull-left">
                                             <div class="form-group">
                                                 <label for="products" class="col-md-4 control-label">Favorite Food</label>
@@ -324,7 +512,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="hobbies" class="col-md-4 control-label">Holodays Activities </label>
+                                                <label for="hobbies" class="col-md-4 control-label">Holidays Activities </label>
                                                 <div class="col-md-8">
                                                      <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
                                                         <option value="1" selected="selected">City Traveler</option>
@@ -410,6 +598,43 @@
                             calendarWeeks: true,
                             endDate: '-10y'
                         });
+
+                          if ($('[data-render=switchery]').length !== 0) {
+                                $('[data-render=switchery]')
+                                        .each(
+                                                function() {
+                                                    var option = {};
+                                                    option.color = '#348fe2';
+                                                    option.secondaryColor = ($(this)
+                                                            .attr('data-secondary-color')) ? $(
+                                                            this)
+                                                            .attr(
+                                                                    'data-secondary-color')
+                                                            : '#dfdfdf';
+                                                    option.className = ($(this)
+                                                            .attr('data-classname')) ? $(
+                                                            this).attr(
+                                                            'data-classname')
+                                                            : 'switchery';
+                                                    option.disabled = ($(this)
+                                                            .attr('data-disabled')) ? true
+                                                            : false;
+                                                    option.disabledOpacity = ($(this)
+                                                            .attr('data-disabled-opacity')) ? $(
+                                                            this)
+                                                            .attr(
+                                                                    'data-disabled-opacity')
+                                                            : 0.5;
+                                                    option.speed = ($(this)
+                                                            .attr('data-speed')) ? $(
+                                                            this).attr(
+                                                            'data-speed')
+                                                            : '0.5s';
+                                                    var switchery = new Switchery(
+                                                            this, option);
+                                                });
+                            }
+
                         $('#password').passwordStrength({targetDiv: '#passwordStrength'});
                         $('#repassword').passwordStrength({targetDiv: '#rePasswordStrength'});
                     });
