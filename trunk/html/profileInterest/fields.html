@@ -35,6 +35,8 @@
         <link rel="stylesheet" type="text/css" href="../resources/venders/animate/animate.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+         <link rel="stylesheet" type="text/css"
+    href="../resources/venders/bootstrap3-editable/css/bootstrap-editable.css" />
         <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
@@ -58,6 +60,7 @@
         <script src="../resources/venders/parsley/parsley.min.js"></script>
         <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <script src="../resources/venders/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
         <script src="../resources/venders/switchery/switchery.min.js"></script>
         <!-- ================== END BASE JS ================== -->
         <!-- ================== BEGIN PAGE LEVEL JS ================== -->
@@ -338,68 +341,71 @@
                                 </div>
                             </div>
 
-                        <div class="col-sm-9">
-                                <fieldset>
-                                    <legend>Profile</legend>
-
-
-                                    <div class="table-responsive">
-                        <table id="user" class="table  table">
-                            
-                            <tbody>
-                                <tr>
-                                    <td>Profile Name : </td>
-                                   <td> <a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
-                                     <td>Smokes : </td>
-                                   <td><input type="checkbox"  data-render="switchery"  data-theme="blue" checked /></td>
-                                    
-                                </tr>
-                                 <tr>
-                                    <td>Profile Phone : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
-                                     <td>Drinks :</td> 
-                                    <td><input type="checkbox"  data-render="switchery"  data-theme="blue" checked /></td>
-                                    
-                                </tr>
-                                <tr>
-                                    <td>Profile age : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
-                                     <td>Profile history : </td>
-                                    <td><input type="checkbox"  data-render="switchery"  data-theme="blue" checked /></td>
-                                    
-                                </tr>
-
-                                <tr>
-                                    <td>Profile ethnicity : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">Indian </a></td>
-                                     <td>Dates Left : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">5 </a></td>
-                                </tr>
-
-                                <tr>
-                                    <td>Marital Status: </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">Unmarried </a></td>
-                                     <td>Free Dates : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">3 </a></td>
-                                </tr>
-                                <tr>
-                                    <td>Profile Income: </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">5 lakh </a></td>
-                                     <td>package Status : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">6 </a></td>
-                                </tr>
-
-                                <tr>
-                                    <td>Profile Education: </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username">PhD and above </a></td>
-                                     <td>Sign Up date : </td>
-                                    <td><a href="#" id="username" data-type="text" data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
-                                </tr>
-                            </tbody>
-                            </table>
-                            </div>
-                                </fieldset>
-                            </div>
+                       <div class="col-sm-9">
+                            <fieldset>
+                                <legend>Profile</legend>
+                                    <table id="user" class="table  table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Profile Name :</td>
+                                                <td><a href="#" id="profileName" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">Sohem </a></td>
+                                                <td>Smokes :</td>
+                                                <td><input type="checkbox" data-render="switchery"
+                                                    data-theme="blue" checked /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile Phone :</td>
+                                                <td><a href="#" id="phoneNumber" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">12243 </a></td>
+                                                <td>Drinks :</td>
+                                                <td><input type="checkbox" data-render="switchery"
+                                                    data-theme="blue" checked /></td>
+                                            <tr>
+                                                <td>Profile age :</td>
+                                                <td><a href="#" id="profileAge" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">23 </a></td>
+                                                <td>Profile history :</td>
+                                                <td><input type="checkbox" data-render="switchery"
+                                                    data-theme="blue" checked /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile ethnicity :</td>
+                                                <td><a href="#" id="profileEthnicity" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">Indian </a></td>
+                                                <td>Dates Left :</td>
+                                                <td><a href="#" id="datesLeft" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">5 </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marital Status:</td>
+                                                <td><a href="#" id="maritalStatus" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">Unmarried </a></td>
+                                                <td>Free Dates :</td>
+                                                <td><a href="#" id="freeDates" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">3 </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile Income:</td>
+                                                <td><a href="#" id="profileIncome" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">5 lakh </a></td>
+                                                <td>package Status :</td>
+                                                <td><a href="#" id="profileStatus" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">6 </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile Education:</td>
+                                                <td><a href="#" id="profileEducation" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">PhD and above
+                                                </a></td>
+                                                <td>Sign Up date :</td>
+                                                <td><a href="#" id="signUpDate" data-type="text"
+                                                    data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                            </fieldset>
+                        </div>
                         </div>
                             <form class="form-horizontal parsley-validate" name="mainForm" method="post" role="form" enctype="multipart/form-data">
                                 <fieldset>
@@ -598,6 +604,21 @@
                             calendarWeeks: true,
                             endDate: '-10y'
                         });
+
+                        /** For Edit the profile value */
+                                     $('#profileName').editable();
+                                     $('#phoneNumber').editable();
+                                     $('#profileAge').editable();
+                                     $('#profileEthnicity').editable();
+                                     $('#datesLeft').editable();
+                                     $('#maritalStatus').editable();
+                                     $('#freeDates').editable();
+                                     $('#profileIncome').editable();
+                                     $('#profileStatus').editable();
+                                     $('#profileEducation').editable();
+                                     $('#profileEthnicity').editable();
+
+                                     /** Finish the edit function for  profile */
 
                           if ($('[data-render=switchery]').length !== 0) {
                                 $('[data-render=switchery]')
