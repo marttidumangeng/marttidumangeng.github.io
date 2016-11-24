@@ -1,4 +1,4 @@
-fiel
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if !IE]><!-->
@@ -72,12 +72,6 @@ fiel
 <script src="../resources/venders/jquery/jquery-migrate-1.1.0.min.js"></script>
 <script src="../resources/venders/jquery-ui/ui/jquery-ui.min.js"></script>
 <script src="../resources/venders/bootstrap/js/bootstrap.min.js"></script>
-
-<!--[if lt IE 9]>
-            <script src="../resources/venders/crossbrowserjs/html5shiv.js"></script>
-            <script src="../resources/venders/crossbrowserjs/respond.min.js"></script>
-            <script src="../resources/venders/crossbrowserjs/excanvas.min.js"></script>
-        <![endif]-->
 <script src="../resources/venders/slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
 <script src="../resources/venders/parsley/parsley.min.js"></script>
@@ -99,7 +93,12 @@ fiel
 	});
 </script>
 
+<style type="text/css">
+	.groupAddonBGC{
+		background-color: #3093E0
+	}
 
+</style>
 </head>
 <body class="layout">
 	<!-- begin #page-loader -->
@@ -227,10 +226,10 @@ fiel
 							<li><a href="../profilePersonalInfo/fields.html">Profile Info</a></li>
 							<li><a href="../profilePreferences/fields.html">Preferences</a></li>
 							<li><a href="../profileInterest/fields.html">Interest</a></li>
-							<li><a href="javascript:;">Expactation</a></li>
-							<li><a href="javascript:;">Assessment</a></li>
-							<li><a href="javascript:;"></a></li>
-							<li><a href="javascript:;"></a></li>
+							<li><a href="../expectation/fields.html">Expactation</a></li>
+                            <li><a href="../profileAssessment/fields.html">Assessment</a></li>
+                            <li><a href="../confidential/fields.html">confidential</a></li>
+							<li><a href="../personalStory/fields.html">Story</a></li>
 							<li><a href="javascript:;"></a></li>
 							<li><a href="javascript:;"></a></li>
 						</ul></li>
@@ -275,6 +274,7 @@ fiel
 			<div class="row">
 				<div class="panel">
 					<div class="panel-body">
+
 					<div class="row">
 							<div class="col-sm-12 m-b-20 m-t-m-30">
 								<div class="btn-group pull-right" role="group">
@@ -340,70 +340,69 @@ fiel
 							</div>
 						</div>
 						<div class="col-sm-9">
-                            <fieldset>
-                                <legend>Profile</legend>
-                                    <table id="user" class="table  table">
-                                        <tbody>
-                                            <tr>
-                                                <td>Profile Name :</td>
-                                                <td><a href="#" id="profileName" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">Sohem </a></td>
-                                                <td>Smokes :</td>
-                                                <td><input type="checkbox" data-render="switchery"
-                                                    data-theme="blue" checked /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Profile Phone :</td>
-                                                <td><a href="#" id="phoneNumber" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">12243 </a></td>
-                                                <td>Drinks :</td>
-                                                <td><input type="checkbox" data-render="switchery"
-                                                    data-theme="blue" checked /></td>
-                                            <tr>
-                                                <td>Profile age :</td>
-                                                <td><a href="#" id="profileAge" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">23 </a></td>
-                                                <td>Profile history :</td>
-                                                <td><input type="checkbox" data-render="switchery"
-                                                    data-theme="blue" checked /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Profile ethnicity :</td>
-                                                <td><a href="#" id="profileEthnicity" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">Indian </a></td>
-                                                <td>Dates Left :</td>
-                                                <td><a href="#" id="datesLeft" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">5 </a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Marital Status:</td>
-                                                <td><a href="#" id="maritalStatus" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">Unmarried </a></td>
-                                                <td>Free Dates :</td>
-                                                <td><a href="#" id="freeDates" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">3 </a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Profile Income:</td>
-                                                <td><a href="#" id="profileIncome" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">5 lakh </a></td>
-                                                <td>package Status :</td>
-                                                <td><a href="#" id="profileStatus" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">6 </a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Profile Education:</td>
-                                                <td><a href="#" id="profileEducation" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">PhD and above
-                                                </a></td>
-                                                <td>Sign Up date :</td>
-                                                <td><a href="#" id="signUpDate" data-type="text"
-                                                    data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                            </fieldset>
-                        </div>
+								<fieldset>
+									<legend>Profile</legend>
+									<table id="user" class="table  table">
+										<tbody>
+											<tr>
+												<td>Profile Name :</td>
+												<td><a href="#" id="profileName" data-type="text"
+													data-pk="1" data-title="Enter Username">Sohem </a></td>
+												<td>Smokes :</td>
+												<td><input type="checkbox" data-render="switchery"
+													data-theme="blue" checked /></td>
+											</tr>
+											<tr>
+												<td>Profile Phone :</td>
+												<td><a href="#" id="phoneNumber" data-type="text"
+													data-pk="1" data-title="Enter Username">12243 </a></td>
+												<td>Drinks :</td>
+												<td><input type="checkbox" data-render="switchery"
+													data-theme="blue" checked /></td>
+											<tr>
+												<td>Profile age :</td>
+												<td><a href="#" id="profileAge" data-type="text"
+													data-pk="1" data-title="Enter Username">23 </a></td>
+												<td>Profile history :</td>
+												<td><input type="checkbox" data-render="switchery"
+													data-theme="blue" checked /></td>
+											</tr>
+											<tr>
+												<td>Profile ethnicity :</td>
+												<td><a href="#" id="profileEthnicity" data-type="text"
+													data-pk="1" data-title="Enter Username">Indian </a></td>
+												<td>Dates Left :</td>
+												<td><a href="#" id="datesLeft" data-type="text"
+													data-pk="1" data-title="Enter Username">5 </a></td>
+											</tr>
+											<tr>
+												<td>Marital Status:</td>
+												<td><a href="#" id="maritalStatus" data-type="text"
+													data-pk="1" data-title="Enter Username">Unmarried </a></td>
+												<td>Free Dates :</td>
+												<td><a href="#" id="freeDates" data-type="text"
+													data-pk="1" data-title="Enter Username">3 </a></td>
+											</tr>
+											<tr>
+												<td>Profile Income:</td>
+												<td><a href="#" id="profileIncome" data-type="text"
+													data-pk="1" data-title="Enter Username">5 lakh </a></td>
+												<td>package Status :</td>
+												<td><a href="#" id="profileStatus" data-type="text"
+													data-pk="1" data-title="Enter Username">6 </a></td>
+											</tr>
+											<tr>
+												<td>Profile Education:</td>
+												<td><a href="#" id="profileEducation" data-type="text"
+													data-pk="1" data-title="Enter Username">PhD and above </a></td>
+												<td>Sign Up date :</td>
+												<td><a href="#" id="signUpDate" data-type="text"
+													data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</fieldset>
+							</div>
 					</div>
 					<div class="row">
 						<form class="form-horizontal parsley-validate" name="mainForm"
@@ -467,8 +466,8 @@ fiel
 														<div class="row">
 															<div class="col-sm-3">
 																<div class="form-group">
-																	<label for="a" class="col-sm-offset-2 control-label"><strong>
-																			Age Range</strong></label>
+																	<label for="a" class="col-sm-offset-2 control-label">
+																			Age Range</label>
 																</div>
 															</div>
 															<div class="col-sm-3">
@@ -510,17 +509,17 @@ fiel
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<label for="updatAgePreference"
-																		class="col-sm-offset-2"><strong>Don't
+																		class="col-sm-offset-2">Don't
 																			Update Age </br>Preference ?
-																	</strong></label>
+																	</label>
 																</div>
 															</div>
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isAgeUpdate" name="isAgeUpdate"
-																			value="" /> Yes
+																		<label class="col-md-4 control-label"> 
+																		<input type="checkbox" data-render="switchery"
+													data-theme="blue" checked />
 																		</label>
 																	</div>
 																</div>
@@ -529,7 +528,7 @@ fiel
 														<div class="row">
 															<div class="col-sm-3">
 																<div class="form-group">
-																	<label for="a" class="col-sm-offset-2 control-label"><strong>Religion</strong>
+																	<label for="a" class="col-sm-offset-2 control-label">Religion
 																	</label>
 																</div>
 															</div>
@@ -577,8 +576,8 @@ fiel
 														<div class="row">
 															<div class="col-sm-3">
 																<div class="form-group">
-																	<label for="a" class="col-sm-offset-2 control-label"><strong>
-																			Ethnicity </strong></label>
+																	<label for="a" class="col-sm-offset-2 control-label">
+																			Ethnicity </label>
 																</div>
 															</div>
 															<div class="col-sm-3">
@@ -625,8 +624,8 @@ fiel
 														<div class="row">
 															<div class="col-sm-3">
 																<div class="form-group">
-																	<label for="a" class="col-sm-offset-2 control-label"><strong>
-																			Education Level</strong> </label>
+																	<label for="a" class="col-sm-offset-2 control-label">
+																			Education Level </label>
 																</div>
 															</div>
 															<div class="col-sm-3">
@@ -675,13 +674,13 @@ fiel
 														<div class="row">
 															<div class="col-sm-3">
 																<div class="form-group">
-																	<label for="a" class="col-sm-offset-2 control-label"><strong>
-																			Previous Marriage </strong></label>
+																	<label for="a" class="col-sm-offset-2 control-label">
+																			Previous Marriage </label>
 																</div>
 															</div>
 															<div class="col-sm-3">
 																<div class="input-group">
-																	<span class="input-group-addon"> <input
+																	<span class="input-group-addon groupAddonBGC"> <input
 																		type="checkbox" name="isMarriage" />
 																	</span> <input type="text" name="marriage1"
 																		class="form-control" placeholder="" />
@@ -689,7 +688,7 @@ fiel
 															</div>
 															<div class="col-sm-3">
 																<div class="input-group">
-																	<span class="input-group-addon"> <input
+																	<span class="input-group-addon groupAddonBGC"> <input
 																		type="checkbox" name="isMarriage2" />
 																	</span> <input type="text" class="form-control"
 																		placeholder="" />
@@ -708,13 +707,13 @@ fiel
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<label for="a" class="col-sm-offset-2 control-label">
-																		<strong>kids from Previous Marriage</strong>
+																		kids from Previous Marriage
 																	</label>
 																</div>
 															</div>
 															<div class="col-sm-3">
 																<div class="input-group">
-																	<span class="input-group-addon"> <input
+																	<span class="input-group-addon groupAddonBGC"> <input
 																		type="checkbox" />
 																	</span> <input type="text" class="form-control"
 																		placeholder="" />
@@ -722,7 +721,7 @@ fiel
 															</div>
 															<div class="col-sm-3">
 																<div class="input-group">
-																	<span class="input-group-addon"> <input
+																	<span class="input-group-addon groupAddonBGC"> <input
 																		type="checkbox" />
 																	</span> <input type="text" class="form-control"
 																		placeholder="" />
@@ -741,7 +740,7 @@ fiel
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<label for="a" class="col-sm-offset-2 control-label">
-																		<strong>Smoking Habbit </strong>
+																		Smoking Habbit 
 																	</label>
 																</div>
 															</div>
@@ -785,7 +784,7 @@ fiel
 													</div>
 												</div>
 											</div>
-										</div>
+									
 										<!-- First Accordian End here-->
 
 										<!-- Second Accordian start here-->
@@ -845,7 +844,7 @@ fiel
 														<div class="row">
 															<div class="col-sm-3">
 																<label for="height"
-																	class="col-sm-offset-2 control-label"> <strong>Height</strong></label>
+																	class="col-sm-offset-2 control-label"> Height</label>
 															</div>
 															<div class="col-sm-3">
 																<div class="form-group">
@@ -886,7 +885,7 @@ fiel
 														<div class="row">
 															<div class="col-sm-3">
 																<label for="a" class="col-sm-offset-2 control-label">
-																	<strong>Build</strong>
+																	Build
 																</label>
 															</div>
 															<div class="col-sm-3">
@@ -932,8 +931,8 @@ fiel
 														</div>
 														<div class="row">
 															<div class="col-sm-3">
-																<label for="a" class="col-sm-offset-2 control-label"><strong>
-																		Style</strong> </label>
+																<label for="a" class="col-sm-offset-2 control-label">
+																		Style </label>
 
 															</div>
 															<div class="col-sm-3">
@@ -979,8 +978,8 @@ fiel
 														</div>
 														<div class="row">
 															<div class="col-sm-3">
-																<label for="a" class="col-sm-offset-2 control-label"><strong>
-																		Hair </strong></label>
+																<label for="a" class="col-sm-offset-2 control-label">
+																		Hair </label>
 															</div>
 															<div class="col-sm-3">
 																<div class="form-group">
@@ -1093,12 +1092,8 @@ fiel
 															</div>
 															<div class="col-sm-2">
 																<div class="form-group">
-																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isPersonalAttribute1"
-																			name="isPersonalAttribute1" value="" /> OK
-																		</label>
-																	</div>
+																	<input type="checkbox" data-render="switchery"
+																	data-theme="blue" checked />
 																</div>
 															</div>
 															<div class="col-sm-4">
@@ -1109,12 +1104,8 @@ fiel
 															</div>
 															<div class="col-sm-2">
 																<div class="form-group">
-																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isPersonalAttribute1"
-																			name="isPersonalAttribute1" value="" /> OK
-																		</label>
-																	</div>
+																	<input type="checkbox" data-render="switchery"
+																	data-theme="blue" checked />
 																</div>
 															</div>
 														</div>
@@ -1127,12 +1118,8 @@ fiel
 															</div>
 															<div class="col-sm-2">
 																<div class="form-group">
-																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isPersonalAttribute1"
-																			name="isPersonalAttribute1" value="" /> OK
-																		</label>
-																	</div>
+																	<input type="checkbox" data-render="switchery"
+																	data-theme="blue" checked />
 																</div>
 															</div>
 															<div class="col-sm-4">
@@ -1143,12 +1130,8 @@ fiel
 															</div>
 															<div class="col-sm-2">
 																<div class="form-group">
-																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isPersonalAttribute1"
-																			name="isPersonalAttribute1" value="" /> OK
-																		</label>
-																	</div>
+																	<input type="checkbox" data-render="switchery"
+																	data-theme="blue" checked />
 																</div>
 															</div>
 														</div>
@@ -1162,12 +1145,8 @@ fiel
 															</div>
 															<div class="col-sm-2">
 																<div class="form-group">
-																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isPersonalAttribute1"
-																			name="isPersonalAttribute1" value="" /> OK
-																		</label>
-																	</div>
+																	<input type="checkbox" data-render="switchery"
+																	data-theme="blue" checked />
 																</div>
 															</div>
 															<div class="col-sm-4">
@@ -1178,12 +1157,8 @@ fiel
 															</div>
 															<div class="col-sm-2">
 																<div class="form-group">
-																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isPersonalAttribute1"
-																			name="isPersonalAttribute1" value="" /> OK
-																		</label>
-																	</div>
+																	<input type="checkbox" data-render="switchery"
+																	data-theme="blue" checked />
 																</div>
 															</div>
 														</div>
@@ -1196,12 +1171,8 @@ fiel
 															</div>
 															<div class="col-sm-2">
 																<div class="form-group">
-																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isPersonalAttribute1"
-																			name="isPersonalAttribute1" value="" /> OK
-																		</label>
-																	</div>
+																	<input type="checkbox" data-render="switchery"
+																	data-theme="blue" checked />
 																</div>
 															</div>
 															<div class="col-sm-4">
@@ -1212,12 +1183,8 @@ fiel
 															</div>
 															<div class="col-sm-2">
 																<div class="form-group">
-																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isPersonalAttribute1"
-																			name="isPersonalAttribute1" value="" /> OK
-																		</label>
-																	</div>
+																	<input type="checkbox" data-render="switchery"
+																	data-theme="blue" checked />
 																</div>
 															</div>
 														</div>
@@ -1231,12 +1198,8 @@ fiel
 															</div>
 															<div class="col-sm-2">
 																<div class="form-group">
-																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isPersonalAttribute1"
-																			name="isPersonalAttribute1" value="" /> OK
-																		</label>
-																	</div>
+																	<input type="checkbox" data-render="switchery"
+																	data-theme="blue" checked />
 																</div>
 															</div>
 															<div class="col-sm-4">
@@ -1244,18 +1207,14 @@ fiel
 
 																	<div class="col-sm-4 col-md-8">
 																		<input type="text" id="username" name="username"
-																			value="" class="form-control" />
+																			value="" placeholder="Personality Other" class="form-control" />
 																	</div>
 																</div>
 															</div>
 															<div class="col-sm-2">
 																<div class="form-group">
-																	<div class="checkbox">
-																		<label class="col-md-4 control-label"> <input
-																			type="checkbox" id="isPersonalAttribute1"
-																			name="isPersonalAttribute1" value="" /> OK
-																		</label>
-																	</div>
+																	<input type="checkbox" data-render="switchery"
+																	data-theme="blue" checked />
 																</div>
 															</div>
 														</div>
@@ -1279,7 +1238,8 @@ fiel
 								</div>
 							</fieldset>
 						</form>
-					</div></div>
+					</div>
+					</div>
 				</div>
 			</div>
 			<!-- end row -->
@@ -1316,11 +1276,11 @@ fiel
                                      $('#phoneNumber').editable();
                                      $('#profileAge').editable();
                                      $('#profileEthnicity').editable();
-                                     $('#datesLeft').editable();
+                                     //$('#datesLeft').editable();
                                      $('#maritalStatus').editable();
-                                     $('#freeDates').editable();
+                                    // $('#freeDates').editable();
                                      $('#profileIncome').editable();
-                                     $('#profileStatus').editable();
+                                    // $('#profileStatus').editable();
                                      $('#profileEducation').editable();
                                      $('#profileEthnicity').editable();
 
