@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--begin head-->
+<!-- # begin head -->
 <head>
 <meta charset="utf-8" />
-<title>Central - Expectations</title>
+<title>Central - Mathces</title>
 <meta
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 	name="viewport" />
 <meta content="" name="description" />
 <meta content="" name="author" />
+
 <!-- caching -->
 <meta http-equiv="cache-control"
 	content="no-cache, no-store, must-revalidate" />
@@ -16,13 +17,15 @@
 <meta http-equiv="expires" content="0" />
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
 <meta name="robots" content="noindex,nofollow">
+
 <!-- icons -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<!-- <link rel="shortcut icon" href="../resources/icons/favicon.ico"
-    type="image/x-icon" /> -->
+<link rel="shortcut icon" href="../resources/icons/favicon.ico"
+	type="image/x-icon" />
 <link rel="apple-touch-icon" href="../resources/icons/favicon.ico" />
 <!-- iOS icon -->
+
 <link rel="stylesheet" type="text/css"
 	href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
 <!-- ================== BEGIN PACE LOADER ================== -->
@@ -43,58 +46,177 @@
 <link rel="stylesheet" type="text/css"
 	href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
 <link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap-timepicker/css/bootstrap-timepicker.min.css" />
+<link rel="stylesheet" type="text/css"
 	href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
 <link rel="stylesheet" type="text/css"
 	href="../resources/css/style.min.css" />
-<link rel="stylesheet" type="text/css"
-	href="../resources/venders/bootstrap3-editable/css/bootstrap-editable.css" />
 <link rel="stylesheet" type="text/css"
 	href="../resources/css/style-responsive.min.css" />
 <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
 <link rel="stylesheet" type="text/css"
 	href="../resources/venders/switchery/switchery.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap3-editable/css/bootstrap-editable.css" />
+
 <!-- ================== END BASE CSS STYLE ================== -->
+
+<!-- ================== BEGIN RATING CSS STYLE ================== -->
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/jquery-bar-rating-master/css/bars-reversed.css">
+<!-- ================== END RATING CSS STYLE ================== -->
+
 
 <!-- ================== BEGIN BASE JS ================== -->
 <script src="../resources/venders/jquery/jquery-1.9.1.min.js"></script>
 <script src="../resources/venders/jquery/jquery-migrate-1.1.0.min.js"></script>
 <script src="../resources/venders/jquery-ui/ui/jquery-ui.min.js"></script>
 <script src="../resources/venders/bootstrap/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+                <script src="../resources/venders/crossbrowserjs/html5shiv.js"></script>
+                <script src="../resources/venders/crossbrowserjs/respond.min.js"></script>
+                <script src="../resources/venders/crossbrowserjs/excanvas.min.js"></script>
+                <![endif]-->
 <script src="../resources/venders/slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
 <script src="../resources/venders/parsley/parsley.min.js"></script>
 <script
 	src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <script
+	src="../resources/venders/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<script
 	src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
 <script src="../resources/venders/switchery/switchery.min.js"></script>
-
 <script
 	src="../resources/venders/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
 
 <!-- ================== END BASE JS ================== -->
 <!-- ================== BEGIN PAGE LEVEL JS ================== -->
 <script src="../resources/scripts/app.min.js"></script>
+<!-- ================== BEGIN RATING JS ================== -->
+<script
+	src="../resources/venders/jquery-bar-rating-master/js/jquery.barrating.min.js"></script>
+<!-- Use rating control from http://antenna.io/demo/jquery-bar-rating/examples/ -->
+<!-- ================== END RATING JS ================== -->
+
 <!-- ================== END PAGE LEVEL JS ================== -->
 <script>
-	$(document).ready(function() {
-		App.init();
-	});
+	$(document)
+			.ready(
+					function() {
+						var arrRatings = [];
+						App.init();
+						$('.barrating').barrating({
+							//theme: 'fontawesome-stars',
+							theme : 'bars-reversed',
+							allowEmpty : true,
+							showValues : false,
+							showSelectedRating : true,
+							reverse : false,
+							onSelect : function(value, text, event) {
+								if (typeof (event) !== 'undefined') {
+									// rating was selected by a user
+									console.log(event.target);
+									alert('Value: ' + value + 'Text: ' + text);
+									var item = {};
+									item["item"] = this.$elem[0].name;
+									item["value"] = value;
+									item["text"] = text;
+									arrRatings.push(item);
+
+								} else {
+									// rating was selected programmatically
+									// by calling `set` method
+								}
+							}
+						});
+
+						$('#dtdate').datepicker({
+							format : 'yyyy-mm-dd',
+							todayHighlight : true,
+							calendarWeeks : true,
+							endDate : '-10y'
+						});
+						$('#dttime').timepicker({
+							showMeridian : false,
+							showSeconds : false
+						});
+
+						if ($('[data-render=switchery]').length !== 0) {
+							$('[data-render=switchery]')
+									.each(
+											function() {
+												var option = {};
+												option.color = '#348fe2';
+												option.secondaryColor = ($(this)
+														.attr('data-secondary-color')) ? $(
+														this).attr(
+														'data-secondary-color')
+														: '#dfdfdf';
+												option.className = ($(this)
+														.attr('data-classname')) ? $(
+														this).attr(
+														'data-classname')
+														: 'switchery';
+												option.disabled = ($(this)
+														.attr('data-disabled')) ? true
+														: false;
+												option.disabledOpacity = ($(this)
+														.attr('data-disabled-opacity')) ? $(
+														this)
+														.attr(
+																'data-disabled-opacity')
+														: 0.5;
+												option.speed = ($(this)
+														.attr('data-speed')) ? $(
+														this)
+														.attr('data-speed')
+														: '0.5s';
+												var switchery = new Switchery(
+														this, option);
+											});
+						}
+
+						$('#profileName').editable();
+						$('#phoneNumber').editable();
+						$('#profileAge').editable();
+						$('#profileEthnicity').editable();
+						//$('#datesLeft').editable();
+						$('#maritalStatus').editable();
+						//$('#freeDates').editable();
+						$('#profileIncome').editable();
+						//$('#profileStatus').editable();
+						$('#profileEducation').editable();
+
+						$('#profileEthnicity').editable();
+
+						$('#btnSave').on(
+								'click',
+								function(e) {
+									$.each(arrRatings, function(index, key) {
+										alert(key.item + '\t' + key.value
+												+ '\t' + key.text);
+									});
+								});
+					});
 </script>
 </head>
-<!--end head-->
+<!-- # end head -->
+
+<!-- # begin body -->
 <body class="layout">
 	<!-- begin #page-loader -->
 	<div id="page-loader" class="fade in">
 		<span class="spinner"></span>
 	</div>
-	<!-- end #page-loader -->
-	<!-- #begin page-container-->
+	<!-- begin #page-loader -->
+	<!-- begin #page-container -->
 	<div id="page-container"
 		class="page-container fade page-with-top-menu page-header-fixed">
-		<!--# begin header-->
+		<!-- begin #header -->
 		<div id="header" class="header navbar navbar-default navbar-fixed-top">
-			<!--#begin container-fluid -->
+			<!-- begin container-fluid -->
 			<div class="container-fluid">
 				<!-- begin mobile sidebar expand / collapse button -->
 				<div class="navbar-header">
@@ -157,12 +279,12 @@
 				</ul>
 				<!-- end header navigation right -->
 			</div>
-			<!--# end container-fluid-->
+			<!-- end container-fluid -->
 		</div>
-		<!--# end header-->
+		<!-- end #header -->
 		<!-- begin #top-menu -->
 		<div id="top-menu" class="top-menu ">
-			<!--# begin top-menu nav -->
+			<!-- begin top-menu nav -->
 			<ul class="nav pull-right">
 				<li class="has-sub "><a href="javascript:;"> <b
 						class="caret pull-right"></b> <i class="fa fa-dot-circle-o"></i> <span>Leads</span>
@@ -191,9 +313,10 @@
 				<li><a href="javascript:;"> <i class="fa fa-money"></i> <span>Payment</span>
 				</a></li>
 			</ul>
-			<!--# end top-menu nav-->
+			<!-- end top-menu nav -->
 		</div>
-		<!--# end top-menu-->
+		<!-- end #top-menu -->
+
 		<!--begin sidebar-->
 		<div id="sidebar" class="sidebar">
 			<!--# begin sidebar scrolling-->
@@ -249,14 +372,14 @@
 		</div>
 		<!--# end sidebar -->
 		<div class="sidebar-bg"></div>
+
 		<!-- begin #content -->
 		<div id="content" class="content m-t-10">
-			<!--# begin row-->
+			<!-- begin row -->
 			<div class="row">
-				<!--# begin panel-->
 				<div class="panel">
-					<!--# begin panel-body-->
 					<div class="panel-body">
+
 						<!--# begin row inside panel-body-->
 						<div class="row">
 							<div class="col-sm-12 m-b-20 m-t-m-30">
@@ -384,210 +507,107 @@
 							</div>
 						</div>
 						<!--# end row for photo-->
-						<!--begin row for Assessment form-->
+						<!-- # begin row -->
 						<div class="row">
+							<!-- # begin form -->
 							<form class="form-horizontal parsley-validate" name="mainForm"
-								method="post" role="form" enctype="multipart/form-data">
-								<!--# begin fieldset-->
+								method="post" role="form">
 								<fieldset>
-									<legend>Expectation</legend>
-									<!-- # begin row  Expectation -->
+									<legend>Matches</legend>
 									<div class="row">
-										<div class="col-sm-8">
-											<div class="form-group">
-												<div class="col-sm-offset-2">
-													<div>
-														<label class="control-label"><strong>1.
-																Why did you decide to join Lunch Actually ? </strong></label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios"
-															value="option1" checked /> Appreciate the convenience as
-															I am very busy
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios"
-															value="option2" /> Hey! its a fun concept
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios"
-															value="option2" /> There's a lot of pressure to settle
-															down...
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios"
-															value="option2" /> Can't seem to meet the right type of
-															people
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios"
-															value="option2" /> Good reviews and recommendations from
-															friends / colleagues
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios"
-															value="option2" /> Some other reasons
-														</label>
-													</div>
-												</div>
-											</div>
-											<div class="form-group">
-												<div class="col-sm-offset-2">
-													<div>
-														<label class="control-label"><strong> 2.
-																Choose one most important thing that your partner must
-																have ?</strong></label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios1"
-															value="option1" checked /> Attractive Looks
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios1"
-															value="option2" /> Good Character
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios1"
-															value="option2" /> Similar Beliefs / Interests / Life
-															Goals
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios1"
-															value="option2" /> Confident and Carry Him /Herself Well
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios1"
-															value="option2" /> Stable Career / Motivated
-														</label>
-													</div>
-												</div>
-											</div>
-											<div class="form-group">
-												<div class="col-sm-offset-2">
-													<div>
-														<label class="control-label"><strong> 3.
-																Do you think that the guy should pay for the first date
-																?</strong></label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios2"
-															value="option1" checked /> Yes
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios2"
-															value="option2" /> No
-														</label>
-													</div>
-													<div class="radio">
-														<label> <input type="radio" name="optionsRadios2"
-															value="option2" /> Not Sure
-														</label>
-													</div>
+										<div class="col-sm-12">
+											<table class="table table-hover table-bordered">
+												<thead>
+													<tr>
+														<th>Match Name</th>
+														<th>F-Comment</th>
+														<th>M-Comment</th>
+														<th>Venue</th>
+														<th>Match Date</th>
+														<th>Date</th>
+														<th>Status</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>match 1</td>
+														<td>F-comment 1</td>
+														<td>M-comment 1</td>
+														<td>Venue 1</td>
+														<td>22-9-2016</td>
+														<td>22-10-2016</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>match 2</td>
+														<td>F-comment 2</td>
+														<td>M-comment 2</td>
+														<td>Venue 2</td>
+														<td>22-9-2016</td>
+														<td>22-10-2016</td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>match 3</td>
+														<td>F-comment 3</td>
+														<td>M-comment 3</td>
+														<td>Venue 3</td>
+														<td>22-9-2016</td>
+														<td>22-10-2016</td>
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-5">
+											<span class="_current_page_start">1</span> - <span class="_current_page_end">4</span> of <span class="_total_records">4 records(s)</span>
+										</div>
+										<div class="col-sm-7">
+											<ul class="pagination pull-right m-t-5 m-b-5 m-l-0 m-r-0">
+												<li class="disabled"><a href="#">Prev</a></li>
+												<li class="active"><a href="#">1</a></li>
+												<li class="disabled"><a href="#">Next</a></li>
+											</ul>
+										</div>
+									</div>
+								</fieldset>
+								<fieldset>
+									<div class="row">
+										<div class="form-group">
+											<div class="text-center">
+												<div id="btnSave">
+													<a href="#" class="btn btn-primary btn-sm">Save</a>
 												</div>
 											</div>
 										</div>
 									</div>
-									<!-- # end row Expectation -->
+
 								</fieldset>
-								<!--# end fieldset-->
-								<!-- begin fieldset -->
-								<fieldset>
-									<div class="row">
-										<div class="col-sm-8">
-											<div class="form-group">
-												<div class="col-md-8 col-md-offset-4">
-													<a href="list.html" class="btn btn-primary btn-lg">Save</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</fieldset>
-								<!-- end fieldset -->
 							</form>
+							<!-- # end form -->
 						</div>
-						<!--end row for Assessment form-->
+						<!-- # end row -->
 					</div>
-					<!--# end  panel-body-->
 				</div>
-				<!--# end panel-->
 			</div>
 			<!-- end row -->
-			<script type="text/javascript">
-				$(document)
-						.ready(
-								function() {
-									$('#dob').datepicker({
-										format : 'yyyy-mm-dd',
-										todayHighlight : true,
-										calendarWeeks : true,
-										endDate : '-10y'
-									});
-
-									if ($('[data-render=switchery]').length !== 0) {
-										$('[data-render=switchery]')
-												.each(
-														function() {
-															var option = {};
-															option.color = '#348fe2';
-															option.secondaryColor = ($(this)
-																	.attr('data-secondary-color')) ? $(
-																	this)
-																	.attr(
-																			'data-secondary-color')
-																	: '#dfdfdf';
-															option.className = ($(this)
-																	.attr('data-classname')) ? $(
-																	this)
-																	.attr(
-																			'data-classname')
-																	: 'switchery';
-															option.disabled = ($(this)
-																	.attr('data-disabled')) ? true
-																	: false;
-															option.disabledOpacity = ($(this)
-																	.attr('data-disabled-opacity')) ? $(
-																	this)
-																	.attr(
-																			'data-disabled-opacity')
-																	: 0.5;
-															option.speed = ($(this)
-																	.attr('data-speed')) ? $(
-																	this)
-																	.attr(
-																			'data-speed')
-																	: '0.5s';
-															var switchery = new Switchery(
-																	this,
-																	option);
-														});
-									}
-									$('#profileName').editable();
-									$('#phoneNumber').editable();
-									$('#profileAge').editable();
-									$('#profileEthnicity').editable();
-									//$('#datesLeft').editable();
-									$('#maritalStatus').editable();
-									//$('#freeDates').editable();
-									$('#profileIncome').editable();
-									//$('#profileStatus').editable();
-									$('#profileEducation').editable();
-
-									$('#profileEthnicity').editable();
-								});
-			</script>
-			<!--# end row-->
+			<link rel="stylesheet" type="text/css"
+				href="../resources/venders/password-indicator/css/password-indicator.css" />
+			<script
+				src="../resources/venders/password-indicator/js/password-indicator.js"></script>
 		</div>
 		<!-- end #content -->
+
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;"
+			class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade"
+			data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
 	</div>
-	<!--# end page-container-->
+	<!-- end #page-container -->
+
 </body>
+<!-- # end body -->
+</html>

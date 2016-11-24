@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
-
 <!--begin head-->
 <head>
 <meta charset="utf-8" />
@@ -13,7 +9,6 @@
 	name="viewport" />
 <meta content="" name="description" />
 <meta content="" name="author" />
-
 <!-- caching -->
 <meta http-equiv="cache-control"
 	content="no-cache, no-store, must-revalidate" />
@@ -67,11 +62,6 @@
 <script src="../resources/venders/jquery/jquery-migrate-1.1.0.min.js"></script>
 <script src="../resources/venders/jquery-ui/ui/jquery-ui.min.js"></script>
 <script src="../resources/venders/bootstrap/js/bootstrap.min.js"></script>
-<!--[if lt IE 9]>
-            <script src="../resources/venders/crossbrowserjs/html5shiv.js"></script>
-            <script src="../resources/venders/crossbrowserjs/respond.min.js"></script>
-            <script src="../resources/venders/crossbrowserjs/excanvas.min.js"></script>
-        <![endif]-->
 <script src="../resources/venders/slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
 <script src="../resources/venders/parsley/parsley.min.js"></script>
@@ -93,11 +83,9 @@
 		App.init();
 	});
 </script>
-
-
 </head>
 <!--end head-->
-
+<!-- begin layout -->
 <body class="layout">
 	<!-- begin #page-loader -->
 	<div id="page-loader" class="fade in">
@@ -212,66 +200,58 @@
 		</div>
 		<!--# end top-menu-->
 		<!--begin sidebar-->
-		<div id="sidebar" class="sidebar">
-			<!--# begin sidebar scrolling-->
-			<div data-scrollbar="true" data-height="100%">
-				<!--begin sidebar nav-->
-				<div class="nav">
-					<li class="has-sub"><a href="javascript:;"> <b
-							class="caret pull-right"></b> <i class="fa fa-list-alt"></i> <span>Profile</span>
-					</a>
-						<ul class="sub-menu">
-							<li><a href="../profilePersonalInfo/fields.html">Profile
-									Info</a></li>
-							<li><a href="../profilePreferences/fields.html">Preferences</a></li>
-							<li><a href="../profileInterest/fields.html">Interest</a></li>
-							<li><a href="../expectation/fields.html">Expactation</a></li>
-							<li><a href="../profileAssessment/fields.html">Assessment</a></li>
-							<li><a href="../confidential/fields.html">confidential</a></li>
-							<li><a href="../personalStory/fields.html">Story</a></li>
-							<li><a href="javascript:;"></a></li>
-							<li><a href="javascript:;"></a></li>
-						</ul></li>
-					<li class="has-sub"><a href="javascript:;"> <b
-							class="caret pull-right"></b> <i class="fa fa-wpforms"></i> <span>Website
-								Content</span>
-					</a>
-						<ul class="sub-menu">
-							<li><a href="javascript:;">Banners</a></li>
-							<li><a href="javascript:;">Categories, Cities</a></li>
-							<li><a href="javascript:;">Pages</a></li>
-							<li><a href="javascript:;">Media Files</a></li>
-							<li><a href="javascript:;">Navigation Menu</a></li>
-							<li><a href="javascript:;">Special Events Page</a></li>
-						</ul></li>
-					<li class="has-sub"><a href="javascript:;"> <b
-							class="caret pull-right"></b> <i class="fa fa-users"></i> <span>Clients
-								Management</span>
-					</a>
-						<ul class="sub-menu">
-							<li><a href="javascript:;">Profile to Approve</a></li>
-							<li><a href="javascript:">Client Profile</a></li>
-							<li><a href="javascript:;">Events Package Users</a></li>
-							<li><a href="javascript:;">Add Client Profile</a></li>
-							<li><a href="javascript:;">Unsubscribe</a></li>
-							<li><a href="javascript:;">Database</a></li>
-						</ul></li>
+		 <div id="sidebar" class="sidebar">
+            <!--# begin sidebar scrolling-->
+            <div data-scrollbar="true" data-height="100%">
+                <!--begin sidebar nav-->
+                <div class="nav">
+                    <li class="has-sub"><a href="javascript:;"> <b
+                            class="caret pull-right"></b> <i class="fa fa-user"></i> <span>Profile</span>
+                    </a>
+                        <ul class="sub-menu">
+                             <li><a href="../profilePersonalInfo/fields.html">Profile
+                                    Info</a></li>
+                            <li><a href="../profilePreferences/fields.html">Preferences</a></li>
+                            <li><a href="../profileInterest/fields.html">Interest</a></li>
+                            <li><a href="../expectation/fields.html">Expectation</a></li>
+                            <li><a href="../profileAssessment/fields.html">Assessment</a></li>
+                            <li><a href="../confidential/fields.html">Confidential Questionary</a></li>
+                           <li><a href="../personalStory/fields.html">My Story</a></li>
+                           <li><a href="../otherPreference/fields.html">Other Services Interest</a></li>
+                        </ul></li>
+                    <li class="has-sub"><a href="javascript:;"> <b
+                            class="caret pull-right"></b> <i class="fa fa-graduation-cap"></i> <span>
+                               Coach</span>
+                    </a>
+                        <ul class="sub-menu">
+                            <li><a href="../coachreview/fields.html">CoachReview</a></li>
+                        </ul></li>
+                    <li class="has-sub"><a href="javascript:;"> <b
+                            class="caret pull-right"></b> <i class="fa fa-venus-mars"></i> <span>Matches</span>
+                    </a>
+                        <ul class="sub-menu">
+                            <li><a href="../matches/fields.html">match</a></li>
+                        </ul></li>
+                        <li class="has-sub"><a href="javascript:;"> <b
+                            class="caret pull-right"></b> <i class="fa fa-coffee"></i> <span>Dates</span>
+                    </a>
+                        <ul class="sub-menu">
+                            <li><a href="../dates/fields.html">date</a></li>
+                        </ul></li>
 
-					<!-- begin sidebar minify button -->
-					<li><a href="javascript:;" class="sidebar-minify-btn"
-						data-click="sidebar-minify"> <i
-							class="fa fa-angle-double-left"></i>
-					</a></li>
-					<!-- end sidebar minify button -->
-				</div>
-				<!--end sidebar nav-->
-			</div>
-			<!--# end sidebar scrolling-->
-		</div>
+                    <!-- begin sidebar minify button -->
+                    <li><a href="javascript:;" class="sidebar-minify-btn"
+                        data-click="sidebar-minify"> <i
+                            class="fa fa-angle-double-left"></i>
+                    </a></li>
+                    <!-- end sidebar minify button -->
+                </div>
+                <!--end sidebar nav-->
+            </div>
+            <!--# end sidebar scrolling-->
+        </div>
 		<!--# end sidebar -->
 		<div class="sidebar-bg"></div>
-
-
 		<!-- begin #content -->
 		<div id="content" class="content m-t-10">
 			<!--# begin row-->
@@ -407,7 +387,6 @@
 							</div>
 						</div>
 						<!--# end row for photo-->
-
 						<!--begin row for Story form-->
 						<div class="row">
 							<form class="form-horizontal parsley-validate" name="mainForm"
@@ -799,7 +778,6 @@
 																				value=""></textarea>
 																		</div>
 																	</div>
-
 																	<div class="form-group">
 																		<label for="username" class="col-md-6 control-label">
 																			Topics you like to talk about (this will be shared
@@ -905,8 +883,6 @@
 										<!-- # end accordian -->
 									</div>
 									<!-- # end of accordian tab	 -->
-										</div>
-										<!-- # end row story form -->
 								</fieldset>
 								<!-- # end fieldset -->
 								<!-- # begin fieldset -->
@@ -930,8 +906,7 @@
 				</div>
 				<!--# end panel-->
 			</div>
-
-
+			<!-- end row -->
 			<script type="text/javascript">
 				$(document)
 						.ready(
@@ -997,12 +972,9 @@
 									$('#profileEthnicity').editable();
 								});
 			</script>
-			<!--# end row-->
 		</div>
 		<!-- end #content -->
-
-
-
 	</div>
 	<!--# end page-container-->
 </body>
+</html>
