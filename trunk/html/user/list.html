@@ -14,17 +14,17 @@
         <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="pragma" content="no-cache" />
         <meta http-equiv="expires" content="0" />
-        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-        <meta name="robots" content="noindex,nofollow">
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta name="robots" content="noindex,nofollow" />
         
         <!-- icons -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link rel="shortcut icon" href="../resources/icons/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="../resources/icons/favicon.ico" />
         <!-- iOS icon -->
 
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" />
         <!-- ================== BEGIN PACE LOADER ================== -->    
         <script src="../resources/venders/pace/js/pace.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../resources/venders/pace/css/pace.minimal.css" />
@@ -66,7 +66,7 @@
             });
         </script>
     </head>
-    <body class="boxed-layout">
+    <body class="layout">
         <!-- begin #page-loader -->
         <div id="page-loader" class="fade in"><span class="spinner"></span></div>
         <!-- end #page-loader -->
@@ -205,6 +205,55 @@
             <div id="sidebar" class="sidebar">
                 <!-- begin sidebar scrollbar -->
                 <div data-scrollbar="true" data-height="100%">
+                    <!-- begin applied filter nav -->
+                    <ul class="nav filters-applied">
+                        <li class="nav-header">Now Filter by</li>
+                        <li><span class="filter-label"></span><span class="filter-value">Assigned to me</span><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                        <li><a href="#" class="clear-all">Clear All</a></li>
+                    </ul>
+                    <!-- end applied filter nav -->
+                    <!-- begin filter nav -->
+                    <ul class="nav filters">
+                        <li class="nav-header">Filters</li>
+                        <li class="has-sub">
+                            <a href="javascript:;">View</a>
+                            <ul class="sub-menu">
+                                <li><a href="?view=all">All</a></li>
+                                <li><a href="#">Assigned to me</a></li>
+                                <li>
+                                    <label class="control-label">Assigned to</label>
+                                    <select name="view" class="form-control selectpicker">
+                                        <option>John Doe</option>
+                                        <option>John Wilson</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;">Leads</a>
+                            <ul class="sub-menu">
+                                <li><a href="?view=all&lead=oraganic">Organic Leads</a></li>
+                                <li><a href="#">Paid Leads</a></li>
+                                <li><a href="#">LA Unsuitable</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a href="javascript:;">Date</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Today</a></li>
+                                <li><a href="#">This Month</a></li>
+                                <li>
+                                    <div class="input-group">
+                                        <input type="text" name="birthDate" class="form-control daterange"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- end filter nav -->
                 </div>
                 <!-- end sidebar scrollbar -->
             </div>
@@ -299,6 +348,34 @@
                     </div>
                 </div>
                 <!-- end row -->
+                <script src="../resources/venders/moment/moment-with-locales.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-daterangepicker/css/daterangepicker.css" />
+                <script src="../resources/venders/bootstrap-daterangepicker/js/daterangepicker.js"></script>
+                <script type="text/javascript">
+                    jQuery(document).ready(function($) {
+                        $(".daterange").daterangepicker({
+                            autoUpdateInput: false,
+                            opens: "right",
+                            format: "MM/DD/YYYY",
+                            separator: " to ",
+                            minDate: "01/01/2016",
+                            ranges: {
+                               'Today': [moment(), moment()],
+                               'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                               'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                               'This Month': [moment().startOf('month'), moment().endOf('month')],
+                               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                            }
+                        });
+                        $('.daterange').on('apply.daterangepicker', function(ev, picker) {
+                            $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+                        });
+                        $('.daterange').on('cancel.daterangepicker', function(ev, picker) {
+                            $(this).val('');
+                        });
+                    });
+                </script>
             </div>
             <!-- end #content -->
 

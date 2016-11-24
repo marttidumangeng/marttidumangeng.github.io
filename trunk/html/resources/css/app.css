@@ -110,3 +110,54 @@ label.css-label {
     -ms-user-select: none;
     user-select: none;
 }
+.sidebar .filters-applied {
+    background-color: #fff;
+}
+.sidebar .filters-applied > li {
+    padding: 8px 20px;
+    line-height: 20px;
+    color: #333;
+    position: relative;
+}
+.sidebar .filters-applied > li .filter-label {
+    font-weight: bold;
+}
+.sidebar .filters-applied > li > a {
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+    display: inline-block;
+    position: absolute;
+    right: -10px;
+}
+.sidebar .filters-applied > li > a.clear-all {
+    position: relative;
+    left: 0;
+}
+.sidebar .filters-applied > li > a:hover {
+    background-color: transparent;
+}
+.sidebar .nav > li.nav-header {
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #6d7983;
+    color: #fff;
+}
+.sidebar .filters .sub-menu {
+    padding: 10px 0 10px 10px;
+}
+.sidebar .filters .sub-menu::before, .sidebar .filters .sub-menu > li > a::before {
+    display: none;
+}
+.sidebar .filters .sub-menu > li {
+    padding: 5px 20px;
+    color: #889097;
+    font-weight: 300;
+}
+.sidebar .filters .sub-menu > li > a {
+    padding: 0;
+}
+.sidebar .filters .sub-menu > li  label {
+    color: #889097;
+    font-weight: 300;
+}
