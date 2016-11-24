@@ -56,6 +56,8 @@
 <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
 <link rel="stylesheet" type="text/css"
 	href="../resources/venders/switchery/switchery.min.css" />
+	<link rel="stylesheet" type="text/css"
+    href="../resources/venders/jquery-bar-rating-master/css/bars-reversed.css">
 <!-- ================== END BASE CSS STYLE ================== -->
 
 <!-- ================== BEGIN BASE JS ================== -->
@@ -79,6 +81,8 @@
 
 <script
 	src="../resources/venders/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+	<script
+    src="../resources/venders/jquery-bar-rating-master/js/jquery.barrating.min.js"></script>
 
 <!-- ================== END BASE JS ================== -->
 <!-- ================== BEGIN PAGE LEVEL JS ================== -->
@@ -825,36 +829,20 @@
 																		</select>
 																	</div>
 																</div>
-																<!-- <div class="form-group">
-																<label for="gender" class="col-md-4 control-label">Grading
-																	</label>
-																<div class="col-md-8">
-																	<input type="checkbox" data-render="switchery"
-																		data-theme="blue" checked />
-																</div>
-															</div> -->
 																<div class="form-group">
-																	<label class="col-md-4 control-label">Grading</label>
-																	<div>
-																		<label class="radio-inline"> <input
-																			type="radio" name="optionsRadios" value="option1"
-																			checked /> A
-																		</label> <label class="radio-inline"> <input
-																			type="radio" name="optionsRadios" value="option2" />
-																			B+
-																		</label> <label class="radio-inline"> <input
-																			type="radio" name="optionsRadios" value="option3" />
-																			B
-																		</label> <label class="radio-inline"> <input
-																			type="radio" name="optionsRadios" value="option4" />
-																			B-
-																		</label> <label class="radio-inline"> <input
-																			type="radio" name="optionsRadios" value="option5" />
-																			C
-																		</label>
-																	</div>
-																</div>
-
+                                                    				<label for="meetpeople" class="col-md-4 control-label">Grading ?</label>
+                                                					<div class="col-md-4">
+						                                                <select id="ratingmeetpeople" class="barrating"
+						                                                        name="meetPeople">
+						                                                        <option value=""></option>
+						                                                        <option value="1" data-rating-value="C">C</option>
+						                                                        <option value="2" data-rating-value="B-">B-</option>
+						                                                        <option value="3" data-rating-value="B">B</option>
+						                                                        <option value="4" data-rating-value="B+">B+</option>
+						                                                        <option value="5" data-rating-value="A">A</option>
+						                                                </select>
+                                                    				</div>
+                                            					</div>
 															</div>
 														</div>
 													</div>
@@ -950,6 +938,32 @@
 										calendarWeeks : true,
 										endDate : '-10y'
 									});
+
+
+									$('.barrating').barrating({
+                            //theme: 'fontawesome-stars',
+                            theme : 'bars-reversed',
+                            allowEmpty : true,
+                            showValues : false,
+                            showSelectedRating : true,
+                            reverse : false,
+                            onSelect : function(value, text, event) {
+                                if (typeof (event) !== 'undefined') {
+                                    // rating was selected by a user
+                                    console.log(event.target);
+                                    alert('Value: ' + value + 'Text: ' + text);
+                                    var item = {};
+                                    item["item"] = this.$elem[0].name;
+                                    item["value"] = value;
+                                    item["text"] = text;
+                                    arrRatings.push(item);
+
+                                } else {
+                                    // rating was selected programmatically
+                                    // by calling `set` method
+                                }
+                            }
+                        });
 
 									if ($('[data-render=switchery]').length !== 0) {
 										$('[data-render=switchery]')
