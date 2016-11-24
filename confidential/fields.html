@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<!--begin head-->
+<head>
+<meta charset="utf-8" />
+<title>Central - confidential</title>
+<meta
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+
+<!-- caching -->
+<meta http-equiv="cache-control"
+	content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta name="robots" content="noindex,nofollow">
+
+<!-- icons -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- <link rel="shortcut icon" href="../resources/icons/favicon.ico"
+    type="image/x-icon" /> -->
+<link rel="apple-touch-icon" href="../resources/icons/favicon.ico" />
+<!-- iOS icon -->
+
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+<!-- ================== BEGIN PACE LOADER ================== -->
+<script src="../resources/venders/pace/js/pace.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/pace/css/pace.minimal.css" />
+<!-- ================== BEGIN BASE CSS STYLE ================== -->
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/jquery-ui/themes/base/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/animate/animate.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/css/style.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap3-editable/css/bootstrap-editable.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/css/style-responsive.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/switchery/switchery.min.css" />
+<!-- ================== END BASE CSS STYLE ================== -->
+
+<!-- ================== BEGIN BASE JS ================== -->
+<script src="../resources/venders/jquery/jquery-1.9.1.min.js"></script>
+<script src="../resources/venders/jquery/jquery-migrate-1.1.0.min.js"></script>
+<script src="../resources/venders/jquery-ui/ui/jquery-ui.min.js"></script>
+<script src="../resources/venders/bootstrap/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+            <script src="../resources/venders/crossbrowserjs/html5shiv.js"></script>
+            <script src="../resources/venders/crossbrowserjs/respond.min.js"></script>
+            <script src="../resources/venders/crossbrowserjs/excanvas.min.js"></script>
+        <![endif]-->
+<script src="../resources/venders/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
+<script src="../resources/venders/parsley/parsley.min.js"></script>
+<script
+	src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script
+	src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="../resources/venders/switchery/switchery.min.js"></script>
+
+<script
+	src="../resources/venders/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+<!-- ================== END BASE JS ================== -->
+<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+<script src="../resources/scripts/app.min.js"></script>
+<!-- ================== END PAGE LEVEL JS ================== -->
+<script>
+	$(document).ready(function() {
+		App.init();
+	});
+</script>
+
+<style type="text/css">
+	.groupAddonBGC{
+		background-color: #3093E0
+	}
+
+</style>
+</head>
+<!--end head-->
+
+<body class="layout">
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in">
+		<span class="spinner"></span>
+	</div>
+	<!-- end #page-loader -->
+
+	<!-- #begin page-container-->
+	<div id="page-container"
+		class="page-container fade page-with-top-menu page-header-fixed">
+		<!--# begin header-->
+		<div id="header" class="header navbar navbar-default navbar-fixed-top">
+			<!--#begin container-fluid -->
+			<div class="container-fluid">
+				<!-- begin mobile sidebar expand / collapse button -->
+				<div class="navbar-header">
+					<a href="" class="navbar-brand"><i class="fa fa-heart-o"
+						aria-hidden="true"></i> Central</a>
+					<button type="button" class="navbar-toggle"
+						data-click="top-menu-toggled">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- end mobile sidebar expand / collapse button -->
+
+				<!-- begin header navigation right -->
+				<ul class="nav navbar-nav navbar-right ">
+					<li>
+						<form class="navbar-form full-width">
+							<div class="form-group">
+								<input type="text" class="form-control"
+									placeholder="Enter keyword" />
+								<button type="submit" class="btn btn-search">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</form>
+					</li>
+					<li class="dropdown"><a href="javascript:;"
+						data-toggle="dropdown" class="dropdown-toggle f-s-14"> <i
+							class="fa fa-bell-o"></i> <span class="label">5</span>
+					</a>
+						<ul
+							class="dropdown-menu media-list pull-right animated fadeInDown">
+							<li class="dropdown-header">Notifications (5)</li>
+							<li class="media"><a href="javascript:;">
+									<div class="media-left">
+										<i class="fa fa-bug media-object bg-red"></i>
+									</div>
+									<div class="media-body">
+										<h6 class="media-heading">Server Error Reports</h6>
+										<div class="text-muted f-s-11">3 minutes ago</div>
+									</div>
+							</a></li>
+							<li class="dropdown-footer text-center"><a
+								href="javascript:;">View more</a></li>
+						</ul></li>
+					<li class="dropdown navbar-user"><a href="javascript:;"
+						class="dropdown-toggle" data-toggle="dropdown"> <img
+							src="../resources/images/photo.jpg" alt="" /> <span
+							class="hidden-xs">John Doe</span> <b class="caret"></b>
+					</a>
+						<ul class="dropdown-menu animated fadeInLeft">
+							<li class="arrow"></li>
+							<li><a href="javascript:;">Edit Profile</a></li>
+							<li><a href="javascript:;"><span
+									class="badge badge-danger pull-right">2</span> Inbox</a></li>
+							<li><a href="javascript:;">Calendar</a></li>
+							<li><a href="javascript:;">Setting</a></li>
+							<li class="divider"></li>
+							<li><a href="login.html">Log Out</a></li>
+						</ul></li>
+				</ul>
+				<!-- end header navigation right -->
+			</div>
+			<!--# end container-fluid-->
+		</div>
+		<!--# end header-->
+		<!-- begin #top-menu -->
+		<div id="top-menu" class="top-menu ">
+			<!--# begin top-menu nav -->
+			<ul class="nav pull-right">
+				<li class="has-sub "><a href="javascript:;"> <b
+						class="caret pull-right"></b> <i class="fa fa-dot-circle-o"></i> <span>Leads</span>
+				</a>
+					<ul class="sub-menu">
+						<li><a href="#">Dashboard v1</a></li>
+						<li><a href="#">Dashboard v2</a></li>
+					</ul></li>
+				<li class="has-sub"><a href="javascript:;"> <b
+						class="caret pull-right"></b> <i class="fa fa-inbox"></i> <span>Email</span>
+				</a>
+					<ul class="sub-menu">
+						<li><a href="#">Inbox</a></li>
+						<li><a href="#">Compose</a></li>
+						<li><a href="#">Detail</a></li>
+					</ul></li>
+				<li><a href="javascript:;"> <i class="fa fa-tasks"></i> <span>Tasks</span>
+				</a></li>
+				<li><a href="javascript:;"> <i
+						class="fa fa-calendar-check-o"></i> <span>Appointments</span>
+				</a></li>
+				<li><a href="javascript:;"> <i class="fa fa-leanpub"></i> <span>Session</span>
+				</a></li>
+				<li><a href="javascript:;"> <i class="fa fa-comment"></i> <span>Feedback</span>
+				</a></li>
+				<li><a href="javascript:;"> <i class="fa fa-money"></i> <span>Payment</span>
+				</a></li>
+			</ul>
+			<!--# end top-menu nav-->
+		</div>
+		<!--# end top-menu-->
+		<!--begin sidebar-->
+		<div id="sidebar" class="sidebar">
+			<!--# begin sidebar scrolling-->
+			<div data-scrollbar="true" data-height="100%">
+				<!--begin sidebar nav-->
+				<div class="nav">
+					<li class="has-sub"><a href="javascript:;"> <b
+							class="caret pull-right"></b> <i class="fa fa-list-alt"></i> <span>Profile</span>
+					</a>
+						<ul class="sub-menu">
+							<li><a href="../profilePersonalInfo/fields.html">Profile
+									Info</a></li>
+							<li><a href="../profilePreferences/fields.html">Preferences</a></li>
+							<li><a href="../profileInterest/fields.html">Interest</a></li>
+							<li><a href="../expectation/fields.html">Expactation</a></li>
+							<li><a href="../profileAssessment/fields.html">Assessment</a></li>
+							<li><a href="../confidential/fields.html">confidential</a></li>
+							<li><a href="../personalStory/fields.html">Story</a></li>
+							<li><a href="javascript:;"></a></li>
+							<li><a href="javascript:;"></a></li>
+						</ul></li>
+					<li class="has-sub"><a href="javascript:;"> <b
+							class="caret pull-right"></b> <i class="fa fa-wpforms"></i> <span>Website
+								Content</span>
+					</a>
+						<ul class="sub-menu">
+							<li><a href="javascript:;">Banners</a></li>
+							<li><a href="javascript:;">Categories, Cities</a></li>
+							<li><a href="javascript:;">Pages</a></li>
+							<li><a href="javascript:;">Media Files</a></li>
+							<li><a href="javascript:;">Navigation Menu</a></li>
+							<li><a href="javascript:;">Special Events Page</a></li>
+						</ul></li>
+					<li class="has-sub"><a href="javascript:;"> <b
+							class="caret pull-right"></b> <i class="fa fa-users"></i> <span>Clients
+								Management</span>
+					</a>
+						<ul class="sub-menu">
+							<li><a href="javascript:;">Profile to Approve</a></li>
+							<li><a href="javascript:">Client Profile</a></li>
+							<li><a href="javascript:;">Events Package Users</a></li>
+							<li><a href="javascript:;">Add Client Profile</a></li>
+							<li><a href="javascript:;">Unsubscribe</a></li>
+							<li><a href="javascript:;">Database</a></li>
+						</ul></li>
+
+					<!-- begin sidebar minify button -->
+					<li><a href="javascript:;" class="sidebar-minify-btn"
+						data-click="sidebar-minify"> <i
+							class="fa fa-angle-double-left"></i>
+					</a></li>
+					<!-- end sidebar minify button -->
+				</div>
+				<!--end sidebar nav-->
+			</div>
+			<!--# end sidebar scrolling-->
+		</div>
+		<!--# end sidebar -->
+		<div class="sidebar-bg"></div>
+
+
+		<!-- begin #content -->
+		<div id="content" class="content m-t-10">
+			<!--# begin row-->
+			<div class="row">
+				<!--# begin panel-->
+				<div class="panel">
+					<!--# begin panel-body-->
+					<div class="panel-body">
+						<!--# begin row inside panel-body-->
+						<div class="row">
+							<div class="col-sm-12 m-b-20 m-t-m-30">
+								<div class="btn-group pull-right" role="group">
+									<a role="button" class="btn btn-white" href="#">Esynchrony</a>
+									<button type="button" class="btn btn-white active">Lunch
+										Actually</button>
+									<a role="button" class="btn btn-white" href="#">Lunch
+										Actually Academy </a>
+								</div>
+							</div>
+						</div>
+						<!--# end row inside panel-body-->
+						<!--# begin row for photo-->
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="form-group">
+									<select id="status" name="profile.laMembership.status"
+										data-parsley-required="true" class="form-control selectpicker">
+
+										<option path="model.profile.laMembership.status"
+											value="New Member">New Member</option>
+
+										<option path="model.profile.laMembership.status"
+											value="Pending Approval">Pending Approval</option>
+
+										<option path="model.profile.laMembership.status"
+											value="Active">Active</option>
+
+										<option path="model.profile.laMembership.status"
+											value="On Hold">On Hold</option>
+
+										<option path="model.profile.laMembership.status"
+											value="Refund">Refund</option>
+
+										<option path="model.profile.laMembership.status"
+											value="Expired">Expired</option>
+
+										<option path="model.profile.laMembership.status"
+											value="Terminated">Terminated</option>
+
+										<option path="model.profile.laMembership.status"
+											value="Renewal">Renewal</option>
+									</select>
+								</div>
+								<div class="profile-image">
+									<img src="../resources/images/photo.jpg"> <i
+										class="fa fa-user hide"></i> <input type="file"
+										name="userphoto" />
+								</div>
+								<div class="form-group">
+									<select id="mood" name="profile.laMembership.mood"
+										data-parsley-required="true" class="form-control selectpicker">
+										<option path="model.profile.laMembership.mood" value="Normal">Normal</option>
+										<option path="model.profile.laMembership.mood" value="Happy">Happy</option>
+										<option path="model.profile.laMembership.mood"
+											value="Complaint">Complaint</option>
+										<option path="model.profile.laMembership.mood" value="Refund">Refund</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<fieldset>
+									<legend>Profile</legend>
+									<table id="user" class="table  table">
+										<tbody>
+											<tr>
+												<td>Profile Name :</td>
+												<td><a href="#" id="profileName" data-type="text"
+													data-pk="1" data-title="Enter Username">Sohem </a></td>
+												<td>Smokes :</td>
+												<td><input type="checkbox" data-render="switchery"
+													data-theme="blue" checked /></td>
+											</tr>
+											<tr>
+												<td>Profile Phone :</td>
+												<td><a href="#" id="phoneNumber" data-type="text"
+													data-pk="1" data-title="Enter Username">12243 </a></td>
+												<td>Drinks :</td>
+												<td><input type="checkbox" data-render="switchery"
+													data-theme="blue" checked /></td>
+											<tr>
+												<td>Profile age :</td>
+												<td><a href="#" id="profileAge" data-type="text"
+													data-pk="1" data-title="Enter Username">23 </a></td>
+												<td>Profile history :</td>
+												<td><input type="checkbox" data-render="switchery"
+													data-theme="blue" checked /></td>
+											</tr>
+											<tr>
+												<td>Profile ethnicity :</td>
+												<td><a href="#" id="profileEthnicity" data-type="text"
+													data-pk="1" data-title="Enter Username">Indian </a></td>
+												<td>Dates Left :</td>
+												<td><a href="#" id="datesLeft" data-type="text"
+													data-pk="1" data-title="Enter Username">5 </a></td>
+											</tr>
+											<tr>
+												<td>Marital Status:</td>
+												<td><a href="#" id="maritalStatus" data-type="text"
+													data-pk="1" data-title="Enter Username">Unmarried </a></td>
+												<td>Free Dates :</td>
+												<td><a href="#" id="freeDates" data-type="text"
+													data-pk="1" data-title="Enter Username">3 </a></td>
+											</tr>
+											<tr>
+												<td>Profile Income:</td>
+												<td><a href="#" id="profileIncome" data-type="text"
+													data-pk="1" data-title="Enter Username">5 lakh </a></td>
+												<td>package Status :</td>
+												<td><a href="#" id="profileStatus" data-type="text"
+													data-pk="1" data-title="Enter Username">6 </a></td>
+											</tr>
+											<tr>
+												<td>Profile Education:</td>
+												<td><a href="#" id="profileEducation" data-type="text"
+													data-pk="1" data-title="Enter Username">PhD and above </a></td>
+												<td>Sign Up date :</td>
+												<td><a href="#" id="signUpDate" data-type="text"
+													data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</fieldset>
+							</div>
+						</div>
+						<!--# end row for photo-->
+
+						<!--begin row for Assessment form-->
+						<div class="row">
+							<form class="form-horizontal parsley-validate" name="mainForm"
+								method="post" role="form" enctype="multipart/form-data">
+								<!--# begin fieldset-->
+								<fieldset>
+									<legend>Confidential </legend>
+									<!--# begin row for accordian tab-->
+									<div class="row">
+										<!--# begin accordian-->
+										<div class="panel-group" id="accordion">
+											<div class="panel panel-inverse">
+												<div class="panel-heading">
+													<h3 class="panel-title">
+														<a class="accordion-toggle accordion-toggle-styled"
+															data-toggle="collapse" data-parent="#accordion"
+															href="#collapseOne"> <i
+															class="fa fa-plus-circle pull-right"></i>
+															Marriage Record
+														</a>
+													</h3>
+												</div>
+												<div class="row">
+													<div class="col-sm-10">
+														<div id="collapseOne" class="panel-collapse collapse in">
+															<div class="panel-body">
+																<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">Providing support to ex-spouse ?
+																		Difficult</label>
+																	<div class="col-md-6">
+																		<input type="checkbox" data-render="switchery"
+																			data-theme="blue" checked />
+																	</div>
+																</div>
+
+																	<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">Have any  child/children </label>
+																	<div class="col-md-6">
+																		<div class="input-group">
+																		<span class="input-group-addon groupAddonBGC"> <input
+																			type="checkbox" name="isMarriage" />
+																		</span> <input type="text" name="marriage1"
+																			class="form-control" placeholder="" />
+																	</div>
+																	</div>
+																</div>
+
+																	<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">shared Custody </label>
+																	<div class="col-md-6">
+																		<input type="checkbox" data-render="switchery"
+																			data-theme="blue" checked />
+																	</div>
+																</div>
+																
+																
+																
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="panel panel-inverse">
+												<div class="panel-heading">
+													<h3 class="panel-title">
+														<a class="accordion-toggle accordion-toggle-styled collapsed"
+															data-toggle="collapse" data-parent="#accordion"
+															href="#collapseTwo"> <i
+															class="fa fa-plus-circle pull-right"></i>
+															Health Record
+														</a>
+													</h3>
+												</div>
+												<div class="row">
+													<div class="col-sm-10">
+														<div id="collapseTwo" class="panel-collapse collapse">
+															<div class="panel-body">
+																<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">Any Serious Medical Condition</label>
+																	<div class="col-md-6">
+																		<div class="input-group">
+																			<span class="input-group-addon groupAddonBGC"> <input
+																				type="checkbox" name="ismedicalCondition" />
+																			</span> <input type="text" name="medicalCondition"
+																			class="form-control" placeholder="" />
+																		</div>
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">Physically or Mentally Disabled ?</label>
+																	<div class="col-md-6">
+																		<div class="input-group">
+																			<span class="input-group-addon groupAddonBGC"> <input
+																				type="checkbox" name="isdisabled" />
+																			</span> <input type="text" name="disabled"
+																			class="form-control" placeholder="" />
+																		</div>
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">Been a patient at mental health facility  ? </label>
+																	<div class="col-md-6">
+																		<div class="input-group">
+																			<span class="input-group-addon groupAddonBGC"> <input
+																				type="checkbox" name="ismentalhealth" />
+																			</span> <input type="text" name="mentalhealth"
+																			class="form-control" placeholder="" />
+																		</div>
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">Undergone any major operations</label>
+																	<div class="col-md-6">
+																		<div class="input-group">
+																			<span class="input-group-addon groupAddonBGC"> <input
+																				type="checkbox" name="isoperation" />
+																			</span> <input type="text" name="operations"
+																			class="form-control" placeholder="" />
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="panel panel-inverse">
+												<!--#begin panel-heading-->
+												<div class="panel-heading">
+													<h3 class="panel-title">
+														<a class="accordion-toggle accordion-toggle-styled collapsed"
+															data-toggle="collapse" data-parent="#accordion"
+															href="#collapseThree"> <i
+															class="fa fa-plus-circle pull-right"></i>
+															Criminal Record
+														</a>
+													</h3>
+												</div>
+												<div class="row">
+													<div class="col-sm-10">
+														<div id="collapseThree" class="panel-collapse collapse">
+															<div class="panel-body">
+																<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">Ever Been Arrested ? </label>
+																	<div class="col-md-6">
+																		<div class="input-group">
+																			<span class="input-group-addon groupAddonBGC"> <input
+																				type="checkbox" name="isarrested" />
+																			</span> <input type="text" name="arrested"
+																			class="form-control" placeholder="" />
+																		</div>
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">Been Convicted for Crime ? </label>
+																	<div class="col-md-6">
+																		<div class="input-group">
+																			<span class="input-group-addon groupAddonBGC"> <input
+																				type="checkbox" name="isdisabled" />
+																			</span> <input type="text" name="disabled"
+																			class="form-control" placeholder="" />
+																		</div>
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">Ever use or abuse alcohol,chemicals, controlled substance/medication ? </label>
+																	<div class="col-md-6">
+																		<div class="input-group">
+																			<span class="input-group-addon groupAddonBGC"> <input
+																				type="checkbox" name="ismentalhealth" />
+																			</span> <input type="text" name="mentalhealth"
+																			class="form-control" placeholder="" />
+																		</div>
+																	</div>
+																</div>
+																<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label">Ever involved in any business/career activity that is illegal in nature(eg. Drug trafficking,prostitution,money laundaring,illegal gambling)</label>
+																	<div class="col-md-6">
+																		<div class="input-group">
+																			<span class="input-group-addon groupAddonBGC"> <input
+																				type="checkbox" name="isoperation" />
+																			</span> <input type="text" name="operations"
+																			class="form-control" placeholder="" />
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										</div>
+								</fieldset>
+								<fieldset>
+								<div class="row">
+									<div class="col-sm-8">
+										<div class="form-group">
+											<div class="col-md-8 col-md-offset-4">
+												<a href="list.html" class="btn btn-primary btn-lg">Save</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+							</form>
+						</div>
+						<!--end row for Assessment form-->
+					</div>
+					<!--# end  panel-body-->
+				</div>
+				<!--# end panel-->
+			</div>
+
+
+			<script type="text/javascript">
+				$(document)
+						.ready(
+								function() {
+									$('#dob').datepicker({
+										format : 'yyyy-mm-dd',
+										todayHighlight : true,
+										calendarWeeks : true,
+										endDate : '-10y'
+									});
+
+									if ($('[data-render=switchery]').length !== 0) {
+										$('[data-render=switchery]')
+												.each(
+														function() {
+															var option = {};
+															option.color = '#348fe2';
+															option.secondaryColor = ($(this)
+																	.attr('data-secondary-color')) ? $(
+																	this)
+																	.attr(
+																			'data-secondary-color')
+																	: '#dfdfdf';
+															option.className = ($(this)
+																	.attr('data-classname')) ? $(
+																	this)
+																	.attr(
+																			'data-classname')
+																	: 'switchery';
+															option.disabled = ($(this)
+																	.attr('data-disabled')) ? true
+																	: false;
+															option.disabledOpacity = ($(this)
+																	.attr('data-disabled-opacity')) ? $(
+																	this)
+																	.attr(
+																			'data-disabled-opacity')
+																	: 0.5;
+															option.speed = ($(this)
+																	.attr('data-speed')) ? $(
+																	this)
+																	.attr(
+																			'data-speed')
+																	: '0.5s';
+															var switchery = new Switchery(
+																	this,
+																	option);
+														});
+									}
+									$('#profileName').editable();
+									$('#phoneNumber').editable();
+									$('#profileAge').editable();
+									$('#profileEthnicity').editable();
+									//$('#datesLeft').editable();
+									$('#maritalStatus').editable();
+									//$('#freeDates').editable();
+									$('#profileIncome').editable();
+									//$('#profileStatus').editable();
+									$('#profileEducation').editable();
+
+									$('#profileEthnicity').editable();
+								});
+			</script>
+			<!--# end row-->
+		</div>
+		<!-- end #content -->
+
+
+
+	</div>
+	<!--# end page-container-->
+</body>
