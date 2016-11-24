@@ -5,7 +5,7 @@
 <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
-        <title>Central - Login</title>
+        <title>Central - Interest</title>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -43,6 +43,8 @@
         <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
         <link rel="stylesheet" type="text/css"
      href="../resources/venders/switchery/switchery.min.css"/>
+     <link rel="stylesheet" type="text/css"
+    href="../resources/venders/jquery-tag-it/css/jquery.tagit.css" />
         <!-- ================== END BASE CSS STYLE ================== -->
         
         <!-- ================== BEGIN BASE JS ================== -->
@@ -62,6 +64,7 @@
         <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
         <script src="../resources/venders/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
         <script src="../resources/venders/switchery/switchery.min.js"></script>
+        <script src="../resources/venders/jquery-tag-it/js/tag-it.min.js"></script>
         <!-- ================== END BASE JS ================== -->
         <!-- ================== BEGIN PAGE LEVEL JS ================== -->
         <script src="../resources/scripts/app.min.js"></script>
@@ -158,10 +161,10 @@
                             <li><a href="../profilePersonalInfo/fields.html">Profile Info</a></li>
                             <li><a href="../profilePreferences/fields.html">Preferences</a></li>
                             <li><a href="../profileInterest/fields.html">Interest</a></li>
-                            <li><a href="javascript:;">Expactation</a></li>
-                            <li><a href="javascript:;">Assessment</a></li>
-                            <li><a href="javascript:;"></a></li>
-                            <li><a href="javascript:;"></a></li>
+                           <li><a href="../expectation/fields.html">Expactation</a></li>
+                            <li><a href="../profileAssessment/fields.html">Assessment</a></li>
+                            <li><a href="../confidential/fields.html">confidential</a></li>
+                            <li><a href="../personalStory/fields.html">Story</a></li>
                             <li><a href="javascript:;"></a></li>
                             <li><a href="javascript:;"></a></li>
                         </ul></li>
@@ -415,7 +418,20 @@
                                         <div class="col-sm-8 pull-left">
                                             <div class="form-group">
                                                 <label for="products" class="col-md-4 control-label">Favorite Food</label>
+
                                                 <div class="col-md-8">
+                                                    <ul name="foods"  type="text" id="jquery-tagIt-food" class="primary"
+                                                        value="Thai,Western"/>
+                                                        <li>Thai</li>
+                                                        <li>Western</li>
+                                                    </ul>
+                                                       <!--   -->
+                                                   
+                                                 <p>Try to enter "Chinese, Meat Lover, Pastry" </p>
+                                                </div>
+
+
+                                               <!--  <div class="col-md-8">
                                                     <select id="foods" multiple="true" name="foods" class="form-control selectpicker" data-parsley-required="true">
                                                         <option value="1" selected="selected">Western</option>
                                                         <option value="2" selected="selected">Chinese</option>
@@ -425,11 +441,18 @@
                                                         <option value="3" selected="selected">Pastry</option>
                                                         <option value="3" selected="selected">Spicy Cuisine</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="form-group">
                                                 <label for="hobbies" class="col-md-4 control-label">Hobbies</label>
                                                 <div class="col-md-8">
+                                                    <ul id="jquery-tagIt-hobbies" class="primary">
+                                                        <li>Spa</li>
+                                                        <li>Resting at Home</li>
+                                                    </ul>
+                                                 <p>Try to enter "Baking,Salsa,Resting at Home,Spa" </p>
+                                                </div>
+                                                <!-- <div class="col-md-8">
                                                     <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
                                                         <option value="1" selected="selected">Collecting Phonecards</option>
                                                         <option value="2">Snorkelling</option>
@@ -440,11 +463,18 @@
                                                         <option value="5">Costuming & Trooping</option>
                                                         <option value="5">Wall Climbing</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="form-group">
                                                 <label for="sports" class="col-md-4 control-label">Sports</label>
-                                                <div class="col-md-8">
+                                                 <div class="col-md-8">
+                                                    <ul id="jquery-tagIt-sport" class="primary">
+                                                        <li>Driving</li>
+                                                        <li>Hockey</li>
+                                                    </ul>
+                                                 <p>Try to enter "Ballet,Scuba,Ice Skating,Mountain Climbing" </p>
+                                                </div>
+                                                <!-- <div class="col-md-8">
                                                     <select id="hobbies" multiple="true" name="sports" class="form-control selectpicker" data-parsley-required="true">
                                                         <option value="1" selected="selected">Mountain Climbing</option>
                                                         <option value="2">Ice Skating</option>
@@ -455,11 +485,20 @@
                                                         <option value="5">Scuba</option>
                                                         <option value="5">Ballet</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="form-group">
                                                 <label for="hobbies" class="col-md-4 control-label">Places of Patronage</label>
-                                                <div class="col-md-8">
+
+                                                 <div class="col-md-8">
+                                                    <ul id="jquery-tagIt-patronage" class="primary">
+                                                        <li>Nature Areas</li>
+                                                        <li>karaoke</li>
+                                                    </ul>
+                                                 <p>Try to enter "Parks,Musical Library,Restaurnat,Trek" </p>
+                                                </div>
+                                                <!-- <div class="col-md-8">
+                                                
                                                     <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
                                                         <option value="1" selected="selected">Nature areas</option>
                                                         <option value="2">Karaoke Centre</option>
@@ -470,11 +509,20 @@
                                                         <option value="5">Trek (Mountain/ Hill)</option>
                                                         <option value="5">Musical Library</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="form-group">
                                                 <label for="hobbies" class="col-md-4 control-label">Type of Film</label>
+
                                                 <div class="col-md-8">
+                                                    <ul id="jquery-tagIt-film" class="primary">
+                                                        <li>Comdey</li>
+                                                        <li>Musical</li>
+                                                    </ul>
+                                                 <p>Try to enter "All kinds,Non fiction,Musical,Thriller" </p>
+                                                </div>
+
+                                                <!-- <div class="col-md-8">
                                                     <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
                                                         <option value="1" selected="selected">Comedy</option>
                                                         <option value="2">Musical</option>
@@ -485,11 +533,20 @@
                                                         <option value="5">Art</option>
                                                         <option value="5">Cartoon</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="form-group">
                                                 <label for="hobbies" class="col-md-4 control-label">Taste of Music</label>
+                                                music
+
                                                 <div class="col-md-8">
+                                                    <ul id="jquery-tagIt-music" class="primary">
+                                                        <li>Spiritual</li>
+                                                        <li>Country</li>
+                                                    </ul>
+                                                 <p>Try to enter "Lounge,Instrumental,Acoustic,SoundTracks" </p>
+                                                </div>
+                                               <!--  <div class="col-md-8">
                                                     <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
                                                         <option value="1" selected="selected">Spiritual</option>
                                                         <option value="2">Country</option>
@@ -500,11 +557,21 @@
                                                         <option value="5">Alternatives</option>
                                                         <option value="5">Mandarin Pop</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         	<div class="form-group">
                                                 <label for="hobbies" class="col-md-4 control-label">Holidays Destination </label>
-                                                <div class="col-md-8">
+
+                                                
+
+                                                 <div class="col-md-8">
+                                                    <ul id="jquery-tagIt-destination" class="primary">
+                                                        <li>Paris</li>
+                                                        <li>Rome</li>
+                                                    </ul>
+                                                 <p>Try to enter "Athens,Vienna,Forest,Budan" </p>
+                                                </div>
+                                                <!-- <div class="col-md-8">
                                                      <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
                                                         <option value="1" selected="selected">Paris</option>
                                                         <option value="2">Rome</option>
@@ -515,11 +582,21 @@
                                                         <option value="5">Athens</option>
                                                         <option value="5">Argentina</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="form-group">
                                                 <label for="hobbies" class="col-md-4 control-label">Holidays Activities </label>
+
                                                 <div class="col-md-8">
+                                                    <ul id="jquery-tagIt-activities" class="primary">
+                                                        <li>city Traveller</li>
+                                                        <li>Dining</li>
+                                                    </ul>
+                                                 <p>Try to enter "Free & Easy,Family trips,Eco-trips,Cultural Traveler" </p>
+                                                </div>
+
+                                                
+                                                <!-- <div class="col-md-8">
                                                      <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
                                                         <option value="1" selected="selected">City Traveler</option>
                                                         <option value="2">Dining</option>
@@ -530,11 +607,18 @@
                                                         <option value="5">Family trips</option>
                                                         <option value="5">All kinds of travel</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="form-group">
                                                 <label for="hobbies" class="col-md-4 control-label">Pets</label>
                                                 <div class="col-md-8">
+                                                    <ul id="jquery-tagIt-pets" class="primary">
+                                                        <li>Otters</li>
+                                                        <li>Horses</li>
+                                                    </ul>
+                                                 <p>Try to enter "Hedgehog,Mammals,Small & furry animals,Birds" </p>
+                                                </div>
+                                               <!--  <div class="col-md-8">
                                                      <select id="hobbies" multiple="true" name="hobbies" class="form-control selectpicker" data-parsley-required="true">
                                                         <option value="1" selected="selected">Otters</option>
                                                         <option value="2">Horses</option>
@@ -545,7 +629,7 @@
                                                         <option value="5">Cat & Fish</option>
                                                         <option value="5">Dogs & Horse</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="form-group">
                                                 <label for="gender" class="col-md-4 control-label">How Often do you exercise</label>
@@ -610,15 +694,59 @@
                                      $('#phoneNumber').editable();
                                      $('#profileAge').editable();
                                      $('#profileEthnicity').editable();
-                                     $('#datesLeft').editable();
+                                    // $('#datesLeft').editable();
                                      $('#maritalStatus').editable();
-                                     $('#freeDates').editable();
+                                     //$('#freeDates').editable();
                                      $('#profileIncome').editable();
-                                     $('#profileStatus').editable();
+                                     //$('#profileStatus').editable();
                                      $('#profileEducation').editable();
                                      $('#profileEthnicity').editable();
 
                                      /** Finish the edit function for  profile */
+                                        
+                                       // console.log(foodArray);
+ /*Autocomplete and multiple tag used*/
+                                    $('#jquery-tagIt-food').tagit({
+                                         availableTags: ["Chinese", "Meat", "Lover", "Pastry", "Spicy Cuisine"]
+                                         });
+                                    
+                                     $('#jquery-tagIt-hobbies').tagit({
+                                         availableTags: ["Baking", "Salsa", "Resting at Home", "Spa", "Wall Climbing"]
+                                         });
+                                      $('#jquery-tagIt-sport').tagit({
+                                         availableTags: ["Ballet", "Cricket", "Scuba", "Ice Skating", "Mountain Climbing"]
+                                         });
+                                      
+                                     $('#jquery-tagIt-patronage').tagit({
+                                     availableTags: ["Golf Courses", "Parks", "Musical Library", "Restaurnat", "Trek"]
+                                        });
+                                     
+                                      $('#jquery-tagIt-film').tagit({
+                                     availableTags: ["All kinds", "Non fiction", "Musical", "Thriller", "Cartoon"]
+                                        });
+
+                                      
+                                      $('#jquery-tagIt-music').tagit({
+                                     availableTags: ["Lounge", "Instrumental", "Acoustic", "SoundTracks", "Mandarin Pop"]
+                                        });
+                                      
+                                      $('#jquery-tagIt-destination').tagit({
+                                     availableTags: ["Athens", "Vienna", "Forest", "Budan","Argentina"]
+                                        });
+                                      
+                                      $('#jquery-tagIt-activities').tagit({
+                                     availableTags: ["Free & Easy", "Cruises", "family trips", "Eco-trips", "Cultural Traveler"]
+                                        });
+                                      
+                                       $('#jquery-tagIt-pets').tagit({
+                                     availableTags: ["Hedgehog", "Dogs", "Mammals", "Small & furry animals", "Birds"]
+                                        });
+                                       
+
+var x = document.getElementsByName("foods");
+
+                                    /*end Autocomplete and multiple tag*/
+
 
                           if ($('[data-render=switchery]').length !== 0) {
                                 $('[data-render=switchery]')
