@@ -207,40 +207,87 @@
             <!-- begin #content -->
             <div id="content" class="content">
                 <!-- begin row -->
-                <div class="row">
+                <div class="row m-t-25">
                     <div class="panel">
                         <div class="panel-body">
+                            <!-- Start Product Status buttons -->
                             <div class="row">
-                                <div class="col-sm-5">
-                                    <form class="form-horizontal" name="mainForm" method="post" role="form" data-parsley-validate="true">
+                                <div class="col-sm-12 m-b-20 m-t-m-30">
+                                    <div class="btn-group pull-right" role="group">
+                                        <button role="button" class="btn btn-white" data-toggle="tooltip" 
+                                        data-placement="left" title="Status: Sold" href="#">Esynchrony</button>
+                                        <button type="button" class="btn btn-white active" data-toggle="tooltip" 
+                                        data-placement="bottom" title="Status: Sold" >Lunch
+                                            Actually</button>
+                                        <button role="button" class="btn btn-white" href="#" data-toggle="tooltip" 
+                                        data-placement="bottom" title="Status: Sold">Lunch
+                                            Actually Academy</button>
+                                        <!-- Begin Cross-sale menu -->    
+                                        <div class="btn-group m-l-25 ">
+                                            <button type="button" class="btn btn-success btn">Cross-sale</button>
+                                            <button type="button" class="btn btn-success btn dropdown-toggle" data-toggle="dropdown">
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Esynchrony</a></li>
+                                                <li><a href="#">LA</a></li>
+                                                <li><a href="#">LAA</a></li>
+                                            </ul>
+                                        </div>
+                                        <!-- End   -->    
+                                    </div>
+                                </div>
+                            </div>
+                           <!-- End Product status buttons -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form class="form-horizontal parsley-validate" name="mainForm" method="post" role="form" data-parsley-validate="true">
                                         <fieldset>
                                             <legend>Profile Info</legend>
                                             <div class="form-group">
-                                                <label for="firstname" class="col-md-4 control-label">First Name</label>
+                                                <label for="firstname" class="col-md-4 control-label">First Name *:</label>
                                                 <div class="col-md-8">
                                                     <input type="text" id="firstname" name="firstname" class="form-control" data-parsley-required="true"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="lastname" class="col-md-4 control-label">Last Name</label>
+                                                <label for="lastname" class="col-md-4 control-label">Last Name *:</label>
                                                 <div class="col-md-8">
                                                     <input type="text" id="lastname" name="lastname" class="form-control" data-parsley-required="true"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="preferredName" class="col-md-4 control-label">Preferred Name</label>
+                                                <label for="preferredName" class="col-md-4 control-label">Preferred Name :</label>
                                                 <div class="col-md-8">
-                                                    <input type="text" id="preferredName" name="preferredName" class="form-control" data-parsley-required="true"/>
+                                                    <input type="text" id="preferredName" name="preferredName" class="form-control"/>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                     <div class="form-group">
+                                                        <label for="preferredName" class="col-md-4 control-label">Preferred Name :</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" id="preferredName" name="preferredName" class="form-control"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                     <div class="form-group">
+                                                        <label for="preferredName" class="col-md-4 control-label">Preferred Name :</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" id="preferredName" name="preferredName" class="form-control"/>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="nickName" class="col-md-4 control-label">Nick Name</label>
+                                                <label for="nickName" class="col-md-4 control-label">Nick Name :</label>
                                                 <div class="col-md-8">
-                                                    <input type="text" id="nickName" name="nickName" class="form-control" data-parsley-required="true"/>
+                                                    <input type="text" id="nickName" name="nickName" class="form-control"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="gender" class="col-md-4 control-label">Gender</label>
+                                                <label for="gender" class="col-md-4 control-label">Gender *:</label>
                                                 <div class="col-md-8">
                                                     <select id="gender" name="gender" class="form-control selectpicker" data-parsley-required="true">
                                                         <option>Male</option>
@@ -249,7 +296,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="email" class="col-md-4 control-label">Email</label>
+                                                <label for="email" class="col-md-4 control-label">Email *:</label>
                                                 <div class="col-md-8">
                                                     <div class="input-group">
                                                         <span class="input-group-addon">@</span>
@@ -258,44 +305,75 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="phone" class="col-md-4 control-label">Phone Number</label>
+                                                <label for="phone" class="col-md-4 control-label">Phone Number *:</label>
                                                 <div class="col-md-8">
                                                     <div class="input-group">   
                                                         <span class="input-group-addon">
                                                             <span class="glyphicon glyphicon-phone-alt"></span>
                                                         </span>
-                                                        <input type="text" id="phone" name="phone" class="form-control" data-parsley-required="true"/>
+                                                        <input type="text" id="phone" name="phone" class="form-control" data-parsley-required="true" data-parsley-type="number"/>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="nric" class="col-md-4 control-label">NRIC</label>
+                                                <label for="nric" class="col-md-4 control-label">NRIC *:</label>
                                                 <div class="col-md-8">
-                                                    <input type="text" id="nric" name="nric" class="form-control"/>
+                                                    <input type="text" id="nric" name="nric" class="form-control" data-parsley-required="true"/>
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label for="birthDate" class="col-md-4 control-label">DOB</label>
+                                                <label for="birthDate" class="col-md-4 control-label">DOB *:</label>
                                                 <div class="col-md-8">
                                                     <div class="input-group date">
-                                                        <input type="text" id="birthDate" name="birthDate" class="form-control" data-parsley-required="true"/>
+                                                        <input type="text" id="birthDate" name="birthDate" class="form-control birth-date-control" data-parsley-required="true"/>
                                                         <span class="input-group-addon">
                                                             <span class="glyphicon glyphicon-calendar"></span>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="form-group">
+                                                <label for="leadType" class="col-md-4 control-label">Lead Type *:</label>
+                                                <div class="col-md-8">
+                                                    <select id="hearUsFrom" name="hearUsFrom" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="-1">-Lead Type-</option>
+                                                        <option value="EDM">Organic</option>
+                                                        <option value="Google Ads">Cross Sale</option>                               
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="hearUsFrom" class="col-md-4 control-label">Hear Us From *:</label>
+                                                <div class="col-md-8">
+                                                    <select id="hearUsFrom" name="hearUsFrom" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="-1">-Hear Us From-</option>
+                                                        <option value="EDM">Google Ads</option>
+                                                        <option value="Google Ads">Google Ads</option>                               
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="leadType" class="col-md-4 control-label">Lead Status *:</label>
+                                                <div class="col-md-8">
+                                                    <select id="hearUsFrom" name="hearUsFrom" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="-1">-Lead Status-</option>
+                                                        <option value="New">New</option>
+                                                        <option value="Spam">Spam</option>                               
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </fieldset>
                                         <fieldset>
                                             <div class="form-group">
                                                 <div class="col-md-8 col-md-offset-4">
-                                                    <a href="list.html" class="btn btn-primary btn-lg">Save</a>
+                                                    <input type="submit" class="btn btn-primary" name="Save" value="Save"/>
+                                                    <input type="submit" class="btn btn-default" name="Cancel" value="Cancel"/>
                                                 </div>
                                             </div>
                                         </fieldset>
                                     </form>
                                 </div>
-                                <div class="col-sm-7">
+                                <div class="col-sm-6">
                                         <div id="profileWizard">
                                             <ul class="nav nav-tabs">
                                                 <li class="active"><a href="#tabLogActions" data-toggle="tab">Log Action</a></li>
@@ -518,13 +596,16 @@
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <div class="form-group">
-                                                                <div class="col-sm-12">
+                                                                <div class="col-sm-6">
                                                                     <select class="form-control selectpicker" id="reason" data-parsley-required="true">
                                                                         <option value="Room">-Room-</option>
                                                                         <option value="A">Room A</option>
                                                                         <option value="B">Room B</option>
                                                                         <option value="C">Room C</option>
                                                                     </select>
+                                                                </div>
+                                                                <div class="col-sm-6 m-t-5">
+                                                                    <a href="#" data-toggle="modal" data-target='#modalAction'>Room Availibity</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -682,148 +763,236 @@
                                             <!-- End Payment tab -->
                                         </div>
                                         <!-- End Tab Content -->
-                                        <!-- begin timeline -->
-                                        <ul class="timeline">
-                                            <li>
-                                                <!-- begin timeline-time -->
-                                                <div class="timeline-time">
-                                                    <span class="date">11/23/2016</span>
-                                                    <span class="time">04:20</span>
-                                                </div>
-                                                <!-- end timeline-time -->
-                                                <!-- begin timeline-icon -->
-                                                <div class="timeline-icon">
-                                                    <a href="javascript:;"><i class="fa fa-comment-o"></i></a>
-                                                </div>
-                                                <!-- end timeline-icon -->
-                                                <!-- begin timeline-body -->
-                                                <div class="timeline-body">
-                                                    <div class="timeline-header">
-                                                        <span>SMS</span>
+
+                                        <!--Start Collapsible accordian -->
+                                        <div class="panel-group col-sm-12" id="accordion">
+                                            <!-- Start Mark as important panel -->
+                                            <div class="mark-as-important ">
+                                                <div class="panel panel-inverse overflow-hidden">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">
+                                                            <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                                <i class="fa fa-plus-circle pull-right"></i> 
+                                                                Important Items
+                                                            </a>
+                                                        </h3>
                                                     </div>
-                                                    <div class="timeline-content">
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis tincidunt luctus.
-                                                            Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <!-- end timeline-body -->
-                                            </li>
-                                            <li>
-                                                <!-- begin timeline-time -->
-                                                <div class="timeline-time">
-                                                    <span class="date">22/11/2016</span>
-                                                    <span class="time">20:17</span>
-                                                </div>
-                                                <!-- end timeline-time -->
-                                                <!-- begin timeline-icon -->
-                                                <div class="timeline-icon">
-                                                    <a href="javascript:;"><i class="fa fa-map-marker"></i></a>
-                                                </div>
-                                                <!-- end timeline-icon -->
-                                                <!-- begin timeline-body -->
-                                                <div class="timeline-body">
-                                                    <div class="timeline-header">
-                                                        <span class="userimage"><img src="assets/img/user-2.jpg" alt="" /></span>
-                                                        <span class="username">Darren Parrase</span>
-                                                        <span class="pull-right text-muted">82 Views</span>
-                                                    </div>
-                                                    <div class="timeline-content">
-                                                        <p>Location: United Sate</p>
-                                                        <div id="google-map" class="height-sm m-b-10"></div>
-                                                    </div>
-                                                    <div class="timeline-footer">
-                                                        <a href="javascript:;" class="m-r-15"><i class="fa fa-thumbs-up fa-fw"></i> Like</a>
-                                                        <a href="javascript:;"><i class="fa fa-comments fa-fw"></i> Comment</a>
+                                                    <div id="collapseOne" class="panel-collapse">
+                                                        <div class="panel-body">
+                                                            <ul class="timeline">
+                                                                <li>
+                                                                    <!-- begin timeline-time -->
+                                                                    <div class="timeline-time">
+                                                                        <span class="date">11/23/2016</span>
+                                                                        <span class="time">04:20</span>
+                                                                    </div>
+                                                                    <!-- end timeline-time -->
+                                                                    <!-- begin timeline-icon -->
+                                                                    <div class="timeline-icon">
+                                                                        <a href="javascript:;"><i class="fa fa-comments"></i></a>
+                                                                    </div>
+                                                                    <!-- end timeline-icon -->
+                                                                    <!-- begin timeline-body -->
+                                                                    <div class="timeline-body">
+                                                                        <div class="timeline-header">
+                                                                            <h4 class="template-title">
+                                                                                SMS
+                                                                            </h4>
+                                                                        </div>
+                                                                        <div class="timeline-content">
+                                                                            <p>
+                                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis tincidunt luctus.
+                                                                                Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end timeline-body -->
+                                                                </li>
+                                                            </ul>                                                        
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <!-- end timeline-body -->
-                                            </li>
-                                            <li>
-                                                <!-- begin timeline-time -->
-                                                <div class="timeline-time">
-                                                    <span class="date">24 February 2014</span>
-                                                    <span class="time">08:17</span>
+                                            </div>
+                                            <!-- End of Mark as important panel -->
+                                            <!-- Start of Timeline panel -->
+                                            <div class="panel panel-inverse overflow-hidden">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">
+                                                        <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                                            <i class="fa fa-plus-circle pull-right"></i> 
+                                                            Time Line
+                                                        </a>
+                                                    </h3>
                                                 </div>
-                                                <!-- end timeline-time -->
-                                                <!-- begin timeline-icon -->
-                                                <div class="timeline-icon">
-                                                    <a href="javascript:;"><i class="fa fa-edit"></i></a>
-                                                </div>
-                                                <!-- end timeline-icon -->
-                                                <!-- begin timeline-body -->
-                                                <div class="timeline-body">
-                                                    <div class="timeline-header">
-                                                        <span class="userimage"><img src="assets/img/user-6.jpg" alt="" /></span>
-                                                        <span class="username">Richard Leong</span>
-                                                        <span class="pull-right text-muted">1,282 Views</span>
+                                                <div id="collapseTwo" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <!-- begin timeline -->
+                                                        <ul class="timeline">
+                                                            <li>
+                                                                <!-- begin timeline-time -->
+                                                                <div class="timeline-time">
+                                                                    <span class="date">11/23/2016</span>
+                                                                    <span class="time">04:20</span>
+                                                                </div>
+                                                                <!-- end timeline-time -->
+                                                                <!-- begin timeline-icon -->
+                                                                <div class="timeline-icon">
+                                                                    <a href="javascript:;"><i class="fa fa-comments"></i></a>
+                                                                </div>
+                                                                <!-- end timeline-icon -->
+                                                                <!-- begin timeline-body -->
+                                                                <div class="timeline-body">
+                                                                    <div class="timeline-header">
+                                                                        <h4 class="template-title">
+                                                                            SMS
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="timeline-content">
+                                                                        <p>
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus turpis quis tincidunt luctus.
+                                                                            Nam sagittis dui in nunc consequat, in imperdiet nunc sagittis.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end timeline-body -->
+                                                            </li>
+                                                            <li>
+                                                                <!-- begin timeline-time -->
+                                                                <div class="timeline-time">
+                                                                    <span class="date">22/11/2016</span>
+                                                                    <span class="time">20:17</span>
+                                                                </div>
+                                                                <!-- end timeline-time -->
+                                                                <!-- begin timeline-icon -->
+                                                                <div class="timeline-icon">
+                                                                    <a href="javascript:;"><i class="fa fa-calendar-check-o"></i></a>
+                                                                </div>
+                                                                <!-- end timeline-icon -->
+                                                                <!-- begin timeline-body -->
+                                                                <div class="timeline-body">
+                                                                    <div class="timeline-header">
+                                                                        <h4 class="template-title">
+                                                                            Appointment
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="timeline-content">
+                                                                       <div> <b> Appointment Date: </b> 22/11/2013 <b> Time: 04:00 PM </b> </div>
+                                                                       <div> <b> Consultant: </b> Consultant A <b> Room: </b> Cafe </div>
+                                                                       <p>
+                                                                           <b> Comment: </b>  Quisque sed varius nisl. Nulla facilisi. Phasellus consequat sapien sit amet nibh molestie placerat. Donec nulla quam, ullamcorper ut velit vitae, lobortis condimentum magna. Suspendisse mollis in sem vel mollis.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end timeline-body -->
+                                                            </li>
+                                                            <li>
+                                                                <!-- begin timeline-time -->
+                                                                <div class="timeline-time">
+                                                                    <span class="date">24 February 2014</span>
+                                                                    <span class="time">08:17</span>
+                                                                </div>
+                                                                <!-- end timeline-time -->
+                                                                <!-- begin timeline-icon -->
+                                                                <div class="timeline-icon">
+                                                                    <a href="javascript:;"><i class="fa fa-quote-left"></i></a>
+                                                                </div>
+                                                                <!-- end timeline-icon -->
+                                                                <!-- begin timeline-body -->
+                                                                <div class="timeline-body">
+                                                                    <div class="timeline-header">
+                                                                        <h4 class="template-title">
+                                                                            Log Actions
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="timeline-content">
+                                                                            Quisque sed varius nisl. Nulla facilisi. Phasellus consequat sapien sit amet nibh molestie placerat. Donec nulla quam, ullamcorper ut velit vitae, lobortis condimentum magna. Suspendisse mollis in sem vel mollis.
+                                                                    </div>
+                                                               </div>
+                                                                <!-- end timeline-body -->
+                                                            </li>
+                                                            <li>
+                                                                <!-- begin timeline-time -->
+                                                                <div class="timeline-time">
+                                                                    <span class="date">10 January 2014</span>
+                                                                    <span class="time">20:43</span>
+                                                                </div>
+                                                                <!-- end timeline-time -->
+                                                                <!-- begin timeline-icon -->
+                                                                <div class="timeline-icon">
+                                                                    <a href="javascript:;"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
+                                                                </div>
+                                                                <!-- end timeline-icon -->
+                                                                <!-- begin timeline-body -->
+                                                                <div class="timeline-body">
+                                                                    <div class="timeline-header">
+                                                                        <h4 class="template-title">
+                                                                            Task
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="timeline-content">
+                                                                        <div> <b> Task Type: </b> Call </div>
+                                                                        <div>
+                                                                            <b>Date:</b><span class="date">22/11/2016</span>
+                                                                            <b>Time:</b><span class="time">20:17</span>
+                                                                            <b> Description: </b> <p> Follow-up on what is the status of his interest to by LAA for
+                                                                            the coaching of the session </p>
+                                                                        </div>                                                        
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end timeline-body -->
+                                                            </li>
+                                                            <li>
+                                                                <!-- begin timeline-icon -->
+                                                                <div class="timeline-icon">
+                                                                    <a href="javascript:;"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                                                                </div>
+                                                                <!-- end timeline-icon -->
+                                                                <!-- begin timeline-body -->
+                                                                <div class="timeline-body">
+                                                                     <div class="timeline-header">
+                                                                        <h4 class="template-title">
+                                                                            Email
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="timeline-content">
+                                                                        <div> <b> Subject: </b> Date fixed tomorrow </div>
+                                                                        <div>
+                                                                            <b> Content: </b> <p> Follow-up on what is the status of his interest to by LAA for
+                                                                            the coaching of the session </p>
+                                                                        </div>                                                        
+                                                                    </div>
+                                                                </div>
+                                                                <!-- begin timeline-body -->
+                                                            </li>
+                                                            <li>
+                                                                <!-- begin timeline-icon -->
+                                                                <div class="timeline-icon">
+                                                                    <a href="javascript:;"><i class="fa fa-spinner"></i></a>
+                                                                </div>
+                                                                <!-- end timeline-icon -->
+                                                                <!-- begin timeline-body -->
+                                                                <div class="timeline-body" style="background: ">
+                                                                    <div class="timeline-content">
+                                                                         <div class="row">
+                                                                            <div class="col-sm-12">
+                                                                                <div class="form-group">
+                                                                                    <div class="col-sm-12">
+                                                                                        <input type="button" class="btn btn-primary" name="" value="Load More">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>                                                      
+                                                                    </div>
+                                                                </div>
+                                                                <!-- begin timeline-body -->
+                                                            </li>
+                                                        </ul>                                                  
                                                     </div>
-                                                    <div class="timeline-content">
-                                                        <p class="lead">
-                                                            <i class="fa fa-quote-left fa-fw pull-left"></i>
-                                                            Quisque sed varius nisl. Nulla facilisi. Phasellus consequat sapien sit amet nibh molestie placerat. Donec nulla quam, ullamcorper ut velit vitae, lobortis condimentum magna. Suspendisse mollis in sem vel mollis.
-                                                            <i class="fa fa-quote-right fa-fw pull-right"></i>
-                                                        </p>
-                                                    </div>
-                                                    <div class="timeline-footer">
-                                                        <a href="javascript:;" class="m-r-15"><i class="fa fa-thumbs-up fa-fw"></i> Like</a>
-                                                        <a href="javascript:;"><i class="fa fa-comments fa-fw"></i> Comment</a>
-                                                    </div>
                                                 </div>
-                                                <!-- end timeline-body -->
-                                            </li>
-                                            <li>
-                                                <!-- begin timeline-time -->
-                                                <div class="timeline-time">
-                                                    <span class="date">10 January 2014</span>
-                                                    <span class="time">20:43</span>
-                                                </div>
-                                                <!-- end timeline-time -->
-                                                <!-- begin timeline-icon -->
-                                                <div class="timeline-icon">
-                                                    <a href="javascript:;"><i class="fa fa-camera"></i></a>
-                                                </div>
-                                                <!-- end timeline-icon -->
-                                                <!-- begin timeline-body -->
-                                                <div class="timeline-body">
-                                                    <div class="timeline-header">
-                                                        <span class="userimage"><img src="assets/img/user-7.jpg" alt="" /></span>
-                                                        <span class="username">Lelouch Wong</span>
-                                                        <span class="pull-right text-muted">1,021,282 Views</span>
-                                                    </div>
-                                                    <div class="timeline-content">
-                                                        <h4 class="template-title">
-                                                            <i class="fa fa-map-marker text-danger fa-fw"></i>
-                                                            795 Folsom Ave, Suite 600 San Francisco, CA 94107
-                                                        </h4>
-                                                        <p>In hac habitasse platea dictumst. Pellentesque bibendum id sem nec faucibus. Maecenas molestie, augue vel accumsan rutrum, massa mi rutrum odio, id luctus mauris nibh ut leo.</p>
-                                                        <p class="m-t-20">
-                                                            <img src="assets/img/gallery/gallery-4.jpg" alt="" />
-                                                        </p>
-                                                    </div>
-                                                    <div class="timeline-footer">
-                                                        <a href="javascript:;" class="m-r-15"><i class="fa fa-thumbs-up fa-fw"></i> Like</a>
-                                                        <a href="javascript:;"><i class="fa fa-comments fa-fw"></i> Comment</a>
-                                                    </div>
-                                                </div>
-                                                <!-- end timeline-body -->
-                                            </li>
-                                            <li>
-                                                <!-- begin timeline-icon -->
-                                                <div class="timeline-icon">
-                                                    <a href="javascript:;"><i class="fa fa-spinner"></i></a>
-                                                </div>
-                                                <!-- end timeline-icon -->
-                                                <!-- begin timeline-body -->
-                                                <div class="timeline-body">
-                                                    Loading...
-                                                </div>
-                                                <!-- begin timeline-body -->
-                                            </li>
-                                        </ul>
-                                        <!-- end timeline -->
-                                    </div>
+                                            </div>
+                                            <!-- End of Timeline panel -->
+                                        </div>
+                                        <!-- End of Collapsible accordian -->
                                 </div>                
                             </div>
                         </div>
@@ -862,13 +1031,20 @@
                         if ($('[data-render=In-out-switch]').length !== 0) {
                             $('[data-render=In-out-switch]').each(function() {
                                 var option = {};
-                                option.secondaryColor = '#00acac';
-                                option.color = '#348fe2';
+                                option.secondaryColor = '#7F38EC';
+                                option.color = '#A5ED39';
                                 option.size = 'small';
                                 var switchery = new Switchery(this, option);
                             });
                         }
                         // Switcher code end
+                        // Begin Data-of-Birth Calendar
+                        $('.birth-date-control').datepicker({
+                            format: 'yyyy-mm-dd',
+                            todayHighlight: true,
+                            calendarWeeks: true
+                        });
+                        // End Date-of-Birth Calendar
                         // SMS characters remaining code start
                         $('.sms-textarea').keyup(function() {
                           var maxLength = 160;
@@ -885,6 +1061,95 @@
             <!-- begin scroll to top btn -->
             <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
             <!-- end scroll to top btn -->
+
+            <!-- Begin Room Modal Dialog -->
+            <div class="modal fade" id="modalAction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <label for="confirmaction"  class="confirmaction">
+                                Rooms availibilty                                
+                            </label>
+                        </h4>
+                      </div>
+                      <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <div class="col-sm-2">
+                                            <label for="room-search"> Booked On :</label>
+                                        </div>    
+                                        <div class="col-sm-4">
+                                            <select class="form-control selectpicker" id="reason">
+                                                <option value="Today">Today</option>
+                                                <option value="Week">This Week</option>
+                                                <option value="Next Week">Next Week</option>
+                                                <option value="Month">Month</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <table id="data-table" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Time</th>
+                                                <th>Consultant</th>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="odd gradeX">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 4.0</td>
+                                                <td>Win 95+</td>
+                                            </tr>
+                                            <tr class="even gradeC">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 5.0</td>
+                                                <td>Win 95+</td>
+                                            </tr>
+                                            <tr class="odd gradeA">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 5.5</td>
+                                                <td>Win 95+</td>
+                                            </tr>
+                                            <tr class="even gradeA">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 6</td>
+                                                <td>Win 98+</td>
+                                            </tr>
+                                            <tr class="odd gradeA">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 7</td>
+                                                <td>Win XP SP2+</td>
+                                            </tr>
+                                            <tr class="even gradeA">
+                                                <td>Trident</td>
+                                                <td>AOL browser (AOL desktop)</td>
+                                                <td>Win XP</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                          </form>
+                      </div>
+                      <div class="modal-footer">
+                            <div class="pull-right">
+                                     <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                                     <a href="#" class="btn btn-primary" id='btnSaveAction'>Select</a>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Room Modal Dialog -->
         </div>
         <!-- end page container -->
     </body>
