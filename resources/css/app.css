@@ -161,3 +161,10 @@ label.css-label {
     color: #889097;
     font-weight: 300;
 }
+.table-plain th, .table-plain td {
+    border: 0px none !important;
+    padding: 3px 5px !important;
+}
+.form-inline .bootstrap-select.form-control:not([class*=col-]) {
+    width: auto;
+}
