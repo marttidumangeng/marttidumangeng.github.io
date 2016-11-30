@@ -228,10 +228,9 @@
                                                 <label for="operatingHours" class="col-md-4 control-label">Operation Hours</label>
                                                 <div class="col-md-8">
                                                     <div class="input-group">
-                                                        <input type="text" id="operatingHours" name="operatingHours" class="form-control" data-parsley-required="true"/>
-                                                        <span class="input-group-addon">
-                                                            <span class="glyphicon glyphicon-time"></span>
-                                                        </span>
+                                                        <input type="text" id="startTime" class="form-control" name="start" placeholder="Start Time" />
+                                                        <span class="input-group-addon">to</span>
+                                                        <input type="text" id="endTime" class="form-control" name="end" placeholder="End Time" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -242,9 +241,27 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
+                                                <label for="specialityDishes" class="col-md-4 control-label">Speciality Dishes</label>
+                                                <div class="col-sm-8">
+                                                        <input type="text" id="specialityDishes" name="specialityDishes" class="form-control" data-parsley-required="true" value="Speciality Dishes" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
                                                 <label for="address" class="col-md-4 control-label">Address</label>
                                                 <div class="col-sm-8">
                                                         <textarea class="form-control" rows="3" cols="20"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="zone" class="col-md-4 control-label">Zone</label>
+                                                <div class="col-md-8">
+                                                    <select id="zone" name="zone" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="0" selected="selected">North</option>
+                                                        <option value="1">South</option>
+                                                        <option value="2">East</option>
+                                                        <option value="3">West</option>
+                                                        <option value="4">Central</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -283,10 +300,10 @@
                                                 <label for="status" class="col-md-4 control-label">Status</label>
                                                 <div class="col-md-8">
                                                     <select id="status" name="status" class="form-control selectpicker" data-parsley-required="true">
-                                                        <option selected="selected">Affiliated</option>
-                                                        <option>Not Affiliated</option>
-                                                        <option>Closed</option>
-                                                        <option>Do Not Send</option>
+                                                        <option value="0" selected="selected">Affiliated</option>
+                                                        <option value="1">Not Affiliated</option>
+                                                        <option value="2">Closed</option>
+                                                        <option value="3">Do Not Send</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -307,44 +324,80 @@
                                                 </div>
                                             </div> 
                                             <div class="form-group">
+                                                <label for="suitableFor" class="col-md-4 control-label">Suitable For</label>
+                                                <div class="col-md-8">
+                                                    <select id="suitableFor" multiple="multiple" name="suitableFor" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="0" selected="selected">Vegetarian</option>
+                                                        <option value="1">Vegan</option>
+                                                        <option value="2">Halal</option>
+                                                        <option value="3">No Beef</option>
+                                                        <option value="4">Seafood Allergy</option>
+                                                        <option value="5">Diabetic</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
                                                 <label for="cuisineType" class="col-md-4 control-label">Cuisine Type</label>
                                                 <div class="col-md-8">
-                                                    <select id="cuisineType" name="cuisineType" class="form-control selectpicker" data-parsley-required="true">
-                                                        <option value="1" selected="selected">Maxican</option>
-                                                        <option value="2">Chinese</option>
-                                                        <option value="3">Italian</option>
-                                                        <option value="4">Thai</option>
-                                                        <option value="5">Japanese</option>
-                                                        <option value="6">Western</option>
-                                                        <option value="7">Sushi</option>
-                                                        <option value="8">Fusion</option>
+                                                    <select id="cuisineType" multiple="multiple" name="cuisineType" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="0" selected="selected">Western</option>
+                                                        <option value="1">Chinese</option>
+                                                        <option value="2">Local Cuisines</option>
+                                                        <option value="3">Asian</option>
+                                                        <option value="4">Desserts</option>
+                                                        <option value="5">Fast Food</option>
+                                                        <option value="6">Gourmet Food</option>
+                                                        <option value="7">Healthy Eating</option>
+                                                        <option value="8">Home Cooked Food</option>
+                                                        <option value="9">Indonesian</option>
+                                                        <option value="10">Korean</option>
+                                                        <option value="11">Meat Lover</option>
+                                                        <option value="12">French</option>
+                                                        <option value="13">Mexican Food</option>
+                                                        <option value="14">Muslim Cusine</option>
+                                                        <option value="15">Non Spicy Food</option>
+                                                        <option value="16">Others</option>
+                                                        <option value="17">Peranankan</option>
+                                                        <option value="18">Seafood</option>
+                                                        <option value="19">Spanish</option>
+                                                        <option value="20">Spicy Cuisines</option>
+                                                        <option value="21">Thai</option>
+                                                        <option value="22">Vietnamese</option>
+                                                        <option value="23">Japanese</option>
+                                                        <option value="24">Turkish</option>
+                                                        <option value="25">South American</option>
+                                                        <option value="26">Malay</option>
+                                                        <option value="27">Pastry</option>
+                                                        <option value="28">European</option>
+                                                        <option value="29">Buffet</option>
+                                                        <option value="30">Dim Sum</option>
+                                                        <option value="31">Steaks</option>
+                                                        <option value="32">Barbeque</option>
+                                                        <option value="33">Indian</option>
+                                                        <option value="34">Street Food</option>
+                                                        <option value="35">Chinese Seafood</option>
+                                                        <option value="36">Cajun</option>
+                                                        <option value="37">British Chippie</option>
+                                                        <option value="38">International</option>
+                                                        <option value="39">Organic Health</option>
+                                                        <option value="40">Italian</option>
+                                                        <option value="41">Vegetarian</option>
+                                                        <option value="42">All Kinds</option>
+                                                        <option value="43">Fusion</option>
+                                                        <option value="44">Mediterranean</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="restaurantType" class="col-md-4 control-label">Restaurant Type</label>
                                                 <div class="col-md-8">
-                                                    <select id="restaurantType" name="restaurantType" class="form-control selectpicker" data-parsley-required="true">
-                                                        <option value="1" selected="selected">Breakfast</option>
-                                                        <option value="2">Cofe</option>
-                                                        <option value="3">Lunch</option>
-                                                        <option value="4">Brunch</option>
-                                                        <option value="5">Desserts</option>
-                                                        <option value="6">Bar</option>
-                                                        <option value="7">Disco</option>
-                                                        <option value="8">Dinner</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="zone" class="col-md-4 control-label">Location</label>
-                                                <div class="col-md-8">
-                                                    <select id="zone" name="zone" class="form-control selectpicker" data-parsley-required="true">
-                                                        <option value="1" selected="selected">North</option>
-                                                        <option value="2">South</option>
-                                                        <option value="3">East</option>
-                                                        <option value="4">West</option>
-                                                        <option value="5">Central</option>
+                                                    <select id="restaurantType" multiple="multiple" name="restaurantType" class="form-control selectpicker" data-parsley-required="true">
+                                                        <option value="0" selected="selected">Brunch</option>
+                                                        <option value="1">Coffee</option>
+                                                        <option value="2">Tea</option>
+                                                        <option value="3">Restaurant</option>
+                                                        <option value="4">Bar</option>
+                                                        <option value="5">Breakfast</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -378,7 +431,8 @@
                             calendarWeeks: true,
                             endDate: '-10y'
                         });
-                        $('#operatingHours').datetimepicker({format:"LT"});
+                        $('#startTime').datetimepicker({format:"LT"});
+                        $('#endTime').datetimepicker({format:"LT"});
                     });
                 </script>
             </div>
