@@ -5,7 +5,7 @@
 <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
-        <title>Central - LAA member</title>
+        <title>Central -coaching session</title>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -36,14 +36,9 @@
         <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
-
-        <link rel="stylesheet" type="text/css" href="../resources/venders/table-sorter\css\themes\blue\style.css" />
-        
         <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
-
-
         <!-- ================== END BASE CSS STYLE ================== -->
         
         <!-- ================== BEGIN BASE JS ================== -->
@@ -61,7 +56,6 @@
         <script src="../resources/venders/parsley/parsley.min.js"></script>
         <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
-        <script src="../resources/venders/table-sorter/js/jquery.tablesorter.min.js"></script>
         <!-- ================== END BASE JS ================== -->
         <!-- ================== BEGIN PAGE LEVEL JS ================== -->
         <script src="../resources/scripts/app.min.js"></script>
@@ -234,7 +228,7 @@
                                     </select>
                                 </li>
                                 <li>
-                                    <label class="control-label">Mood</label>
+                                    <label class="control-label">Status</label>
                                     <select name="view" class="form-control selectpicker">
                                         <option>Normal</option>
                                         <option>Happy</option>
@@ -243,7 +237,7 @@
                                     </select>
                                 </li>
                                 <li>
-                                    <label class="control-label">Status</label>
+                                    <label class="control-label">First Name</label>
                                     <select name="view" class="form-control selectpicker">
                                         <option>New Member</option>
                                         <option>Pending Approval</option>
@@ -262,22 +256,8 @@
                             </ul>
                         </li>
                     
-                        <li class="has-sub">
-                            <a href="javascript:;">Active Date</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Today</a></li>
-                                <li><a href="#">This Month</a></li>
-                                <li>
-                                    <div class="input-group">
-                                        <input type="text" name="birthDate" class="form-control daterange"/>
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
+                        
+                        <!-- <li class="has-sub">
                             <a href="javascript:;">Expiry Date</a>
                             <ul class="sub-menu">
                                 <li><a href="#">Today</a></li>
@@ -291,7 +271,7 @@
                                     </div>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- end filter nav -->
                 </div>
@@ -303,7 +283,7 @@
             <!-- begin #content -->
             <div id="content" class="content">
                 <!-- begin page-header -->
-                <h1 class="page-header">LAA Member</h1>
+                <h1 class="page-header">Coaching Session</h1>
                 <!-- end page-header -->
                 
                 <!-- begin row -->
@@ -312,59 +292,48 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <table id="sortTable" class="table table-hover table-bordered tablesorter">
+                                    <table class="table table-hover table-bordered">
                                         <thead>
                                             <tr>
-                                                <th >Sales Associate</th>
-                                                <th >Name</th>
-                                                <th >Mood</th>
-                                              
-                                                <th >Status</th>
-                                                <th >Active Date</th>
-                                                <th >Expiry Date</th>
-                                                <th >Renewal</th>
+                                                <th>Name</th>
+                                                <th>Session Date</th>
+                                                <th>Session Status</th>
+                                                <th>Phone</th>
+                                                <th>Last Session</th>
+                                                <th>Days Waiting</th>
+                                                <th>Coach</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>USER</td>
-                                                <td>Rahul Soni</td>
-                                                <td>Normal</td>
-                                                
-                                                <td>New Member</td>
-                                                <td>11-01-2016</td>
-                                                <td>11-02-2016</td>
-                                                <td>true</td>
-                                            </tr>
-                                            <tr>
-                                                <td>USER</td>
                                                 <td>John Doe</td>
-                                                <td>Happy</td>
-                                               
-                                                <td>Pending Approval</td>
-                                                <td>19-03-2016</td>
-                                                <td>21-12-2016</td>
-                                                <td>false</td>
+                                                <td>12-09-2012</td>
+                                                <td>session status 1</td>
+                                                <td>1243123123</td>
+                                                <td>last session 1</td>
+                                                <td>1</td>
+                                                <td>coach 1</td>
                                             </tr>
                                             <tr>
-                                                <td>USER</td>
-                                                <td>John Wilson</td>
-                                                <td>Complaint</td>
-                                              
-                                                <td>On Hold</td>
-                                                <td>12-04-2016</td>
-                                                <td>11-06-2016</td>
-                                                <td>true</td>
+                                                <td>Manoj prajapati</td>
+                                                <td>12-09-2013</td>
+                                                <td>session status 1</td>
+                                                <td>123423423</td>
+                                                <td>last session 2</td>
+                                                <td>2</td>
+                                                <td>coach 2</td>
                                             </tr>
                                             <tr>
-                                                <td>USER</td>
-                                                <td>Anuj Patel</td>
-                                                <td>Refund</td>
-                                               
-                                                <td>Marriage</td>
-                                                <td>30-07-2016</td>
-                                                <td>07-12-2016</td>
-                                                <td>false</td>
+                                                <td>rahul soni</td>
+                                                <td>12-09-2014</td>
+                                                <td>session status 1</td>
+                                                <td>12433333123</td>
+                                                <td>last session 3</td>
+                                                <td>3</td>
+                                                <td>coach 3</td>
+                                            </tr>
+                                            <tr>
+                                            
                                             </tr>
                                         </tbody>
                                     </table>
@@ -391,25 +360,6 @@
                 <script src="../resources/venders/bootstrap-daterangepicker/js/daterangepicker.js"></script>
                 <script type="text/javascript">
                     jQuery(document).ready(function($) {
-
-                        console.log("sorting the table : "+$('#sortTable').tablesorter());
-
-                            // For getting the header name 
-                        $('#sortTable').tablesorter({
-                        // sort on the last column, order asc 
-                        sortList: [[6, 0]]
-                    }).bind("sortEnd", function(event) {
-                      var table = event.target,
-                     currentSort = table.config.sortList,
-                         // target the first sorted column
-                     columnNum = currentSort[0][0],
-                     columnName = $(table.config.headerList[columnNum]).text();
-
-                        console.log(columnName);
-
-                        });
-
-
                         $(".daterange").daterangepicker({
                             autoUpdateInput: false,
                             opens: "right",
