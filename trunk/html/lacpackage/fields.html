@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>LA - Package </title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        
+        <!-- caching -->
+        <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+        <meta name="robots" content="noindex,nofollow">
+        
+        <!-- icons -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="../resources/icons/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="../resources/icons/favicon.ico" />
+        <!-- iOS icon -->
+
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+        <!-- ================== BEGIN PACE LOADER ================== -->    
+        <script src="../resources/venders/pace/js/pace.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../resources/venders/pace/css/pace.minimal.css" />
+        <!-- ================== BEGIN BASE CSS STYLE ================== -->
+        <link rel="stylesheet" type="text/css" href="../resources/venders/jquery-ui/themes/base/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/animate/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
+        <!-- ================== END BASE CSS STYLE ================== -->
+        
+        <!-- ================== BEGIN BASE JS ================== -->
+        <script src="../resources/venders/jquery/jquery-1.9.1.min.js"></script>
+        <script src="../resources/venders/jquery/jquery-migrate-1.1.0.min.js"></script>
+        <script src="../resources/venders/jquery-ui/ui/jquery-ui.min.js"></script>
+        <script src="../resources/venders/bootstrap/js/bootstrap.min.js"></script>
+        <!--[if lt IE 9]>
+            <script src="../resources/venders/crossbrowserjs/html5shiv.js"></script>
+            <script src="../resources/venders/crossbrowserjs/respond.min.js"></script>
+            <script src="../resources/venders/crossbrowserjs/excanvas.min.js"></script>
+        <![endif]-->
+        <script src="../resources/venders/slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
+        <script src="../resources/venders/parsley/parsley.min.js"></script>
+        <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <!-- ================== END BASE JS ================== -->
+        <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+        <script src="../resources/scripts/app.min.js"></script>
+        <!-- ================== END PAGE LEVEL JS ================== -->
+        <script>
+            $(document).ready(function() {
+                App.init();
+            });
+        </script>
+    </head>
+    <body class="boxed-layout">
+        <!-- begin #page-loader -->
+        <div id="page-loader" class="fade in"><span class="spinner"></span></div>
+        <!-- end #page-loader -->
+        
+        <!-- begin #page-container -->
+        <div id="page-container" class="page-container fade page-with-top-menu page-header-fixed page-without-sidebar">
+            <!-- begin #header -->
+            <div id="header" class="header navbar navbar-default navbar-fixed-top">
+                <!-- begin container-fluid -->
+                <div class="container-fluid">
+                    <!-- begin mobile sidebar expand / collapse button -->
+                    <div class="navbar-header">
+                        <a href="" class="navbar-brand"><i class="fa fa-heart-o" aria-hidden="true"></i> Central</a>
+                        <button type="button" class="navbar-toggle" data-click="top-menu-toggled">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- end mobile sidebar expand / collapse button -->
+                    <!-- begin header navigation right -->
+                    <ul class="nav navbar-nav navbar-right ">
+                        <li>
+                            <form class="navbar-form full-width">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter keyword" />
+                                    <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="label">5</span>
+                            </a>
+                            <ul class="dropdown-menu media-list pull-right animated fadeInDown">
+                                <li class="dropdown-header">Notifications (5)</li>
+                                <li class="media">
+                                    <a href="javascript:;">
+                                        <div class="media-left"><i class="fa fa-bug media-object bg-red"></i></div>
+                                        <div class="media-body">
+                                            <h6 class="media-heading">Server Error Reports</h6>
+                                            <div class="text-muted f-s-11">3 minutes ago</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                 <li class="dropdown-footer text-center">
+                                    <a href="javascript:;">View more</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown navbar-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="../resources/images/photo.jpg" alt="" />
+                                <span class="hidden-xs">John Doe</span> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInLeft">
+                                <li class="arrow"></li>
+                                <li><a href="javascript:;">Edit Profile</a></li>
+                                <li><a href="javascript:;"><span class="badge badge-danger pull-right">2</span> Inbox</a></li>
+                                <li><a href="javascript:;">Calendar</a></li>
+                                <li><a href="javascript:;">Setting</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- end header navigation right -->
+                </div>
+                <!-- end container-fluid -->
+            </div>
+            <!-- end #header -->
+            <!-- begin #top-menu -->
+            <div id="top-menu" class="top-menu ">
+                <!-- begin top-menu nav -->
+                <ul class="nav pull-right" >
+                    <li class="has-sub ">
+                        <a href="javascript:;">
+                            <b class="caret pull-right"></b>
+                            <i class="fa fa-dot-circle-o"></i>
+                            <span>Leads</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Dashboard v1</a></li>
+                            <li><a href="#">Dashboard v2</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret pull-right"></b>
+                            <i class="fa fa-inbox"></i> 
+                            <span>Email</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Inbox</a></li>
+                            <li><a href="#">Compose</a></li>
+                            <li><a href="#">Detail</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-tasks"></i>
+                            <span>Tasks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-calendar-check-o"></i>
+                            <span>Appointments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-leanpub"></i>
+                            <span>Session</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-comment"></i>
+                            <span>Feedback</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-money"></i>
+                            <span>Payment</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- end top-menu nav -->
+            </div>
+            <!-- end #top-menu -->
+
+            <!-- begin #content -->
+            <div id="content" class="content">
+                <!-- begin row -->
+               <div class="row">
+	<div class="panel">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-sm-6">
+					<form id="esyncPackage" name="mainForm" role="form" data-parsley-validate="true" class="form-horizontal" action="/a/r/esyncpackage/create" method="post">
+
+<!-- alertMessages set from spring_errors -->
+<!-- formsPage will set the variable to true before header so header don't show -->
+
+<!-- once this is fired by header, set to false so show for the formsPage itself -->
+
+
+						<fieldset>
+							<legend>New LA Package</legend>
+						</fieldset>
+						<div class="form-group">
+							<label for="name" class="col-md-4 control-label">Package
+								Name</label>
+							<div class="col-md-8">
+								<input id="name" name="name" class="form-control" data-parsley-required="true" type="text" value=""/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="packageType" class="col-md-4 control-label">Package Type</label>
+							<div class="col-md-8">
+								<select id="packageType" name="packageType" data-parsley-required="true" class="form-control selectpicker">
+									
+										<option path="packageType" value="NORMAL">Normal</option>
+									
+										<option path="packageType" value="UNLIMITED">Unlimited</option>
+									
+										<option path="packageType" value="RENEWAL">Renewal</option>
+									
+										<option path="packageType" value="TRIAL">Trial</option>
+									
+										<option path="packageType" value="TRANSFER">Transfer</option>
+									
+										<option path="packageType" value="SPECIAL">Special</option>
+									
+										<option path="packageType" value="PREMIUM">Premium</option>
+									
+										<option path="packageType" value="VIP">VIP</option>
+									
+										<option path="packageType" value="FREE">Free</option>
+									
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="duration" class="col-md-4 control-label">Duration
+							</label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<select id="duration" name="duration" data-parsley-required="true" class="form-control selectpicker">
+										
+											<option path="duration" value="1">1</option>
+										
+											<option path="duration" value="2">2</option>
+										
+											<option path="duration" value="3">3</option>
+										
+											<option path="duration" value="4">4</option>
+										
+											<option path="duration" value="5">5</option>
+										
+											<option path="duration" value="6">6</option>
+										
+											<option path="duration" value="7">7</option>
+										
+											<option path="duration" value="8">8</option>
+										
+											<option path="duration" value="9">9</option>
+										
+											<option path="duration" value="10">10</option>
+										
+											<option path="duration" value="11">11</option>
+										
+											<option path="duration" value="12">12</option>
+										
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="dates" class="col-md-4 control-label">Dates </label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<input id="dates" name="dates" class="form-control" data-parsley-required="true" type="text" value=""/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="guaranteedDates" class="col-md-4 control-label">Guaranteed
+								Dates </label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<input id="guaranteedDates" name="guaranteedDates" class="form-control" data-parsley-required="true" type="text" value=""/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="description" class="col-md-4 control-label">Free
+								Add ons</label>
+							<div class="col-md-8">
+								<input id="description" name="description" class="form-control" data-parsley-required="true" type="text" value=""/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="price" class="col-md-4 control-label">Price </label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<span class="input-group-addon">$</span>
+									<input id="price" name="price" class="form-control" data-parsley-required="true" type="text" value=""/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="maxDiscount" class="col-md-4 control-label">Max
+								Discount </label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<span class="input-group-addon">$</span>
+									<input id="maxDiscount" name="maxDiscount" class="form-control" data-parsley-required="true" type="text" value=""/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="registerFee" class="col-md-4 control-label">Registration
+								Fees </label>
+							<div class="col-md-8">
+								<div class="input-group">
+									<span class="input-group-addon">$</span>
+									<input id="registerFee" name="registerFee" class="form-control" data-parsley-required="true" type="text" value=""/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="currency" class="col-md-4 control-label">Currency</label>
+							<div class="col-md-8">
+								<select id="currency" name="currency" data-parsley-required="true" class="form-control selectpicker">
+									
+										<option path="currency" value="SGD">SGD</option>
+									
+										<option path="currency" value="HKD">HKD</option>
+									
+										<option path="currency" value="THB">THB</option>
+									
+										<option path="currency" value="IDR">IDR</option>
+									
+										<option path="currency" value="MYR">MYR</option>
+									
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="activationDateFrom" class="col-md-4 control-label">Activation
+								Date </label>
+							<div class="col-md-3">
+								<div class="input-group">
+									<input id="activationDateFrom" name="activationDateFrom" class="form-control" data-parsley-required="true" type="text" value=""/>
+									<span class="input-group-addon"><i
+										class="fa fa-calendar"></i></span>
+								</div>
+							</div>
+							<label for="activationDateTo" class="col-md-1 control-label">
+								To </label>
+							<div class="col-md-3">
+								<div class="input-group">
+									<input id="activationDateTo" name="activationDateTo" class="form-control" data-parsley-required="true" type="text" value=""/>
+									<span class="input-group-addon"><i
+										class="fa fa-calendar"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="gender" class="col-md-4 control-label">Gender</label>
+							<div class="col-md-8">
+								<select id="gender" name="gender" data-parsley-required="true" class="form-control selectpicker">
+									
+										<option path="gender" value="MALE">Male</option>
+									
+										<option path="gender" value="FEMALE">Female</option>
+									
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="ageFrom" class="col-md-4 control-label">Age
+								From </label>
+							<div class="col-md-2">
+								<div class="input-group">
+									<input id="ageFrom" name="ageFrom" class="form-control" data-parsley-required="true" type="text" value="" maxlength="2"/>
+								</div>
+							</div>
+							<label for="ageTo" class="col-md-1 control-label">To </label>
+							<div class="col-md-2">
+								<div class="input-group">
+									<input id="ageTo" name="ageTo" class="form-control" data-parsley-required="true" type="text" value="" maxlength="2"/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="packageStatus" class="col-md-4 control-label">Status</label>
+							<div class="col-md-8">
+								<select id="packageStatus" name="packageStatus" data-parsley-required="true" class="form-control selectpicker">
+									
+										<option path="packageStatus" value="ACTIVE">Active</option>
+									
+										<option path="packageStatus" value="IN_US">In Use Only</option>
+									
+										<option path="packageStatus" value="INACTIVE">Inactive</option>
+									
+								</select>
+							</div>
+						</div>
+						<fieldset>
+							<div class="form-group">
+								<div class="col-md-8 col-md-offset-4">
+									<button type="submit" class="btn btn-primary btn-lg">Save</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+                <!-- end row -->
+                <link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" />
+                <script src="../resources/venders/password-indicator/js/password-indicator.js"></script>
+				<script type="text/javascript">
+				    $(document).ready(function() {
+				    	$('#activationDateFrom').datepicker({
+				    		format: 'yyyy-mm-dd',
+				            todayHighlight: true,
+				            calendarWeeks: true,
+				            endDate: '1y'
+				        });
+				    	$('#activationDateTo').datepicker({
+				    		format: 'yyyy-mm-dd',
+				            todayHighlight: true,
+				            calendarWeeks: true,
+				            endDate: '+1y'
+				        });
+				        $('.selectpicker').selectpicker();
+				    });
+				</script>
+            </div>
+            <!-- end #content -->
+
+            <!-- begin scroll to top btn -->
+            <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+            <!-- end scroll to top btn -->
+        </div>
+        <!-- end page container -->
+    </body>
+</html>
