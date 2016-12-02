@@ -1,0 +1,2467 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<title>Central - Login</title>
+<meta
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+	name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+
+<!-- caching -->
+<meta http-equiv="cache-control"
+	content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta name="robots" content="noindex,nofollow">
+
+<!-- icons -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="shortcut icon" href="../resources/icons/favicon.ico"
+	type="image/x-icon" />
+<link rel="apple-touch-icon" href="../resources/icons/favicon.ico" />
+<!-- iOS icon -->
+
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+<!-- ================== BEGIN PACE LOADER ================== -->
+<script src="../resources/venders/pace/js/pace.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/pace/css/pace.minimal.css" />
+<!-- ================== BEGIN BASE CSS STYLE ================== -->
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/jquery-ui/themes/base/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/animate/animate.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/css/style.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../resources/css/style-responsive.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
+<!-- ================== END BASE CSS STYLE ================== -->
+
+<!-- ================== BEGIN BASE JS ================== -->
+<script src="../resources/venders/jquery/jquery-1.9.1.min.js"></script>
+<script src="../resources/venders/jquery/jquery-migrate-1.1.0.min.js"></script>
+<script src="../resources/venders/jquery-ui/ui/jquery-ui.min.js"></script>
+<script src="../resources/venders/bootstrap/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+            <script src="../resources/venders/crossbrowserjs/html5shiv.js"></script>
+            <script src="../resources/venders/crossbrowserjs/respond.min.js"></script>
+            <script src="../resources/venders/crossbrowserjs/excanvas.min.js"></script>
+        <![endif]-->
+<script src="../resources/venders/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
+<script src="../resources/venders/parsley/parsley.min.js"></script>
+<script
+	src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script
+	src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+
+<!-- ================== END BASE JS ================== -->
+<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+<script src="../resources/scripts/app.min.js"></script>
+<!-- ================== END PAGE LEVEL JS ================== -->
+<script>
+            $(document).ready(function() {
+                App.init();
+            });
+        </script>
+</head>
+<body class="layout">
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade in">
+		<span class="spinner"></span>
+	</div>
+	<!-- end #page-loader -->
+
+	<!-- begin #page-container -->
+	<div id="page-container"
+		class="page-container fade page-with-top-menu page-header-fixed page-without-sidebar">
+		<!-- begin #header -->
+		<div id="header" class="header navbar navbar-default navbar-fixed-top">
+			<!-- begin container-fluid -->
+			<div class="container-fluid">
+				<!-- begin mobile sidebar expand / collapse button -->
+				<div class="navbar-header">
+					<a href="" class="navbar-brand"><i class="fa fa-heart-o"
+						aria-hidden="true"></i> Central</a>
+					<button type="button" class="navbar-toggle"
+						data-click="top-menu-toggled">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+				<!-- end mobile sidebar expand / collapse button -->
+				<!-- begin header navigation right -->
+				<ul class="nav navbar-nav navbar-right ">
+					<li>
+						<form class="navbar-form full-width">
+							<div class="form-group">
+								<input type="text" class="form-control"
+									placeholder="Enter keyword" />
+								<button type="submit" class="btn btn-search">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</form>
+					</li>
+					<li class="dropdown"><a href="javascript:;"
+						data-toggle="dropdown" class="dropdown-toggle f-s-14"> <i
+							class="fa fa-bell-o"></i> <span class="label">5</span>
+					</a>
+						<ul
+							class="dropdown-menu media-list pull-right animated fadeInDown">
+							<li class="dropdown-header">Notifications (5)</li>
+							<li class="media"><a href="javascript:;">
+									<div class="media-left">
+										<i class="fa fa-bug media-object bg-red"></i>
+									</div>
+									<div class="media-body">
+										<h6 class="media-heading">Server Error Reports</h6>
+										<div class="text-muted f-s-11">3 minutes ago</div>
+									</div>
+							</a></li>
+							<li class="dropdown-footer text-center"><a
+								href="javascript:;">View more</a></li>
+						</ul></li>
+					<li class="dropdown navbar-user"><a href="javascript:;"
+						class="dropdown-toggle" data-toggle="dropdown"> <img
+							src="../resources/images/photo.jpg" alt="" /> <span
+							class="hidden-xs">John Doe</span> <b class="caret"></b>
+					</a>
+						<ul class="dropdown-menu animated fadeInLeft">
+							<li class="arrow"></li>
+							<li><a href="javascript:;">Edit Profile</a></li>
+							<li><a href="javascript:;"><span
+									class="badge badge-danger pull-right">2</span> Inbox</a></li>
+							<li><a href="javascript:;">Calendar</a></li>
+							<li><a href="javascript:;">Setting</a></li>
+							<li class="divider"></li>
+							<li><a href="login.html">Log Out</a></li>
+						</ul></li>
+				</ul>
+				<!-- end header navigation right -->
+			</div>
+			<!-- end container-fluid -->
+		</div>
+		<!-- end #header -->
+		<!-- begin #top-menu -->
+		<div id="top-menu" class="top-menu ">
+			<!-- begin top-menu nav -->
+			<ul class="nav pull-right">
+				<li class="has-sub "><a href="javascript:;"> <b
+						class="caret pull-right"></b> <i class="fa fa-dot-circle-o"></i> <span>Leads</span>
+				</a>
+					<ul class="sub-menu">
+						<li><a href="#">Dashboard v1</a></li>
+						<li><a href="#">Dashboard v2</a></li>
+					</ul></li>
+				<li class="has-sub"><a href="javascript:;"> <b
+						class="caret pull-right"></b> <i class="fa fa-inbox"></i> <span>Email</span>
+				</a>
+					<ul class="sub-menu">
+						<li><a href="#">Inbox</a></li>
+						<li><a href="#">Compose</a></li>
+						<li><a href="#">Detail</a></li>
+					</ul></li>
+				<li><a href="javascript:;"> <i class="fa fa-tasks"></i> <span>Tasks</span>
+				</a></li>
+				<li><a href="javascript:;"> <i
+						class="fa fa-calendar-check-o"></i> <span>Appointments</span>
+				</a></li>
+				<li><a href="javascript:;"> <i class="fa fa-leanpub"></i> <span>Session</span>
+				</a></li>
+				<li><a href="javascript:;"> <i class="fa fa-comment"></i> <span>Feedback</span>
+				</a></li>
+				<li><a href="javascript:;"> <i class="fa fa-money"></i> <span>Payment</span>
+				</a></li>
+			</ul>
+			<!-- end top-menu nav -->
+		</div>
+		<!-- end #top-menu -->
+
+		<!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin row -->
+			<div class="row">
+				<div class="col-sm-6 pull-left">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="form-group">
+												<select class="form-control selectpicker" id="result"
+													data-parsley-required="true">
+													<option value="No Attempt Made">No Attempt Made</option>
+													<option value="In Process">In Process</option>
+													<option value="Not Interested">Not Interested</option>
+													<option value="No Match Found">No Match Found</option>
+													<option value="Success">Success</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-group">
+												<select class="form-control selectpicker" id="result"
+													data-parsley-required="true">
+													<option value="-1">-Result-</option>
+													<option value="Did not Pick up">Did not Pick up</option>
+													<option value="Not Interested">Not Interested</option>
+													<option value="Follow up">Follow up</option>
+													<option value="Not Suitable">Not Suitable</option>
+													<option value="Spam">Spam</option>
+													<option value="Appointment Made">Appointment Made</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							&nbsp;
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="form-group">
+										<select id="status" name="profile.laMembership.status"
+											data-parsley-required="true"
+											class="form-control selectpicker">
+
+											<option path="model.profile.laMembership.status"
+												value="New Member">New Member</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Pending Approval">Pending Approval</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Active">Active</option>
+
+											<option path="model.profile.laMembership.status"
+												value="On Hold">On Hold</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Refund">Refund</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Expired">Expired</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Terminated">Terminated</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Renewal">Renewal</option>
+										</select>
+									</div>
+									<div class="profile-image">
+										<img src="../resources/images/photo.jpg"> <i
+											class="fa fa-user hide"></i> <input type="file"
+											name="userphoto" />
+									</div>
+									<div class="form-group">
+										<select id="mood" name="profile.laMembership.mood"
+											data-parsley-required="true"
+											class="form-control selectpicker">
+											<option path="model.profile.laMembership.mood" value="Normal">Normal</option>
+											<option path="model.profile.laMembership.mood" value="Happy">Happy</option>
+											<option path="model.profile.laMembership.mood" value="Complaint">Complaint</option>
+											<option path="model.profile.laMembership.mood" value="Refund">Refund</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<fieldset>
+										<legend>Male Profile</legend>
+										<table id="user" class="table  table">
+											<tbody>
+												<tr>
+													<td>Profile Name :</td>
+													<td><a href="#" id="profileName" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
+													<td>Smokes :</td>
+													<td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+												</tr>
+												<tr>
+													<td>Profile Phone :</td>
+													<td><a href="#" id="phoneNumber" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
+													<td>Drinks :</td>
+													<td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+												<tr>
+													<td>Profile age :</td>
+													<td><a href="#" id="profileAge" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
+													<td>Profile history :</td>
+													<td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+												</tr>
+												<tr>
+													<td>Profile ethnicity :</td>
+													<td><a href="#" id="profileEthnicity" data-type="text" data-pk="1" data-title="Enter Username">Indian </a></td>
+													<td>Dates Left :</td>
+													<td><a href="#" id="datesLeft" data-type="text" data-pk="1" data-title="Enter Username">5 </a></td>
+												</tr>
+												<tr>
+													<td>Marital Status:</td>
+													<td><a href="#" id="maritalStatus" data-type="text"
+														data-pk="1" data-title="Enter Username">Unmarried </a></td>
+													<td>Free Dates :</td>
+													<td><a href="#" id="freeDates" data-type="text"
+														data-pk="1" data-title="Enter Username">3 </a></td>
+												</tr>
+												<tr>
+													<td>Profile Income:</td>
+													<td><a href="#" id="profileIncome" data-type="text"
+														data-pk="1" data-title="Enter Username">5 lakh </a></td>
+													<td>package Status :</td>
+													<td><a href="#" id="profileStatus" data-type="text"
+														data-pk="1" data-title="Enter Username">6 </a></td>
+												</tr>
+												<tr>
+													<td>Profile Education:</td>
+													<td><a href="#" id="profileEducation" data-type="text"
+														data-pk="1" data-title="Enter Username">PhD and above
+													</a></td>
+													<td>Sign Up date :</td>
+													<td><a href="#" id="signUpDate" data-type="text"
+														data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</fieldset>
+								</div>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-sm-12">
+									<ul class="nav nav-pills">
+										<li class="active"><a href="#tabInfo" data-toggle="tab">Info</a></li>
+										<li><a href="#tabMatch" data-toggle="tab">Match</a></li>
+										<li><a href="#tabDates" data-toggle="tab">Dates</a></li>
+										<li><a href="#tabFeedback" data-toggle="tab">Feedback</a></li>
+									</ul>
+                                  <!-- tab content start here -->
+                              		<div class="tab-content">
+                                  	<div class="tab-pane fade active in" id="tabInfo">
+                                  		<legend>profile Info</legend>
+                                  		<ul class="nav nav-pills">
+                                  			<li class="active"><a href="#tabProfileInfo" data-toggle="tab">profile Info</a></li>
+                                  			<li><a href="#tabPreference" data-toggle="tab">Preferences</a></li>
+                                  			<li><a href="#tabInterest" data-toggle="tab">Interest</a></li>
+                                  			<li><a href="#tabExpectation" data-toggle="tab">Expectation</a></li>
+                                  			<li><a href="#tabAssessment" data-toggle="tab">Assessment</a></li>
+                                  			<li><a href="#tabConfidential" data-toggle="tab">Confidential </a></li>
+                                  			<li><a href="#tabMyStory" data-toggle="tab">My Story </a></li>
+                                  			<li><a href="#tabOtherService" data-toggle="tab">Other services Interest </a></li>
+                                  		</ul>
+                                  		<div class="tab-content">
+                                  			<div class="tab-pane fade active in" id="tabProfileInfo">
+                                  				<!-- Personal info start here -->
+                                  				<fieldset>
+                                  					<legend>Personal Info</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Grew Up In:</b></td>
+                                  										<td>Grew Up In Value</td>
+                                  										<td><b>Ethnicity:</b></td>
+                                  										<td>Ethinicity Value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Other Carreer:</b></td>
+                                  										<td>Other carrer Value</td>
+                                  										<td><b>My Personaltiy:</b></td>
+                                  										<td>Traditional</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Overseas Live:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Personal Info end here -->
+                                  				<!-- Contact Details start here-->
+                                  				<fieldset>
+                                  					<legend>Contacts Details</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Home Address:</b></td>
+                                  										<td>Home address value</td>
+                                  										<td><b>Home zip:</b></td>
+                                  										<td>Home Zip Value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Office Address:</b></td>
+                                  										<td>Office address value</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Work Details end here-->
+                                  				<fieldset>
+                                  					<legend>Work Details</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Company:</b></td>
+                                  										<td>company value</td>
+                                  										<td><b>Industry:</b></td>
+                                  										<td>Industry  value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>How often do you travel for business:</b></td>
+                                  										<td>travel for business value</td>
+                                  										<td><b>Overseas Work:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Work Details end here -->
+                                  				<!-- Work and Education Profile Start here-->
+                                  				<fieldset>
+                                  					<legend>Work &amp; Education Profile</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Office Zip:</b></td>
+                                  										<td>Home Office Zip value</td>
+                                  										<td><b>OverSeas Study:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"  /></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>OverSeas Study Location:</b></td>
+                                  										<td>OverSeas Study Location value</td>
+                                  										<td><b>OverSeas Study Language:</b></td>
+                                  										<td>OverSeas Study Language value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Second Education:</b></td>
+                                  										<td>Second Education value</td>
+                                  										<td><b>Second Institution Name:</b></td>
+                                  										<td>Second Institution Name value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Second Education Subject:</b></td>
+                                  										<td>Second Education Subject value</td>
+                                  										<td><b>Third Education:</b></td>
+                                  										<td>Third Education value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Third Education subject:</b></td>
+                                  										<td>Third Education subject value</td>
+                                  										<td><b>Third Education:</b></td>
+                                  										<td>Third Education value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>OverSeas Work Location:</b></td>
+                                  										<td>OverSeas Work Location value</td>
+                                  										<td><b>OverSeas Work Language:</b></td>
+                                  										<td>OverSeas Work Language value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>OverSeas Live Location:</b></td>
+                                  										<td>OverSeas Live Location value</td>
+                                  										<td><b>OverSeas Live Language:</b></td>
+                                  										<td>OverSeas Live Language value</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Work and Education Profile end here-->
+                                  				<!-- style and character start here -->
+                                  				<fieldset>
+                                  					<legend>Style and Character</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>1 to 3 areas to improve about yourself (Optional):</b></td>
+                                  										<td>Glum, Selfish,Timid</td>
+                                  										<td><b>1 to 3 positive worrds about yourself Personality:</b></td>
+                                  										<td>Dependable,Extroverted,helpful</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>My Style:</b></td>
+                                  										<td>My Style value</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- style and character end here -->
+                                  				<!-- Family table start here -->
+                                  				<fieldset>
+                                  					<legend>Style and Character</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Father Job:</b></td>
+                                  										<td>Father Job Value</td>
+                                  										<td><b>Living With Father:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Mother Job:</b></td>
+                                  										<td>Mother Job Value</td>
+                                  										<td><b>Living With Mother:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>No of Siblings</b></td>
+                                  										<td>4</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Family table end here -->
+                                  			</div>
+                                  			<!-- tab preference start here -->
+                                  			<div class="tab-pane fade" id="tabPreference">
+                                  				<fieldset>
+                                  					<legend>Profile Attribute Preference</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<thead>
+                                  									<tr>
+                                  										<th>Attribute</th>
+                                  										<th>First Preferences</th>
+                                  										<th>Second Preferences</th>
+                                  										<th>Flexibility</th>
+                                  									</tr>
+                                  								</thead>
+                                  								<tbody>
+                                  									<tr>
+                                  										<td>Age Range </td>
+                                  										<td>6 to 7 </td>
+                                  										<td>7 to 9</td>
+                                  										<td>Not Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Don't Update Age Preference ?</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td></td>
+                                  										<td></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Religion</td>
+                                  										<td>Catholic</td>
+                                  										<td>Hindu</td>
+                                  										<td>Moderately Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Ethnicity</td>
+                                  										<td>Chinese</td>
+                                  										<td>Malay</td>
+                                  										<td>Extremely Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Education Level</td>
+                                  										<td>Junior Colledge &amp; below</td>
+                                  										<td>Masters</td>
+                                  										<td>Extremely Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Previos Marriage</td>
+                                  										<td>yes</td>
+                                  										<td>yes</td>
+                                  										<td>Not Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Kids From Previos Marriage</td>
+                                  										<td>yes</td>
+                                  										<td>yes</td>
+                                  										<td>Extremely Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Smoking Habbit</td>
+                                  										<td>No</td>
+                                  										<td>Light / Social</td>
+                                  										<td>Moderately Flexible</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Physical Attribute Preference</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<thead>
+                                  									<tr>
+                                  										<th>Attribute</th>
+                                  										<th>First Preferences</th>
+                                  										<th>Second Preferences</th>
+                                  										<th>Flexibility</th>
+                                  									</tr>
+                                  								</thead>
+                                  								<tbody>
+                                  									<tr>
+                                  										<td>Height</td>
+                                  										<td>4.5</td>
+                                  										<td>4.7</td>
+                                  										<td>Not Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Build </td>
+                                  										<td>Slim </td>
+                                  										<td>Athletic</td>
+                                  										<td>Moderately Flexible</td>
+                                  									</tr>
+                                  									
+                                  									<tr>
+                                  										<td>Style</td>
+                                  										<td>Sophiticated</td>
+                                  										<td>classical</td>
+                                  										<td>Moderately Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Hair</td>
+                                  										<td>Short</td>
+                                  										<td>Medium</td>
+                                  										<td>Extremely Flexible</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Personality Attribute Preference</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<thead>
+                                  									<tr>
+                                  										<th>Attribute</th>
+                                  										<th>Very Important</th>
+                                  										<th>Attribute</th>
+                                  										<th>Very Important</th>
+                                  									</tr>
+                                  								</thead>
+                                  								<tbody>
+                                  									<tr>
+                                  										<td>Extrovert</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td>Tactful</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Organized</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td>Simple</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Serios</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td>worldly</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Indoor</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td>cooporate</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Thrifty</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td>Personality Other</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									
+                                  									
+                                  									
+                                  									
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  			<!-- tab preference end here -->
+                                  			<!-- tab Interest start here -->
+                                  			<div class="tab-pane fade" id="tabInterest">
+                                  				<!-- Interest page start here -->
+                                  				<fieldset>
+                                  					<legend>profile Interest</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Favorite Food:</b></td>
+                                  										<td>Thai ,Western</td>
+                                  										<td><b>Hobbies:</b></td>
+                                  										<td>Spa,Restling at Home</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Sports:</b></td>
+                                  										<td>Driving , Hockey</td>
+                                  										<td><b>Places of Patronage:</b></td>
+                                  										<td>Natural areas,karaoke</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Type of Film:</b></td>
+                                  										<td>comedy , Musical</td>
+                                  										<td><b>Taste of Music:</b></td>
+                                  										<td>Spiritual,Country</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Holidays Destination:</b></td>
+                                  										<td>Paris,Rome</td>
+                                  										<td><b>Holidays Activities:</b></td>
+                                  										<td>City Traveller,Dinning</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Pets:</b></td>
+                                  										<td>Horses,Otters</td>
+                                  										<td><b>How Often do you exercise:</b></td>
+                                  										<td>Never or Very Infrequent</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Importancy of Interest &amp; hobbies for matching</b></td>
+                                  										<td>Personal Coaching</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Interest page end here -->
+                                  			</div>
+                                  			<!-- tab Interest end here -->
+                                  			<!-- tab Expectation start here -->
+                                  			<div class="tab-pane fade" id="tabExpectation">
+                                  				<fieldset>
+                                  					<legend>Expectation</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Why did you decide to join Lunch Actually ?:</b></td>
+                                  										<td>Hey! its a fun concept</td>
+                                  										<td><b>Choose one most important thing that your partner must have ?:</b></td>
+                                  										<td>Good Character</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Do you think that the guy should pay for the first date ?:</b></td>
+                                  										<td>Not sure</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  			<!-- tab Expectation end here -->
+                                  			<!-- tab Assessment start here -->
+                                  			<div class="tab-pane fade" id="tabAssessment">
+                                  				<fieldset>
+                                  					<legend>Consultants Assessment</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Name of Consultants:</b></td>
+                                  										<td>User 1</td>
+                                  										<td><b>Client Difficult:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Client Monitored:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td><b>Client Punctualed:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Client Appearance</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Hair Color / Length:</b></td>
+                                  										<td>Short</td>
+                                  										<td><b>Body Type:</b></td>
+                                  										<td>Slim</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Grooming:</b></td>
+                                  										<td>Immaculate</td>
+                                  										<td><b>Complexion:</b></td>
+                                  										<td>Flawless</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Maturity:</b></td>
+                                  										<td>More Mature than age</td>
+                                  										<td><b>Confidence Level:</b></td>
+                                  										<td>Arrogant</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>English Level:</b></td>
+                                  										<td>Extremely Eloquent</td>
+                                  										<td><b>Masculine / Feminine:</b></td>
+                                  										<td>Feminine</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Personality</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Extrovert:</b></td>
+                                  										<td>Extrovert Level</td>
+                                  										<td><b>Organized Level:</b></td>
+                                  										<td>Organized</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Serious Level:</b></td>
+                                  										<td>Light Hearted</td>
+                                  										<td><b>Outdoor Level:</b></td>
+                                  										<td>Outdoor /Sporting</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Generous Level:</b></td>
+                                  										<td>Thrifty</td>
+                                  										<td><b>TactFul Level:</b></td>
+                                  										<td>TactFul</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Intellectual Level:</b></td>
+                                  										<td>Intellectual</td>
+                                  										<td><b>Worldy Level:</b></td>
+                                  										<td>Localized</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Artistic Level</b></td>
+                                  										<td>Cooperate</td>
+                                  										<td><b>Traditional</b></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Ratings of Clients</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Appearance:</b></td>
+                                  										<td>4</td>
+                                  										<td><b>Personality:</b></td>
+                                  										<td>4</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Grading:</b></td>
+                                  										<td>B+</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Remarks &amp; Comments</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Past RelationShips:</b></td>
+                                  										<td>Past RelationShips Value</td>
+                                  										<td><b>Additional Comments:</b></td>
+                                  										<td>Additional Comments Value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Consultants Recommendation:</b></td>
+                                  										<td>Consultants Recommendation Value</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  			<!-- tab Assessment end here -->
+                                  			<div class="tab-pane fade" id="tabConfidential">
+                                  				<fieldset>
+                                  					<legend>Marriage Record</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Providing support to ex-spouse ? Difficult:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td><b>shared Custody:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Have any child/children:</b></td>
+                                  										<td>Yes</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Health Record</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Any Serious Medical Condition:</b></td>
+                                  										<td>No Serious Medical Condition</td>
+                                  										<td><b>Physically or Mentally Disabled ?:</b></td>
+                                  										<td>Mentallty</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Been a patient at mental health facility ?:</b></td>
+                                  										<td>Yes</td>
+                                  										<td><b>Undergone any major operations:</b></td>
+                                  										<td>No</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Criminal Record</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Ever Been Arrested ?:</b></td>
+                                  										<td>No</td>
+                                  										<td><b>Been Convicted for Crime ?:</b></td>
+                                  										<td>No</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Ever use or abuse alcohol,chemicals, controlled substance/medication ?:</b></td>
+                                  										<td>Yes</td>
+                                  										<td><b>Ever involved in any business/career activity that is illegal in nature(eg. Drug trafficking,prostitution,money laundaring,illegal gambling):</b></td>
+                                  										<td>No</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  			<div class="tab-pane fade" id="tabMyStory">
+                                  				<fieldset>
+                                  					<legend>Past RelationShip</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>How long have you been single?:</b></td>
+                                  										<td>Less Than Two Months</td>
+                                  										<td><b>Think back about the most serious past relationship that you’ve ever had. How long did the relationship last for?:</b></td>
+                                  										<td>Less Than Two Months</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>How did you meet him/her?:</b></td>
+                                  										<td>meet personaly</td>
+                                  										<td><b>How did it end?:</b></td>
+                                  										<td>By marriage</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Divorce Happen(If applicable):</b></td>
+                                  										<td>No</td>
+                                  										<td><b>How did it happen?:</b></td>
+                                  										<td>fight</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>How old are you children (if any)?:</b></td>
+                                  										<td>34</td>
+                                  										<td><b>Is custody with you or your ex?:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Likes</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>What did you like about your previous partner(s)?:</b></td>
+                                  										<td>previos partner details</td>
+                                  										<td><b>What would your ideal partner be like (if different from above)?:</b></td>
+                                  										<td>Ideal Partner different</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Dislikes</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>What did you dislike about your previous partner(s)?:</b></td>
+                                  										<td>previos partner details</td>
+                                  										<td><b>What type of people do you dislike and would rather avoid (if different from above)?:</b></td>
+                                  										<td>Ideal Partner different</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>About Him / Her</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>How would you describe your personality?:</b></td>
+                                  										<td>about your personlity</td>
+                                  										<td><b>Four things your friends will say about you:</b></td>
+                                  										<td>very well</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>One thing people don’t notice about you</b></td>
+                                  										<td>Good thing</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>About His / Her Family</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Where is your hometown?:</b></td>
+                                  										<td>Gujarat</td>
+                                  										<td><b>Are you staying alone?:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Are you the eldest / youngest sibling? Or otherwise? (Please specify).</b></td>
+                                  										<td>Eldest</td>
+                                  										<td><b>Is / are your sibling/ s married?</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>How close are you with your family members?:</b></td>
+                                  										<td>very close</td>
+                                  										<td><b>What do you like about your job?:</b></td>
+                                  										<td>work</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>What do you dislike about your job?:</b></td>
+                                  										<td>Not work</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Interests</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>What you like to do during your free time / weekends:</b></td>
+                                  										<td>Sleeping</td>
+                                  										<td><b>What is one activity that you enjoy the most?:</b></td>
+                                  										<td>travelling</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Topics you like to talk about (this will be shared with your potential match)</b></td>
+                                  										<td>Nothing</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Values</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Five things or people you can’t live without:</b></td>
+                                  										<td>Five thing are here</td>
+                                  										<td><b>Three people or experiences you are most thankful for (this will be shared with your potential match):</b></td>
+                                  										<td></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>What are you most passionate about? (this will be shared with your potential match)</b></td>
+                                  										<td>Nothing</td>
+                                  										<td><b>One thing you’ve always wanted to do?</b></td>
+                                  										<td>Nothing</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>What is your greatest achievement? (this will be shared with your potential match)</b></td>
+                                  										<td>Nothing</td>
+                                  										<td><b>What makes you a good catch? (this will be shared with your potential match)</b></td>
+                                  										<td>Nothing</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  			<div class="tab-pane fade" id="tabOtherService">
+                                  				<fieldset>
+                                  					<legend>Marriage Record</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<thead>
+                                  									<tr>
+                                  										<th>Best Talk Time</th>
+                                  										<th>PreferDay and Time</th>
+                                  										<th>Restuarant Preferences</th>
+                                  									</tr>
+                                  								</thead>
+                                  								<tbody>
+                                  									<tr>
+                                  										<td>Weekdays Morning</td>
+                                  										<td>Weekdays 10:00 pm</td>
+                                  										<td>thursday 10:00 pm</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Weekdays Morning</td>
+                                  										<td>Weekdays 10:00 pm</td>
+                                  										<td>thursday 10:00 pm</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>vegan</td>
+                                  										<td>Diabetic</td>
+                                  										<td>Allergy Seafood</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Other Preferences</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Would Like to recieve a dating report after feedback from 5 introductions:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td><b>Would Like to recieve a dating tips via SMS prior to every intros:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Would Like to recieve Dating E-Coach by email twice every month:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td><b>Would Like to attend your proven 'I am Ready for Love' WorkShop:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Would Like to attend your proven Image Consultancy Coaching session to understand the keys to improving my image and style.:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td><b>I want to purchase the Coaching Bundle:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  		</div>
+                                  	</div>
+                                  	<div class="tab-pane fade" id="tabMatch">
+                                  		<p>Macth Page Under processing...</p>
+                                  	</div>
+                                  	<div class="tab-pane fade" id="tabDates">
+                                  		<p>Dates  Page Under processing...</p>
+                                  	</div>
+                                  	<div class="tab-pane fade" id="tabFeedback">
+                                  		<p>Feedback  Page Under processing...</p>
+                                  	</div>
+                              		</div>
+									<!-- tab content end here -->
+                              	</div>
+                           	</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 pull-left">
+					<div class="panel">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="form-group">
+												<select class="form-control selectpicker" id="result"
+													data-parsley-required="true">
+													<option value="No Attempt Made">No Attempt Made</option>
+													<option value="In Process">In Process</option>
+													<option value="Not Interested">Not Interested</option>
+													<option value="No Match Found">No Match Found</option>
+													<option value="Success">Success</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-group">
+												<select class="form-control selectpicker" id="result"
+													data-parsley-required="true">
+													<option value="-1">-Result-</option>
+													<option value="Did not Pick up">Did not Pick up</option>
+													<option value="Not Interested">Not Interested</option>
+													<option value="Follow up">Follow up</option>
+													<option value="Not Suitable">Not Suitable</option>
+													<option value="Spam">Spam</option>
+													<option value="Appointment Made">Appointment Made</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							&nbsp;
+							<div class="row">
+								<div class="col-sm-3">
+									<div class="form-group">
+										<select id="status" name="profile.laMembership.status"
+											data-parsley-required="true"
+											class="form-control selectpicker">
+
+											<option path="model.profile.laMembership.status"
+												value="New Member">New Member</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Pending Approval">Pending Approval</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Active">Active</option>
+
+											<option path="model.profile.laMembership.status"
+												value="On Hold">On Hold</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Refund">Refund</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Expired">Expired</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Terminated">Terminated</option>
+
+											<option path="model.profile.laMembership.status"
+												value="Renewal">Renewal</option>
+										</select>
+									</div>
+									<div class="profile-image">
+										<img src="../resources/images/photo.jpg"> <i
+											class="fa fa-user hide"></i> <input type="file"
+											name="userphoto" />
+									</div>
+									<div class="form-group">
+										<select id="mood" name="profile.laMembership.mood"
+											data-parsley-required="true"
+											class="form-control selectpicker">
+											<option path="model.profile.laMembership.mood" value="Normal">Normal</option>
+											<option path="model.profile.laMembership.mood" value="Happy">Happy</option>
+											<option path="model.profile.laMembership.mood" value="Complaint">Complaint</option>
+											<option path="model.profile.laMembership.mood" value="Refund">Refund</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-9">
+									<fieldset>
+										<legend>Male Profile</legend>
+										<table id="user" class="table  table">
+											<tbody>
+												<tr>
+													<td>Profile Name :</td>
+													<td><a href="#" id="profileName" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
+													<td>Smokes :</td>
+													<td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+												</tr>
+												<tr>
+													<td>Profile Phone :</td>
+													<td><a href="#" id="phoneNumber" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
+													<td>Drinks :</td>
+													<td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+												<tr>
+													<td>Profile age :</td>
+													<td><a href="#" id="profileAge" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
+													<td>Profile history :</td>
+													<td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+												</tr>
+												<tr>
+													<td>Profile ethnicity :</td>
+													<td><a href="#" id="profileEthnicity" data-type="text" data-pk="1" data-title="Enter Username">Indian </a></td>
+													<td>Dates Left :</td>
+													<td><a href="#" id="datesLeft" data-type="text" data-pk="1" data-title="Enter Username">5 </a></td>
+												</tr>
+												<tr>
+													<td>Marital Status:</td>
+													<td><a href="#" id="maritalStatus" data-type="text"
+														data-pk="1" data-title="Enter Username">Unmarried </a></td>
+													<td>Free Dates :</td>
+													<td><a href="#" id="freeDates" data-type="text"
+														data-pk="1" data-title="Enter Username">3 </a></td>
+												</tr>
+												<tr>
+													<td>Profile Income:</td>
+													<td><a href="#" id="profileIncome" data-type="text"
+														data-pk="1" data-title="Enter Username">5 lakh </a></td>
+													<td>package Status :</td>
+													<td><a href="#" id="profileStatus" data-type="text"
+														data-pk="1" data-title="Enter Username">6 </a></td>
+												</tr>
+												<tr>
+													<td>Profile Education:</td>
+													<td><a href="#" id="profileEducation" data-type="text"
+														data-pk="1" data-title="Enter Username">PhD and above
+													</a></td>
+													<td>Sign Up date :</td>
+													<td><a href="#" id="signUpDate" data-type="text"
+														data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</fieldset>
+								</div>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-sm-12">
+									<ul class="nav nav-pills">
+										<li class="active"><a href="#tabInfo1" data-toggle="tab">Info</a></li>
+										<li><a href="#tabMatch1" data-toggle="tab">Match</a></li>
+										<li><a href="#tabDates1" data-toggle="tab">Dates</a></li>
+										<li><a href="#tabFeedback1" data-toggle="tab">Feedback</a></li>
+									</ul>
+                                  <!-- tab content start here -->
+                              		<div class="tab-content">
+                                  	<div class="tab-pane fade active in" id="tabInfo1">
+                                  		<legend>profile Info</legend>
+                                  		<ul class="nav nav-pills">
+                                  			<li class="active"><a href="#tabProfileInfo1" data-toggle="tab">profile Info</a></li>
+                                  			<li><a href="#tabPreference1" data-toggle="tab">Preferences</a></li>
+                                  			<li><a href="#tabInterest1" data-toggle="tab">Interest</a></li>
+                                  			<li><a href="#tabExpectation1" data-toggle="tab">Expectation</a></li>
+                                  			<li><a href="#tabAssessment1" data-toggle="tab">Assessment</a></li>
+                                  			<li><a href="#tabConfidential1" data-toggle="tab">Confidential </a></li>
+                                  			<li><a href="#tabMyStory1" data-toggle="tab">My Story </a></li>
+                                  			<li><a href="#tabOtherService1" data-toggle="tab">Other services Interest </a></li>
+                                  		</ul>
+                                  		<div class="tab-content">
+                                  			<div class="tab-pane fade active in" id="tabProfileInfo1">
+                                  				<!-- Personal info start here -->
+                                  				<fieldset>
+                                  					<legend>Personal Info</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Grew Up In:</b></td>
+                                  										<td>Grew Up In Value</td>
+                                  										<td><b>Ethnicity:</b></td>
+                                  										<td>Ethinicity Value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Other Carreer:</b></td>
+                                  										<td>Other carrer Value</td>
+                                  										<td><b>My Personaltiy:</b></td>
+                                  										<td>Traditional</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Overseas Live:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Personal Info end here -->
+                                  				<!-- Contact Details start here-->
+                                  				<fieldset>
+                                  					<legend>Contacts Details</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Home Address:</b></td>
+                                  										<td>Home address value</td>
+                                  										<td><b>Home zip:</b></td>
+                                  										<td>Home Zip Value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Office Address:</b></td>
+                                  										<td>Office address value</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Work Details end here-->
+                                  				<fieldset>
+                                  					<legend>Work Details</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Company:</b></td>
+                                  										<td>company value</td>
+                                  										<td><b>Industry:</b></td>
+                                  										<td>Industry  value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>How often do you travel for business:</b></td>
+                                  										<td>travel for business value</td>
+                                  										<td><b>Overseas Work:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Work Details end here -->
+                                  				<!-- Work and Education Profile Start here-->
+                                  				<fieldset>
+                                  					<legend>Work &amp; Education Profile</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Office Zip:</b></td>
+                                  										<td>Home Office Zip value</td>
+                                  										<td><b>OverSeas Study:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"  /></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>OverSeas Study Location:</b></td>
+                                  										<td>OverSeas Study Location value</td>
+                                  										<td><b>OverSeas Study Language:</b></td>
+                                  										<td>OverSeas Study Language value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Second Education:</b></td>
+                                  										<td>Second Education value</td>
+                                  										<td><b>Second Institution Name:</b></td>
+                                  										<td>Second Institution Name value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Second Education Subject:</b></td>
+                                  										<td>Second Education Subject value</td>
+                                  										<td><b>Third Education:</b></td>
+                                  										<td>Third Education value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Third Education subject:</b></td>
+                                  										<td>Third Education subject value</td>
+                                  										<td><b>Third Education:</b></td>
+                                  										<td>Third Education value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>OverSeas Work Location:</b></td>
+                                  										<td>OverSeas Work Location value</td>
+                                  										<td><b>OverSeas Work Language:</b></td>
+                                  										<td>OverSeas Work Language value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>OverSeas Live Location:</b></td>
+                                  										<td>OverSeas Live Location value</td>
+                                  										<td><b>OverSeas Live Language:</b></td>
+                                  										<td>OverSeas Live Language value</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Work and Education Profile end here-->
+                                  				<!-- style and character start here -->
+                                  				<fieldset>
+                                  					<legend>Style and Character</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>1 to 3 areas to improve about yourself (Optional):</b></td>
+                                  										<td>Glum, Selfish,Timid</td>
+                                  										<td><b>1 to 3 positive worrds about yourself Personality:</b></td>
+                                  										<td>Dependable,Extroverted,helpful</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>My Style:</b></td>
+                                  										<td>My Style value</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- style and character end here -->
+                                  				<!-- Family table start here -->
+                                  				<fieldset>
+                                  					<legend>Style and Character</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Father Job:</b></td>
+                                  										<td>Father Job Value</td>
+                                  										<td><b>Living With Father:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Mother Job:</b></td>
+                                  										<td>Mother Job Value</td>
+                                  										<td><b>Living With Mother:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>No of Siblings</b></td>
+                                  										<td>4</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Family table end here -->
+                                  			</div>
+                                  			<!-- tab preference start here -->
+                                  			<div class="tab-pane fade" id="tabPreference1">
+                                  				<fieldset>
+                                  					<legend>Profile Attribute Preference</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<thead>
+                                  									<tr>
+                                  										<th>Attribute</th>
+                                  										<th>First Preferences</th>
+                                  										<th>Second Preferences</th>
+                                  										<th>Flexibility</th>
+                                  									</tr>
+                                  								</thead>
+                                  								<tbody>
+                                  									<tr>
+                                  										<td>Age Range </td>
+                                  										<td>6 to 7 </td>
+                                  										<td>7 to 9</td>
+                                  										<td>Not Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Don't Update Age Preference ?</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td></td>
+                                  										<td></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Religion</td>
+                                  										<td>Catholic</td>
+                                  										<td>Hindu</td>
+                                  										<td>Moderately Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Ethnicity</td>
+                                  										<td>Chinese</td>
+                                  										<td>Malay</td>
+                                  										<td>Extremely Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Education Level</td>
+                                  										<td>Junior Colledge &amp; below</td>
+                                  										<td>Masters</td>
+                                  										<td>Extremely Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Previos Marriage</td>
+                                  										<td>yes</td>
+                                  										<td>yes</td>
+                                  										<td>Not Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Kids From Previos Marriage</td>
+                                  										<td>yes</td>
+                                  										<td>yes</td>
+                                  										<td>Extremely Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Smoking Habbit</td>
+                                  										<td>No</td>
+                                  										<td>Light / Social</td>
+                                  										<td>Moderately Flexible</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Physical Attribute Preference</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<thead>
+                                  									<tr>
+                                  										<th>Attribute</th>
+                                  										<th>First Preferences</th>
+                                  										<th>Second Preferences</th>
+                                  										<th>Flexibility</th>
+                                  									</tr>
+                                  								</thead>
+                                  								<tbody>
+                                  									<tr>
+                                  										<td>Height</td>
+                                  										<td>4.5</td>
+                                  										<td>4.7</td>
+                                  										<td>Not Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Build </td>
+                                  										<td>Slim </td>
+                                  										<td>Athletic</td>
+                                  										<td>Moderately Flexible</td>
+                                  									</tr>
+                                  									
+                                  									<tr>
+                                  										<td>Style</td>
+                                  										<td>Sophiticated</td>
+                                  										<td>classical</td>
+                                  										<td>Moderately Flexible</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Hair</td>
+                                  										<td>Short</td>
+                                  										<td>Medium</td>
+                                  										<td>Extremely Flexible</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Personality Attribute Preference</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<thead>
+                                  									<tr>
+                                  										<th>Attribute</th>
+                                  										<th>Very Important</th>
+                                  										<th>Attribute</th>
+                                  										<th>Very Important</th>
+                                  									</tr>
+                                  								</thead>
+                                  								<tbody>
+                                  									<tr>
+                                  										<td>Extrovert</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td>Tactful</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Organized</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td>Simple</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Serios</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td>worldly</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Indoor</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td>cooporate</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Thrifty</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td>Personality Other</td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									
+                                  									
+                                  									
+                                  									
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  			<!-- tab preference end here -->
+                                  			<!-- tab Interest start here -->
+                                  			<div class="tab-pane fade" id="tabInterest1">
+                                  				<!-- Interest page start here -->
+                                  				<fieldset>
+                                  					<legend>profile Interest</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Favorite Food:</b></td>
+                                  										<td>Thai ,Western</td>
+                                  										<td><b>Hobbies:</b></td>
+                                  										<td>Spa,Restling at Home</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Sports:</b></td>
+                                  										<td>Driving , Hockey</td>
+                                  										<td><b>Places of Patronage:</b></td>
+                                  										<td>Natural areas,karaoke</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Type of Film:</b></td>
+                                  										<td>comedy , Musical</td>
+                                  										<td><b>Taste of Music:</b></td>
+                                  										<td>Spiritual,Country</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Holidays Destination:</b></td>
+                                  										<td>Paris,Rome</td>
+                                  										<td><b>Holidays Activities:</b></td>
+                                  										<td>City Traveller,Dinning</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Pets:</b></td>
+                                  										<td>Horses,Otters</td>
+                                  										<td><b>How Often do you exercise:</b></td>
+                                  										<td>Never or Very Infrequent</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Importancy of Interest &amp; hobbies for matching</b></td>
+                                  										<td>Personal Coaching</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<!-- Interest page end here -->
+                                  			</div>
+                                  			<!-- tab Interest end here -->
+                                  			<!-- tab Expectation start here -->
+                                  			<div class="tab-pane fade" id="tabExpectation1">
+                                  				<fieldset>
+                                  					<legend>Expectation</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Why did you decide to join Lunch Actually ?:</b></td>
+                                  										<td>Hey! its a fun concept</td>
+                                  										<td><b>Choose one most important thing that your partner must have ?:</b></td>
+                                  										<td>Good Character</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Do you think that the guy should pay for the first date ?:</b></td>
+                                  										<td>Not sure</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  			<!-- tab Expectation end here -->
+                                  			<!-- tab Assessment start here -->
+                                  			<div class="tab-pane fade" id="tabAssessment1">
+                                  				<fieldset>
+                                  					<legend>Consultants Assessment</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Name of Consultants:</b></td>
+                                  										<td>User 1</td>
+                                  										<td><b>Client Difficult:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Client Monitored:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td><b>Client Punctualed:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Client Appearance</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Hair Color / Length:</b></td>
+                                  										<td>Short</td>
+                                  										<td><b>Body Type:</b></td>
+                                  										<td>Slim</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Grooming:</b></td>
+                                  										<td>Immaculate</td>
+                                  										<td><b>Complexion:</b></td>
+                                  										<td>Flawless</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Maturity:</b></td>
+                                  										<td>More Mature than age</td>
+                                  										<td><b>Confidence Level:</b></td>
+                                  										<td>Arrogant</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>English Level:</b></td>
+                                  										<td>Extremely Eloquent</td>
+                                  										<td><b>Masculine / Feminine:</b></td>
+                                  										<td>Feminine</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Personality</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Extrovert:</b></td>
+                                  										<td>Extrovert Level</td>
+                                  										<td><b>Organized Level:</b></td>
+                                  										<td>Organized</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Serious Level:</b></td>
+                                  										<td>Light Hearted</td>
+                                  										<td><b>Outdoor Level:</b></td>
+                                  										<td>Outdoor /Sporting</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Generous Level:</b></td>
+                                  										<td>Thrifty</td>
+                                  										<td><b>TactFul Level:</b></td>
+                                  										<td>TactFul</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Intellectual Level:</b></td>
+                                  										<td>Intellectual</td>
+                                  										<td><b>Worldy Level:</b></td>
+                                  										<td>Localized</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Artistic Level</b></td>
+                                  										<td>Cooperate</td>
+                                  										<td><b>Traditional</b></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Ratings of Clients</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Appearance:</b></td>
+                                  										<td>4</td>
+                                  										<td><b>Personality:</b></td>
+                                  										<td>4</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Grading:</b></td>
+                                  										<td>B+</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Remarks &amp; Comments</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Past RelationShips:</b></td>
+                                  										<td>Past RelationShips Value</td>
+                                  										<td><b>Additional Comments:</b></td>
+                                  										<td>Additional Comments Value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Consultants Recommendation:</b></td>
+                                  										<td>Consultants Recommendation Value</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  			<!-- tab Assessment end here -->
+                                  			<div class="tab-pane fade" id="tabConfidential1">
+                                  				<fieldset>
+                                  					<legend>Marriage Record</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Providing support to ex-spouse ? Difficult:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td><b>shared Custody:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Have any child/children:</b></td>
+                                  										<td>Yes</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Health Record</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Any Serious Medical Condition:</b></td>
+                                  										<td>No Serious Medical Condition</td>
+                                  										<td><b>Physically or Mentally Disabled ?:</b></td>
+                                  										<td>Mentallty</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Been a patient at mental health facility ?:</b></td>
+                                  										<td>Yes</td>
+                                  										<td><b>Undergone any major operations:</b></td>
+                                  										<td>No</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Criminal Record</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Ever Been Arrested ?:</b></td>
+                                  										<td>No</td>
+                                  										<td><b>Been Convicted for Crime ?:</b></td>
+                                  										<td>No</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Ever use or abuse alcohol,chemicals, controlled substance/medication ?:</b></td>
+                                  										<td>Yes</td>
+                                  										<td><b>Ever involved in any business/career activity that is illegal in nature(eg. Drug trafficking,prostitution,money laundaring,illegal gambling):</b></td>
+                                  										<td>No</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  			<div class="tab-pane fade" id="tabMyStory1">
+                                  				<fieldset>
+                                  					<legend>Past RelationShip</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>How long have you been single?:</b></td>
+                                  										<td>Less Than Two Months</td>
+                                  										<td><b>Think back about the most serious past relationship that you’ve ever had. How long did the relationship last for?:</b></td>
+                                  										<td>Less Than Two Months</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>How did you meet him/her?:</b></td>
+                                  										<td>meet personaly</td>
+                                  										<td><b>How did it end?:</b></td>
+                                  										<td>By marriage</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Divorce Happen(If applicable):</b></td>
+                                  										<td>No</td>
+                                  										<td><b>How did it happen?:</b></td>
+                                  										<td>fight</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>How old are you children (if any)?:</b></td>
+                                  										<td>34</td>
+                                  										<td><b>Is custody with you or your ex?:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Likes</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>What did you like about your previous partner(s)?:</b></td>
+                                  										<td>previos partner details</td>
+                                  										<td><b>What would your ideal partner be like (if different from above)?:</b></td>
+                                  										<td>Ideal Partner different</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Dislikes</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>What did you dislike about your previous partner(s)?:</b></td>
+                                  										<td>previos partner details</td>
+                                  										<td><b>What type of people do you dislike and would rather avoid (if different from above)?:</b></td>
+                                  										<td>Ideal Partner different</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>About Him / Her</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>How would you describe your personality?:</b></td>
+                                  										<td>about your personlity</td>
+                                  										<td><b>Four things your friends will say about you:</b></td>
+                                  										<td>very well</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>One thing people don’t notice about you</b></td>
+                                  										<td>Good thing</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>About His / Her Family</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Where is your hometown?:</b></td>
+                                  										<td>Gujarat</td>
+                                  										<td><b>Are you staying alone?:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Are you the eldest / youngest sibling? Or otherwise? (Please specify).</b></td>
+                                  										<td>Eldest</td>
+                                  										<td><b>Is / are your sibling/ s married?</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>How close are you with your family members?:</b></td>
+                                  										<td>very close</td>
+                                  										<td><b>What do you like about your job?:</b></td>
+                                  										<td>work</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>What do you dislike about your job?:</b></td>
+                                  										<td>Not work</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Interests</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>What you like to do during your free time / weekends:</b></td>
+                                  										<td>Sleeping</td>
+                                  										<td><b>What is one activity that you enjoy the most?:</b></td>
+                                  										<td>travelling</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Topics you like to talk about (this will be shared with your potential match)</b></td>
+                                  										<td>Nothing</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Values</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Five things or people you can’t live without:</b></td>
+                                  										<td>Five thing are here</td>
+                                  										<td><b>Three people or experiences you are most thankful for (this will be shared with your potential match):</b></td>
+                                  										<td></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>What are you most passionate about? (this will be shared with your potential match)</b></td>
+                                  										<td>Nothing</td>
+                                  										<td><b>One thing you’ve always wanted to do?</b></td>
+                                  										<td>Nothing</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>What is your greatest achievement? (this will be shared with your potential match)</b></td>
+                                  										<td>Nothing</td>
+                                  										<td><b>What makes you a good catch? (this will be shared with your potential match)</b></td>
+                                  										<td>Nothing</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  			<div class="tab-pane fade" id="tabOtherService1">
+                                  				<fieldset>
+                                  					<legend>Marriage Record</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<thead>
+                                  									<tr>
+                                  										<th>Best Talk Time</th>
+                                  										<th>PreferDay and Time</th>
+                                  										<th>Restuarant Preferences</th>
+                                  									</tr>
+                                  								</thead>
+                                  								<tbody>
+                                  									<tr>
+                                  										<td>Weekdays Morning</td>
+                                  										<td>Weekdays 10:00 pm</td>
+                                  										<td>thursday 10:00 pm</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>Weekdays Morning</td>
+                                  										<td>Weekdays 10:00 pm</td>
+                                  										<td>thursday 10:00 pm</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td>vegan</td>
+                                  										<td>Diabetic</td>
+                                  										<td>Allergy Seafood</td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  				<fieldset>
+                                  					<legend>Other Preferences</legend>
+                                  					<div class="row">
+                                  						<div class="col-sm-12">
+                                  							<table class="table table-plain">
+                                  								<tbody>
+                                  									<tr>
+                                  										<td><b>Would Like to recieve a dating report after feedback from 5 introductions:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td><b>Would Like to recieve a dating tips via SMS prior to every intros:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Would Like to recieve Dating E-Coach by email twice every month:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td><b>Would Like to attend your proven 'I am Ready for Love' WorkShop:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Would Like to attend your proven Image Consultancy Coaching session to understand the keys to improving my image and style.:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  										<td><b>I want to purchase the Coaching Bundle:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
+                                  									</tr>
+                                  								</tbody>
+                                  							</table>
+                                  						</div>
+                                  					</div>
+                                  				</fieldset>
+                                  			</div>
+                                  		</div>
+                                  	</div>
+                                  	<div class="tab-pane fade" id="tabMatch1">
+                                  		<p>Macth Page Under processing...</p>
+                                  	</div>
+                                  	<div class="tab-pane fade" id="tabDates1">
+                                  		<p>Dates  Page Under processing...</p>
+                                  	</div>
+                                  	<div class="tab-pane fade" id="tabFeedback1">
+                                  		<p>Feedback  Page Under processing...</p>
+                                  	</div>
+                              		</div>
+									<!-- tab content end here -->
+                              	</div>
+                           	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- end row -->
+	<link rel="stylesheet" type="text/css"
+		href="../resources/venders/password-indicator/css/password-indicator.css" />
+	<link rel="stylesheet" type="text/css"
+		href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.css" />
+	<link rel="stylesheet" type="text/css"
+		href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.skinNice.css" />
+
+	<link rel="stylesheet" type="text/css"
+		href="../resources/venders/switchery/switchery.min.css" />
+	<script
+		src="../resources/venders/password-indicator/js/password-indicator.js"></script>
+	<script
+		src="../resources/venders/ionRangeSlider/js/ion.rangeSlider.min.js"></script>
+	<script src="../resources/venders/switchery/switchery.min.js"></script>
+	<script type="text/javascript">
+                    $(document).ready(function() {
+
+                          $(".birth-date-control").datepicker({
+                            format: 'yyyy-mm-dd',
+                            todayHighlight: true,
+                            calendarWeeks: true,
+                            startDate: '0'
+                        });
+                        // range double slider for age
+                        $("#age").ionRangeSlider({
+                            type: "double",
+                            grid: true,
+                            min: 0,
+                            max: 100,
+                            from: 20,
+                            to: 40
+                        });
+                        //range double slider for hieght
+                        $("#height").ionRangeSlider({
+                            type: "double",
+                            grid: true,
+                            min: 120,
+                            max: 210,
+                            from: 160,
+                            to: 190,
+                            postfix: "cm"
+                        });
+                        // preference slider
+                        $('.flex-slider').ionRangeSlider({
+                            values : [ 'No Preference',
+                                    'First Preference',
+                                    'Second Preference',
+                                    'Grading' ],
+                            type : 'single',
+
+                        });
+                        //habit slider
+                        $('.flex-slider-habit').ionRangeSlider({
+                            values : [ 'No',
+                                    'Light/Social',
+                                    'Yes'],
+                            type : 'single',
+
+                        });
+                        //religion and ethnicity slider 
+                        $('.flex-slider-religion-ethnicity').ionRangeSlider({
+                            values : [ 'Moderately Flexible',
+                                    'Member Flexible',
+                                    'Extremely Flexible'],
+                            type : 'single',
+
+                        });
+                        // Switchery code start
+                        if ($('[data-render=switchery]').length !== 0) {
+                            $('[data-render=switchery]').each(function() {
+                                var option = {};
+                                option.color = '#348fe2';
+                                option.size = 'small';
+                                option.secondaryColor = ($(this)
+                                        .attr('data-secondary-color')) ? $(
+                                        this)
+                                        .attr(
+                                                'data-secondary-color')
+                                        : '#000000';
+                                option.className = ($(this)
+                                        .attr('data-classname')) ? $(
+                                        this).attr(
+                                        'data-classname')
+                                        : 'switchery';
+                                option.disabled = ($(this)
+                                        .attr('data-disabled')) ? true
+                                        : false;
+                                option.disabledOpacity = ($(this)
+                                        .attr('data-disabled-opacity')) ? $(
+                                        this)
+                                        .attr(
+                                                'data-disabled-opacity')
+                                        : 0.5;
+                                option.speed = ($(this)
+                                        .attr('data-speed')) ? $(
+                                        this).attr(
+                                        'data-speed')
+                                        : '0.5s';
+                                var switchery = new Switchery(
+                                        this, option);
+                            });
+                        }
+                    });
+                </script>
+	</div>
+	<!-- end #content -->
+
+	<!-- begin scroll to top btn -->
+	<a href="javascript:;"
+		class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade"
+		data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+	<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+</body>
+</html>
