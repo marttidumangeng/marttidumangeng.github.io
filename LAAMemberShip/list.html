@@ -390,25 +390,41 @@
                 <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-daterangepicker/css/daterangepicker.css" />
                 <script src="../resources/venders/bootstrap-daterangepicker/js/daterangepicker.js"></script>
                 <script type="text/javascript">
+                    
+
                     jQuery(document).ready(function($) {
 
-                        console.log("sorting the table : "+$('#sortTable').tablesorter());
 
-                            // For getting the header name 
-                        $('#sortTable').tablesorter({
+                        console.log("sorting the table : "+$('#sortTable').tablesorter());
+                        // HEADER VALUE WITH ASC AND DESC BUTTON  
+                                              $("#sortTable").on("sortEnd", function(event) {
+                        // prints the current sort order to the console
+                       currentSort =  event.target.config.sortList;
+                       columnNum = currentSort[0][0];
+
+                        console.log(event.target.config.headerList[columnNum].className);
+                        console.log(event.target.config.headerList[columnNum].innerHTML);
+                    });
+
+                            // GET THE HEADER NAME OF TABLE
+                       /*$('#sortTable').tablesorter({
+
+                        
                         // sort on the last column, order asc 
                         sortList: [[6, 0]]
-                    }).bind("sortEnd", function(event) {
+                    }).bind("sortStart", function(event) {
+                        //console.log("inside sortEnd"+$(event).find("span:last").text());
+                       
                       var table = event.target,
                      currentSort = table.config.sortList,
                          // target the first sorted column
+
                      columnNum = currentSort[0][0],
                      columnName = $(table.config.headerList[columnNum]).text();
 
                         console.log(columnName);
 
-                        });
-
+                        });*/
 
                         $(".daterange").daterangepicker({
                             autoUpdateInput: false,
