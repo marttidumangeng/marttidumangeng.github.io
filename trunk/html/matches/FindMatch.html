@@ -206,231 +206,571 @@
             <div id="content" class="content">
                 <!-- begin row -->
                 <div class="row">
-                    <div class="col-sm-6 pull-left">
-                        <div class="panel">
+                    <div class="col-sm-12">
+                        <div class="panel panel-inverse" data-sortable-id="form-stuff-1">
+                            <div class="panel-heading">
+                                <div class="panel-heading-btn">
+                                    <!-- <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a> -->
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                    <!-- <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a> -->
+                                </div>
+                                <h4 class="panel-title">Search Criteria</h4>
+                            </div>
+                       <!--  <div class="panel"> -->
                             <div class="panel-body">    
-                                <form class="form-horizontal parsley-validate" name="mainForm" method="post" role="form" enctype="multipart/form-data">                        
-                                    <div class="form-group m-b-40">
-                                        <div class="col-md-4">
-                                            <input class="form-control" name="search" type="text" placeholder="Search" />
+                                <form class="form-horizontal parsley-validate" name="mainForm" method="post" role="form" enctype="multipart/form-data">                
+                                    <div class="row">
+                                        <div class="col-sm-offset-2">
+                                            <div class="panel-heading p-0">
+                                                <ul class="nav nav-pills">
+                                                    <li class="active"><a href="#search-criteria" data-toggle="tab">Search Criteria</a></li>
+                                                    <li><a href="#counter-check" data-toggle="tab">Counter Check</a></li>
+                                                </ul>
+                                            </div> 
                                         </div>
-                                        <div class="col-md-1">
-                                            <button class="btn glyphicon glyphicon-search pull-left"></button>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="matchusing" class="col-md-3 control-label">Match Using</label>
-                                        <div class="col-md-6">
-                                            <select id="matchusing" name="matchusing" class="form-control selectpicker" data-parsley-required="true">
-                                                <option selected="selected">No Preference</option>
-                                                <option>First Preference</option>
-                                                <option>Second Preference</option>
-                                                <option>Education</option>
-                                                <option>Grading</option>
-                                                <option>Age</option>
-                                                <option>All</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label"><b>Add more filters:</b></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="age" class="col-md-3 control-label">Age</label>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="col-md-12">
-                                                    <input type="text" class="flex-slider" id="age" name="age" value="" />
+                                    </div> 
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="tab-content">
+                                            <!-- Search Criteria tab start here -->
+                                                <div class="tab-pane fade active in" id="search-criteria">
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="form-gorup">
+                                                                <label class="col-md-4 control-label">Name</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" class="form-control"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="form-group">
+                                                                <label for="age" class="col-md-3 control-label">Age</label>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <div class="col-md-12">
+                                                                            <input type="text" class="flex-slider" id="age" name="age" value="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="form-gorup">
+                                                                <label class="col-md-4 control-label">Filter By</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="text" class="form-control"/>
+                                                                </div>
+                                                                <div class="col-md-1">
+                                                                    <button class="btn glyphicon glyphicon-search pull-left"></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                           <div class="form-group">
+                                                                <label for="Religion" class="col-md-2 control-label">Religion</label>
+                                                                <div class="col-md-4">
+                                                                    <select id="religion" name="religion" multiple="true" 
+                                                                        class="form-control selectpicker"
+                                                                        data-parsley-required="true">
+                                                                        <option selected="selected">Catholic</option>
+                                                                        <option>Christian</option>
+                                                                        <option>Buddhist</option>
+                                                                        <option>Hindu</option>
+                                                                        <option>Muslim</option>
+                                                                        <option>Taoist</option>
+                                                                        <option>Free Thinker</option>
+                                                                        <option>Judaism</option>
+                                                                        <option>Atheist</option>
+                                                                        <option>Sikh</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-md-4 col-md-offset-1">
+                                                                    <input type="text" class="flex-slider-religion-ethnicity" id="religion" name="religion" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="ethnicity" class="col-md-2 control-label">Ethnicity</label>
+                                                                <div class="col-md-4">
+                                                                    <select id="ethnicity" name="ethnicity" multiple="true" class="form-control selectpicker"
+                                                                        data-parsley-required="true">
+                                                                        <option selected="selected">Caucasian</option>
+                                                                        <option>Chinese</option>
+                                                                        <option>Japanese</option>
+                                                                        <option>Thai</option>
+                                                                        <option>Malay</option>
+                                                                        <option>Indian</option>
+                                                                     </select>
+                                                                </div>
+                                                                <div class="col-md-4 col-md-offset-1">
+                                                                    <input type="text" class="flex-slider-religion-ethnicity" id="ethnicity" name="ethnicity" value="" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                     <fieldset>
+                                                        <legend>Looks</legend>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="height" class="col-md-3 control-label">Height</label>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <div class="col-md-12">
+                                                                            <input type="text" class="flex-slider" id="height" name="height" value="" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="build" class="col-md-3 control-label">Build</label>
+                                                                <div class="col-md-6">
+                                                                    <select id="build" name="build" multiple="true" class="form-control selectpicker" data-parsley-required="true">
+                                                                        <option selected="selected">Slim</option>
+                                                                        <option>Athletic</option>
+                                                                        <option>Medium</option>
+                                                                        <option>Slightly Overweight</option>
+                                                                        <option>Plumb</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                    </div>
+                                                    <div class="row">
+                                                        <fieldset>
+                                                            <legend>Personal</legend>
+                                                            <div class="col-sm-4">
+                                                                <div class="form-group">
+                                                                    <label for="smokingHabit" class="col-md-4 control-label">Smoking Habit</label>
+                                                                    <div class="col-md-6">
+                                                                        <input class="flex-slider-habit" name="educationalFlexibility" type="text" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                              <div class="form-group">
+                                                                <label for="drinkingHabit" class="col-md-4 control-label">Drinking Habit</label>
+                                                                <div class="col-md-6">
+                                                                    <input class="flex-slider-habit" name="educationalFlexibility" type="text" value="" />
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <div class="form-group">
+                                                                    <label for="vegetarianToggle" class="col-md-3 control-label">Vegetarian</label>
+                                                                    <div class="col-md-6">
+                                                                        <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                    </div>
+                                                                </div> 
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="row">
+                                                        <fieldset>
+                                                            <legend>Carreer</legend>
+                                                            <div class="col-sm-4">
+                                                                <div class="form-group">
+                                                                    <label for="occupation" class="col-md-4 control-label">Occupation</label>
+                                                                    <div class="col-md-6">
+                                                                        <input class="flex-slider" name="occupationFlexibility" type="text" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <div class="form-group">
+                                                                    <label for="incomeGroup" class="col-md-4 control-label"><b>Income Group:</b></label>
+                                                                    <div class="col-md-6">
+                                                                        <label class="control-label radio-inline">Higher&nbsp;&nbsp;<input type="checkbox" class="checkbox" id="inOut" data-render="switchery" data-theme="default" checked/>&nbsp;&nbsp; Lower</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="row">
+                                                        <fieldset>
+                                                            <div class="col-sm-4">
+                                                                <div class="form-group">
+                                                                    <label for="educationallevel" class="col-md-4 control-label">Educational Level</label>
+                                                                    <div class="col-md-6">
+                                                                        <input class="flex-slider" name="educationalFlexibility" type="text" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                               <div class="form-group">
+                                                                    <label for="incomelevel" class="col-md-4 control-label">Income Level</label>
+                                                                    <div class="col-md-6">
+                                                                        <input class="flex-slider" name="incomeFlexibility" type="text" value="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="occupation" class="col-md-3 control-label">Occupation</label>
-                                        <div class="col-md-6">
-                                            <input class="flex-slider" name="occupationFlexibility" type="text" value="" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="educationallevel" class="col-md-3 control-label">Educational Level</label>
-                                        <div class="col-md-6">
-                                            <input class="flex-slider" name="educationalFlexibility" type="text" value="" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="incomelevel" class="col-md-3 control-label">Income Level</label>
-                                        <div class="col-md-6">
-                                            <input class="flex-slider" name="incomeFlexibility" type="text" value="" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="incomeGroup" class="col-md-3 control-label">Income Group</label>
-                                        <div class="col-md-6">
-                                        <label class="control-label radio-inline">Higher&nbsp;&nbsp;<input type="checkbox" class="checkbox" id="inOut" data-render="switchery" data-theme="default" checked/>&nbsp;&nbsp; Lower</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="previousMarriage" class="col-md-3 control-label">Previous Marriage</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="smokingHabit" class="col-md-3 control-label">Smoking Habit</label>
-                                        <div class="col-md-6">
-                                            <input class="flex-slider-habit" name="educationalFlexibility" type="text" value="" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="drinkingHabit" class="col-md-3 control-label">Drinking Habit</label>
-                                        <div class="col-md-6">
-                                            <input class="flex-slider-habit" name="educationalFlexibility" type="text" value="" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="height" class="col-md-3 control-label">Height</label>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <div class="col-md-12">
-                                                    <input type="text" class="flex-slider" id="height" name="height" value="" />
+                                                <!-- Search Criteria tab end here -->
+                                                <!-- Counter-Check tab start here -->
+                                                <div class="tab-pane fade" id="counter-check">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label for="matchusing" class="col-md-3 control-label">Match Using</label>
+                                                                <div class="col-md-6">
+                                                                    <select id="matchusing" name="matchusing" class="form-control selectpicker" data-parsley-required="true">
+                                                                        <option selected="selected">No Preference</option>
+                                                                        <option>First Preference</option>
+                                                                        <option>Second Preference</option>
+                                                                        <option>Education</option>
+                                                                        <option>Grading</option>
+                                                                        <option>Age</option>
+                                                                        <option>All</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="form-group">
+                                                                <label for="ageToggle" class="col-md-3 control-label">Age</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                           <div class="form-group">
+                                                                <label for="ethnicityToggle" class="col-md-3 control-label">Ethnicity</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="form-group">
+                                                                <label for="drinkingToggle" class="col-md-3 control-label">Drinking</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="form-group">
+                                                                <label for="religionToggle" class="col-md-3 control-label">Religion</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="form-group">
+                                                                <label for="heightToggle" class="col-md-3 control-label">Height</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="form-group">
+                                                                <label for="smokingToggle" class="col-md-3 control-label">Smoking</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="form-group">
+                                                                <label for="preMarriageToggle" class="col-md-3 control-label">Previous Marriage</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="form-group">
+                                                                <label for="kidsToggle" class="col-md-3 control-label">Kids From Previous Marriage</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="form-group">
+                                                                <label for="singaporeanToggle" class="col-md-3 control-label">Singaporean Only</label>
+                                                                <div class="col-md-6">
+                                                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-4">
+                                                            <div class="form-group">
+                                                                <label for="counterCheck" class="col-md-3 control-label">Counter Check</label>
+                                                                <div class="col-md-6 checkbox">
+                                                                    <input type="radio"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                                <!-- Counter-check tab end here -->
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="build" class="col-md-3 control-label">Build</label>
-                                        <div class="col-md-6">
-                                            <select id="build" name="build" class="form-control selectpicker" data-parsley-required="true">
-                                                <option selected="selected">Slim</option>
-                                                <option>Athletic</option>
-                                                <option>Medium</option>
-                                                <option>Slightly Overweight</option>
-                                                <option>Plumb</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                    <label for="Religion" class="col-md-3 control-label">Religion</label>
-                                        <div class="col-md-4">
-                                            <select id="religion" name="religion"
-                                                class="form-control selectpicker"
-                                                data-parsley-required="true">
-                                                <option selected="selected">Catholic</option>
-                                                <option>Christian</option>
-                                                <option>Buddhist</option>
-                                                <option>Hindu</option>
-                                                <option>Muslim</option>
-                                                <option>Taoist</option>
-                                                <option>Free Thinker</option>
-                                                <option>Judaism</option>
-                                                <option>Atheist</option>
-                                                <option>Sikh</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4 col-md-offset-1">
-                                            <input type="text" class="flex-slider-religion-ethnicity" id="religion" name="religion" value="" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                    <label for="ethnicity" class="col-md-3 control-label">Ethnicity</label>
-                                        <div class="col-md-4">
-                                            <select id="ethnicity" name="ethnicity"
-                                                class="form-control selectpicker"
-                                                data-parsley-required="true">
-                                                <option selected="selected">Caucasian</option>
-                                                <option>Chinese</option>
-                                                <option>Japanese</option>
-                                                <option>Thai</option>
-                                                <option>Malay</option>
-                                                <option>Indian</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4 col-md-offset-1">
-                                            <input type="text" class="flex-slider-religion-ethnicity" id="ethnicity" name="ethnicity" value="" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="counterCheck" class="col-md-3 control-label">Counter Check</label>
-                                        <div class="col-md-6 checkbox">
-                                            <input type="radio"/>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ageToggle" class="col-md-3 control-label">Age</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ethnicityToggle" class="col-md-3 control-label">Ethnicity</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="religionToggle" class="col-md-3 control-label">Religion</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="heightToggle" class="col-md-3 control-label">Height</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="preMarriageToggle" class="col-md-3 control-label">Previous Marriage</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="kidsToggle" class="col-md-3 control-label">Kids From Previous Marriage</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="drinkingToggle" class="col-md-3 control-label">Drinking</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="smokingToggle" class="col-md-3 control-label">Smoking</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="singaporeanToggle" class="col-md-3 control-label">Singaporean Only</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="vegetarianToggle" class="col-md-3 control-label">Vegetarian</label>
-                                        <div class="col-md-6">
-                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
-                                        </div>
-                                    </div>   
-                                    <div class="form-group">
-                                        <center>
-                                            <button class="btn btn-success">Search</button>
-                                            <button class="btn">Undo</button>
-                                        </center>
-                                    </div>                                 
+                                         </div>
+                                        <div class="form-group">
+                                            <center>
+                                                <button class="btn btn-success">Search</button>
+                                                <button class="btn">Undo</button>
+                                            </center>
+                                        </div> 
+                                    </div>                                
                                 </form>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 pull-left">
+                   <!--  </div> -->
+                    <!-- <div class="col-sm-6 pull-left">
                         <div class="panel">
                             <div class="panel-body">                       
                             </div>
                         </div>
+                    </div> -->
                     </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                     <div class="panel panel-inverse" data-sortable-id="form-stuff-1">
+                    <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <!-- <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a> -->
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-repeat"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                            </div>
+                            <h4 class="panel-title">Match Intro</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-sm-6 pull-left">
+                        <div class="panel">
+                            <div class="panel-body">    
+                                <form class="form-horizontal parsley-validate" name="mainForm" method="post" role="form" enctype="multipart/form-data"> 
+                                    <legend>Match Intro</legend>
+
+                                    <!-- FIRST USER ROW START HERE  -->
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                               <div class="col-sm-3">
+                                                    <div class="profile-image">
+                                                        <img src="../resources/images/photo.jpg" />
+                                                        <i class="fa fa-user hide"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <table class="table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Name</td>
+                                                                <td>John Paul,say john</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Last Date</td>
+                                                                <td>23/2/2012</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Grading</td>
+                                                                <td>A</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Age</td>
+                                                                <td>32</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Preferences</td>
+                                                                <td>1st</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 note note-info">
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+
+                                                        <input type="button" class="btn btn-primary" name="view" value="View"/>
+                                                        <input type="button" class="btn btn-primary" name="Intro" value="Intro"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="input-group date">
+                                                        <input type="text" id="birthDate" name="birthDate" class="form-control birth-date-control" data-parsley-required="true"/>
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <div class="col-md-2">
+                                                            <input type="button" class="btn btn-primary" name="saveIntro" value="Save Intro"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- FIRST USER ROW END HERE -->
+                                    <!-- SECOND USER START HERE -->
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                               <div class="col-sm-3">
+                                                    <div class="profile-image">
+                                                        <img src="../resources/images/photo.jpg" />
+                                                        <i class="fa fa-user hide"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <table class="table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Name</td>
+                                                                <td>say john</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Last Date</td>
+                                                                <td>23/2/2013</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Grading</td>
+                                                                <td>B</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Age</td>
+                                                                <td>24</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Preferences</td>
+                                                                <td>2nd</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 note note-info">
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+
+                                                        <input type="button" class="btn btn-primary" name="view" value="View"/>
+                                                        <input type="button" class="btn btn-primary" name="Intro" value="Intro"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="input-group date">
+                                                        <input type="text" id="birthDate" name="birthDate" class="form-control birth-date-control" data-parsley-required="true"/>
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <div class="col-md-2">
+                                                            <input type="button" class="btn btn-primary" name="saveIntro" value="Save Intro"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <!-- SECOND USER END HERE -->
+                                    <!-- THIRD USER START HERE -->
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                               <div class="col-sm-3">
+                                                    <div class="profile-image">
+                                                        <img src="../resources/images/photo.jpg" />
+                                                        <i class="fa fa-user hide"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <table class="table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Name</td>
+                                                                <td>anuj patel</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Last Date</td>
+                                                                <td>23/2/2014</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Grading</td>
+                                                                <td>A</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Age</td>
+                                                                <td>35</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Preferences</td>
+                                                                <td>1st</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 note note-info">
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+
+                                                        <input type="button" class="btn btn-primary" name="view" value="View"/>
+                                                        <input type="button" class="btn btn-primary" name="Intro" value="Intro"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="input-group date">
+                                                        <input type="text" id="birthDate" name="birthDate" class="form-control birth-date-control" data-parsley-required="true"/>
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-calendar"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <div class="col-md-2">
+                                                            <input type="button" class="btn btn-primary" name="saveIntro" value="Save Intro"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <!-- THIRD USER END HERE -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
                 </div>
                 <!-- end row -->
                 <link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" />
@@ -447,10 +787,10 @@
                         $("#age").ionRangeSlider({
                             type: "double",
                             grid: true,
-                            min: 0,
-                            max: 100,
+                            min: 18,
+                            max: 80,
                             from: 20,
-                            to: 40
+                            to: 35
                         });
                         //range double slider for hieght
                         $("#height").ionRangeSlider({
@@ -492,13 +832,13 @@
                             $('[data-render=switchery]').each(function() {
                                 var option = {};
                                 option.color = '#348fe2';
-                                //option.size = 'small';
+                                option.size = 'small';
                                 option.secondaryColor = ($(this)
                                         .attr('data-secondary-color')) ? $(
                                         this)
                                         .attr(
                                                 'data-secondary-color')
-                                        : '#dfdfdf';
+                                        : '#000000';
                                 option.className = ($(this)
                                         .attr('data-classname')) ? $(
                                         this).attr(
