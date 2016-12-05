@@ -168,3 +168,6 @@ label.css-label {
 .form-inline .bootstrap-select.form-control:not([class*=col-]) {
     width: auto;
 }
+.timeline-container {
+    background-color: #d9e0e7;
+}
