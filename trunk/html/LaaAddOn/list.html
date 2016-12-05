@@ -219,35 +219,33 @@
                             <a href="javascript:;">View</a>
                             <ul class="sub-menu">
                                 <li><a href="?view=all">All</a></li>
-                                <li><a href="#">Assigned to me</a></li>
                                 <li>
-                                    <label class="control-label">Assigned to</label>
+                                    <label class="control-label">Gender</label>
                                     <select name="view" class="form-control selectpicker">
-                                        <option>John Doe</option>
-                                        <option>John Wilson</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label class="control-label">Status</label>
+                                    <select name="view" class="form-control selectpicker">
+                                        <option>Active</option>
+                                        <option>InActive</option>
+                                        <option>In Use Only</option>
                                     </select>
                                 </li>
                             </ul>
                         </li>
                         <li class="has-sub">
-                            <a href="javascript:;">Leads</a>
+                            <a href="javascript:;">Activation Date</a>
                             <ul class="sub-menu">
-                                <li><a href="?view=all&lead=oraganic">Organic Leads</a></li>
-                                <li><a href="#">Paid Leads</a></li>
-                                <li><a href="#">LA Unsuitable</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a href="javascript:;">Date</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Today</a></li>
-                                <li><a href="#">This Month</a></li>
+                                <!-- <li><a href="#">Today</a></li>
+                                <li><a href="#">This Month</a></li> -->
                                 <li>
-                                    <div class="input-group">
-                                        <input type="text" name="birthDate" class="form-control daterange"/>
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
+                                    <div class="input-group ">
+                                        <input type="text" class="form-control" id="activationDateFrom" name="start" placeholder="From" />
+                                        <span class="input-group-addon">To</span>
+                                        <input type="text" class="form-control" id="activationDateTo" name="end" placeholder="To" />
                                     </div>
                                 </li>
                             </ul>
@@ -346,6 +344,21 @@
                 <script src="../resources/venders/bootstrap-daterangepicker/js/daterangepicker.js"></script>
                 <script type="text/javascript">
                     jQuery(document).ready(function($) {
+
+                         $('#activationDateFrom').datepicker({
+                            format: 'yyyy-mm-dd',
+                            todayHighlight: true,
+                            calendarWeeks: true,
+                            endDate: '1y'
+                        });
+                        $('#activationDateTo').datepicker({
+                            format: 'yyyy-mm-dd',
+                            todayHighlight: true,
+                            calendarWeeks: true,
+                            endDate: '+1y'
+                        });
+                        
+
                         $(".daterange").daterangepicker({
                             autoUpdateInput: false,
                             opens: "right",

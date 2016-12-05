@@ -110,12 +110,10 @@
 
 <!-- ================== END PAGE LEVEL JS ================== -->
 <script>
-    $(document)
-            .ready(
-                    function() {
-                        
-                        App.init();
-                        
+    $(document).ready(function() {
+        
+        App.init();
+        
                      //   $('#datetimepicker').datetimepicker();
 
                         // $('#dtdate').datepicker({
@@ -133,38 +131,17 @@
                         });
 
                         if ($('[data-render=switchery]').length !== 0) {
-                            $('[data-render=switchery]')
-                                    .each(
-                                            function() {
-                                                var option = {};
-                                                option.color = '#348fe2';
-                                                option.secondaryColor = ($(this)
-                                                        .attr('data-secondary-color')) ? $(
-                                                        this).attr(
-                                                        'data-secondary-color')
-                                                        : '#dfdfdf';
-                                                option.className = ($(this)
-                                                        .attr('data-classname')) ? $(
-                                                        this).attr(
-                                                        'data-classname')
-                                                        : 'switchery';
-                                                option.disabled = ($(this)
-                                                        .attr('data-disabled')) ? true
-                                                        : false;
-                                                option.disabledOpacity = ($(this)
-                                                        .attr('data-disabled-opacity')) ? $(
-                                                        this)
-                                                        .attr(
-                                                                'data-disabled-opacity')
-                                                        : 0.5;
-                                                option.speed = ($(this)
-                                                        .attr('data-speed')) ? $(
-                                                        this)
-                                                        .attr('data-speed')
-                                                        : '0.5s';
-                                                var switchery = new Switchery(
-                                                        this, option);
-                                            });
+                            $('[data-render=switchery]').each(function() {
+                                var option = {};
+                                option.color = '#348fe2';
+                                option.size = 'small';
+                                option.secondaryColor = ($(this).attr('data-secondary-color')) ? $(this).attr('data-secondary-color'): '#000000';
+                                option.className = ($(this).attr('data-classname')) ? $(this).attr('data-classname'): 'switchery';
+                                option.disabled = ($(this).attr('data-disabled')) ? true: false;
+                                option.disabledOpacity = ($(this).attr('data-disabled-opacity')) ? $(this).attr('data-disabled-opacity'): 0.5;
+                                option.speed = ($(this).attr('data-speed')) ? $(this).attr('data-speed'): '0.5s';
+                                var switchery = new Switchery(this, option);
+                            });
                         }
 
                         $('#profileName').editable();
@@ -177,19 +154,14 @@
                         $('#profileIncome').editable();
                         //$('#profileStatus').editable();
                         $('#profileEducation').editable();
-
                         $('#profileEthnicity').editable();
-
-                        $('#btnSave').on(
-                                'click',
-                                function(e) {
-                                    $.each(arrRatings, function(index, key) {
-                                        alert(key.item + '\t' + key.value
-                                                + '\t' + key.text);
-                                    });
-                                });
+                        $('#btnSave').on('click',function(e) {
+                            $.each(arrRatings, function(index, key) {
+                                alert(key.item + '\t' + key.value+ '\t' + key.text);
+                            });
+                        });
                     });
-</script>
+                </script>
 </head>
 
 <body class="layout">
@@ -462,32 +434,28 @@
                                                 <td><a href="#" id="profileEthnicity" data-type="text"
                                                     data-pk="1" data-title="Enter Username">Indian </a></td>
                                                 <td>Dates Left :</td>
-                                                <td><a href="#" id="datesLeft" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">5 </a></td>
+                                                <td><id="datesLeft" data-type="text" data-pk="1" data-title="Enter Username">5</td>
                                             </tr>
                                             <tr>
                                                 <td>Marital Status:</td>
                                                 <td><a href="#" id="maritalStatus" data-type="text"
                                                     data-pk="1" data-title="Enter Username">Unmarried </a></td>
                                                 <td>Free Dates :</td>
-                                                <td><a href="#" id="freeDates" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">3 </a></td>
+                                                <td><id="freeDates" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">3</td>
                                             </tr>
                                             <tr>
                                                 <td>Profile Income:</td>
-                                                <td><a href="#" id="profileIncome" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">5 lakh </a></td>
+                                                <td><a href="#" id="profileIncome" data-type="text" data-pk="1" data-title="Enter Username">5 lakh </a></td>
                                                 <td>package Status :</td>
-                                                <td><a href="#" id="profileStatus" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">6 </a></td>
+                                                <td><id="profileStatus" data-type="text" data-pk="1" data-title="Enter Username">6</td>
                                             </tr>
                                             <tr>
                                                 <td>Profile Education:</td>
                                                 <td><a href="#" id="profileEducation" data-type="text"
                                                     data-pk="1" data-title="Enter Username">PhD and above </a></td>
                                                 <td>Sign Up date :</td>
-                                                <td><a href="#" id="signUpDate" data-type="text"
-                                                    data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
+                                                <td><id="signUpDate" data-type="text" data-pk="1" data-title="Enter Username"> 22-9-2016</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -500,140 +468,122 @@
                             <form class="form-horizontal parsley-validate" name="mainForm"
                                 method="post" role="form">
                                 <fieldset>
-                                 <legend>Coach Session</legend>
+                                <legend>Coach Session</legend>
                                     <div class="panel panel-default">
                                         <div class="panel">
-                                        <div class="row">
-                                        <div class="form-group">
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-4">
-                                                <label class="control-label col-md-4">Coach</label>
-                                                    <div class="col-md-8
-                                                    ">
-                                                        <select name="ddlselect" id="ddlselect"
-                                                            class="form-control selectpicker">
-                                                            <option value="Coach-1">Coach-1</option>
-                                                            <option value="Coach-2">Coach-2</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label col-md-4">Date Time</label>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <div class="col-sm-12">
+                                                        <div class="col-sm-4">
+                                                            <label class="control-label col-md-4">Coach</label>
                                                             <div class="col-md-8">
-                                                                <div class="input-group date" id="datetimepicker1">
-                                                                    <input type="text" class="form-control" />
-                                                                    <span class="input-group-addon">
-                                                                        <span class="glyphicon glyphicon-calendar"></span>
-                                                                    </span>
+                                                                <select name="ddlselect" id="ddlselect" class="form-control selectpicker">
+                                                                    <option value="Coach-1">Coach-1</option>
+                                                                    <option value="Coach-2">Coach-2</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">Date Time</label>
+                                                                    <div class="col-md-8">
+                                                                        <div class="input-group date" id="datetimepicker1">
+                                                                            <input type="text" class="form-control" />
+                                                                            <span class="input-group-addon">
+                                                                                <span class="glyphicon glyphicon-calendar"></span>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                             </div>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-4">Duration </label>
+                                                                <div class="col-md-8">
+                                                                    <div class="input-group bootstrap-timepicker timepicker">
+                                                                        <input type="text" id="dttime" path="startTime" class="form-control" /> <span class="input-group-addon">
+                                                                            <span class="glyphicon glyphicon-time"></span>
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                     </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                    <label class="control-label col-md-4">Duration </label>
-                                                    <div class="col-md-8">
-                                                    <div class="input-group bootstrap-timepicker timepicker">
-                                                        <input type="text" id="dttime" path="startTime"
-                                                            class="form-control" /> <span class="input-group-addon">
-                                                            <span class="glyphicon glyphicon-time"></span>
-                                                        </span>
-                                                    </div>
-                                                    </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
                                             </div>
                                             <div class="row">
-                                        <div class="col-sm-12">
-
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label for="coachSession" class="control-label col-md-4"> Session Type </label>
-                                                <div class="col-md-7">
-                                                    <select id="exercise" name="exercise"
-                                                    class="form-control selectpicker"
-                                                    data-parsley-required="true">
-                                                        <option selected="selected">Image Coaching</option>
-                                                        <option>Date Coaching</option>
-                                                    </select>
-                                                </div>
+                                                <div class="col-sm-12">
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <label for="coachSession" class="control-label col-md-4"> Session Type </label>
+                                                            <div class="col-md-7">
+                                                                <select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
+                                                                    <option selected="selected">Image Coaching</option>
+                                                                    <option>Date Coaching</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="form-group">
+                                                            <label for="coachSession" class="control-label col-md-2">Method</label>
+                                                            <div class="col-md-6">
+                                                                <select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
+                                                                    <option selected="selected">Phone </option>
+                                                                    <option>Live</option>
+                                                                     <option>Walk In</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                    
+                                                    </div>
                                                 </div>
                                             </div>
-
-                                            <div class="col-sm-5">
-                                            <div class="form-group">
-                                                    <label for="coachSession" class="control-label col-md-2">Method</label>
-                                                <div class="col-md-6">
-                                                    <select id="exercise" name="exercise"
-                                                    class="form-control selectpicker"
-                                                    data-parsley-required="true">
-                                                        <option selected="selected">Phone </option>
-                                                        <option>Live</option>
-                                                         <option>Walk In</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2"></div>
-                                        </div>
-                                        </div>
                                         </div>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="meetpeople" class="control-label
-                                                    col-md-4">What was Discussed ?
-                                                </label>
-                                                <div class="col-md-8">
-                                                <textarea class="form-control"></textarea>
-                                                </div>
-                                        </div>
-                                        </div>
-                                        </div>
-
-                                        <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="meetpeople" class="control-label
-                                                    col-md-4">Action To Take ?
-                                                </label>
-                                                <div class="col-md-8">
-                                                <textarea class="form-control"></textarea>
-                                                </div>
-                                        </div>
-                                        </div>
-                                        </div>
-
-                                        <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="meetpeople" class="control-label
-                                                    col-md-4">Notes
-                                                </label>
-                                                <div class="col-md-8">
-                                                <textarea class="form-control"></textarea>
-                                                </div>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        
-                                        <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="gender" class="col-md-4 control-label">FeedBack From Sent</label>
-                                                <div class="col-md-8">
-                                                        <input type="checkbox" data-render="switchery"
-                                                    data-theme="blue" checked />
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="meetpeople" class="control-label col-md-4">What was Discussed ? </label>
+                                                    <div class="col-md-8">
+                                                        <textarea class="form-control"></textarea>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="meetpeople" class="control-label col-md-4">Action To Take ? </label>
+                                                    <div class="col-md-8">
+                                                        <textarea class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="meetpeople" class="control-label col-md-4">Notes </label>
+                                                    <div class="col-md-8">
+                                                        <textarea class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="gender" class="col-md-4 control-label">FeedBack From Sent</label>
+                                                    <div class="col-md-8">
+                                                            <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="form-group">
                                                 <div class="text-center">

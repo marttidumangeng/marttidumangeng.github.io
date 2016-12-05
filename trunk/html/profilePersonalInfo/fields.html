@@ -363,24 +363,24 @@
                                                 <td><a href="#" id="profileEthnicity" data-type="text"
                                                     data-pk="1" data-title="Enter Username">Indian </a></td>
                                                 <td>Dates Left :</td>
-                                                <td><a href="#" id="datesLeft" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">5 </a></td>
+                                                <td><id="datesLeft" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">5</td>
                                             </tr>
                                             <tr>
                                                 <td>Marital Status:</td>
                                                 <td><a href="#" id="maritalStatus" data-type="text"
                                                     data-pk="1" data-title="Enter Username">Unmarried </a></td>
                                                 <td>Free Dates :</td>
-                                                <td><a href="#" id="freeDates" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">3 </a></td>
+                                                <td><id="freeDates" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">3</td>
                                             </tr>
                                             <tr>
                                                 <td>Profile Income:</td>
                                                 <td><a href="#" id="profileIncome" data-type="text"
                                                     data-pk="1" data-title="Enter Username">5 lakh </a></td>
                                                 <td>package Status :</td>
-                                                <td><a href="#" id="profileStatus" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">6 </a></td>
+                                                <td><id="profileStatus" data-type="text"
+                                                    data-pk="1" data-title="Enter Username">6</td>
                                             </tr>
                                             <tr>
                                                 <td>Profile Education:</td>
@@ -388,8 +388,8 @@
                                                     data-pk="1" data-title="Enter Username">PhD and above
                                                 </a></td>
                                                 <td>Sign Up date :</td>
-                                                <td><a href="#" id="signUpDate" data-type="text"
-                                                    data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
+                                                <td><id="signUpDate" data-type="text"
+                                                    data-pk="1" data-title="Enter Username"> 22-9-2016</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -893,82 +893,49 @@
                 </div>
             </div>
             <!-- end row -->
-            <link rel="stylesheet" type="text/css"
-                href="../resources/venders/password-indicator/css/password-indicator.css" />
-            <script
-                src="../resources/venders/password-indicator/js/password-indicator.js"></script>
+            <link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" />
+            <script src="../resources/venders/password-indicator/js/password-indicator.js"></script>
             <script type="text/javascript">
-                $(document)
-                        .ready(
-                                function() {
-                                    $('#dob').datepicker({
-                                        format : 'yyyy-mm-dd',
-                                        todayHighlight : true,
-                                        calendarWeeks : true,
-                                        endDate : '-10y'
-                                    });
+                $(document).ready(function() {
+                    $('#dob').datepicker({
+                        format : 'yyyy-mm-dd',
+                        todayHighlight : true,
+                        calendarWeeks : true,
+                        endDate : '-10y'
+                    });
 
-                                    if ($('[data-render=switchery]').length !== 0) {
-                                        $('[data-render=switchery]')
-                                                .each(
-                                                        function() {
-                                                            var option = {};
-                                                            option.color = '#348fe2';
-                                                            option.secondaryColor = ($(this)
-                                                                    .attr('data-secondary-color')) ? $(
-                                                                    this)
-                                                                    .attr(
-                                                                            'data-secondary-color')
-                                                                    : '#dfdfdf';
-                                                            option.className = ($(this)
-                                                                    .attr('data-classname')) ? $(
-                                                                    this)
-                                                                    .attr(
-                                                                            'data-classname')
-                                                                    : 'switchery';
-                                                            option.disabled = ($(this)
-                                                                    .attr('data-disabled')) ? true
-                                                                    : false;
-                                                            option.disabledOpacity = ($(this)
-                                                                    .attr('data-disabled-opacity')) ? $(
-                                                                    this)
-                                                                    .attr(
-                                                                            'data-disabled-opacity')
-                                                                    : 0.5;
-                                                            option.speed = ($(this)
-                                                                    .attr('data-speed')) ? $(
-                                                                    this)
-                                                                    .attr(
-                                                                            'data-speed')
-                                                                    : '0.5s';
-                                                            var switchery = new Switchery(
-                                                                    this,
-                                                                    option);
-                                                        });
-                                    }
-                                     $('#profileName').editable();
-                                     $('#phoneNumber').editable();
-                                     $('#profileAge').editable();
-                                     $('#profileEthnicity').editable();
-                                    // $('#datesLeft').editable();
-                                     $('#maritalStatus').editable();
-                                    // $('#freeDates').editable();
-                                     $('#profileIncome').editable();
-                                   //  $('#profileStatus').editable();
-                                     $('#profileEducation').editable();
-                                     $('#profileEthnicity').editable();
-                                     
+                    if ($('[data-render=switchery]').length !== 0) {
+                        $('[data-render=switchery]').each(function() {
+                            var option = {};
+                            option.color = '#348fe2';
+                            option.size = 'small';
+                            option.secondaryColor = ($(this).attr('data-secondary-color')) ? $(this).attr('data-secondary-color'): '#000000';
+                            option.className = ($(this).attr('data-classname')) ? $(this).attr('data-classname'): 'switchery';
+                            option.disabled = ($(this).attr('data-disabled')) ? true: false;
+                            option.disabledOpacity = ($(this).attr('data-disabled-opacity')) ? $(this).attr('data-disabled-opacity'): 0.5;
+                            option.speed = ($(this).attr('data-speed')) ? $(this).attr('data-speed'): '0.5s';
+                            var switchery = new Switchery(this,option);
+                        });
+                    }
+                     $('#profileName').editable();
+                     $('#phoneNumber').editable();
+                     $('#profileAge').editable();
+                     $('#profileEthnicity').editable();
+                    // $('#datesLeft').editable();
+                     $('#maritalStatus').editable();
+                    // $('#freeDates').editable();
+                     $('#profileIncome').editable();
+                   //  $('#profileStatus').editable();
+                     $('#profileEducation').editable();
+                     $('#profileEthnicity').editable();
 
-
-
-
-                                    $('#password').passwordStrength({
-                                        targetDiv : '#passwordStrength'
-                                    });
-                                    $('#repassword').passwordStrength({
-                                        targetDiv : '#rePasswordStrength'
-                                    });
-                                });
+                    $('#password').passwordStrength({
+                        targetDiv : '#passwordStrength'
+                    });
+                    $('#repassword').passwordStrength({
+                        targetDiv : '#rePasswordStrength'
+                    });
+                });
             </script>
         </div>
         <!-- end #content -->
