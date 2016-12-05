@@ -102,9 +102,7 @@
 
 <!-- ================== END PAGE LEVEL JS ================== -->
 <script>
-    $(document)
-            .ready(
-                    function() {
+                     $(document).ready(function() {
                         var arrRatings = [];
                         App.init();
                         $('.barrating').barrating({
@@ -143,39 +141,19 @@
                             showSeconds : false
                         });
 
+                        // switchery start here
                         if ($('[data-render=switchery]').length !== 0) {
-                            $('[data-render=switchery]')
-                                    .each(
-                                            function() {
-                                                var option = {};
-                                                option.color = '#348fe2';
-                                                option.secondaryColor = ($(this)
-                                                        .attr('data-secondary-color')) ? $(
-                                                        this).attr(
-                                                        'data-secondary-color')
-                                                        : '#dfdfdf';
-                                                option.className = ($(this)
-                                                        .attr('data-classname')) ? $(
-                                                        this).attr(
-                                                        'data-classname')
-                                                        : 'switchery';
-                                                option.disabled = ($(this)
-                                                        .attr('data-disabled')) ? true
-                                                        : false;
-                                                option.disabledOpacity = ($(this)
-                                                        .attr('data-disabled-opacity')) ? $(
-                                                        this)
-                                                        .attr(
-                                                                'data-disabled-opacity')
-                                                        : 0.5;
-                                                option.speed = ($(this)
-                                                        .attr('data-speed')) ? $(
-                                                        this)
-                                                        .attr('data-speed')
-                                                        : '0.5s';
-                                                var switchery = new Switchery(
-                                                        this, option);
-                                            });
+                            $('[data-render=switchery]').each(function() {
+                                var option = {};
+                                option.color = '#348fe2';
+                                option.size = 'small'
+                                option.secondaryColor = ($(this).attr('data-secondary-color')) ? $(this).attr('data-secondary-color'): '#000000';
+                                option.className = ($(this).attr('data-classname')) ? $(this).attr('data-classname'): 'switchery';
+                                option.disabled = ($(this).attr('data-disabled')) ? true: false;
+                                option.disabledOpacity = ($(this).attr('data-disabled-opacity')) ? $(this).attr('data-disabled-opacity'): 0.5;
+                                option.speed = ($(this).attr('data-speed')) ? $(this).attr('data-speed'): '0.5s';
+                                var switchery = new Switchery(this, option);
+                            });
                         }
 
                         $('#profileName').editable();
@@ -188,17 +166,12 @@
                         $('#profileIncome').editable();
                         //$('#profileStatus').editable();
                         $('#profileEducation').editable();
-
                         $('#profileEthnicity').editable();
-
-                        $('#btnSave').on(
-                                'click',
-                                function(e) {
-                                    $.each(arrRatings, function(index, key) {
-                                        alert(key.item + '\t' + key.value
-                                                + '\t' + key.text);
-                                    });
-                                });
+                        $('#btnSave').on('click',function(e) {
+                            $.each(arrRatings, function(index, key) {
+                                alert(key.item + '\t' + key.value+ '\t' + key.text);
+                            });
+                        });
                     });
 </script>
 </head>

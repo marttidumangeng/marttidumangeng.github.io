@@ -370,32 +370,32 @@
 												<td><a href="#" id="profileEthnicity" data-type="text"
 													data-pk="1" data-title="Enter Username">Indian </a></td>
 												<td>Dates Left :</td>
-												<td><a href="#" id="datesLeft" data-type="text"
-													data-pk="1" data-title="Enter Username">5 </a></td>
+												<td><id="datesLeft" data-type="text"
+													data-pk="1" data-title="Enter Username">5</td>
 											</tr>
 											<tr>
 												<td>Marital Status:</td>
 												<td><a href="#" id="maritalStatus" data-type="text"
 													data-pk="1" data-title="Enter Username">Unmarried </a></td>
 												<td>Free Dates :</td>
-												<td><a href="#" id="freeDates" data-type="text"
-													data-pk="1" data-title="Enter Username">3 </a></td>
+												<td><id="freeDates" data-type="text"
+													data-pk="1" data-title="Enter Username">3</td>
 											</tr>
 											<tr>
 												<td>Profile Income:</td>
 												<td><a href="#" id="profileIncome" data-type="text"
 													data-pk="1" data-title="Enter Username">5 lakh </a></td>
 												<td>package Status :</td>
-												<td><a href="#" id="profileStatus" data-type="text"
-													data-pk="1" data-title="Enter Username">6 </a></td>
+												<td><id="profileStatus" data-type="text"
+													data-pk="1" data-title="Enter Username">6</td>
 											</tr>
 											<tr>
 												<td>Profile Education:</td>
 												<td><a href="#" id="profileEducation" data-type="text"
 													data-pk="1" data-title="Enter Username">PhD and above </a></td>
 												<td>Sign Up date :</td>
-												<td><a href="#" id="signUpDate" data-type="text"
-													data-pk="1" data-title="Enter Username"> 22-9-2016</a></td>
+												<td><id="signUpDate" data-type="text"
+													data-pk="1" data-title="Enter Username"> 22-9-2016</td>
 											</tr>
 										</tbody>
 									</table>
@@ -403,7 +403,7 @@
 							</div>
 					</div>
 					<div class="row">
-						<form class="form-horizontal parsley-validate" name="mainForm"
+						<form class="form-horizontal" data-parsley-validate="true" name="mainForm"
 							method="post" role="form" enctype="multipart/form-data">
 							<fieldset>
 								<legend>Profile Preferences</legend>
@@ -472,9 +472,9 @@
 																<div class="form-group">
 																	<div class="col-md-12">
 																		<div class="input-group ">
-																			<input type="text" class="form-control" name="start"
+																			<input type="text" class="form-control" name="start" data-parsley-required="true"
 																				placeholder="From" /> <span
-																				class="input-group-addon"></span><input type="text"
+																				class="input-group-addon"></span><input type="text" data-parsley-required="true"
 																				class="form-control" name="end" placeholder="to" />
 																		</div>
 																	</div>
@@ -485,11 +485,9 @@
 																<div class="form-group">
 																	<div class="col-md-12">
 																		<div class="input-group ">
-																			<input type="text" class="form-control" name="start"
-																				placeholder="From" /> <span
-																				class="input-group-addon"></span> <input
-																				type="text" class="form-control" name="end"
-																				placeholder="to" />
+																			<input type="text" class="form-control" name="start" data-parsley-required="true" placeholder="From"/>
+																			 <span class="input-group-addon"></span> 
+																		 	<input type="text" class="form-control" name="end" data-parsley-required="true" placeholder="to" />
 																		</div>
 																	</div>
 																</div>
@@ -1229,7 +1227,7 @@
 									<div class="col-sm-8">
 										<div class="form-group">
 											<div class="col-md-8 col-md-offset-4">
-												<a href="list.html" class="btn btn-primary btn-lg">Save</a>
+												<button type="submit" class="btn btn-primary btn-lg">Save</button>
 											</div>
 										</div>
 									</div>
@@ -1285,49 +1283,25 @@
                                      /** Finish the edit function for  profile */
 
 							if ($('[data-render=switchery]').length !== 0) {
-								$('[data-render=switchery]')
-										.each(
-												function() {
-													var option = {};
-													option.color = '#348fe2';
-													option.secondaryColor = ($(this)
-															.attr('data-secondary-color')) ? $(
-															this)
-															.attr(
-																	'data-secondary-color')
-															: '#dfdfdf';
-													option.className = ($(this)
-															.attr('data-classname')) ? $(
-															this).attr(
-															'data-classname')
-															: 'switchery';
-													option.disabled = ($(this)
-															.attr('data-disabled')) ? true
-															: false;
-													option.disabledOpacity = ($(this)
-															.attr('data-disabled-opacity')) ? $(
-															this)
-															.attr(
-																	'data-disabled-opacity')
-															: 0.5;
-													option.speed = ($(this)
-															.attr('data-speed')) ? $(
-															this).attr(
-															'data-speed')
-															: '0.5s';
-													var switchery = new Switchery(
-															this, option);
-												});
-							}
-						});
+								$('[data-render=switchery]').each(function() {
+									var option = {};
+									option.color = '#348fe2';
+									option.size = 'small';
+									option.secondaryColor = ($(this).attr('data-secondary-color')) ? $(this).attr('data-secondary-color'): '#000000';
+									option.className = ($(this).attr('data-classname')) ? $(this).attr('data-classname'): 'switchery';
+									option.disabled = ($(this).attr('data-disabled')) ? true: false;
+									option.disabledOpacity = ($(this).attr('data-disabled-opacity')) ? $(this).attr('data-disabled-opacity'): 0.5;
+									option.speed = ($(this).attr('data-speed')) ? $(this).attr('data-speed'): '0.5s';
+									var switchery = new Switchery(this, option);
+									});
+								}
+							});
 
 
 
-				$(".btn-group > .btn").click(
-						function() {
-							$(this).addClass("active").siblings().removeClass(
-									"active");
-						});
+				$(".btn-group > .btn").click(function() {
+					$(this).addClass("active").siblings().removeClass("active");
+				});
 			</script>
 			
 		</div>

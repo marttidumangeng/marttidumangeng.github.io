@@ -219,35 +219,25 @@
                             <a href="javascript:;">View</a>
                             <ul class="sub-menu">
                                 <li><a href="?view=all">All</a></li>
-                                <li><a href="#">Assigned to me</a></li>
+                                <!-- <li><a href="#">Assigned to me</a></li> -->
                                 <li>
-                                    <label class="control-label">Assigned to</label>
+                                    <label class="control-label">Status</label>
                                     <select name="view" class="form-control selectpicker">
-                                        <option>John Doe</option>
-                                        <option>John Wilson</option>
+                                        <option>Active</option>
+                                        <option>InActive</option>
+                                        <option>In Use Only</option>
                                     </select>
                                 </li>
                             </ul>
                         </li>
                         <li class="has-sub">
-                            <a href="javascript:;">Leads</a>
+                            <a href="javascript:;">Activation Date</a>
                             <ul class="sub-menu">
-                                <li><a href="?view=all&lead=oraganic">Organic Leads</a></li>
-                                <li><a href="#">Paid Leads</a></li>
-                                <li><a href="#">LA Unsuitable</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a href="javascript:;">Date</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Today</a></li>
-                                <li><a href="#">This Month</a></li>
                                 <li>
-                                    <div class="input-group">
-                                        <input type="text" name="birthDate" class="form-control daterange"/>
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
+                                   <div class="input-group ">
+                                        <input type="text" class="form-control" id="activationDateFrom" name="start" placeholder="From" />
+                                        <span class="input-group-addon">To</span>
+                                        <input type="text" class="form-control" id="activationDateTo" name="end" placeholder="To" />
                                     </div>
                                 </li>
                             </ul>
@@ -281,50 +271,50 @@
 												<th>Dates</th>
 												<th>Guaranteed Dates</th>
 												<th>Activation Date From</th>
-												<th>To</th>
+                                                <th>To</th>
 												<th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
 												<td>Package Name_1</td>
-												<td>Duration_1</td>
-												<td>Price_1</td>
-												<td>Dates_1</td>
-												<td>Guaranteed Dates_1</td>
-												<td>Activation Date From_1</td>
-												<td>To_1</td>
-												<td>Status_1</td>
+												<td>1 Month</td>
+												<td>22</td>
+												<td>1</td>
+												<td>2 Dates_1</td>
+												<td>20/11/2016</td>
+                                                <td>23/11/2016</td>
+												<td>Active</td>
                                             </tr>
                                            <tr>
 												<td>Package Name_1</td>
-												<td>Duration_1</td>
-												<td>Price_1</td>
-												<td>Dates_1</td>
-												<td>Guaranteed Dates_1</td>
-												<td>Activation Date From_1</td>
-												<td>To_1</td>
-												<td>Status_1</td>
+												<td>2 Month</td>
+												<td>23</td>
+												<td>2</td>
+												<td>2 Dates_1</td>
+												<td>22/11/2016</td>
+                                                <td>31/11/2016</td>
+												<td>InActive</td>
                                             </tr>
                                            <tr>
 												<td>Package Name_1</td>
-												<td>Duration_1</td>
-												<td>Price_1</td>
-												<td>Dates_1</td>
-												<td>Guaranteed Dates_1</td>
-												<td>Activation Date From_1</td>
-												<td>To_1</td>
-												<td>Status_1</td>
+												<td>3 Month</td>
+												<td>65</td>
+												<td>3</td>
+												<td>3 Dates_1</td>
+												<td>20/11/2016</td>
+                                                <td>31/11/2016</td>
+												<td>In Use Only</td>
                                             </tr>
                                             <tr>
 												<td>Package Name_1</td>
-												<td>Duration_1</td>
-												<td>Price_1</td>
-												<td>Dates_1</td>
-												<td>Guaranteed Dates_1</td>
-												<td>Activation Date From_1</td>
-												<td>To_1</td>
-												<td>Status_1</td>
+												<td>4 Month</td>
+												<td>12</td>
+												<td>2</td>
+												<td>3</td>
+												<td>20/11/2016</td>
+                                                <td>31/11/2016</td>
+												<td>Active</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -351,6 +341,21 @@
                 <script src="../resources/venders/bootstrap-daterangepicker/js/daterangepicker.js"></script>
                 <script type="text/javascript">
                     jQuery(document).ready(function($) {
+
+
+                         $('#activationDateFrom').datepicker({
+                            format: 'yyyy-mm-dd',
+                            todayHighlight: true,
+                            calendarWeeks: true,
+                            endDate: '1y'
+                        });
+                        $('#activationDateTo').datepicker({
+                            format: 'yyyy-mm-dd',
+                            todayHighlight: true,
+                            calendarWeeks: true,
+                            endDate: '+1y'
+                        });
+
                         $(".daterange").daterangepicker({
                             autoUpdateInput: false,
                             opens: "right",

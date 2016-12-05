@@ -38,6 +38,7 @@
         <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/switchery/switchery.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
         <!-- ================== END BASE CSS STYLE ================== -->
         
@@ -56,6 +57,7 @@
         <script src="../resources/venders/parsley/parsley.min.js"></script>
         <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <script src="../resources/venders/switchery/switchery.min.js"></script>
         <!-- ================== END BASE JS ================== -->
         <!-- ================== BEGIN PAGE LEVEL JS ================== -->
         <script src="../resources/scripts/app.min.js"></script>
@@ -210,13 +212,6 @@
 			<div class="row">
 				<div class="col-sm-6">
 					<form id="esyncPackage" name="mainForm" role="form" data-parsley-validate="true" class="form-horizontal" action="/a/r/esyncpackage/create" method="post">
-
-<!-- alertMessages set from spring_errors -->
-<!-- formsPage will set the variable to true before header so header don't show -->
-
-<!-- once this is fired by header, set to false so show for the formsPage itself -->
-
-
 						<fieldset>
 							<legend>New LA Package</legend>
 						</fieldset>
@@ -231,25 +226,15 @@
 							<label for="packageType" class="col-md-4 control-label">Package Type</label>
 							<div class="col-md-8">
 								<select id="packageType" name="packageType" data-parsley-required="true" class="form-control selectpicker">
-									
-										<option path="packageType" value="NORMAL">Normal</option>
-									
-										<option path="packageType" value="UNLIMITED">Unlimited</option>
-									
-										<option path="packageType" value="RENEWAL">Renewal</option>
-									
-										<option path="packageType" value="TRIAL">Trial</option>
-									
-										<option path="packageType" value="TRANSFER">Transfer</option>
-									
-										<option path="packageType" value="SPECIAL">Special</option>
-									
-										<option path="packageType" value="PREMIUM">Premium</option>
-									
-										<option path="packageType" value="VIP">VIP</option>
-									
-										<option path="packageType" value="FREE">Free</option>
-									
+									<option path="packageType" value="NORMAL">Normal</option>
+									<option path="packageType" value="UNLIMITED">Unlimited</option>
+									<option path="packageType" value="RENEWAL">Renewal</option>
+									<option path="packageType" value="TRIAL">Trial</option>
+									<option path="packageType" value="TRANSFER">Transfer</option>
+									<option path="packageType" value="SPECIAL">Special</option>
+									<option path="packageType" value="PREMIUM">Premium</option>
+									<option path="packageType" value="VIP">VIP</option>
+									<option path="packageType" value="FREE">Free</option>
 								</select>
 							</div>
 						</div>
@@ -259,32 +244,19 @@
 							<div class="col-md-8">
 								<div class="input-group">
 									<select id="duration" name="duration" data-parsley-required="true" class="form-control selectpicker">
-										
-											<option path="duration" value="1">1</option>
-										
-											<option path="duration" value="2">2</option>
-										
-											<option path="duration" value="3">3</option>
-										
-											<option path="duration" value="4">4</option>
-										
-											<option path="duration" value="5">5</option>
-										
-											<option path="duration" value="6">6</option>
-										
-											<option path="duration" value="7">7</option>
-										
-											<option path="duration" value="8">8</option>
-										
-											<option path="duration" value="9">9</option>
-										
-											<option path="duration" value="10">10</option>
-										
-											<option path="duration" value="11">11</option>
-										
-											<option path="duration" value="12">12</option>
-										
-									</select>
+										<option path="duration" value="1">1 Month</option>
+										<option path="duration" value="2">2 Month</option>
+										<option path="duration" value="3">3 Month</option>
+										<option path="duration" value="4">4 Month</option>
+										<option path="duration" value="5">5 Month</option>
+										<option path="duration" value="6">6 Month</option>
+										<option path="duration" value="7">7 Month</option>
+										<option path="duration" value="8">8 Month</option>
+										<option path="duration" value="9">9 Month</option>
+										<option path="duration" value="10">10 Month</option>
+										<option path="duration" value="11">11 Month</option>
+										<option path="duration" value="12">12 Month</option>
+								</select>
 								</div>
 							</div>
 						</div>
@@ -292,22 +264,20 @@
 							<label for="dates" class="col-md-4 control-label">Dates </label>
 							<div class="col-md-8">
 								<div class="input-group">
-									<input id="dates" name="dates" class="form-control" data-parsley-required="true" type="text" value=""/>
+									<input id="dates" name="dates" data-parsley-type="number" class="form-control" data-parsley-required="true" type="text" value=""/>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="guaranteedDates" class="col-md-4 control-label">Guaranteed
-								Dates </label>
+							<label for="guaranteedDates" class="col-md-4 control-label">Guaranteed Dates </label>
 							<div class="col-md-8">
 								<div class="input-group">
-									<input id="guaranteedDates" name="guaranteedDates" class="form-control" data-parsley-required="true" type="text" value=""/>
+									<input id="guaranteedDates" data-parsley-type="number" name="guaranteedDates" class="form-control" data-parsley-required="true" type="text" value=""/>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="description" class="col-md-4 control-label">Free
-								Add ons</label>
+							<label for="description" class="col-md-4 control-label">Free Add ons</label>
 							<div class="col-md-8">
 								<input id="description" name="description" class="form-control" data-parsley-required="true" type="text" value=""/>
 							</div>
@@ -316,28 +286,26 @@
 							<label for="price" class="col-md-4 control-label">Price </label>
 							<div class="col-md-8">
 								<div class="input-group">
-									<span class="input-group-addon">$</span>
-									<input id="price" name="price" class="form-control" data-parsley-required="true" type="text" value=""/>
+									<span class="input-group-addon"><i class="fa fa-money"></i></span>
+									<input id="price" name="price" data-parsley-type="number" class="form-control" data-parsley-required="true" type="text" value=""/>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="maxDiscount" class="col-md-4 control-label">Max
-								Discount </label>
+							<label for="maxDiscount" class="col-md-4 control-label">Max Discount </label>
 							<div class="col-md-8">
 								<div class="input-group">
-									<span class="input-group-addon">$</span>
-									<input id="maxDiscount" name="maxDiscount" class="form-control" data-parsley-required="true" type="text" value=""/>
+									<span class="input-group-addon"><i class="fa fa-money"></i></span>
+									<input id="maxDiscount" data-parsley-type="number" name="maxDiscount" class="form-control" data-parsley-required="true" type="text" value=""/>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="registerFee" class="col-md-4 control-label">Registration
-								Fees </label>
+							<label for="registerFee" class="col-md-4 control-label">Registration Fees </label>
 							<div class="col-md-8">
 								<div class="input-group">
-									<span class="input-group-addon">$</span>
-									<input id="registerFee" name="registerFee" class="form-control" data-parsley-required="true" type="text" value=""/>
+									<span class="input-group-addon"><i class="fa fa-money"></i></span>
+									<input id="registerFee" name="registerFee" data-parsley-type="number" class="form-control" data-parsley-required="true" type="text" value=""/>
 								</div>
 							</div>
 						</div>
@@ -345,78 +313,51 @@
 							<label for="currency" class="col-md-4 control-label">Currency</label>
 							<div class="col-md-8">
 								<select id="currency" name="currency" data-parsley-required="true" class="form-control selectpicker">
-									
-										<option path="currency" value="SGD">SGD</option>
-									
-										<option path="currency" value="HKD">HKD</option>
-									
-										<option path="currency" value="THB">THB</option>
-									
-										<option path="currency" value="IDR">IDR</option>
-									
-										<option path="currency" value="MYR">MYR</option>
-									
+									<option path="currency" value="SGD">SGD</option>
+									<option path="currency" value="HKD">HKD</option>
+									<option path="currency" value="THB">THB</option>
+									<option path="currency" value="IDR">IDR</option>
+									<option path="currency" value="MYR">MYR</option>
 								</select>
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="activationDateFrom" class="col-md-4 control-label">Activation
-								Date </label>
-							<div class="col-md-3">
-								<div class="input-group">
-									<input id="activationDateFrom" name="activationDateFrom" class="form-control" data-parsley-required="true" type="text" value=""/>
-									<span class="input-group-addon"><i
-										class="fa fa-calendar"></i></span>
-								</div>
-							</div>
-							<label for="activationDateTo" class="col-md-1 control-label">
-								To </label>
-							<div class="col-md-3">
-								<div class="input-group">
-									<input id="activationDateTo" name="activationDateTo" class="form-control" data-parsley-required="true" type="text" value=""/>
-									<span class="input-group-addon"><i
-										class="fa fa-calendar"></i></span>
-								</div>
-							</div>
-						</div>
+                        <div class="form-group">
+                            <label for="price" class="col-md-4 control-label">Activation Date</label>
+                                <div class="col-md-8">
+                                    <div class="input-group input-daterange">
+                                            <input type="text" class="form-control" name="start" placeholder="Date Start" />
+                                            <span class="input-group-addon">to</span>
+                                            <input type="text" class="form-control" name="end" placeholder="Date End" />
+                                        </div>
+                                    <!-- <div class="input-group ">
+                                        <input type="text" class="form-control" id="activationDateFrom" name="start" placeholder="From" />
+                                        <span class="input-group-addon">To</span>
+                                        <input type="text" class="form-control" id="activationDateTo" name="end" placeholder="to" />
+                                    </div> -->
+                                </div>
+                            </div>
 						<div class="form-group">
 							<label for="gender" class="col-md-4 control-label">Gender</label>
 							<div class="col-md-8">
 								<select id="gender" name="gender" data-parsley-required="true" class="form-control selectpicker">
-									
-										<option path="gender" value="MALE">Male</option>
-									
-										<option path="gender" value="FEMALE">Female</option>
-									
+									<option path="gender" value="MALE">Male</option>
+									<option path="gender" value="FEMALE">Female</option>
 								</select>
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="ageFrom" class="col-md-4 control-label">Age
-								From </label>
-							<div class="col-md-2">
-								<div class="input-group">
-									<input id="ageFrom" name="ageFrom" class="form-control" data-parsley-required="true" type="text" value="" maxlength="2"/>
-								</div>
-							</div>
-							<label for="ageTo" class="col-md-1 control-label">To </label>
-							<div class="col-md-2">
-								<div class="input-group">
-									<input id="ageTo" name="ageTo" class="form-control" data-parsley-required="true" type="text" value="" maxlength="2"/>
-								</div>
-							</div>
-						</div>
+                         <div class="form-group">
+                            <label for="age" class="col-md-4 control-label">Age</label>
+                            <div class="col-md-6">
+                                <input type="text" class="flex-slider" id="ageSlider" name="age" value="" />
+                            </div>
+                        </div>
 						<div class="form-group">
 							<label for="packageStatus" class="col-md-4 control-label">Status</label>
 							<div class="col-md-8">
 								<select id="packageStatus" name="packageStatus" data-parsley-required="true" class="form-control selectpicker">
-									
-										<option path="packageStatus" value="ACTIVE">Active</option>
-									
-										<option path="packageStatus" value="IN_US">In Use Only</option>
-									
-										<option path="packageStatus" value="INACTIVE">Inactive</option>
-									
+									<option path="packageStatus" value="ACTIVE">Active</option>
+									<option path="packageStatus" value="IN_US">In Use Only</option>
+									<option path="packageStatus" value="INACTIVE">Inactive</option>
 								</select>
 							</div>
 						</div>
@@ -435,9 +376,23 @@
 </div>
                 <!-- end row -->
                 <link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" />
+                <link rel="stylesheet" type="text/css" href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.css"/>
+                <link rel="stylesheet" type="text/css" href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.skinNice.css"/>
                 <script src="../resources/venders/password-indicator/js/password-indicator.js"></script>
+                <script src="../resources/venders/ionRangeSlider/js/ion.rangeSlider.min.js"></script>
 				<script type="text/javascript">
 				    $(document).ready(function() {
+                         $("#ageSlider").ionRangeSlider({
+                            type: "double",
+                            grid: true,
+                            min: 18,
+                            max: 80,
+                            from: 20,
+                            to: 35
+                        });
+                         // for closing after selecting date autoclose:!0
+                         $(".input-daterange").datepicker({todayHighlight:!0});
+                         
 				    	$('#activationDateFrom').datepicker({
 				    		format: 'yyyy-mm-dd',
 				            todayHighlight: true,

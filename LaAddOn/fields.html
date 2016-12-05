@@ -38,6 +38,7 @@
         <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/switchery/switchery.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
         <!-- ================== END BASE CSS STYLE ================== -->
         
@@ -56,6 +57,7 @@
         <script src="../resources/venders/parsley/parsley.min.js"></script>
         <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <script src="../resources/venders/switchery/switchery.min.js"></script>
         <!-- ================== END BASE JS ================== -->
         <!-- ================== BEGIN PAGE LEVEL JS ================== -->
         <script src="../resources/scripts/app.min.js"></script>
@@ -210,20 +212,6 @@
 			<div class="row">
 				<div class="col-sm-6">
 					<form id="laaAddOn" name="mainForm" role="form" data-parsley-validate="true" class="form-horizontal" action="/a/r/laaaddon/create" method="post">
-
-						
-						
-
-
-
-
-
-<!-- alertMessages set from spring_errors -->
-<!-- formsPage will set the variable to true before header so header don't show -->
-
-<!-- once this is fired by header, set to false so show for the formsPage itself -->
-
-
 						<fieldset>
 							<legend>New LA Addon</legend>
 						</fieldset>
@@ -239,21 +227,36 @@
 							<label for="price" class="col-md-4 control-label">Price </label>
 							<div class="col-md-8">
 								<div class="input-group">
-									<span class="input-group-addon">$</span>
-									<input id="price" name="price" class="form-control" data-parsley-required="true" type="text" value=""/>
+									<span class="input-group-addon"><i class="fa fa-money"></i></span>
+									<input id="price" name="price" data-parsley-type="number" class="form-control" data-parsley-required="true" type="text" value=""/>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="isItem" class="col-md-4 control-label">Is Free </label>
 							<div class="col-md-8">
-								<div class="input-group">
-									
-									<input id="isItem" name="isItem" class="form-control" data-parsley-required="true" type="checkbox" value="true"/><input type="hidden" name="_isItem" value="on"/>
-								</div>
-							</div>
+                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                            </div>
 						</div>
-						<div class="form-group">
+                        <div class="form-group">
+                                <label for="price" class="col-md-4 control-label">Activation Date</label>
+                                <div class="col-md-8">
+                                     <div class="input-group input-daterange">
+                                            <input type="text" class="form-control" name="start" placeholder="Date Start" />
+                                            <span class="input-group-addon">to</span>
+                                            <input type="text" class="form-control" name="end" placeholder="Date End" />
+                                        </div>
+
+                                   <!--  <div class="input-group ">
+                                        <input type="text" class="form-control" id="activationDateFrom" name="start" placeholder="From" />
+                                        <span class="input-group-addon">To</span>
+                                        <input type="text" class="form-control" id="activationDateTo" name="end" placeholder="To" />
+                                    </div> -->
+                                </div>
+                            </div>
+
+
+						<!-- <div class="form-group">
 							<label for="activationDateFrom" class="col-md-4 control-label">Activation
 								Date </label>
 							<div class="col-md-3">
@@ -272,7 +275,7 @@
 										class="fa fa-calendar"></i></span>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="form-group">
 							<label for="gender" class="col-md-4 control-label">Gender</label>
 							<div class="col-md-8">
@@ -285,7 +288,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="ageFrom" class="col-md-4 control-label">Age
 								From </label>
 							<div class="col-md-2">
@@ -299,7 +302,14 @@
 									<input id="ageTo" name="ageTo" class="form-control" data-parsley-required="true" type="text" value="" maxlength="2"/>
 								</div>
 							</div>
-						</div>
+						</div> -->
+
+                        <div class="form-group">
+                                <label for="age" class="col-md-4 control-label">Age From</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="flex-slider" id="ageSlider" name="age" value="" />
+                                </div>
+                            </div>
 						<div class="form-group">
 							<label for="status" class="col-md-4 control-label">Status</label>
 							<div class="col-md-8">
@@ -328,9 +338,37 @@
 	</div>
 </div>            <!-- end row -->
                 <link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" />
+                <link rel="stylesheet" type="text/css" href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.css"/>
+                <link rel="stylesheet" type="text/css" href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.skinNice.css"/>
+                
                 <script src="../resources/venders/password-indicator/js/password-indicator.js"></script>
+                <script src="../resources/venders/ionRangeSlider/js/ion.rangeSlider.min.js"></script>
 				<script type="text/javascript">
 				    $(document).ready(function() {
+
+                        $("#ageSlider").ionRangeSlider({
+                            type: "double",
+                            grid: true,
+                            min: 18,
+                            max: 80,
+                            from: 20,
+                            to: 35
+                        });
+                         // Switchery code start
+                        if ($('[data-render=switchery]').length !== 0) {
+                            $('[data-render=switchery]').each(function() {
+                                var option = {};
+                                option.color = '#348fe2';
+                                option.size = 'small';
+                                option.secondaryColor = ($(this).attr('data-secondary-color')) ? $(this).attr('data-secondary-color'): '#000000';
+                                option.className = ($(this).attr('data-classname')) ? $(this).attr('data-classname'): 'switchery';
+                                option.disabled = ($(this).attr('data-disabled')) ? true: false;
+                                option.disabledOpacity = ($(this).attr('data-disabled-opacity')) ? $(this).attr('data-disabled-opacity'): 0.5;
+                                option.speed = ($(this).attr('data-speed')) ? $(this).attr('data-speed'): '0.5s';
+                                var switchery = new Switchery(this, option);
+                            });
+                        }
+                        $(".input-daterange").datepicker({todayHighlight:!0});
 				    	$('#activationDateFrom').datepicker({
 				    		format: 'yyyy-mm-dd',
 				            todayHighlight: true,
