@@ -38,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
     <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/venders/switchery/switchery.min.css"/>
     <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
     <!-- ================== END BASE CSS STYLE ================== -->
     <!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
@@ -61,6 +62,7 @@
             <script src="../resources/venders/parsley/parsley.min.js"></script>
             <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
             <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+            <script src="../resources/venders/switchery/switchery.min.js"></script>
             <!-- ================== END BASE JS ================== -->
             <!-- ================== BEGIN PAGE LEVEL JS ================== -->
            
@@ -83,6 +85,23 @@
             <script type="text/javascript">
                 $(document).ready(function() {
                     App.init();
+
+                    if ($('[data-render=switchery]').length !== 0) {
+                        $('[data-render=switchery]').each(function() {
+                            var option = {};
+                            option.color = '#348fe2';
+                            option.size = 'small';
+                            option.secondaryColor = ($(this).attr('data-secondary-color')) ? $(this).attr('data-secondary-color'): '#000000';
+                            option.className = ($(this).attr('data-classname')) ? $(this).attr('data-classname'): 'switchery';
+                            option.disabled = ($(this).attr('data-disabled')) ? true: false;
+                            option.disabledOpacity = ($(this).attr('data-disabled-opacity')) ? $(this).attr('data-disabled-opacity'): 0.5;
+                            option.speed = ($(this).attr('data-speed')) ? $(this).attr('data-speed'): '0.5s';
+                            var switchery = new Switchery(this,option);
+                        });
+                    }
+
+
+                    
                    $("#fileupload").fileupload({
                         autoUpload:false,
                         disableImageResize:/Android(?!.*Chrome)|Opera/.test(window.navigator.userAgent),
@@ -117,7 +136,25 @@
 
                     });
                     $('#btnAddFiles').prop("disabled",true);
-                    $('[name="checkboxbtn"]').on('click',function(e){
+
+                    
+
+                       /* var specificField = $('btnAddFiles').parsley();
+                        
+                   /* $('#btnAddFiles').on('click',function(e) {
+                        alert("inside this");
+                    
+                        if(!$('[name="checkboxbtn"]').is(":checked")){
+                            alert("please seleect checknbox");
+                            return false;
+
+                    }
+                });*/
+
+                $('[name="checkboxbtn"]').on('click',function(e){
+                      
+                        console.log($(this).is(":checked"));
+
                          if ($(this).is(":checked")) {
                                 $('#btnAddFiles').prop('disabled',false);
                          }       
@@ -125,19 +162,21 @@
                                 $('#btnAddFiles').prop('disabled',true);
                          }
                     });
+
+                    
                     
                     //checkboxbtn    
                     //btnAddFiles
                 });
             </script>
         </head>
-        <body class="boxed-layout">
+        <body class="layout">
             <!-- begin #page-loader -->
             <div id="page-loader" class="fade in"><span class="spinner"></span></div>
             <!-- end #page-loader -->
 
             <!-- begin #page-container -->
-            <div id="page-container" class="page-container fade page-with-top-menu page-header-fixed page-without-sidebar">
+            <div id="page-container" class="page-container fade page-with-top-menu page-header-fixed">
                 <!-- begin #header -->
                 <div id="header" class="header navbar navbar-default navbar-fixed-top">
                     <!-- begin container-fluid -->
@@ -265,83 +304,211 @@
                     <!-- end top-menu nav -->
                 </div>
                 <!-- end #top-menu -->
+                 <!--begin sidebar-->
+                <div id="sidebar" class="sidebar">
+                    <!--# begin sidebar scrolling-->
+                    <div data-scrollbar="true" data-height="100%">
+                        <!--begin sidebar nav-->
+                        <div class="nav">
+                            <li class="has-sub">
+                                <a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-user"></i> <span>Profile</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="../profilePersonalInfo/fields.html">Profile Info</a></li>
+                                    <li><a href="../profilePreferences/fields.html">Preferences</a></li>
+                                    <li><a href="../profileInterest/fields.html">Interest</a></li>
+                                    <li><a href="../expectation/fields.html">Expectation</a></li>
+                                    <li><a href="../profileAssessment/fields.html">Assessment</a></li>
+                                    <li><a href="../confidential/fields.html">Confidential Questionary</a></li>
+                                    <li><a href="../personalStory/fields.html">My Story</a></li>
+                                    <li><a href="../otherPreference/fields.html">Other Services Interest</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-sub"><a href="javascript:;"> <b
+                                    class="caret pull-right"></b> <i class="fa fa-graduation-cap"></i> <span>
+                                       Coach</span>
+                            </a>
+                                <ul class="sub-menu">
+                                    <li><a href="../coachreview/fields.html">CoachReview</a></li>
+                                </ul></li>
+                                <li class="has-sub">
+                                    <a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-venus-mars"></i> <span>Matches</span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="../matches/fields.html">match</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub"><a href="javascript:;"> <b
+                                    class="caret pull-right"></b> <i class="fa fa-coffee"></i> <span>Dates</span>
+                            </a>
+                                <ul class="sub-menu">
+                                    <li><a href="../dates/fields.html">date</a></li>
+                                </ul></li>
 
+                                <li ><a href="../document/fields.html"> <b
+                                    ></b> <i class="fa fa-file"></i> <span>Docs</span>
+                            </a></li>
+                            
+                                
+
+
+                            <!-- begin sidebar minify button -->
+                            <li><a href="javascript:;" class="sidebar-minify-btn"
+                                data-click="sidebar-minify"> <i
+                                    class="fa fa-angle-double-left"></i>
+                            </a></li>
+                            <!-- end sidebar minify button -->
+                        </div>
+                        <!--end sidebar nav-->
+                    </div>
+                    <!--# end sidebar scrolling-->
+                </div>
+                <!--end sidebar-->
+                <div class="sidebar-bg"></div>
                 <!-- begin #content -->
-                <div id="content" class="content">
+                <!-- begin #content -->
+                <div id="content" class="content m-t-10">
                     <!-- begin row -->
                     <div class="row">
+                    <!-- start panel -->
                         <div class="panel">
+                        <!-- start panel body -->
                             <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-12 m-b-20 m-t-m-30">
+                                        <div class="btn-group pull-right" role="group">
+                                            <a role="button" class="btn btn-white" href="#">Esynchrony</a>
+                                            <button type="button" class="btn btn-white active">Lunch Actually</button>
+                                            <a role="button" class="btn btn-white" href="#">Lunch Actually Academy</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <select id="status" name="profile.laMembership.status" data-parsley-required="true" class="form-control selectpicker">
+                                                <option path="model.profile.laMembership.status" value="New Member">New Member</option>
+                                                <option path="model.profile.laMembership.status" value="Pending Approval">Pending Approval</option>
+                                                <option path="model.profile.laMembership.status" value="Active">Active</option>
+                                                <option path="model.profile.laMembership.status" value="On Hold">On Hold</option>
+                                                <option path="model.profile.laMembership.status" value="Refund">Refund</option>
+                                                <option path="model.profile.laMembership.status" value="Expired">Expired</option>
+                                                <option path="model.profile.laMembership.status" value="Terminated">Terminated</option>
+                                                <option path="model.profile.laMembership.status" value="Renewal">Renewal</option>
+                                            </select>
+                                        </div>
+                                        <div class="profile-image">
+                                            <img src="../resources/images/photo.jpg"><i class="fa fa-user hide"></i> <input type="file" name="userphoto" />
+                                        </div>
+                                        <div class="form-group">
+                                            <select id="mood" name="profile.laMembership.mood" data-parsley-required="true" class="form-control selectpicker">
+                                                <option path="model.profile.laMembership.mood" value="Normal">Normal</option>
+                                                <option path="model.profile.laMembership.mood" value="Happy">Happy</option>
+                                                <option path="model.profile.laMembership.mood" value="Complaint">Complaint</option>
+                                                <option path="model.profile.laMembership.mood" value="Refund">Refund</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <fieldset>
+                                            <legend>Profile</legend>
+                                                <table id="user" class="table  table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Profile Name :</td>
+                                                            <td><a href="#" id="profileName" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
+                                                            <td>Smokes :</td>
+                                                            <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Profile Phone :</td>
+                                                            <td><a href="#" id="phoneNumber" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
+                                                            <td>Drinks :</td>
+                                                            <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                        <tr>
+                                                            <td>Profile age :</td>
+                                                            <td><a href="#" id="profileAge" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
+                                                            <td>Profile history :</td>
+                                                            <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Profile ethnicity :</td>
+                                                            <td><a href="#" id="profileEthnicity" data-type="text" data-pk="1" data-title="Enter Username">Indian </a></td>
+                                                            <td>Dates Left :</td>
+                                                            <td><id="datesLeft" data-type="text" data-pk="1" data-title="Enter Username">5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Marital Status:</td>
+                                                            <td><a href="#" id="maritalStatus" data-type="text" data-pk="1" data-title="Enter Username">Unmarried </a></td>
+                                                            <td>Free Dates :</td>
+                                                            <td><id="freeDates" data-type="text" data-pk="1" data-title="Enter Username">3</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Profile Income:</td>
+                                                            <td><a href="#" id="profileIncome" data-type="text" data-pk="1" data-title="Enter Username">5 lakh </a></td>
+                                                            <td>package Status :</td>
+                                                            <td><id="profileStatus" data-type="text" data-pk="1" data-title="Enter Username">6</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Profile Education:</td>
+                                                            <td><a href="#" id="profileEducation" data-type="text" data-pk="1" data-title="Enter Username">PhD and above
+                                                            </a></td>
+                                                            <td>Sign Up date :</td>
+                                                            <td><id="signUpDate" data-type="text" data-pk="1" data-title="Enter Username"> 22-9-2016</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                        </fieldset>
+                                    </div>
+                                </div>
                                 <form id="fileupload" class="form-horizontal parsley-validate" name="mainForm" method="post" role="form" enctype="multipart/form-data">
-                                   
-                                        <legend>Upload User Docs</legend>
-                                        <div class="row fileupload-buttonbar">
-                                            <div class="col-md-7">
-                                                <div>
+                                    <legend>Upload User Docs</legend>
+                                    <div class="row fileupload-buttonbar">
+                                        <div class="col-md-7">
+                                            <div>
                                                 <span class="btn btn-success fileinput-button">
                                                     <i class="fa fa-plus"></i>
                                                     <span>Add files...</span>
                                                     <input type="file" name="files[]"  id="btnAddFiles" multiple="">
                                                 </span>
-                                                </div>
+                                            </div>
                                                 <!-- The global file processing state -->
-                                                <span class="fileupload-process"></span>
-                                            </div>
+                                            <span class="fileupload-process"></span>
+                                        </div>
                                             <!-- The global progress state -->
-                                            <div class="col-md-5 fileupload-progress fade">
+                                        <div class="col-md-5 fileupload-progress fade">
                                                 <!-- The global progress bar -->
-                                                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
-                                                </div>
+                                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                                            </div>
                                                 <!-- The extended global progress state -->
-                                                <div class="progress-extended">&nbsp;</div>
-                                            </div>
+                                            <div class="progress-extended">&nbsp;</div>
                                         </div>
-                                        <!-- The table listing the files available for upload/download -->
-                                        <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
-                                      <!--   <div class="row">
-                                         <div class="col-sm-12">
-                                             <div class="form-group">
-                                                 <div class="col-sm-6">
-                                                 <input type="text" class="form-control">
-                                                 </div>
-                                                 <div class="col-sm-6">
-                                                    <div class="col-sm-2">
-                                                        <a href="#" class="btn btn-primary btn-sm">Browse</a>
-                                                    </div>    
-                                                    <div class="col-sm-2">
-                                                        <a href="#" class="btn btn-primary btn-sm">Upload</a>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div> -->
+                                    </div>
+                                            <!-- The table listing the files available for upload/download -->
+                                    <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="form-group">
                                                 <div class="col-sm-8">
                                                     <label class="checkbox-inline">
-                                                        <input type="checkbox" name="checkboxbtn" value="radio1">Education
+                                                        <input type="checkbox" name="checkboxbtn" data-parsley-multiple="checkb" data-parsley-errors-container="#checkbox-errors" value="radio1"/>Education
                                                     </label>
                                                     <label class="checkbox-inline">
-                                                        <input type="checkbox"  name="checkboxbtn" value="radio2">Profession
+                                                        <input type="checkbox"  name="checkboxbtn" data-parsley-multiple="checkb" value="radio2"/>Profession
                                                     </label>
                                                     <label class="checkbox-inline">
-                                                        <input type="checkbox"  name="checkboxbtn" value="radio3">Income
+                                                        <input type="checkbox"  name="checkboxbtn" data-parsley-multiple="checkb" value="radio3"/>Income
                                                     </label>
                                                     <label class="checkbox-inline">
-                                                        <input type="checkbox"  name="checkboxbtn" value="radio4">ID
+                                                        <input type="checkbox"  name="checkboxbtn" data-parsley-multiple="checkb" value="radio4"/>ID
                                                     </label>
                                                     <label class="checkbox-inline">
-                                                        <input type="checkbox"  name="checkboxbtn" value="radio5">Marital Status
+                                                        <input type="checkbox"  name="checkboxbtn" data-parsley-multiple="checkb" value="radio5"/>Marital Status
                                                     </label>
                                                 </div>
+                                                <div id="checkbox-errors"></div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="panel">
                                             <div class="panel-body">
@@ -370,198 +537,188 @@
                                                                            <div class="col-sm-3"><a href="#" class="lnkdisapprove btn btn-danger btn-sm" data-toggle="modal" data-target='#modalAction'>Disapprove</a></div>
                                                                        </div>    
                                                                    </td>
-                                                               </tr>
-                                                               <tr>
-                                                                <td class="filenamecol text-center">Educ2</td>
-                                                                <td class="text-center">1MB</td>
-                                                                <td class="text-center">2016-01-15</td>
-                                                                <td class="text-center">User_Name</td>
-                                                                <td class="action">
-                                                                    <div class="text-center"> 
-                                                                       <div class="col-sm-3">  <a href="#" class="btn btn-primary btn-sm">Download</a></div>
-                                                                       <div class="col-sm-3"> <a href="#" class="lnkapprove btn btn-success btn-sm" data-toggle="modal" data-target='#modalAction'>Approve</a></div>
-                                                                       <div class="col-sm-3"><a href="#" class="lnkdisapprove btn btn-danger btn-sm" data-toggle="modal" data-target='#modalAction'>Disapprove</a></div>
-                                                                   </div>   
-                                                               </td>
-                                                           </tr>
-                                                           <tr>
-                                                            <td class="text-center">ID1</td>
-                                                            <td class="text-center">154KB</td>
-                                                            <td class="text-center">2016-01-30</td>
-                                                            <td class="text-center">User_Name</td>
-                                                            <td class="action">
-                                                                <div class="text-center">
-                                                                   <div class="col-sm-3">  <a href="#" class="btn btn-primary btn-sm">Download</a></div>
-                                                                   <div class="col-sm-3"> <a href="#" class="lnkapprove btn btn-success btn-sm"  data-toggle="modal" data-target='#modalAction'>Approve</a></div>
-                                                                   <div class="col-sm-3"><a href="#" class="lnkdisapprove btn btn-danger btn-sm"  data-toggle="modal" data-target='#modalAction'>Disapprove</a></div>
-                                                               </div>  
-                                                           </td>
-                                                       </tr>
-                                                       <tr>
-                                                        <td class="text-center">Work</td>
-                                                        <td class="text-center">1.1MB</td>
-                                                        <td class="text-center">2016-02-01</td>
-                                                        <td class="text-center" >User_Name</td>
-                                                        <td class="action">
-                                                            <div class="text-center">
-                                                               <div class="col-sm-3">  <a href="#" class="btn btn-primary btn-sm">Download</a></div>
-                                                               <div class="col-sm-3"> <a href="#" class="lnkapprove btn btn-success btn-sm"  data-toggle="modal" data-target='#modalAction'>Approve</a></div>
-                                                               <div class="col-sm-3"><a href="#" class="lnkdisapprove btn btn-danger btn-sm"  data-toggle="modal" data-target='#modalAction'>Disapprove</a></div>
-                                                           </div>     
-                                                       </td>
-                                                   </tr>
-                                                   <tr>
-                                                    <td class="text-center">Marital Status</td>
-                                                    <td class="text-center">233MB</td>
-                                                    <td class="text-center">2016-02-01</td>
-                                                    <td class="text-center">User_Name</td>
-                                                    <td class="action">
-                                                        <div class="text-center">
-                                                           <div class="col-sm-3">  <a href="#" class="btn btn-primary btn-sm">Download</a></div>
-                                                           <div class="col-sm-3"> <a href="#" class="lnkapprove btn btn-success btn-sm"  data-toggle="modal" data-target='#modalAction'>Approve</a></div>
-                                                           <div class="col-sm-3"><a href="#" class="lnkdisapprove btn btn-danger btn-sm"  data-toggle="modal" data-target='#modalAction'>Disapprove</a></div>
-                                                       </div>    
-                                                   </td>
-                                               </tr>                                  
-                                           </tbody>
-                                       </table>
-                                   </div>    
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               <!-- </fieldset> -->
-           </form>
-       </div>
-   </div>
-</div>
-<!-- end row -->
-<!-- <link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" /> -->
-<!-- <script src="../resources/venders/password-indicator/js/password-indicator.js"></script> -->
- <script type="text/javascript">
-// $(document).ready(function() {
-//     $('#dob').datepicker({
-//         format: 'yyyy-mm-dd',
-//         todayHighlight: true,
-//         calendarWeeks: true,
-//         endDate: '-10y'
-//     });
-//     $('#password').passwordStrength({targetDiv: '#passwordStrength'});
-//     $('#repassword').passwordStrength({targetDiv: '#rePasswordStrength'});
-// });
-</script>
-<!-- The template to display files available for upload -->
-<script id="template-upload" type="text/x-tmpl">
-    {% for (var i=0, file; file=o.files[i]; i++) { %}
-        <tr class="template-upload fade">
-            <td class="col-md-1">
-                <span class="preview"></span>
-            </td>
-            <td>
-                <p class="name">{%=file.name%}</p>
-                <strong class="error text-danger"></strong>
-            </td>
-            <td>
-                <p class="size">Processing...</p>
-                <div class="progress progress-striped active"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
-            </td>
-            <td>
-                {% if (!i && !o.options.autoUpload) { %}
-                    <button class="btn btn-primary btn-sm start" disabled>
-                        <i class="fa fa-upload"></i>
-                        <span>Start</span>
-                    </button>
-                {% } %}
-                {% if (!i) { %}
-                    <button class="btn btn-white btn-sm cancel">
-                        <i class="fa fa-ban"></i>
-                        <span>Cancel</span>
-                    </button>
-                {% } %}
-            </td>
-        </tr>
-    {% } %}
-</script>
-<script id="template-download" type="text/x-tmpl">
-    {% for (var i=0, file; file=o.files[i]; i++) { %}
-        <tr class="template-download fade">
-            <td>
-                <span class="preview">
-                    {% if (file.thumbnailUrl) { %}
-                        <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
-                    {% } %}
-                </span>
-            </td>
-            <td>
-                <p class="name">
-                    {% if (file.url) { %}
-                        <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
-                    {% } else { %}
-                        <span>{%=file.name%}</span>
-                    {% } %}
-                </p>
-                {% if (file.error) { %}
-                    <div><span class="label label-danger">Error</span> {%=file.error%}</div>
-                {% } %}
-            </td>
-            <td>
-                <span class="size">{%=o.formatFileSize(file.size)%}</span>
-            </td>
-            <td>
-                {% if (file.deleteUrl) { %}
-                    <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
-                        <i class="glyphicon glyphicon-trash"></i>
-                        <span>Delete</span>
-                    </button>
-                    <input type="checkbox" name="delete" value="1" class="toggle">
-                {% } else { %}
-                    <button class="btn btn-warning cancel">
-                        <i class="glyphicon glyphicon-ban-circle"></i>
-                        <span>Cancel</span>
-                    </button>
-                {% } %}
-            </td>
-        </tr>
-    {% } %}
-</script>
-</div>
-<!-- end #content -->
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="filenamecol text-center">Educ2</td>
+                                                                    <td class="text-center">1MB</td>
+                                                                    <td class="text-center">2016-01-15</td>
+                                                                    <td class="text-center">User_Name</td>
+                                                                    <td class="action">
+                                                                        <div class="text-center"> 
+                                                                           <div class="col-sm-3">  <a href="#" class="btn btn-primary btn-sm">Download</a></div>
+                                                                           <div class="col-sm-3"> <a href="#" class="lnkapprove btn btn-success btn-sm" data-toggle="modal" data-target='#modalAction'>Approve</a></div>
+                                                                           <div class="col-sm-3"><a href="#" class="lnkdisapprove btn btn-danger btn-sm" data-toggle="modal" data-target='#modalAction'>Disapprove</a></div>
+                                                                       </div>   
+                                                                   </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">ID1</td>
+                                                                    <td class="text-center">154KB</td>
+                                                                    <td class="text-center">2016-01-30</td>
+                                                                    <td class="text-center">User_Name</td>
+                                                                    <td class="action">
+                                                                        <div class="text-center">
+                                                                           <div class="col-sm-3">  <a href="#" class="btn btn-primary btn-sm">Download</a></div>
+                                                                           <div class="col-sm-3"> <a href="#" class="lnkapprove btn btn-success btn-sm"  data-toggle="modal" data-target='#modalAction'>Approve</a></div>
+                                                                           <div class="col-sm-3"><a href="#" class="lnkdisapprove btn btn-danger btn-sm"  data-toggle="modal" data-target='#modalAction'>Disapprove</a></div>
+                                                                       </div>  
+                                                                   </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">Work</td>
+                                                                    <td class="text-center">1.1MB</td>
+                                                                    <td class="text-center">2016-02-01</td>
+                                                                    <td class="text-center" >User_Name</td>
+                                                                    <td class="action">
+                                                                        <div class="text-center">
+                                                                           <div class="col-sm-3">  <a href="#" class="btn btn-primary btn-sm">Download</a></div>
+                                                                           <div class="col-sm-3"> <a href="#" class="lnkapprove btn btn-success btn-sm"  data-toggle="modal" data-target='#modalAction'>Approve</a></div>
+                                                                           <div class="col-sm-3"><a href="#" class="lnkdisapprove btn btn-danger btn-sm"  data-toggle="modal" data-target='#modalAction'>Disapprove</a></div>
+                                                                       </div>     
+                                                                   </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-center">Marital Status</td>
+                                                                    <td class="text-center">233MB</td>
+                                                                    <td class="text-center">2016-02-01</td>
+                                                                    <td class="text-center">User_Name</td>
+                                                                    <td class="action">
+                                                                        <div class="text-center">
+                                                                           <div class="col-sm-3">  <a href="#" class="btn btn-primary btn-sm">Download</a></div>
+                                                                           <div class="col-sm-3"> <a href="#" class="lnkapprove btn btn-success btn-sm"  data-toggle="modal" data-target='#modalAction'>Approve</a></div>
+                                                                           <div class="col-sm-3"><a href="#" class="lnkdisapprove btn btn-danger btn-sm"  data-toggle="modal" data-target='#modalAction'>Disapprove</a></div>
+                                                                       </div>    
+                                                                   </td>
+                                                                </tr>                                  
+                                                            </tbody>
+                                                        </table>
+                                                    </div>    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- end panel-body -->
+                        </div>
+                        <!-- end panel  -->
+                    </div>
+                    <!-- end row -->
+                        <!-- end row -->
+                        <!-- <link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" /> -->
+                        <!-- <script src="../resources/venders/password-indicator/js/password-indicator.js"></script> -->
+                        <!-- The template to display files available for upload -->
+                    <script id="template-upload" type="text/x-tmpl">
+                        {% for (var i=0, file; file=o.files[i]; i++) { %}
+                            <tr class="template-upload fade">
+                                <td class="col-md-1">
+                                    <span class="preview"></span>
+                                </td>
+                                <td>
+                                    <p class="name">{%=file.name%}</p>
+                                    <strong class="error text-danger"></strong>
+                                </td>
+                                <td>
+                                    <p class="size">Processing...</p>
+                                    <div class="progress progress-striped active"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+                                </td>
+                                <td>
+                                    {% if (!i && !o.options.autoUpload) { %}
+                                        <button class="btn btn-primary btn-sm start" disabled>
+                                            <i class="fa fa-upload"></i>
+                                            <span>Start</span>
+                                        </button>
+                                    {% } %}
+                                    {% if (!i) { %}
+                                        <button class="btn btn-white btn-sm cancel">
+                                            <i class="fa fa-ban"></i>
+                                            <span>Cancel</span>
+                                        </button>
+                                    {% } %}
+                                </td>
+                            </tr>
+                        {% } %}
+                    </script>
+                    <script id="template-download" type="text/x-tmpl">
+                        {% for (var i=0, file; file=o.files[i]; i++) { %}
+                            <tr class="template-download fade">
+                                <td>
+                                    <span class="preview">
+                                        {% if (file.thumbnailUrl) { %}
+                                            <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+                                        {% } %}
+                                    </span>
+                                </td>
+                                <td>
+                                    <p class="name">
+                                        {% if (file.url) { %}
+                                            <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+                                        {% } else { %}
+                                            <span>{%=file.name%}</span>
+                                        {% } %}
+                                    </p>
+                                    {% if (file.error) { %}
+                                        <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+                                    {% } %}
+                                </td>
+                                <td>
+                                    <span class="size">{%=o.formatFileSize(file.size)%}</span>
+                                </td>
+                                <td>
+                                    {% if (file.deleteUrl) { %}
+                                        <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+                                            <i class="glyphicon glyphicon-trash"></i>
+                                            <span>Delete</span>
+                                        </button>
+                                        <input type="checkbox" name="delete" value="1" class="toggle">
+                                    {% } else { %}
+                                        <button class="btn btn-warning cancel">
+                                            <i class="glyphicon glyphicon-ban-circle"></i>
+                                            <span>Cancel</span>
+                                        </button>
+                                    {% } %}
+                                </td>
+                            </tr>
+                        {% } %}
+                    </script>
+                </div>
+                <!-- end #content -->
 
-<!-- begin scroll to top btn -->
-<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
-<!-- end scroll to top btn -->
-</div>
-<!-- end page container -->
+                <!-- begin scroll to top btn -->
+                <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+                <!-- end scroll to top btn -->
+            </div>
+            <!-- end page container -->
 
-<!-- Modal -->
-<div class="modal fade" id="modalAction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h4 class="modal-title" id="myModalLabel">
-        <label for="confirmaction"  class="confirmaction"></label>
-        -
-        <label for="confirmtitle" class="confirmtitle">File Name</label>
-    </h4>
-  </div>
-  <div class="modal-body">
-      <div>
-            <div>
-                 <h4><p>Are you sure you want to <label for="confirmbody" class="confirmaction"></label>?</p></h4>
+            <!-- Modal -->
+            <div class="modal fade" id="modalAction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                <label for="confirmaction"  class="confirmaction"></label>
+                                -
+                                <label for="confirmtitle" class="confirmtitle">File Name</label>
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div>
+                                   <h4><p>Are you sure you want to <label for="confirmbody" class="confirmaction"></label>?</p></h4>
+                                </div>
+                                <div>
+                                    <textarea class="form-control" name="confirmcontent" cols="30" rows="3" placeholder="Comments"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="pull-right">
+                                <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a><a href="#" class="btn btn-primary" id='btnSaveAction'>Save</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <textarea class="form-control" name="confirmcontent" cols="30" rows="3" placeholder="Comments"></textarea>
-            </div>
-      </div>
-  </div>
-  <div class="modal-footer">
-        <div class="pull-right">
-                 <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a><a href="#" class="btn btn-primary" id='btnSaveAction'>Save</a>
-        </div>
-  </div>
-</div>
-</div>
-</div>
-</body>
+        </body>
 </html>
