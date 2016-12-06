@@ -386,6 +386,69 @@
                                                     </select>
                                                 </div>
                                             </div>
+
+                                            
+                                            <div class="row">
+                                              <div class="col-sm-12">
+                                                  <div class="col-sm-9">
+                                                    <div class="form-group">
+                                                        <label for="besttime" class="control-label col-md-5">Best time to talk 
+                                                        </label>
+                                                        <div class="col-md-6">
+                                                            <select  name="besttime" id="besttime1"  class="form-control">
+                                                                <option value="Weekdays" >Weekdays
+                                                                </option>
+                                                                <option value="Weekends">Weekends
+                                                                </option>
+                                                                <option value="Monday">Monday
+                                                                </option>
+                                                                <option value="Tuesday">Tuesday</option>
+                                                                <option value="Wednesday">Wednesday</option>
+                                                                <option value="thursday">thursday</option>
+                                                                <option value="friday">friday</option>
+                                                                <option value="saturday"> saturday</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="besttime" class="control-label col-md-5" >Time:</label>
+                                                        <div class="col-md-6">
+                                                            <select  name="besttime2" id="besttime2"  class=" form-control">
+                                                                <option value="Morning">Morning</option>
+                                                                <option value="Afternoon">Afternoon</option>
+                                                                <option value="Night"> Night</option>
+                                                                <option value="8:00 pm">8:00 pm</option>
+                                                                <option value="9:00 pm">9:00 pm</option>
+                                                                <option value="10:00 pm">10:00 pm</option>
+                                                                <option value="11:00 pm">11:00 pm</option>
+                                                                <option value="12:00 pm">12:00 pm</option>
+                                                                <option value="1:00 pm">1:00 pm</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3">
+                                                   <div class="form-group">
+                                                    <input type="button"  class="Add-Row btn btn-primary" value="add"/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-offset-4">
+                                            <div class="form-group">
+                                                <div class="col-md-8">
+                                                    <table id="table_id">
+                                                        <tbody>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                         </fieldset>
                                         <fieldset>
                                             <div class="form-group">
@@ -1260,6 +1323,51 @@
                 <script src="../resources/venders/jquery/jquery.hashchange.min.js"></script>
                 <script type="text/javascript">
                     $(document).ready(function() {
+
+                        var bestTimeList = new Array(); 
+                                    $('.Add-Row').click(function(){
+
+                                                var bestTimeListLength = bestTimeList.length;
+                                                var currentbestTimeListIndex = bestTimeList.length + 1;
+                                                var bestTime = {};
+
+                                                bestTime['id'] = currentbestTimeListIndex;
+                                                bestTime['besttime'] = $('#besttime1').val();
+                                                bestTime['time'] = $('#besttime2').val();
+                                                bestTimeList[bestTimeListLength] = bestTime;
+                                                var besttime1 = $('#besttime1').val();
+                                                var besttime2 = $('#besttime2').val();
+
+                                                if(besttime1==null && besttime2==null){
+                                                    alert('select the value');
+                                                    return false;
+                                                }
+                                                var besttime3 = besttime1+" "+besttime2;
+                                                
+                                        
+
+                                                var markup = "<tr><td style='padding: 3px'; ><span  class='badge badge-primary' style='font-size: 12px;' value='"+besttime3+"' name='record'>"+besttime3+"</span><input type='hidden' class='form-control' value='"+besttime3+"' name='record'></td><td><a class='btnDelete btn btn-danger btn-icon btn-circle btn-xs' data-besttime-list-index='"+currentbestTimeListIndex+"'> <i class='fa fa-times'></a></td></tr>";
+                                        
+
+                                                var tds = $('#table_id tbody tr td input');
+                                                    for(i = 0; i < tds.length; ++i) {
+                                                        if(tds[i].value==besttime3){
+                                                       return false;
+                                                        }
+                                                    }
+                                            // APPEND THE BESTIME VALUE IN TABLE
+                                            $("#table_id tbody").append(markup);
+
+                                    });
+
+
+                                    $('#table_id').on('click','.btnDelete',function(){
+                                        var deletebesttimeId = $(this).data('besttime-list-index');
+                                        bestTimeList.splice(deletebesttimeId-1,1);
+                                        $(this).closest('tr').remove();
+                                    });
+
+
                          $('#result').bind('change', function() {
                            var selectedValue = this.value;
                             console.log('selectedValue'+selectedValue);
