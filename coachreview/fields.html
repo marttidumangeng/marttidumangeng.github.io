@@ -4,6 +4,7 @@
     <html lang="en">
     <!--<![endif]-->
     <head>
+
         <meta charset="utf-8" />
         <title>Central - Login</title>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
@@ -38,6 +39,8 @@
         <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
+        <link rel="stylesheet" type="text/css" href="../resources/venders/switchery/switchery.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
         <!-- ================== END BASE CSS STYLE ================== -->
 
@@ -60,7 +63,11 @@
                 <script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
                 <script src="../resources/venders/parsley/parsley.min.js"></script>
                 <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+                <script src="../resources/venders/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+                <script src="../resources/venders/moment/moment-with-locales.min.js"></script>
+                <script src="../resources/venders/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
                 <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+                <script src="../resources/venders/switchery/switchery.min.js"></script>
                 <!-- ================== END BASE JS ================== -->
                 <!-- ================== BEGIN PAGE LEVEL JS ================== -->
                 <script src="../resources/scripts/app.min.js"></script>
@@ -72,6 +79,29 @@
                 <!-- ================== END PAGE LEVEL JS ================== -->
                 <script>
                     $(document).ready(function() {
+
+                          $('#datetimepicker1').datetimepicker();
+                        $('#dttime').timepicker({
+                            showMeridian : false,
+                            showSeconds : false
+                        });
+
+
+                    // SWITCHERY ADD HERE
+                        if ($('[data-render=switchery]').length !== 0) {
+                        $('[data-render=switchery]').each(function() {
+                            var option = {};
+                            option.color = '#348fe2';
+                            option.size = 'small';
+                            option.secondaryColor = ($(this).attr('data-secondary-color')) ? $(this).attr('data-secondary-color'): '#000000';
+                            option.className = ($(this).attr('data-classname')) ? $(this).attr('data-classname'): 'switchery';
+                            option.disabled = ($(this).attr('data-disabled')) ? true: false;
+                            option.disabledOpacity = ($(this).attr('data-disabled-opacity')) ? $(this).attr('data-disabled-opacity'): 0.5;
+                            option.speed = ($(this).attr('data-speed')) ? $(this).attr('data-speed'): '0.5s';
+                            var switchery = new Switchery(this,option);
+                        });
+                    }
+
                         var arrRatings = [];
                         App.init();
                         $('.barrating').barrating({
@@ -107,13 +137,13 @@
 });
 </script>
 </head>
-<body class="boxed-layout">
+<body class="layout">
     <!-- begin #page-loader -->
     <div id="page-loader" class="fade in"><span class="spinner"></span></div>
     <!-- end #page-loader -->
 
     <!-- begin #page-container -->
-    <div id="page-container" class="page-container fade page-with-top-menu page-header-fixed page-without-sidebar">
+    <div id="page-container" class="page-container fade page-with-top-menu page-header-fixed">
         <!-- begin #header -->
         <div id="header" class="header navbar navbar-default navbar-fixed-top">
             <!-- begin container-fluid -->
@@ -242,225 +272,408 @@
         </div>
         <!-- end #top-menu -->
 
+         <!--begin sidebar-->
+        <div id="sidebar" class="sidebar">
+            <!--# begin sidebar scrolling-->
+            <div data-scrollbar="true" data-height="100%">
+                <!--begin sidebar nav-->
+                <div class="nav">
+                    <li class="has-sub">
+                        <a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-user"></i> <span>Profile</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="../profilePersonalInfo/fields.html">Profile Info</a></li>
+                            <li><a href="../profilePreferences/fields.html">Preferences</a></li>
+                            <li><a href="../profileInterest/fields.html">Interest</a></li>
+                            <li><a href="../expectation/fields.html">Expectation</a></li>
+                            <li><a href="../profileAssessment/fields.html">Assessment</a></li>
+                            <li><a href="../confidential/fields.html">Confidential Questionary</a></li>
+                            <li><a href="../personalStory/fields.html">My Story</a></li>
+                            <li><a href="../otherPreference/fields.html">Other Services Interest</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub"><a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-graduation-cap"></i> <span>Coach</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="../coachreview/fields.html">CoachReview</a></li>
+                            <li><a href="../coachSession/fields.html">CoachSession</a></li>
+                        </ul>
+                    </li>
+                        <li><a href="../matches/fields.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Matches</span></a></li>
+                        <li><a href="../dates/fields.html"> <b></b> <i class="fa fa-coffee"></i> <span>Dates</span></a></li>
+                        <li ><a href="../document/fields.html"> <b></b> <i class="fa fa-file"></i> <span>Docs</span></a></li>
+                        <li ><a href="../actions/fields.html"> <b></b> <i class="fa fa-cog"></i> <span>Actions</span></a></li>
+                        
+
+
+                    <!-- begin sidebar minify button -->
+                    <li><a href="javascript:;" class="sidebar-minify-btn"
+                        data-click="sidebar-minify"> <i
+                            class="fa fa-angle-double-left"></i>
+                    </a></li>
+                    <!-- end sidebar minify button -->
+                </div>
+                <!--end sidebar nav-->
+            </div>
+            <!--# end sidebar scrolling-->
+        </div>
+        <!--end sidebar-->
+        <div class="sidebar-bg"></div>
+        <!-- begin #content -->
+
+
+
         <!-- begin #content -->
         <div id="content" class="content">
             <!-- begin row -->
-            <div class="row col-sm-8">
+            <div class="row">
                 <div class="panel">
                     <div class="panel-body">
-                        <form class="form-horizontal parsley-validate" name="mainForm" method="post" role="form">
-                            <fieldset>
-                             <div class="row">
-                                 <div class="col-sm-8">
-                                     <div class="form-group">
-                                         <div class="col-sm-2">
-                                             <a href="#" class="btn btn-primary btn-sm">Session</a>
-                                         </div>
-                                         <div class="col-sm-2">
-                                             <a href="#" class="btn btn-default btn-sm">Review</a>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>  
-                            
-                               <div class="panel panel-default">
-                                <div class="panel-heading">
-                                   
-                                        <div class="form-group">
-                                          <div class="col-sm-6">
-                                            <div class="">
-                                             <select name="ddlselect" id="ddlselect" class="form-control">
-                                                <option value="">-Coach-</option>
-                                                <option value="">Coach_A</option>
-                                            </select>
-                                        </div>         
+                        <div class="row">
+                            <div class="col-sm-12 m-b-20 m-t-m-30">
+                                <div class="col-sm-9 pull-right " role="group">
+                                    <div class="col-md-4 ">
+                                        <div class="widget widget-stats bg-green">
+                                            <div class="stats-icon"><i class="fa fa-heart-o"></i></div>
+                                            <div class="stats-info">
+                                                <h4>Esyncrony</h4>
+                                                Lead Status: Sold <br/>
+                                                MembershipStatus: Pending
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6"></div> 
-                                    <div class="col-sm-3">
-                                      <input type="date" name="dtdate" id="dtdate" class="form-control">
-                                  </div>  
-                                  <div class="col-sm-3">
-                                      <input type="time" name="dttime" id="dttime" class="form-control">
-                                  </div>            
-                                  </div>
-                              </div>   
-                          
-                      </div>
-                      <div class="panel-body">
-                       <div class="row">
-                        <div class="form-group">
-                           <div class="col-sm-4">
-                               <label for="meetpeople" class="control-label">Meet people?</label>
-                           </div>
-                           <div class="col-sm-5">
-                            <select id="ratingmeetpeople" class="barrating" name="meetPeople">
-                              <option value=""></option>
-                              <option value="1" data-rating-value="Verypoor">Very Poor</option>
-                              <option value="2" data-rating-value="Poor">Poor</option>
-                              <option value="3" data-rating-value="Good">Good</option>
-                              <option value="4" data-rating-value="Awesome">Awesome</option>
-                              <option value="5" data-rating-value="Excellent">Excellent</option>
-                          </select>
-                      </div>
-                  </div>
-              </div>
-                            <div class="row">
-                <div class="form-group">
-                   <div class="col-sm-4">
-                       <label for="meetpeople" class="control-label">Get Contacts?</label>
-                   </div>
-                   <div class="col-sm-5">
-                    <select id="ratinggetcontact" class="barrating" name="getContacts">
-                     <option value=""></option>
-                              <option value="1" data-rating-value="Verypoor">Very Poor</option>
-                              <option value="2" data-rating-value="Poor">Poor</option>
-                              <option value="3" data-rating-value="Good">Good</option>
-                              <option value="4" data-rating-value="Awesome">Awesome</option>
-                              <option value="5" data-rating-value="Excellent">Excellent</option>
-                  </select>
-              </div>
-          </div>
-      </div>
-      <div class="row">
-        <div class="form-group">
-           <div class="col-sm-4">
-               <label for="meetpeople" class="control-label">Go for 1-1 dates</label>
-           </div>
-           <div class="col-sm-5">
-              <select id="ratingonetoonedates" class="barrating" name="onetoOneDates">
-                 <option value=""></option>
-                              <option value="1" data-rating-value="Verypoor">Very Poor</option>
-                              <option value="2" data-rating-value="Poor">Poor</option>
-                              <option value="3" data-rating-value="Good">Good</option>
-                              <option value="4" data-rating-value="Awesome">Awesome</option>
-                              <option value="5" data-rating-value="Excellent">Excellent</option>
-              </select>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-    <div class="form-group">
-       <div class="col-sm-4">
-           <label for="meetpeople" class="control-label">Go for 4-7 dates?</label>
-       </div>
-       <div class="col-sm-5">
-        <select id="ratingfourtosevendate" class="barrating" name="fourtoSevenDate">
-         <option value=""></option>
-                              <option value="1" data-rating-value="Verypoor">Very Poor</option>
-                              <option value="2" data-rating-value="Poor">Poor</option>
-                              <option value="3" data-rating-value="Good">Good</option>
-                              <option value="4" data-rating-value="Awesome">Awesome</option>
-                              <option value="5" data-rating-value="Excellent">Excellent</option>
-      </select>
-  </div>
-</div>
-</div>
-<div class="row">
-    <div class="form-group">
-       <div class="col-sm-4">
-           <label for="meetpeople" class="control-label">Get a boyfriend?</label>
-       </div>
-       <div class="col-sm-5">
-        <select id="ratinggetboyfriend" class="barrating" name="getBoyfriend">
-        <option value=""></option>
-                              <option value="1" data-rating-value="Verypoor">Very Poor</option>
-                              <option value="2" data-rating-value="Poor">Poor</option>
-                              <option value="3" data-rating-value="Good">Good</option>
-                              <option value="4" data-rating-value="Awesome">Awesome</option>
-                              <option value="5" data-rating-value="Excellent">Excellent</option>
-      </select>
-  </div>
-</div>
-</div>
-<div class="row">
-    <div class="form-group">
-       <div class="col-sm-4">
-           <label for="meetpeople" class="control-label">Dressing?</label>
-       </div>
-       <div class="col-sm-5">
-        <select id="ratingdressing" class="barrating" name="dressing">
-       <option value=""></option>
-                              <option value="1" data-rating-value="Verypoor">Very Poor</option>
-                              <option value="2" data-rating-value="Poor">Poor</option>
-                              <option value="3" data-rating-value="Good">Good</option>
-                              <option value="4" data-rating-value="Awesome">Awesome</option>
-                              <option value="5" data-rating-value="Excellent">Excellent</option>
-      </select>
-  </div>
-</div>
-</div>
-<div class="row">
-    <div class="form-group">
-       <div class="col-sm-4">
-           <label for="meetpeople" class="control-label">Make up?</label>
-       </div>
-       <div class="col-sm-5">
-        <select id="ratingmakeup" class="barrating" name="makeup">
-          <option value=""></option>
-                              <option value="1" data-rating-value="Verypoor">Very Poor</option>
-                              <option value="2" data-rating-value="Poor">Poor</option>
-                              <option value="3" data-rating-value="Good">Good</option>
-                              <option value="4" data-rating-value="Awesome">Awesome</option>
-                              <option value="5" data-rating-value="Excellent">Excellent</option>
-      </select>
-  </div>
-</div>
-</div>
-<div class="row">
-    <div class="form-group">
-       <div class="col-sm-4">
-           <label for="meetpeople" class="control-label">Buying Appropriate Clothes?</label>
-       </div>
-       <div class="col-sm-5">
-         <select id="ratingbuycloth" class="barrating" name="buyCloth">
-         <option value=""></option>
-                              <option value="1" data-rating-value="Verypoor">Very Poor</option>
-                              <option value="2" data-rating-value="Poor">Poor</option>
-                              <option value="3" data-rating-value="Good">Good</option>
-                              <option value="4" data-rating-value="Awesome">Awesome</option>
-                              <option value="5" data-rating-value="Excellent">Excellent</option>
-      </select>
-  </div>
-</div>
-</div>
-<div class="row">
-    <div class="form-group">
-       <div class="col-sm-4">
-          <label for="meetpeople" class="control-label">Image Coach Comments</label>
-      </div>
-      <div class="col-sm-5">
-        <textarea class="form-control"></textarea>
-    </div>
-</div>     
-</div>
-<div class="row">
-    <div class="form-group">
-       <div class="col-sm-4">
-          <label for="meetpeople" class="control-label">Comments by Date Coach?</label>
-      </div>
-      <div class="col-sm-5">
-        <textarea class="form-control"></textarea>
-    </div>
-</div>     
-</div>
-<div class="row">
-    <div class="form-group">
-       <div class="text-center">
-            <div id="btnSave">
-                <a href="#" class="btn btn-primary btn-sm">Save</a>
-          </div>
-      </div>
-  </div>     
-</div>
-
-</div>
-</div>
-                                    
-</fieldset>
-</form>
-</div>
-</div>
-</div>
+                                    <div class="col-md-4 ">
+                                        <div class="widget widget-stats bg-red">
+                                            <div class="stats-icon"><i class="fa fa-magic"></i></div>
+                                            <div class="stats-info">
+                                                <h4>LAA</h4>
+                                                 Lead Status: Sold <br/>
+                                                MembershipStatus: Pending
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="widget widget-stats bg-purple-darker">
+                                            <div class="stats-icon"><i class="fa fa-venus-mars"></i></div>
+                                            <div class="stats-info">
+                                                <h4>LA</h4>
+                                                Lead Status: Sold <br/>     
+                                                MembershipStatus: Pending
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <select id="status" name="profile.laMembership.status" data-parsley-required="true" class="form-control selectpicker">
+                                        <option path="model.profile.laMembership.status" value="New Member">New Member</option>
+                                        <option path="model.profile.laMembership.status" value="Pending Approval">Pending Approval</option>
+                                        <option path="model.profile.laMembership.status" value="Active">Active</option>
+                                        <option path="model.profile.laMembership.status" value="On Hold">On Hold</option>
+                                        <option path="model.profile.laMembership.status" value="Refund">Refund</option>
+                                        <option path="model.profile.laMembership.status" value="Expired">Expired</option>
+                                        <option path="model.profile.laMembership.status" value="Terminated">Terminated</option>
+                                        <option path="model.profile.laMembership.status" value="Renewal">Renewal</option>
+                                    </select>
+                                </div>
+                                <div class="profile-image">
+                                    <img src="../resources/images/photo.jpg"> 
+                                    <i class="fa fa-user hide"></i>
+                                    <input type="file"name="userphoto" />
+                                </div>
+                                <div class="form-group">
+                                    <select id="mood" name="profile.laMembership.mood" data-parsley-required="true" class="form-control selectpicker">
+                                        <option path="model.profile.laMembership.mood" value="Normal">Normal</option>
+                                        <option path="model.profile.laMembership.mood" value="Happy">Happy</option>
+                                        <option path="model.profile.laMembership.mood" value="Complaint">Complaint</option>
+                                        <option path="model.profile.laMembership.mood" value="Refund">Refund</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <fieldset>
+                                    <legend>Profile History</legend>
+                                        <table id="user" class="table  table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Profile Name :</td>
+                                                    <td><a href="#" id="profileName" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
+                                                    <td>Smokes :</td>
+                                                    <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profile Phone :</td>
+                                                    <td><a href="#" id="phoneNumber" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
+                                                    <td>Drinks :</td>
+                                                    <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                <tr>
+                                                    <td>Profile age :</td>
+                                                    <td><a href="#" id="profileAge" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
+                                                    <td>Profile history :</td>
+                                                    <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profile ethnicity :</td>
+                                                    <td><a href="#" id="profileEthnicity" data-type="text" data-pk="1" data-title="Enter Username">Indian </a></td>
+                                                    <td>Dates Left :</td>
+                                                    <td><id="datesLeft" data-type="text" data-pk="1" data-title="Enter Username">5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Marital Status:</td>
+                                                    <td><a href="#" id="maritalStatus" data-type="text" data-pk="1" data-title="Enter Username">Unmarried </a></td>
+                                                    <td>complementary Dates :</td>
+                                                    <td><id="freeDates" data-type="text"
+                                                        data-pk="1" data-title="Enter Username">3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profile Income:</td>
+                                                    <td><a href="#" id="profileIncome" data-type="text" data-pk="1" data-title="Enter Username">5 lakh </a></td>
+                                                    <td>package Name :</td>
+                                                    <td>Normal</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profile Education:</td>
+                                                    <td><a href="#" id="profileEducation" data-type="text" data-pk="1" data-title="Enter Username">PhD and above
+                                                    </a></td>
+                                                    <td>Sign Up date :</td>
+                                                    <td><id="signUpDate" data-type="text" data-pk="1" data-title="Enter Username"> 22-9-2016</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form class="form-horizontal parsley-validate" name="mainForm" method="post" role="form">
+                                <fieldset>
+                                    <legend>Coach Review</legend>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="panel panel-default">
+                                                        <!-- <div class="panel-heading"> -->
+                                                            <div class="form-group">
+                                                                <div class="col-sm-3">
+                                                                    <select  class="form-control selectpicker" name="ddlselect" id="ddlselect">
+                                                                        <option value="Coach A">-Coach-</option>
+                                                                        <option value="Coach B">Coach_A</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="form-group">
+                                                                            <div class="col-md-6">
+                                                                                <div class="input-group date" id="datetimepicker1">
+                                                                                    <input type="text" class="form-control" />
+                                                                                    <span class="input-group-addon">
+                                                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                                                    </span>
+                                                                                </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>  
+                                                                <!-- <div class="col-sm-3">
+                                                                    <input type="time" name="dttime" id="dttime" class="form-control"/>
+                                                                </div> -->
+                                                            </div>
+                                                        <!-- </div>  -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-3">
+                                                            <label for="meetpeople" class="control-label">Meet people?</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <select id="ratingmeetpeople" class="barrating" name="meetPeople">
+                                                                <option value=""></option>
+                                                                <option value="1" data-rating-value="Verypoor">Very Poor</option>
+                                                                <option value="2" data-rating-value="Poor">Poor</option>
+                                                                <option value="3" data-rating-value="Good">Good</option>
+                                                                <option value="4" data-rating-value="Awesome">Awesome</option>
+                                                                <option value="5" data-rating-value="Excellent">Excellent</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-3">
+                                                            <label for="meetpeople" class="control-label">Get Contacts?</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <select id="ratinggetcontact" class="barrating" name="getContacts">
+                                                                <option value=""></option>
+                                                                <option value="1" data-rating-value="Verypoor">Very Poor</option>
+                                                                <option value="2" data-rating-value="Poor">Poor</option>
+                                                                <option value="3" data-rating-value="Good">Good</option>
+                                                                <option value="4" data-rating-value="Awesome">Awesome</option>
+                                                                <option value="5" data-rating-value="Excellent">Excellent</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-3">
+                                                            <label for="meetpeople" class="control-label">Go for 1-1 dates</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <select id="ratingonetoonedates" class="barrating" name="onetoOneDates">
+                                                                <option value=""></option>
+                                                                <option value="1" data-rating-value="Verypoor">Very Poor</option>
+                                                                <option value="2" data-rating-value="Poor">Poor</option>
+                                                                <option value="3" data-rating-value="Good">Good</option>
+                                                                <option value="4" data-rating-value="Awesome">Awesome</option>
+                                                                <option value="5" data-rating-value="Excellent">Excellent</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-3">
+                                                            <label for="meetpeople" class="control-label">Go for 4-7 dates?</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <select id="ratingfourtosevendate" class="barrating" name="fourtoSevenDate">
+                                                               <option value=""></option>
+                                                               <option value="1" data-rating-value="Verypoor">Very Poor</option>
+                                                               <option value="2" data-rating-value="Poor">Poor</option>
+                                                               <option value="3" data-rating-value="Good">Good</option>
+                                                               <option value="4" data-rating-value="Awesome">Awesome</option>
+                                                               <option value="5" data-rating-value="Excellent">Excellent</option>
+                                                             </select>
+                                                       </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-3">
+                                                            <label for="meetpeople" class="control-label">Get a boyfriend?</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <select id="ratinggetboyfriend" class="barrating" name="getBoyfriend">
+                                                                <option value=""></option>
+                                                                  <option value="1" data-rating-value="Verypoor">Very Poor</option>
+                                                                  <option value="2" data-rating-value="Poor">Poor</option>
+                                                                  <option value="3" data-rating-value="Good">Good</option>
+                                                                  <option value="4" data-rating-value="Awesome">Awesome</option>
+                                                                  <option value="5" data-rating-value="Excellent">Excellent</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-3">
+                                                           <label for="meetpeople" class="control-label">Dressing?</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <select id="ratingdressing" class="barrating" name="dressing">
+                                                               <option value=""></option>
+                                                               <option value="1" data-rating-value="Verypoor">Very Poor</option>
+                                                               <option value="2" data-rating-value="Poor">Poor</option>
+                                                               <option value="3" data-rating-value="Good">Good</option>
+                                                               <option value="4" data-rating-value="Awesome">Awesome</option>
+                                                               <option value="5" data-rating-value="Excellent">Excellent</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-3">
+                                                             <label for="meetpeople" class="control-label">Make up?</label>
+                                                         </div>
+                                                        <div class="col-sm-5">
+                                                            <select id="ratingmakeup" class="barrating" name="makeup">
+                                                              <option value=""></option>
+                                                              <option value="1" data-rating-value="Verypoor">Very Poor</option>
+                                                              <option value="2" data-rating-value="Poor">Poor</option>
+                                                              <option value="3" data-rating-value="Good">Good</option>
+                                                              <option value="4" data-rating-value="Awesome">Awesome</option>
+                                                              <option value="5" data-rating-value="Excellent">Excellent</option>
+                                                          </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-3">
+                                                            <label for="meetpeople" class="control-label">Buying Appropriate</br> Clothes?</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <select id="ratingbuycloth" class="barrating" name="buyCloth">
+                                                               <option value=""></option>
+                                                               <option value="1" data-rating-value="Verypoor">Very Poor</option>
+                                                               <option value="2" data-rating-value="Poor">Poor</option>
+                                                               <option value="3" data-rating-value="Good">Good</option>
+                                                               <option value="4" data-rating-value="Awesome">Awesome</option>
+                                                               <option value="5" data-rating-value="Excellent">Excellent</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-3">
+                                                            <label for="meetpeople" class="control-label">Image Coach Comments</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <textarea class="form-control"></textarea>
+                                                        </div>
+                                                    </div>     
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group">
+                                                        <div class="col-sm-3">
+                                                            <label for="meetpeople" class="control-label">Comments by Date Coach?</label>
+                                                        </div>
+                                                        <div class="col-sm-5">
+                                                            <textarea class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>     
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                   <div class="text-center">
+                                                        <div id="btnSave">
+                                                            <a href="#" class="btn btn-primary btn-sm">Save</a>
+                                                      </div>
+                                                  </div>
+                                              </div>     
+                                            </div>
+                                        </div>
+                                    </div>
+                             </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
 <!-- end row -->
 <link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" />
 <script src="../resources/venders/password-indicator/js/password-indicator.js"></script>

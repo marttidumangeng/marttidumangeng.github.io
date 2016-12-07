@@ -70,20 +70,18 @@
 <script src="../resources/venders/slimscroll/jquery.slimscroll.min.js"></script>
 <script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
 <script src="../resources/venders/parsley/parsley.min.js"></script>
-<script
-	src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-<script
-	src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
 
 <!-- ================== END BASE JS ================== -->
 <!-- ================== BEGIN PAGE LEVEL JS ================== -->
 <script src="../resources/scripts/app.min.js"></script>
 <!-- ================== END PAGE LEVEL JS ================== -->
 <script>
-            $(document).ready(function() {
-                App.init();
-            });
-        </script>
+    $(document).ready(function() {
+        App.init();
+    });
+</script>
 </head>
 <body class="layout">
 	<!-- begin #page-loader -->
@@ -150,8 +148,7 @@
 						<ul class="dropdown-menu animated fadeInLeft">
 							<li class="arrow"></li>
 							<li><a href="javascript:;">Edit Profile</a></li>
-							<li><a href="javascript:;"><span
-									class="badge badge-danger pull-right">2</span> Inbox</a></li>
+							<li><a href="javascript:;"><span class="badge badge-danger pull-right">2</span> Inbox</a></li>
 							<li><a href="javascript:;">Calendar</a></li>
 							<li><a href="javascript:;">Setting</a></li>
 							<li class="divider"></li>
@@ -167,32 +164,24 @@
 		<div id="top-menu" class="top-menu ">
 			<!-- begin top-menu nav -->
 			<ul class="nav pull-right">
-				<li class="has-sub "><a href="javascript:;"> <b
-						class="caret pull-right"></b> <i class="fa fa-dot-circle-o"></i> <span>Leads</span>
-				</a>
+				<li class="has-sub "><a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-dot-circle-o"></i> <span>Leads</span></a>
 					<ul class="sub-menu">
 						<li><a href="#">Dashboard v1</a></li>
 						<li><a href="#">Dashboard v2</a></li>
-					</ul></li>
-				<li class="has-sub"><a href="javascript:;"> <b
-						class="caret pull-right"></b> <i class="fa fa-inbox"></i> <span>Email</span>
-				</a>
+					</ul>
+				</li>
+				<li class="has-sub"><a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-inbox"></i> <span>Email</span></a>
 					<ul class="sub-menu">
 						<li><a href="#">Inbox</a></li>
 						<li><a href="#">Compose</a></li>
 						<li><a href="#">Detail</a></li>
-					</ul></li>
-				<li><a href="javascript:;"> <i class="fa fa-tasks"></i> <span>Tasks</span>
-				</a></li>
-				<li><a href="javascript:;"> <i
-						class="fa fa-calendar-check-o"></i> <span>Appointments</span>
-				</a></li>
-				<li><a href="javascript:;"> <i class="fa fa-leanpub"></i> <span>Session</span>
-				</a></li>
-				<li><a href="javascript:;"> <i class="fa fa-comment"></i> <span>Feedback</span>
-				</a></li>
-				<li><a href="javascript:;"> <i class="fa fa-money"></i> <span>Payment</span>
-				</a></li>
+					</ul>
+				</li>
+				<li><a href="javascript:;"> <i class="fa fa-tasks"></i> <span>Tasks</span></a></li>
+				<li><a href="javascript:;"> <i class="fa fa-calendar-check-o"></i> <span>Appointments</span></a></li>
+				<li><a href="javascript:;"> <i class="fa fa-leanpub"></i> <span>Session</span></a></li>
+				<li><a href="javascript:;"> <i class="fa fa-comment"></i> <span>Feedback</span></a></li>
+				<li><a href="javascript:;"> <i class="fa fa-money"></i> <span>Payment</span></a></li>
 			</ul>
 			<!-- end top-menu nav -->
 		</div>
@@ -205,44 +194,6 @@
 				<div class="col-sm-6 pull-left">
 					<div class="panel">
 						<div class="panel-body">
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="row">
-										<div class="col-sm-4">
-											<div class="form-group">
-												<select class="form-control selectpicker" id="result"
-													data-parsley-required="true">
-													<option value="No Attempt Made">No Attempt Made</option>
-													<option value="In Process">In Process</option>
-													<option value="Not Interested">Not Interested</option>
-													<option value="No Match Found">No Match Found</option>
-													<option value="Success">Success</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group">
-												<select class="form-control selectpicker" id="result"
-													data-parsley-required="true">
-													<option value="-1">-Result-</option>
-													<option value="Did not Pick up">Did not Pick up</option>
-													<option value="Not Interested">Not Interested</option>
-													<option value="Follow up">Follow up</option>
-													<option value="Not Suitable">Not Suitable</option>
-													<option value="Spam">Spam</option>
-													<option value="Appointment Made">Appointment Made</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-sm-4">
-											<div class="form-group">
-												<input type="text" class="form-control" placeholder="" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							&nbsp;
 							<div class="row">
 								<div class="col-sm-3">
 									<div class="form-group">
@@ -324,14 +275,14 @@
 												<tr>
 													<td>Marital Status:</td>
 													<td>Unmarried</td>
-													<td>Free Dates :</td>
+													<td>Complementary Dates :</td>
 													<td>3</td>
 												</tr>
 												<tr>
 													<td>Profile Income:</td>
 													<td>5 lakh</td>
-													<td>package Status :</td>
-													<td>6</td>
+													<td>Package Name :</td>
+													<td>Normal</td>
 												</tr>
 												<tr>
 													<td>Profile Education:</td>
@@ -342,6 +293,47 @@
 											</tbody>
 										</table>
 									</fieldset>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="form-group">
+												<select class="form-control selectpicker" id="result"
+													data-parsley-required="true">
+													<option value="No Attempt Made">No Attempt Made</option>
+													<option value="In Process">In Process</option>
+													<option value="Not Interested">Not Interested</option>
+													<option value="No Match Found">No Match Found</option>
+													<option value="Success">Success</option>
+												</select>
+											</div>
+										</div>
+										<!-- <div class="col-sm-4">
+											<div class="form-group">
+												<select class="form-control selectpicker" id="result"
+													data-parsley-required="true">
+													<option value="-1">-Result-</option>
+													<option value="Did not Pick up">Did not Pick up</option>
+													<option value="Not Interested">Not Interested</option>
+													<option value="Follow up">Follow up</option>
+													<option value="Not Suitable">Not Suitable</option>
+													<option value="Spam">Spam</option>
+													<option value="Appointment Made">Appointment Made</option>
+												</select>
+											</div>
+										</div> -->
+										<div class="col-sm-4">
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder=""/>
+
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<button type="button" class="btn btn-primary m-r-5 m-b-5">ADD</button>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -426,31 +418,7 @@
                                   						</div>
                                   					</div>
                                   				</fieldset>
-                                  				<!-- Work Details end here-->
-                                  				<fieldset>
-                                  					<legend>Work Details</legend>
-                                  					<div class="row">
-                                  						<div class="col-sm-12">
-                                  							<table class="table table-plain">
-                                  								<tbody>
-                                  									<tr>
-                                  										<td><b>Company:</b></td>
-                                  										<td>company value</td>
-                                  										<td><b>Industry:</b></td>
-                                  										<td>Industry  value</td>
-                                  									</tr>
-                                  									<tr>
-                                  										<td><b>How often do you travel for business:</b></td>
-                                  										<td>travel for business value</td>
-                                  										<td><b>Overseas Work:</b></td>
-                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
-                                  									</tr>
-                                  								</tbody>
-                                  							</table>
-                                  						</div>
-                                  					</div>
-                                  				</fieldset>
-                                  				<!-- Work Details end here -->
+                                  				
                                   				<!-- Work and Education Profile Start here-->
                                   				<fieldset>
                                   					<legend>Work &amp; Education Profile</legend>
@@ -459,34 +427,46 @@
                                   							<table class="table table-plain">
                                   								<tbody>
                                   									<tr>
-                                  										<td><b>Office Zip:</b></td>
-                                  										<td>Home Office Zip value</td>
                                   										<td><b>OverSeas Study:</b></td>
                                   										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"  /></td>
-                                  									</tr>
-                                  									<tr>
                                   										<td><b>OverSeas Study Location:</b></td>
                                   										<td>OverSeas Study Location value</td>
+                                  									</tr>
+                                  									<tr>
                                   										<td><b>OverSeas Study Language:</b></td>
                                   										<td>OverSeas Study Language value</td>
-                                  									</tr>
-                                  									<tr>
                                   										<td><b>Second Education:</b></td>
                                   										<td>Second Education value</td>
-                                  										<td><b>Second Institution Name:</b></td>
-                                  										<td>Second Institution Name value</td>
                                   									</tr>
                                   									<tr>
+                                  										<td><b>Second Institution Name:</b></td>
+                                  										<td>Second Institution Name value</td>
                                   										<td><b>Second Education Subject:</b></td>
                                   										<td>Second Education Subject value</td>
+                                  									</tr>
+                                  									<tr>
                                   										<td><b>Third Education:</b></td>
                                   										<td>Third Education value</td>
+                                  										<td><b>Third Instution Name:</b></td>
+                                  										<td>Third Instution Name value</td>
                                   									</tr>
                                   									<tr>
                                   										<td><b>Third Education subject:</b></td>
                                   										<td>Third Education subject value</td>
-                                  										<td><b>Third Education:</b></td>
-                                  										<td>Third Education value</td>
+                                  										<td><b>Company:</b></td>
+                                  										<td>company value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Industry:</b></td>
+                                  										<td>Industry  value</td>
+                                  										<td><b>Office Zip:</td>
+                                  										<td>Home Office Zip value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>How often do you travel for business:</b></td>
+                                  										<td>travel for business value</td>
+                                  										<td><b>Overseas Work:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
                                   									</tr>
                                   									<tr>
                                   										<td><b>OverSeas Work Location:</b></td>
@@ -531,7 +511,7 @@
                                   				<!-- style and character end here -->
                                   				<!-- Family table start here -->
                                   				<fieldset>
-                                  					<legend>Style and Character</legend>
+                                  					<legend>Family</legend>
                                   					<div class="row">
                                   						<div class="col-sm-12">
                                   							<table class="table table-plain">
@@ -837,24 +817,28 @@
                                   									<tr>
                                   										<td><b>Hair Color / Length:</b></td>
                                   										<td>Short</td>
+                                  										<td><b>Hair Style</b></td>
+                                  										<td>Hair Style Value</td>
+                                  									</tr>
+                                  									<tr>
                                   										<td><b>Body Type:</b></td>
                                   										<td>Slim</td>
-                                  									</tr>
-                                  									<tr>
                                   										<td><b>Grooming:</b></td>
                                   										<td>Immaculate</td>
+                                  									</tr>
+                                  									<tr>
                                   										<td><b>Complexion:</b></td>
                                   										<td>Flawless</td>
-                                  									</tr>
-                                  									<tr>
                                   										<td><b>Maturity:</b></td>
                                   										<td>More Mature than age</td>
-                                  										<td><b>Confidence Level:</b></td>
-                                  										<td>Arrogant</td>
                                   									</tr>
                                   									<tr>
+                                  										<td><b>Confidence Level:</b></td>
+                                  										<td>Arrogant</td>
                                   										<td><b>English Level:</b></td>
                                   										<td>Extremely Eloquent</td>
+                                  									</tr>
+                                  									<tr>
                                   										<td><b>Masculine / Feminine:</b></td>
                                   										<td>Feminine</td>
                                   									</tr>
@@ -1276,7 +1260,7 @@
 				<div class="col-sm-6 pull-left">
 					<div class="panel">
 						<div class="panel-body">
-							<div class="row">
+							<!-- <div class="row">
 								<div class="col-sm-12">
 									<div class="row">
 										<div class="col-sm-4">
@@ -1313,7 +1297,7 @@
 									</div>
 								</div>
 							</div>
-							&nbsp;
+							&nbsp; -->
 							<div class="row">
 								<div class="col-sm-3">
 									<div class="form-group">
@@ -1395,14 +1379,14 @@
 												<tr>
 													<td>Marital Status:</td>
 													<td>Unmarried</td>
-													<td>Free Dates :</td>
+													<td>Complementary Dates :</td>
 													<td>3</td>
 												</tr>
 												<tr>
 													<td>Profile Income:</td>
 													<td>5 lakh</td>
-													<td>package Status :</td>
-													<td>6</td>
+													<td>Package Name :</td>
+													<td>Normal</td>
 												</tr>
 												<tr>
 													<td>Profile Education:</td>
@@ -1413,6 +1397,46 @@
 											</tbody>
 										</table>
 									</fieldset>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="form-group">
+												<select class="form-control selectpicker" id="result"
+													data-parsley-required="true">
+													<option value="No Attempt Made">No Attempt Made</option>
+													<option value="In Process">In Process</option>
+													<option value="Not Interested">Not Interested</option>
+													<option value="No Match Found">No Match Found</option>
+													<option value="Success">Success</option>
+												</select>
+											</div>
+										</div>
+										<!-- <div class="col-sm-4">
+											<div class="form-group">
+												<select class="form-control selectpicker" id="result"
+													data-parsley-required="true">
+													<option value="-1">-Result-</option>
+													<option value="Did not Pick up">Did not Pick up</option>
+													<option value="Not Interested">Not Interested</option>
+													<option value="Follow up">Follow up</option>
+													<option value="Not Suitable">Not Suitable</option>
+													<option value="Spam">Spam</option>
+													<option value="Appointment Made">Appointment Made</option>
+												</select>
+											</div>
+										</div> -->
+										<div class="col-sm-4">
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder=""/>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<button type="button" class="btn btn-primary m-r-5 m-b-5">ADD</button>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1508,30 +1532,6 @@
                                   					</div>
                                   				</fieldset>
                                   				<!-- Work Details end here-->
-                                  				<fieldset>
-                                  					<legend>Work Details</legend>
-                                  					<div class="row">
-                                  						<div class="col-sm-12">
-                                  							<table class="table table-plain">
-                                  								<tbody>
-                                  									<tr>
-                                  										<td><b>Company:</b></td>
-                                  										<td>company value</td>
-                                  										<td><b>Industry:</b></td>
-                                  										<td>Industry  value</td>
-                                  									</tr>
-                                  									<tr>
-                                  										<td><b>How often do you travel for business:</b></td>
-                                  										<td>travel for business value</td>
-                                  										<td><b>Overseas Work:</b></td>
-                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
-                                  									</tr>
-                                  								</tbody>
-                                  							</table>
-                                  						</div>
-                                  					</div>
-                                  				</fieldset>
-                                  				<!-- Work Details end here -->
                                   				<!-- Work and Education Profile Start here-->
                                   				<fieldset>
                                   					<legend>Work &amp; Education Profile</legend>
@@ -1540,34 +1540,46 @@
                                   							<table class="table table-plain">
                                   								<tbody>
                                   									<tr>
-                                  										<td><b>Office Zip:</b></td>
-                                  										<td>Home Office Zip value</td>
                                   										<td><b>OverSeas Study:</b></td>
                                   										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"  /></td>
-                                  									</tr>
-                                  									<tr>
                                   										<td><b>OverSeas Study Location:</b></td>
                                   										<td>OverSeas Study Location value</td>
+                                  									</tr>
+                                  									<tr>
                                   										<td><b>OverSeas Study Language:</b></td>
                                   										<td>OverSeas Study Language value</td>
-                                  									</tr>
-                                  									<tr>
                                   										<td><b>Second Education:</b></td>
                                   										<td>Second Education value</td>
-                                  										<td><b>Second Institution Name:</b></td>
-                                  										<td>Second Institution Name value</td>
                                   									</tr>
                                   									<tr>
+                                  										<td><b>Second Institution Name:</b></td>
+                                  										<td>Second Institution Name value</td>
                                   										<td><b>Second Education Subject:</b></td>
                                   										<td>Second Education Subject value</td>
+                                  									</tr>
+                                  									<tr>
                                   										<td><b>Third Education:</b></td>
                                   										<td>Third Education value</td>
+                                  										<td><b>Third Instution Name:</b></td>
+                                  										<td>Third Instution Name value</td>
                                   									</tr>
                                   									<tr>
                                   										<td><b>Third Education subject:</b></td>
                                   										<td>Third Education subject value</td>
-                                  										<td><b>Third Education:</b></td>
-                                  										<td>Third Education value</td>
+                                  										<td><b>Company:</b></td>
+                                  										<td>company value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>Industry:</b></td>
+                                  										<td>Industry  value</td>
+                                  										<td><b>Office Zip:</td>
+                                  										<td>Home Office Zip value</td>
+                                  									</tr>
+                                  									<tr>
+                                  										<td><b>How often do you travel for business:</b></td>
+                                  										<td>travel for business value</td>
+                                  										<td><b>Overseas Work:</b></td>
+                                  										<td><input type="checkbox" readonly="" data-render="switchery" data-theme="blue"/></td>
                                   									</tr>
                                   									<tr>
                                   										<td><b>OverSeas Work Location:</b></td>
@@ -1612,7 +1624,7 @@
                                   				<!-- style and character end here -->
                                   				<!-- Family table start here -->
                                   				<fieldset>
-                                  					<legend>Style and Character</legend>
+                                  					<legend>Family</legend>
                                   					<div class="row">
                                   						<div class="col-sm-12">
                                   							<table class="table table-plain">
@@ -1918,24 +1930,28 @@
                                   									<tr>
                                   										<td><b>Hair Color / Length:</b></td>
                                   										<td>Short</td>
+                                  										<td><b>Hair Style</b></td>
+                                  										<td>Hair Style Value</td>
+                                  									</tr>
+                                  									<tr>
                                   										<td><b>Body Type:</b></td>
                                   										<td>Slim</td>
-                                  									</tr>
-                                  									<tr>
                                   										<td><b>Grooming:</b></td>
                                   										<td>Immaculate</td>
+                                  									</tr>
+                                  									<tr>
                                   										<td><b>Complexion:</b></td>
                                   										<td>Flawless</td>
-                                  									</tr>
-                                  									<tr>
                                   										<td><b>Maturity:</b></td>
                                   										<td>More Mature than age</td>
-                                  										<td><b>Confidence Level:</b></td>
-                                  										<td>Arrogant</td>
                                   									</tr>
                                   									<tr>
+                                  										<td><b>Confidence Level:</b></td>
+                                  										<td>Arrogant</td>
                                   										<td><b>English Level:</b></td>
                                   										<td>Extremely Eloquent</td>
+                                  									</tr>
+                                  									<tr>
                                   										<td><b>Masculine / Feminine:</b></td>
                                   										<td>Feminine</td>
                                   									</tr>

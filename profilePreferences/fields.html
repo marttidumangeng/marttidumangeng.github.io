@@ -239,20 +239,15 @@
                     </a>
                         <ul class="sub-menu">
                             <li><a href="../coachreview/fields.html">CoachReview</a></li>
+                            <li><a href="../coachSession/fields.html">CoachSession</a></li>
                         </ul></li>
-                    <li class="has-sub"><a href="javascript:;"> <b
-                            class="caret pull-right"></b> <i class="fa fa-venus-mars"></i> <span>Matches</span>
-                    </a>
-                        <ul class="sub-menu">
-                            <li><a href="../matches/fields.html">match</a></li>
-                        </ul></li>
-                        <li class="has-sub"><a href="javascript:;"> <b
-                            class="caret pull-right"></b> <i class="fa fa-coffee"></i> <span>Dates</span>
-                    </a>
-                        <ul class="sub-menu">
-                            <li><a href="../dates/fields.html">date</a></li>
-                        </ul></li>
+                    
+                        <li><a href="../matches/fields.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Matches</span></a></li>
+                        <li><a href="../dates/fields.html"> <b></b> <i class="fa fa-coffee"></i> <span>Dates</span></a></li>
 
+                        <li ><a href="../document/fields.html"> <b></b> <i class="fa fa-file"></i> <span>Docs</span></a></li>
+                        <li ><a href="../actions/fields.html"> <b></b> <i class="fa fa-cog"></i> <span>Actions</span></a></li>
+                    
                     <!-- begin sidebar minify button -->
                     <li><a href="javascript:;" class="sidebar-minify-btn"
                         data-click="sidebar-minify"> <i
@@ -272,8 +267,52 @@
 			<div class="row">
 				<div class="panel">
 					<div class="panel-body">
-
-					<div class="row">
+						<div class="row">
+                            <!-- <div class="col-sm-12 m-b-20 m-t-m-30">
+                                <div class="btn-group pull-right" role="group">
+                                    <a role="button" class="btn btn-white" href="#">Esynchrony</a>
+                                    <button type="button" class="btn btn-white active">Lunch
+                                        Actually</button>
+                                    <a role="button" class="btn btn-white" href="#">Lunch
+                                        Actually Academy</a>
+                                </div>
+                            </div> -->
+                            <div class="col-sm-12 m-b-20 m-t-m-30">
+                                <div class="col-sm-9 pull-right " role="group">
+                                    <div class="col-md-4 ">
+                                        <div class="widget widget-stats bg-green">
+                                            <div class="stats-icon"><i class="fa fa-heart-o"></i></div>
+                                            <div class="stats-info">
+                                                <h4>Esyncrony</h4>
+                                                Lead Status: Sold <br/>
+                                                MembershipStatus: Pending
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="widget widget-stats bg-red">
+                                            <div class="stats-icon"><i class="fa fa-magic"></i></div>
+                                            <div class="stats-info">
+                                                <h4>LAA</h4>
+                                                 Lead Status: Sold <br/>
+                                                MembershipStatus: Pending
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="widget widget-stats bg-purple-darker">
+                                            <div class="stats-icon"><i class="fa fa-venus-mars"></i></div>
+                                            <div class="stats-info">
+                                                <h4>LA</h4>
+                                                Lead Status: Sold <br/>     
+                                                MembershipStatus: Pending
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					<!-- <div class="row">
 							<div class="col-sm-12 m-b-20 m-t-m-30">
 								<div class="btn-group pull-right" role="group">
 									<a role="button" class="btn btn-white" href="#">Esynchrony</a>
@@ -283,37 +322,19 @@
 										Actually Academy</a>
 								</div>
 							</div>
-					</div>
+					</div> -->
 					<div class="row">
 						<div class="col-sm-3">
 							<div class="form-group">
-								<select id="status" name="profile.laMembership.status"
-									data-parsley-required="true" class="form-control selectpicker">
-
-									<option path="model.profile.laMembership.status"
-										value="New Member">New Member</option>
-
-									<option path="model.profile.laMembership.status"
-										value="Pending Approval">Pending Approval</option>
-
-									<option path="model.profile.laMembership.status"
-										value="Active">Active</option>
-
-									<option path="model.profile.laMembership.status"
-										value="On Hold">On Hold</option>
-
-									<option path="model.profile.laMembership.status"
-										value="Refund">Refund</option>
-
-									<option path="model.profile.laMembership.status"
-										value="Expired">Expired</option>
-
-									<option path="model.profile.laMembership.status"
-										value="Terminated">Terminated</option>
-
-									<option path="model.profile.laMembership.status"
-										value="Renewal">Renewal</option>
-
+								<select id="status" name="profile.laMembership.status" data-parsley-required="true" class="form-control selectpicker">
+									<option path="model.profile.laMembership.status" value="New Member">New Member</option>
+									<option path="model.profile.laMembership.status" value="Pending Approval">Pending Approval</option>
+									<option path="model.profile.laMembership.status" value="Active">Active</option>
+									<option path="model.profile.laMembership.status" value="On Hold">On Hold</option>
+									<option path="model.profile.laMembership.status" value="Refund">Refund</option>
+									<option path="model.profile.laMembership.status" value="Expired">Expired</option>
+									<option path="model.profile.laMembership.status" value="Terminated">Terminated</option>
+									<option path="model.profile.laMembership.status" value="Renewal">Renewal</option>
 								</select>
 							</div>
 							<div class="profile-image">
@@ -339,7 +360,7 @@
 						</div>
 						<div class="col-sm-9">
 								<fieldset>
-									<legend>Profile</legend>
+									<legend>Profile History</legend>
 									<table id="user" class="table  table">
 										<tbody>
 											<tr>
@@ -377,7 +398,7 @@
 												<td>Marital Status:</td>
 												<td><a href="#" id="maritalStatus" data-type="text"
 													data-pk="1" data-title="Enter Username">Unmarried </a></td>
-												<td>Free Dates :</td>
+												<td>Complementary Dates :</td>
 												<td><id="freeDates" data-type="text"
 													data-pk="1" data-title="Enter Username">3</td>
 											</tr>
@@ -385,7 +406,7 @@
 												<td>Profile Income:</td>
 												<td><a href="#" id="profileIncome" data-type="text"
 													data-pk="1" data-title="Enter Username">5 lakh </a></td>
-												<td>package Status :</td>
+												<td>Package Name :</td>
 												<td><id="profileStatus" data-type="text"
 													data-pk="1" data-title="Enter Username">6</td>
 											</tr>

@@ -228,23 +228,13 @@
                     </a>
                         <ul class="sub-menu">
                             <li><a href="../coachreview/fields.html">CoachReview</a></li>
+                            <li><a href="../coachSession/fields.html">CoachSession</a></li>
                         </ul></li>
-                        <li class="has-sub">
-                            <a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-venus-mars"></i> <span>Matches</span></a>
-                            <ul class="sub-menu">
-                                <li><a href="../matches/fields.html">match</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-sub"><a href="javascript:;"> <b
-                            class="caret pull-right"></b> <i class="fa fa-coffee"></i> <span>Dates</span>
-                    </a>
-                        <ul class="sub-menu">
-                            <li><a href="../dates/fields.html">date</a></li>
-                        </ul></li>
+                        <li><a href="../matches/fields.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Matches</span></a></li>
+                        <li><a href="../dates/fields.html"> <b></b> <i class="fa fa-coffee"></i> <span>Dates</span></a></li>
 
-                        <li ><a href="../document/fields.html"> <b
-                            ></b> <i class="fa fa-file"></i> <span>Docs</span>
-                    </a></li>
+                        <li ><a href="../document/fields.html"> <b></b> <i class="fa fa-file"></i> <span>Docs</span></a></li>
+                        <li ><a href="../actions/fields.html"> <b></b> <i class="fa fa-cog"></i> <span>Actions</span></a></li>
                     
                         
 
@@ -273,7 +263,7 @@
                 <div class="panel">
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-sm-12 m-b-20 m-t-m-30">
+                            <!-- <div class="col-sm-12 m-b-20 m-t-m-30">
                                 <div class="btn-group pull-right" role="group">
                                     <a role="button" class="btn btn-white" href="#">Esynchrony</a>
                                     <button type="button" class="btn btn-white active">Lunch
@@ -281,128 +271,122 @@
                                     <a role="button" class="btn btn-white" href="#">Lunch
                                         Actually Academy</a>
                                 </div>
+                            </div> -->
+                            <div class="col-sm-12 m-b-20 m-t-m-30">
+                                <div class="col-sm-9 pull-right " role="group">
+                                    <div class="col-md-4 ">
+                                        <div class="widget widget-stats bg-green">
+                                            <div class="stats-icon"><i class="fa fa-heart-o"></i></div>
+                                            <div class="stats-info">
+                                                <h4>Esyncrony</h4>
+                                                Lead Status: Sold <br/>
+                                                MembershipStatus: Pending
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="widget widget-stats bg-red">
+                                            <div class="stats-icon"><i class="fa fa-magic"></i></div>
+                                            <div class="stats-info">
+                                                <h4>LAA</h4>
+                                                 Lead Status: Sold <br/>
+                                                MembershipStatus: Pending
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <div class="widget widget-stats bg-purple-darker">
+                                            <div class="stats-icon"><i class="fa fa-venus-mars"></i></div>
+                                            <div class="stats-info">
+                                                <h4>LA</h4>
+                                                Lead Status: Sold <br/>     
+                                                MembershipStatus: Pending
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                         <div class="row">
-                        <div class="col-sm-3">
-                            <div class="form-group">
-                                <select id="status" name="profile.laMembership.status"
-                                    data-parsley-required="true" class="form-control selectpicker">
-
-                                    <option path="model.profile.laMembership.status"
-                                        value="New Member">New Member</option>
-
-                                    <option path="model.profile.laMembership.status"
-                                        value="Pending Approval">Pending Approval</option>
-
-                                    <option path="model.profile.laMembership.status"
-                                        value="Active">Active</option>
-
-                                    <option path="model.profile.laMembership.status"
-                                        value="On Hold">On Hold</option>
-
-                                    <option path="model.profile.laMembership.status"
-                                        value="Refund">Refund</option>
-
-                                    <option path="model.profile.laMembership.status"
-                                        value="Expired">Expired</option>
-
-                                    <option path="model.profile.laMembership.status"
-                                        value="Terminated">Terminated</option>
-
-                                    <option path="model.profile.laMembership.status"
-                                        value="Renewal">Renewal</option>
-                                </select>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <select id="status" name="profile.laMembership.status" data-parsley-required="true" class="form-control selectpicker">
+                                        <option path="model.profile.laMembership.status" value="New Member">New Member</option>
+                                        <option path="model.profile.laMembership.status" value="Pending Approval">Pending Approval</option>
+                                        <option path="model.profile.laMembership.status" value="Active">Active</option>
+                                        <option path="model.profile.laMembership.status" value="On Hold">On Hold</option>
+                                        <option path="model.profile.laMembership.status" value="Refund">Refund</option>
+                                        <option path="model.profile.laMembership.status" value="Expired">Expired</option>
+                                        <option path="model.profile.laMembership.status" value="Terminated">Terminated</option>
+                                        <option path="model.profile.laMembership.status" value="Renewal">Renewal</option>
+                                    </select>
+                                </div>
+                                <div class="profile-image">
+                                    <img src="../resources/images/photo.jpg"> <i
+                                        class="fa fa-user hide"></i> <input type="file"
+                                        name="userphoto" />
+                                </div>
+                                <div class="form-group">
+                                    <select id="mood" name="profile.laMembership.mood" data-parsley-required="true" class="form-control selectpicker">
+                                        <option path="model.profile.laMembership.mood" value="Normal">Normal</option>
+                                        <option path="model.profile.laMembership.mood" value="Happy">Happy</option>
+                                        <option path="model.profile.laMembership.mood" value="Complaint">Complaint</option>
+                                        <option path="model.profile.laMembership.mood" value="Refund">Refund</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="profile-image">
-                                <img src="../resources/images/photo.jpg"> <i
-                                    class="fa fa-user hide"></i> <input type="file"
-                                    name="userphoto" />
-                            </div>
-                            <div class="form-group">
-                                <select id="mood" name="profile.laMembership.mood"
-                                    data-parsley-required="true" class="form-control selectpicker">
-
-                                    <option path="model.profile.laMembership.mood" value="Normal">Normal</option>
-
-                                    <option path="model.profile.laMembership.mood" value="Happy">Happy</option>
-
-                                    <option path="model.profile.laMembership.mood"
-                                        value="Complaint">Complaint</option>
-
-                                    <option path="model.profile.laMembership.mood" value="Refund">Refund</option>
-
-                                </select>
+                            <div class="col-sm-9">
+                                <fieldset>
+                                    <legend>Profile History</legend>
+                                        <table id="user" class="table  table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Profile Name :</td>
+                                                    <td><a href="#" id="profileName" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
+                                                    <td>Smokes :</td>
+                                                    <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profile Phone :</td>
+                                                    <td><a href="#" id="phoneNumber" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
+                                                    <td>Drinks :</td>
+                                                    <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                <tr>
+                                                    <td>Profile age :</td>
+                                                    <td><a href="#" id="profileAge" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
+                                                    <td>Profile history :</td>
+                                                    <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profile ethnicity :</td>
+                                                    <td><a href="#" id="profileEthnicity" data-type="text" data-pk="1" data-title="Enter Username">Indian </a></td>
+                                                    <td>Dates Left :</td>
+                                                    <td><id="datesLeft" data-type="text" data-pk="1" data-title="Enter Username">5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Marital Status:</td>
+                                                    <td><a href="#" id="maritalStatus" data-type="text" data-pk="1" data-title="Enter Username">Unmarried </a></td>
+                                                    <td>Complementary Dates :</td>
+                                                    <td><id="freeDates" data-type="text" data-pk="1" data-title="Enter Username">3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profile Income:</td>
+                                                    <td><a href="#" id="profileIncome" data-type="text" data-pk="1" data-title="Enter Username">5 lakh </a></td>
+                                                    <td>Package Name :</td>
+                                                    <td>Normal</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profile Education:</td>
+                                                    <td><a href="#" id="profileEducation" data-type="text" data-pk="1" data-title="Enter Username">PhD and above
+                                                    </a></td>
+                                                    <td>Sign Up date :</td>
+                                                    <td><id="signUpDate" data-type="text" data-pk="1" data-title="Enter Username"> 22-9-2016</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </fieldset>
                             </div>
                         </div>
-                        <div class="col-sm-9">
-                            <fieldset>
-                                <legend>Profile</legend>
-                                    <table id="user" class="table  table">
-                                        <tbody>
-                                            <tr>
-                                                <td>Profile Name :</td>
-                                                <td><a href="#" id="profileName" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">Sohem </a></td>
-                                                <td>Smokes :</td>
-                                                <td><input type="checkbox" data-render="switchery"
-                                                    data-theme="blue" checked /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Profile Phone :</td>
-                                                <td><a href="#" id="phoneNumber" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">12243 </a></td>
-                                                <td>Drinks :</td>
-                                                <td><input type="checkbox" data-render="switchery"
-                                                    data-theme="blue" checked /></td>
-                                            <tr>
-                                                <td>Profile age :</td>
-                                                <td><a href="#" id="profileAge" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">23 </a></td>
-                                                <td>Profile history :</td>
-                                                <td><input type="checkbox" data-render="switchery"
-                                                    data-theme="blue" checked /></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Profile ethnicity :</td>
-                                                <td><a href="#" id="profileEthnicity" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">Indian </a></td>
-                                                <td>Dates Left :</td>
-                                                <td><id="datesLeft" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Marital Status:</td>
-                                                <td><a href="#" id="maritalStatus" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">Unmarried </a></td>
-                                                <td>Free Dates :</td>
-                                                <td><id="freeDates" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">3</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Profile Income:</td>
-                                                <td><a href="#" id="profileIncome" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">5 lakh </a></td>
-                                                <td>package Status :</td>
-                                                <td><id="profileStatus" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">6</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Profile Education:</td>
-                                                <td><a href="#" id="profileEducation" data-type="text"
-                                                    data-pk="1" data-title="Enter Username">PhD and above
-                                                </a></td>
-                                                <td>Sign Up date :</td>
-                                                <td><id="signUpDate" data-type="text"
-                                                    data-pk="1" data-title="Enter Username"> 22-9-2016</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                            </fieldset>
-                        </div>
-                         </div>
-                        
                         <div class="row">
                         <form class="form-horizontal parsley-validate" name="mainForm"
                             method="post" role="form" enctype="multipart/form-data">
@@ -410,6 +394,7 @@
                                 <legend>Profile Info</legend>
                                 <div class="row">
                                     <div class="panel-group" id="accordion">
+                                    <!-- PERSONAL INFO ACCORDIAN START -->
                                         <div class="panel panel-inverse">
                                             <div class="panel-heading">
                                                 <h3 class="panel-title">
@@ -421,61 +406,49 @@
                                                 </h3>
                                             </div>
                                             <div class="row">
-                                            <div class="col-sm-8">
-                                                <div id="collapseOne" class="panel-collapse collapse in">
-                                                   <div class="panel-body">
-                                                        <div class="form-group">
-                                                            <label for="username" class="col-md-4 control-label">Grew
-                                                                Up In</label>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="username" name="username"
-                                                                    class="form-control" data-parsley-required="true"
-                                                                    value="johndoe" />
+                                                <div class="col-sm-8">
+                                                    <div id="collapseOne" class="panel-collapse collapse in">
+                                                        <div class="panel-body">
+                                                            <div class="form-group">
+                                                                <label for="username" class="col-md-4 control-label">Grew Up In</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="johndoe" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="username" class="col-md-4 control-label">Ethnicity</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="username" class="col-md-4 control-label">Other career</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="gender" class="col-md-4 control-label">My Personality </label>
+                                                                <div class="col-md-8">
+                                                                    <select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
+                                                                        <option selected="selected">Traditional</option>
+                                                                        <option>In between</option>
+                                                                        <option>Westernized</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="gender" class="col-md-4 control-label">Overseas Live </label>
+                                                                <div class="col-md-8">
+                                                                    <input type="checkbox" data-render="switchery" data-theme="blue" checked />
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label for="username" class="col-md-4 control-label">Ethnicity</label>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="username" name="username"
-                                                                    class="form-control" data-parsley-required="true"
-                                                                    value="" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="username" class="col-md-4 control-label">Other
-                                                                career</label>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="username" name="username"
-                                                                    class="form-control" data-parsley-required="true"
-                                                                    value="" />
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="gender" class="col-md-4 control-label">My
-                                                                Personality </label>
-                                                            <div class="col-md-8">
-                                                                <select id="exercise" name="exercise"
-                                                                    class="form-control selectpicker"
-                                                                    data-parsley-required="true">
-                                                                    <option selected="selected">Traditional</option>
-                                                                    <option>In between</option>
-                                                                    <option>Westernized</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="gender" class="col-md-4 control-label">Overseas Live </label>
-                                                            <div class="col-md-8">
-                                                                    <input type="checkbox" data-render="switchery"
-                                                                data-theme="blue" checked />
-                                                            </div>
-                                                        </div>
-                                                   
-                                            </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            </div>
                                         </div>
+                                        <!-- PERSONAL ACCORDIAN END  -->
                                         <div class="panel panel-inverse">
                                             <div class="panel-heading">
                                                 <h3 class="panel-title">
@@ -487,76 +460,142 @@
                                                 </h3>
                                             </div>
                                             <div class="row">
-                                            <div class="col-sm-8">
-                                                <div id="collapseFive" class="panel-collapse collapse">
-                                                    <div class="panel-body">
-                                                    <div class="form-group">
-                                                            <label for="username" class="col-md-4 control-label">Home
-                                                                Address</label>
-                                                            <div class="col-md-8">
-                                                                <textarea id="username" name="username"
-                                                                    class="form-control" data-parsley-required="true"
-                                                                    value="johndoe"></textarea>
+                                                <div class="col-sm-8">
+                                                    <div id="collapseFive" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <div class="form-group">
+                                                                <label for="username" class="col-md-4 control-label">Home Address</label>
+                                                                <div class="col-md-8">
+                                                                    <textarea id="username" name="username" class="form-control" data-parsley-required="true" value="johndoe"></textarea>
+                                                                </div>
                                                             </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                            <label for="username" class="col-md-4 control-label">Home
-                                                                Zip</label>
-                                                            <div class="col-md-8">
-                                                                <input type="text" id="username" name="username"
-                                                                    class="form-control" data-parsley-required="true"
-                                                                    value="" />
+                                                            <div class="form-group">
+                                                                <label for="username" class="col-md-4 control-label">Home Zip</label>
+                                                                <div class="col-md-8">
+                                                                    <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
+                                                                </div>
                                                             </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="username" class="col-md-4 control-label">Office
-                                                            Address</label>
-                                                        <div class="col-md-8">
-                                                            <textarea id="username" name="username"
-                                                                class="form-control" data-parsley-required="true"
-                                                                value=""></textarea>
+                                                            <div class="form-group">
+                                                                <label for="username" class="col-md-4 control-label">Office Address</label>
+                                                                <div class="col-md-8">
+                                                                    <textarea id="username" name="username"class="form-control" data-parsley-required="true" value=""></textarea>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
-                                         <div class="panel panel-inverse">
+                                        <div class="panel panel-inverse">
                                             <div class="panel-heading">
                                                 <h3 class="panel-title">
-                                                    <a class="accordion-toggle accordion-toggle-styled collapsed"
-                                                        data-toggle="collapse" data-parent="#accordion"
-                                                        href="#collapseSix"> <i
-                                                        class="fa fa-plus-circle pull-right"></i> Work  Details
+                                                    <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"> 
+                                                        <i class="fa fa-plus-circle pull-right"></i> Work &amp; Education Profile
                                                     </a>
                                                 </h3>
                                             </div>
                                             <div class="row">
                                             <div class="col-sm-8">
-                                                <div id="collapseSix" class="panel-collapse collapse"><div class="panel-body">
+                                                <div id="collapseThree" class="panel-collapse collapse"><div class="panel-body">
+                                                    <div class="form-group">
+                                                        <label for="gender" class="col-md-4 control-label">Overseas Study </label>
+                                                        <div class="col-md-8">
+                                                            <input type="checkbox"  data-render="switchery"  data-theme="blue" checked />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="username" class="col-md-4 control-label">Overseas Study Location </label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
+                                                        </div>
+                                                    </div>      
+                                                    <div class="form-group">
+                                                        <label for="gender" class="col-md-4 control-label">Overseas Study Language </label>
+                                                        <div class="col-md-8">
+                                                            <select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
+                                                                <option selected="selected">English</option>
+                                                                <option>Thai</option>
+                                                                <option>Hindi</option>
+                                                                <option>German</option>
+                                                                <option>Spanish</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="gender" class="col-md-4 control-label">Second Education </label>
+                                                        <div class="col-md-8">
+                                                            <select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
+                                                                <option selected="selected">Junior college &amp; below</option>
+                                                                <option>Polytechnic</option>
+                                                                <option>Master Degree</option>
+                                                                <option>Masters</option>
+                                                                <option>Phd &amp; Above</option>
+                                                                <option>Professional Qualification</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="username" class="col-md-4 control-label">Second Institution Name</label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="username" class="col-md-4 control-label">Second Education Subject </label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="gender" class="col-md-4 control-label">Third
+                                                            Education </label>
+                                                        <div class="col-md-8">
+                                                            <select id="exercise" name="exercise"
+                                                                class="form-control selectpicker"
+                                                                data-parsley-required="true">
+                                                                <option selected="selected">Junior college &amp; below</option>
+                                                                <option>Polytechnic</option>
+                                                                <option>Master Degree</option>
+                                                                <option>Masters</option>
+                                                                <option>Phd &amp; Above</option>
+                                                                <option>Professional Qualification</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="username" class="col-md-4 control-label">Third Institution Name </label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="username" class="col-md-4 control-label">Third Education Subject </label>
+                                                        <div class="col-md-8">
+                                                            <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
+                                                        </div>
+                                                    </div>
                                                     <div class="form-group">
                                                         <label for="username" class="col-md-4 control-label">Company</label>
                                                         <div class="col-md-8">
-                                                            <input type="text" id="username" name="username"
-                                                                class="form-control" data-parsley-required="true"
-                                                                value="" />
+                                                            <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="username" class="col-md-4 control-label">Industry</label>
                                                         <div class="col-md-8">
-                                                            <input type="text" id="username" name="username"
-                                                                class="form-control" data-parsley-required="true"
-                                                                value="" />
+                                                            <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="gender" class="col-md-4 control-label">How
-                                                            often do you travel for business </label>
+                                                        <label for="username" class="col-md-4 control-label">Office Zip</label>
                                                         <div class="col-md-8">
-                                                            <select id="exercise" name="exercise"
-                                                                class="form-control selectpicker"
+                                                            <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="gender" class="col-md-4 control-label">How often do you travel for business </label>
+                                                        <div class="col-md-8">
+                                                            <select id="exercise" name="exercise" class="form-control selectpicker"
                                                                 data-parsley-required="true">
                                                                 <option selected="selected">Once every 3
                                                                     months</option>
@@ -568,150 +607,15 @@
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="gender" class="col-md-4 control-label">Overseas
-
-                                                            Work </label>
-                                                        <div class="col-md-8">
-                                                            <input type="checkbox"  data-render="switchery"  data-theme="blue" checked />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-inverse">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">
-                                                    <a class="accordion-toggle accordion-toggle-styled collapsed"
-                                                        data-toggle="collapse" data-parent="#accordion"
-                                                        href="#collapseThree"> <i
-                                                        class="fa fa-plus-circle pull-right"></i> Work & Education
-                                                        Profile
-                                                    </a>
-                                                </h3>
-                                            </div>
-                                            <div class="row">
-                                            <div class="col-sm-8">
-                                                <div id="collapseThree" class="panel-collapse collapse"><div class="panel-body">
-                                                    <div class="form-group">
-                                                        <label for="username" class="col-md-4 control-label">Office
-                                                            Zip</label>
-                                                        <div class="col-md-8">
-                                                            <input type="text" id="username" name="username"
-                                                                class="form-control" data-parsley-required="true"
-                                                                value="" />
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <div class="form-group">
-                                                        <label for="gender" class="col-md-4 control-label">Overseas
-                                                            Study </label>
+                                                        <label for="gender" class="col-md-4 control-label">Overseas Work </label>
                                                         <div class="col-md-8">
                                                             <input type="checkbox"  data-render="switchery"  data-theme="blue" checked />
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="username" class="col-md-4 control-label">Overseas
-                                                            Study Location </label>
+                                                        <label for="username" class="col-md-4 control-label">Overseas Work Location </label>
                                                         <div class="col-md-8">
-                                                            <input type="text" id="username" name="username"
-                                                                class="form-control" data-parsley-required="true"
-                                                                value="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="gender" class="col-md-4 control-label">Overseas
-                                                            Study Language </label>
-                                                        <div class="col-md-8">
-                                                            <select id="exercise" name="exercise"
-                                                                class="form-control selectpicker"
-                                                                data-parsley-required="true">
-                                                                <option selected="selected">English</option>
-                                                                <option>Thai</option>
-                                                                <option>Hindi</option>
-                                                                <option>German</option>
-                                                                <option>Spanish</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="gender" class="col-md-4 control-label">Second
-                                                            Education </label>
-                                                        <div class="col-md-8">
-                                                            <select id="exercise" name="exercise"
-                                                                class="form-control selectpicker"
-                                                                data-parsley-required="true">
-                                                                <option selected="selected">Junior college &
-                                                                    below</option>
-                                                                <option>Polytechnic</option>
-                                                                <option>Master Degree</option>
-                                                                <option>Masters</option>
-                                                                <option>Phd & Above</option>
-                                                                <option>Professional Qualification</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="username" class="col-md-4 control-label">Second
-                                                            Institution Name</label>
-                                                        <div class="col-md-8">
-                                                            <input type="text" id="username" name="username"
-                                                                class="form-control" data-parsley-required="true"
-                                                                value="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="username" class="col-md-4 control-label">Second
-                                                            Education Subject </label>
-                                                        <div class="col-md-8">
-                                                            <input type="text" id="username" name="username"
-                                                                class="form-control" data-parsley-required="true"
-                                                                value="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="gender" class="col-md-4 control-label">Third
-                                                            Education </label>
-                                                        <div class="col-md-8">
-                                                            <select id="exercise" name="exercise"
-                                                                class="form-control selectpicker"
-                                                                data-parsley-required="true">
-                                                                <option selected="selected">Junior college &
-                                                                    below</option>
-                                                                <option>Polytechnic</option>
-                                                                <option>Master Degree</option>
-                                                                <option>Masters</option>
-                                                                <option>Phd & Above</option>
-                                                                <option>Professional Qualification</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="username" class="col-md-4 control-label">Third
-                                                            Institution Name </label>
-                                                        <div class="col-md-8">
-                                                            <input type="text" id="username" name="username"
-                                                                class="form-control" data-parsley-required="true"
-                                                                value="" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="username" class="col-md-4 control-label">Third
-                                                            Education Subject </label>
-                                                        <div class="col-md-8">
-                                                            <input type="text" id="username" name="username"
-                                                                class="form-control" data-parsley-required="true"
-                                                                value="" />
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    <div class="form-group">
-                                                        <label for="username" class="col-md-4 control-label">Overseas
-                                                            Work Location </label>
-                                                        <div class="col-md-8">
-                                                            <input type="text" id="username" name="username"
-                                                                class="form-control" data-parsley-required="true"
-                                                                value="" />
+                                                            <input type="text" id="username" name="username" class="form-control" data-parsley-required="true" value="" />
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
