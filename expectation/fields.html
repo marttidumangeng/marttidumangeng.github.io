@@ -161,81 +161,94 @@
 		</div>
 		<!--# end header-->
 		<!-- begin #top-menu -->
-		<div id="top-menu" class="top-menu ">
-			<!--# begin top-menu nav -->
-			<ul class="nav pull-right">
-				<li class="has-sub "><a href="javascript:;"> <b
-						class="caret pull-right"></b> <i class="fa fa-dot-circle-o"></i> <span>Leads</span>
-				</a>
-					<ul class="sub-menu">
-						<li><a href="#">Dashboard v1</a></li>
-						<li><a href="#">Dashboard v2</a></li>
-					</ul></li>
-				<li class="has-sub"><a href="javascript:;"> <b
-						class="caret pull-right"></b> <i class="fa fa-inbox"></i> <span>Email</span>
-				</a>
-					<ul class="sub-menu">
-						<li><a href="#">Inbox</a></li>
-						<li><a href="#">Compose</a></li>
-						<li><a href="#">Detail</a></li>
-					</ul></li>
-				<li><a href="javascript:;"> <i class="fa fa-tasks"></i> <span>Tasks</span>
-				</a></li>
-				<li><a href="javascript:;"> <i
-						class="fa fa-calendar-check-o"></i> <span>Appointments</span>
-				</a></li>
-				<li><a href="javascript:;"> <i class="fa fa-leanpub"></i> <span>Session</span>
-				</a></li>
-				<li><a href="javascript:;"> <i class="fa fa-comment"></i> <span>Feedback</span>
-				</a></li>
-				<li><a href="javascript:;"> <i class="fa fa-money"></i> <span>Payment</span>
-				</a></li>
-			</ul>
-			<!--# end top-menu nav-->
-		</div>
-		<!--# end top-menu-->
+            <div id="top-menu" class="top-menu ">
+                <!-- begin top-menu nav -->
+                <ul class="nav pull-right" >
+                    <li><a href="../lead/list.html"><i class="fa fa-dot-circle-o"></i><span>Leads</span></a></li>
+                   
+                    <!-- <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret pull-right"></b>
+                            <i class="fa fa-inbox"></i> 
+                            <span>Email</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Inbox</a></li>
+                            <li><a href="#">Compose</a></li>
+                            <li><a href="#">Detail</a></li>
+                        </ul>
+                    </li> -->
+                    <li><a href="../Task/list.html"><i class="fa fa-tasks"></i><span>Tasks</span></a></li>
+                    <li><a href="../Appointment/list.html"><i class="fa fa-calendar-check-o"></i><span>Appointments</span></a></li>
+                    <li><a href="../coachSessionList/list.html"><i class="fa fa-leanpub"></i><span>Session</span></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-comment"></i><span>Feedback</span></a></li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                        <b class="caret pull-right"></b>
+                        <i class="fa fa-briefcase"></i>
+                        <span>Package</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href=../lacpackage/fields.html>LA Create</a></li>
+                            <li><a href="../lacpackage/list.html">LA List</a></li>
+                            <li><a href="../laacpackage/fields.html">LAA Create</a></li>
+                            <li><a href="../laacpackage/list.html">LAA List</a></li>
+                            <li><a href="../esyncpackage/fields.html">Esync Create</a></li>
+                            <li><a href="../esyncpackage/list.html">Esync List</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub">
+                        <a href="javascript:;">
+                        <b class="caret pull-right"></b>
+                        <i class="fa fa-puzzle-piece"></i>
+                        <span>Addon</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href=../LaAddOn/fields.html>LA Create</a></li>
+                            <li><a href="../LaAddOn/list.html">LA List</a></li>
+                            <li><a href="../LaaAddOn/fields.html">LAA Create</a></li>
+                            <li><a href="../LaaAddOn/list.html">LAA List</a></li>
+                            <li><a href="../EsyncAddOn/fields.html">Esync Create</a></li>
+                            <li><a href="../EsyncAddOn/list.html">Esync List</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;"><i class="fa fa-money"></i><span>Payment</span></a></li>
+                </ul>
+                <!-- end top-menu nav -->
+            </div>
+            <!-- end #top-menu -->
 		<!--begin sidebar-->
 		<div id="sidebar" class="sidebar">
 			<!--# begin sidebar scrolling-->
 			<div data-scrollbar="true" data-height="100%">
 				<!--begin sidebar nav-->
 				<div class="nav">
-					<li class="has-sub"><a href="javascript:;"> <b
-							class="caret pull-right"></b> <i class="fa fa-user"></i> <span>Profile</span>
-					</a>
+					<li class="has-sub"><a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-user"></i> <span>Profile</span></a>
 						<ul class="sub-menu">
-							<li><a href="../profilePersonalInfo/fields.html">Profile
-									Info</a></li>
+							<li><a href="../profilePersonalInfo/fields.html">Profile Info</a></li>
 							<li><a href="../profilePreferences/fields.html">Preferences</a></li>
 							<li><a href="../profileInterest/fields.html">Interest</a></li>
 							<li><a href="../expectation/fields.html">Expectation</a></li>
 							<li><a href="../profileAssessment/fields.html">Assessment</a></li>
-							<li><a href="../confidential/fields.html">Confidential
-									Questionary</a></li>
+							<li><a href="../confidential/fields.html">Confidential Questionary</a></li>
 							<li><a href="../personalStory/fields.html">My Story</a></li>
-							<li><a href="../otherPreference/fields.html">Other
-									Services Interest</a></li>
-						</ul></li>
-					<li class="has-sub"><a href="javascript:;"> <b
-							class="caret pull-right"></b> <i class="fa fa-graduation-cap"></i> <span>
-								Coach</span>
-					</a>
+							<li><a href="../otherPreference/fields.html">Other Services Interest</a></li>
+						</ul>
+					</li>
+					<li class="has-sub"><a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-graduation-cap"></i> <span>Coach</span></a>
 						<ul class="sub-menu">
 							<li><a href="../coachreview/fields.html">CoachReview</a></li>
 							<li><a href="../coachSession/fields.html">CoachSession</a></li>
-						</ul></li>
-						<li><a href="../matches/fields.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Matches</span></a></li>
-                        <li><a href="../dates/fields.html"> <b></b> <i class="fa fa-coffee"></i> <span>Dates</span></a></li>
-
-                        <li ><a href="../document/fields.html"> <b></b> <i class="fa fa-file"></i> <span>Docs</span></a></li>
-                        <li ><a href="../actions/fields.html"> <b></b> <i class="fa fa-cog"></i> <span>Actions</span></a></li>
-					
+						</ul>
+					</li>
+					<li><a href="../matches/fields.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Matches</span></a></li>
+					<li><a href="../matches/FindMatch.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Find Match</span></a></li>
+                    <li><a href="../dates/fields.html"> <b></b> <i class="fa fa-coffee"></i> <span>Dates</span></a></li>
+                    <li><a href="../document/fields.html"> <b></b> <i class="fa fa-file"></i> <span>Docs</span></a></li>
+                    <li><a href="../actions/fields.html"> <b></b> <i class="fa fa-cog"></i> <span>Actions</span></a></li>
 
 					<!-- begin sidebar minify button -->
-					<li><a href="javascript:;" class="sidebar-minify-btn"
-						data-click="sidebar-minify"> <i
-							class="fa fa-angle-double-left"></i>
-					</a></li>
+					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"> <i class="fa fa-angle-double-left"></i></a></li>
 					<!-- end sidebar minify button -->
 				</div>
 				<!--end sidebar nav-->

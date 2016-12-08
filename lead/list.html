@@ -5,7 +5,7 @@
 <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
-        <title>Central - appointment</title>
+        <title>Central - lead-list</title>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -99,8 +99,7 @@
                         </li>
                         <li class="dropdown">
                             <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14">
-                                <i class="fa fa-bell-o"></i>
-                                <span class="label">5</span>
+                                <i class="fa fa-bell-o"></i><span class="label">5</span>
                             </a>
                             <ul class="dropdown-menu media-list pull-right animated fadeInDown">
                                 <li class="dropdown-header">Notifications (5)</li>
@@ -113,9 +112,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                 <li class="dropdown-footer text-center">
-                                    <a href="javascript:;">View more</a>
-                                </li>
+                                 <li class="dropdown-footer text-center"><a href="javascript:;">View more</a></li>
                             </ul>
                         </li>
                         <li class="dropdown navbar-user">
@@ -214,67 +211,53 @@
                         <li class="has-sub">
                             <a href="javascript:;">View</a>
                             <ul class="sub-menu">
-                                <li><a href="?view=all">All</a></li>
-                                <li><a href="#">Assigned to me</a></li>
                                 <li>
-                                    <label class="control-label">Assigned to</label>
-                                    <select name="view" class="form-control selectpicker">
-                                        <option>John Doe</option>
-                                        <option>John Wilson</option>
-                                    </select>
-                                </li>
-                                <li>
-                                    <label class="control-label">Type</label>
+                                    <label class="control-label">Branch</label>
                                     <select name="type" class="form-control selectpicker">
-                                        <option>Sales</option>
-                                        <option>Coaching</option>
-                                        <option>La Members</option>
+                                        <option>SG</option>
+                                        <option>KL</option>
+                                        <option>PG</option>
+                                        <option>HK</option>
+                                        <option>TH</option>
+                                        <option>JKT</option>
                                     </select>
                                 </li>
                                 <li>
-                                    <label class="control-label">Appointment Type</label>
+                                    <label class="control-label">Product</label>
+                                    <select name="type" class="form-control selectpicker">
+                                        <option>LA</option>
+                                        <option>LAA</option>
+                                        <option>Esync</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label class="control-label">Lead Type</label>
+                                    <select name="type" class="form-control selectpicker">
+                                        <option>LA Genuine</option>
+                                        <option>LA Cross-Sell</option>
+                                        <option>eSync Genuine</option>
+                                        <option>eSync Cross-Sell</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label class="control-label">Contact Method</label>
                                     <select name="appType" class="form-control selectpicker">
-                                        <option>Re profilling</option>
-                                        <option>Chit-Chat</option>
+                                        <option>Call</option>
+                                        <option>SMS</option>
+                                        <option>Email</option>
+                                        <option>Walk In</option>
+                                        <option>NA</option>
                                     </select>
                                 </li>
                                 <li>
-                                    <label class="control-label">Sales Result</label>
+                                    <label class="control-label">Hear Us From</label>
                                     <select name="salesResult" class="form-control selectpicker">
-                                        <option>Successful</option>
-                                        <option>Not Successful</option>
-                                        <option>Not Suitable</option>
-                                        <option>Non Sales</option>
-                                        <option>Solid Addon Only</option>
-                                        <option>Pending</option>
+                                        <option>Facebook Ad</option>
+                                        <option>Google Ad</option>
+                                        <option>LA Website</option>
+                                        <option>Newspaper</option>
+                                        <option>Blog</option>
                                     </select>
-                                </li>
-                                <li>
-                                    <label class="control-label">Status</label>
-                                    <select name="status" class="form-control selectpicker">
-                                        <option>To Be Confirmed</option>
-                                        <option>Appointment Confirmed</option>
-                                        <option>Client Turned Up</option>
-                                        <option>Rescheduled</option>
-                                        <option>Rescheduled (By Us)</option>
-                                        <option>Client Did Not Turn Up</option>
-                                        <option>Cancelled</option>
-                                        <option>Cancelled (By Us)</option>
-
-                                    </select>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a href="javascript:;">Appointment Date</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <div class="input-group">
-                                        <input type="text" name="appDate" class="form-control daterange"/>
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                    </div>
                                 </li>
                             </ul>
                         </li>
@@ -289,9 +272,7 @@
             <!-- begin #content -->
             <div id="content" class="content">
                 <!-- begin page-header -->
-                <h1 class="page-header">Appointment</h1>
-                <!-- end page-header -->
-                
+                <h1 class="page-header">Lead</h1>
                 <!-- begin row -->
                 <div class="row">
                     <div class="panel">
@@ -301,58 +282,46 @@
                                     <table class="table table-hover table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Appointment Date</th>
-                                                <th>Name</th>
-                                                <th>Type</th>
-                                                <th>Appointment Type</th>
-                                                <th>Sales Result</th>
-                                                <th>Room</th>
-                                                <th>Assingned Consultant</th>
-                                                <th>Status</th>
-                                                
-
+                                                <th>Lead Name</th>
+                                                <th>Branch</th>
+                                                <th>Lead Type</th>
+                                                <th>Contact Method</th>
+                                                <th>Product</th>
+                                                <th>Hear Us From</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>22-12-2016</td>
-                                                <td>Rahul Soni</td>
-                                                <td>Sales</td>
-                                                <td>Reprofilling</td>
-                                                <td>Not Suitable</td>
-                                                <td>room1</td>
-                                                 <td>User1</td>
-                                                <td>Rescheduled</td>
+                                                <td>Lead Name 1</td>
+                                                <td>SG</td>
+                                                <td>LA Genuine</td>
+                                                <td>Call</td>
+                                                <td>LA</td>
+                                                <td>Facebook Ad</td>
                                             </tr>
                                             <tr>
-                                                <td>22-12-2016</td>
-                                                <td>Rahul Soni</td>
-                                                <td>Coaching</td>
-                                                <td>chit-chat</td>
-                                                <td>Successful</td>
-                                                <td>room2</td>
-                                                 <td>User2</td>
-                                                <td>To be Confirmed</td>
+                                                <td>Lead Name 2</td>
+                                                <td>KL</td>
+                                                <td>LA Cross-Sell</td>
+                                                <td>SMS</td>
+                                                <td>LAA</td>
+                                                <td>Google Ad</td>
                                             </tr>
                                             <tr>
-                                                <td>22-12-2016</td>
-                                                <td>Rahul Soni</td>
-                                                <td>LA members</td>
-                                                <td>Reprofilling</td>
-                                                <td>Pending</td>
-                                                <td>room3</td>
-                                                 <td>User3</td>
-                                                <td>Appointment Confirmed</td>
+                                                <td>Lead Name 3</td>
+                                                <td>PG</td>
+                                                <td>eSync Genuine</td>
+                                                <td>Email</td>
+                                                <td>Esync</td>
+                                                <td>LA Website</td>
                                             </tr>
                                             <tr>
-                                                <td>22-12-2016</td>
-                                                <td>Rahul Soni</td>
-                                                <td>LA members</td>
-                                                <td>chit-chat</td>
-                                                <td>Non Sales</td>
-                                                <td>room4</td>
-                                                 <td>User4</td>
-                                                <td>Cleint turned Up</td>
+                                                <td>Lead Name 4</td>
+                                                <td>HK</td>
+                                                <td>eSync Cross-Sell</td>
+                                                <td>Walk In</td>
+                                                <td>LAA</td>
+                                                <td>Newspaper</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -374,36 +343,6 @@
                     </div>
                 </div>
                 <!-- end row -->
-                <script src="../resources/venders/moment/moment-with-locales.min.js"></script>
-                <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-daterangepicker/css/daterangepicker.css" />
-                <script src="../resources/venders/bootstrap-daterangepicker/js/daterangepicker.js"></script>
-                <script type="text/javascript">
-                    jQuery(document).ready(function($) {
-                        $(".daterange").daterangepicker({
-                            autoUpdateInput: false,
-                            opens: "right",
-                            format: "MM/DD/YYYY",
-                            separator: " to ",
-                            minDate: "01/01/2016",
-                            ranges: {
-                               'Today': [moment(), moment()],
-                               'Yesterday'  : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                               'This Week'  :[moment().startOf('week'),moment().endOf('week')],
-                               'Last Week'  :[moment().subtract(1,'week').startOf('week'),moment().subtract(1,'week').endOf('week')],
-                               'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                               'This Month': [moment().startOf('month'), moment().endOf('month')],
-                               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-                            }
-                        });
-                        $('.daterange').on('apply.daterangepicker', function(ev, picker) {
-                            $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-                        });
-                        $('.daterange').on('cancel.daterangepicker', function(ev, picker) {
-                            $(this).val('');
-                        });
-                    });
-                </script>
             </div>
             <!-- end #content -->
 
