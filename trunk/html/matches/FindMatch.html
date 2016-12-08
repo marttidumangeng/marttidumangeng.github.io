@@ -140,22 +140,14 @@
                 <!-- end container-fluid -->
             </div>
             <!-- end #header -->
-            <!-- begin #top-menu -->
+          
+ <!-- begin #top-menu -->
             <div id="top-menu" class="top-menu ">
                 <!-- begin top-menu nav -->
                 <ul class="nav pull-right" >
-                    <li class="has-sub ">
-                        <a href="javascript:;">
-                            <b class="caret pull-right"></b>
-                            <i class="fa fa-dot-circle-o"></i>
-                            <span>Leads</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Dashboard v1</a></li>
-                            <li><a href="#">Dashboard v2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
+                    <li><a href="../lead/list.html"><i class="fa fa-dot-circle-o"></i><span>Leads</span></a></li>
+                   
+                    <!-- <li class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
                             <i class="fa fa-inbox"></i> 
@@ -166,42 +158,46 @@
                             <li><a href="#">Compose</a></li>
                             <li><a href="#">Detail</a></li>
                         </ul>
-                    </li>
-                    <li>
+                    </li> -->
+                    <li><a href="../Task/list.html"><i class="fa fa-tasks"></i><span>Tasks</span></a></li>
+                    <li><a href="../Appointment/list.html"><i class="fa fa-calendar-check-o"></i><span>Appointments</span></a></li>
+                    <li><a href="../coachSessionList/list.html"><i class="fa fa-leanpub"></i><span>Session</span></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-comment"></i><span>Feedback</span></a></li>
+                    <li class="has-sub">
                         <a href="javascript:;">
-                            <i class="fa fa-tasks"></i>
-                            <span>Tasks</span>
+                        <b class="caret pull-right"></b>
+                        <i class="fa fa-briefcase"></i>
+                        <span>Package</span>
                         </a>
+                        <ul class="sub-menu">
+                            <li><a href=../lacpackage/fields.html>LA Create</a></li>
+                            <li><a href="../lacpackage/list.html">LA List</a></li>
+                            <li><a href="../laacpackage/fields.html">LAA Create</a></li>
+                            <li><a href="../laacpackage/list.html">LAA List</a></li>
+                            <li><a href="../esyncpackage/fields.html">Esync Create</a></li>
+                            <li><a href="../esyncpackage/list.html">Esync List</a></li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="has-sub">
                         <a href="javascript:;">
-                            <i class="fa fa-calendar-check-o"></i>
-                            <span>Appointments</span>
+                        <b class="caret pull-right"></b>
+                        <i class="fa fa-puzzle-piece"></i>
+                        <span>Addon</span>
                         </a>
+                        <ul class="sub-menu">
+                            <li><a href=../LaAddOn/fields.html>LA Create</a></li>
+                            <li><a href="../LaAddOn/list.html">LA List</a></li>
+                            <li><a href="../LaaAddOn/fields.html">LAA Create</a></li>
+                            <li><a href="../LaaAddOn/list.html">LAA List</a></li>
+                            <li><a href="../EsyncAddOn/fields.html">Esync Create</a></li>
+                            <li><a href="../EsyncAddOn/list.html">Esync List</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-leanpub"></i>
-                            <span>Session</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-comment"></i>
-                            <span>Feedback</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-money"></i>
-                            <span>Payment</span>
-                        </a>
-                    </li>
+                    <li><a href="javascript:;"><i class="fa fa-money"></i><span>Payment</span></a></li>
                 </ul>
                 <!-- end top-menu nav -->
             </div>
             <!-- end #top-menu -->
-
             <!-- begin #content -->
             <div id="content" class="content">
                 <!-- begin row -->
@@ -951,20 +947,21 @@
                                             <tbody>
                                                 <tr>
                                                     <td>Profile Name :</td>
-                                                    <td>Sohem</td>
+                                                    <td><a href="#" id="profileName" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
                                                     <td>Smokes :</td>
-                                                    <td><input type="checkbox" data-render="switchery" data-theme="blue" checked readonly="" /></td>
+                                                    <td>Yes &nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;No</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Profile Phone :</td>
-                                                    <td>12243</td>
+                                                    <td><a href="#" id="phoneNumber" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
                                                     <td>Drinks :</td>
-                                                    <td><input type="checkbox" data-render="switchery" data-theme="blue" checked readonly="" /></td>
+                                                    <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
+                                                </tr>
                                                 <tr>
                                                     <td>Profile age :</td>
-                                                    <td>23 </a></td>
+                                                    <td><a href="#" id="profileAge" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
                                                     <td>Profile history :</td>
-                                                    <td><input type="checkbox" data-render="switchery" data-theme="blue" checked readonly="" /></td>
+                                                    <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Profile ethnicity :</td>

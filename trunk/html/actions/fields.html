@@ -6,15 +6,12 @@
 <head>
 <meta charset="utf-8" />
 <title>Central - Personal Info</title>
-<meta
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    name="viewport" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 <meta content="" name="description" />
 <meta content="" name="author" />
 
 <!-- caching -->
-<meta http-equiv="cache-control"
-    content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="expires" content="0" />
 <meta http-equiv="content-type" content="text/html;charset=UTF-8">
@@ -28,8 +25,7 @@
 <link rel="apple-touch-icon" href="../resources/icons/favicon.ico" />
 <!-- iOS icon -->
 
-<link rel="stylesheet" type="text/css"
-    href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
 <!-- ================== BEGIN PACE LOADER ================== -->
 <script src="../resources/venders/pace/js/pace.min.js"></script>
 <link rel="stylesheet" type="text/css"
@@ -232,8 +228,7 @@
             <div data-scrollbar="true" data-height="100%">
                 <!--begin sidebar nav-->
                 <div class="nav">
-                    <li class="has-sub">
-                        <a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-user"></i> <span>Profile</span></a>
+                    <li class="has-sub"><a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-user"></i> <span>Profile</span></a>
                         <ul class="sub-menu">
                             <li><a href="../profilePersonalInfo/fields.html">Profile Info</a></li>
                             <li><a href="../profilePreferences/fields.html">Preferences</a></li>
@@ -245,30 +240,21 @@
                             <li><a href="../otherPreference/fields.html">Other Services Interest</a></li>
                         </ul>
                     </li>
-                    <li class="has-sub"><a href="javascript:;"> <b
-                            class="caret pull-right"></b> <i class="fa fa-graduation-cap"></i> <span>
-                               Coach</span>
-                    </a>
+                    <li><a href="../actions/fields.html"> <b></b> <!-- <i class="fa fa-cog"></i>  --><span>Actions</span></a></li>
+                    <li class="has-sub"><a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-graduation-cap"></i> <span>Coach</span></a>
                         <ul class="sub-menu">
                             <li><a href="../coachreview/fields.html">CoachReview</a></li>
-                            <li><a href="../coachSession/fields.html">CoachSession</a></li>
-                        </ul></li>
-                        <li><a href="../matches/fields.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Matches</span></a></li>
-                        <li><a href="../dates/fields.html"> <b></b> <i class="fa fa-coffee"></i> <span>Dates</span>
-                    </a>
-                        </li>
+                            <li><a href="../coachSession/list.html">CoachSession</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../matches/fields.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Matches</span></a></li>
+                    <li><a href="../matches/FindMatch.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Find Match</span></a></li>
+                    <li><a href="../dates/fields.html"> <b></b> <i class="fa fa-coffee"></i> <span>Dates</span></a></li>
+                    <li><a href="../document/fields.html"> <b></b> <i class="fa fa-file"></i> <span>Docs</span></a></li>
+                    
 
-                        <li ><a href="../document/fields.html"> <b
-                            ></b> <i class="fa fa-file"></i> <span>Docs</span>
-                    </a></li>
-                    <li ><a href="../actions/fields.html"> <b
-                            ></b> <i class="fa fa-cog"></i> <span>Actions</span>
-                    </a></li>
                     <!-- begin sidebar minify button -->
-                    <li><a href="javascript:;" class="sidebar-minify-btn"
-                        data-click="sidebar-minify"> <i
-                            class="fa fa-angle-double-left"></i>
-                    </a></li>
+                    <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"> <i class="fa fa-angle-double-left"></i></a></li>
                     <!-- end sidebar minify button -->
                 </div>
                 <!--end sidebar nav-->
@@ -365,28 +351,23 @@
                                         <table id="user" class="table  table">
                                             <tbody>
                                                 <tr>
-                                                    <td>Profile Name :</td>
-                                                    <td><a href="#" id="profileName" data-type="text"
-                                                        data-pk="1" data-title="Enter Username">Sohem </a></td>
-                                                    <td>Smokes :</td>
-                                                    <td><input type="checkbox" data-render="switchery"
-                                                        data-theme="blue" checked /></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Profile Phone :</td>
-                                                    <td><a href="#" id="phoneNumber" data-type="text"
-                                                        data-pk="1" data-title="Enter Username">12243 </a></td>
-                                                    <td>Drinks :</td>
-                                                    <td><input type="checkbox" data-render="switchery"
-                                                        data-theme="blue" checked /></td>
-                                                <tr>
-                                                    <td>Profile age :</td>
-                                                    <td><a href="#" id="profileAge" data-type="text"
-                                                        data-pk="1" data-title="Enter Username">23 </a></td>
-                                                    <td>Profile history :</td>
-                                                    <td><input type="checkbox" data-render="switchery"
-                                                        data-theme="blue" checked /></td>
-                                                </tr>
+                                                <td>Profile Name :</td>
+                                                <td><a href="#" id="profileName" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
+                                                <td>Smokes :</td>
+                                                <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile Phone :</td>
+                                                <td><a href="#" id="phoneNumber" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
+                                                <td>Drinks :</td>
+                                                <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Profile age :</td>
+                                                <td><a href="#" id="profileAge" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
+                                                <td>Profile history :</td>
+                                                <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
+                                            </tr>
                                                 <tr>
                                                     <td>Profile ethnicity :</td>
                                                     <td><a href="#" id="profileEthnicity" data-type="text"

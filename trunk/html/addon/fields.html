@@ -147,18 +147,9 @@
             <div id="top-menu" class="top-menu ">
                 <!-- begin top-menu nav -->
                 <ul class="nav pull-right" >
-                    <li class="has-sub ">
-                        <a href="javascript:;">
-                            <b class="caret pull-right"></b>
-                            <i class="fa fa-dot-circle-o"></i>
-                            <span>Leads</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Dashboard v1</a></li>
-                            <li><a href="#">Dashboard v2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
+                    <li><a href="../lead/list.html"><i class="fa fa-dot-circle-o"></i><span>Leads</span></a></li>
+                   
+                    <!-- <li class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
                             <i class="fa fa-inbox"></i> 
@@ -169,37 +160,42 @@
                             <li><a href="#">Compose</a></li>
                             <li><a href="#">Detail</a></li>
                         </ul>
-                    </li>
-                    <li>
+                    </li> -->
+                    <li><a href="../Task/list.html"><i class="fa fa-tasks"></i><span>Tasks</span></a></li>
+                    <li><a href="../Appointment/list.html"><i class="fa fa-calendar-check-o"></i><span>Appointments</span></a></li>
+                    <li><a href="../coachSessionList/list.html"><i class="fa fa-leanpub"></i><span>Session</span></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-comment"></i><span>Feedback</span></a></li>
+                    <li class="has-sub">
                         <a href="javascript:;">
-                            <i class="fa fa-tasks"></i>
-                            <span>Tasks</span>
+                        <b class="caret pull-right"></b>
+                        <i class="fa fa-briefcase"></i>
+                        <span>Package</span>
                         </a>
+                        <ul class="sub-menu">
+                            <li><a href=../lacpackage/fields.html>LA Create</a></li>
+                            <li><a href="../lacpackage/list.html">LA List</a></li>
+                            <li><a href="../laacpackage/fields.html">LAA Create</a></li>
+                            <li><a href="../laacpackage/list.html">LAA List</a></li>
+                            <li><a href="../esyncpackage/fields.html">Esync Create</a></li>
+                            <li><a href="../esyncpackage/list.html">Esync List</a></li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="has-sub">
                         <a href="javascript:;">
-                            <i class="fa fa-calendar-check-o"></i>
-                            <span>Appointments</span>
+                        <b class="caret pull-right"></b>
+                        <i class="fa fa-puzzle-piece"></i>
+                        <span>Addon</span>
                         </a>
+                        <ul class="sub-menu">
+                            <li><a href=../LaAddOn/fields.html>LA Create</a></li>
+                            <li><a href="../LaAddOn/list.html">LA List</a></li>
+                            <li><a href="../LaaAddOn/fields.html">LAA Create</a></li>
+                            <li><a href="../LaaAddOn/list.html">LAA List</a></li>
+                            <li><a href="../EsyncAddOn/fields.html">Esync Create</a></li>
+                            <li><a href="../EsyncAddOn/list.html">Esync List</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-leanpub"></i>
-                            <span>Session</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-comment"></i>
-                            <span>Feedback</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-money"></i>
-                            <span>Payment</span>
-                        </a>
-                    </li>
+                    <li><a href="javascript:;"><i class="fa fa-money"></i><span>Payment</span></a></li>
                 </ul>
                 <!-- end top-menu nav -->
             </div>
@@ -231,47 +227,47 @@
                                     </select>
                                 </div>
                             </div>
-						    <div class="form-group">
-							    <label for="duration" class="col-md-4 control-label">Duration</label>
-    							<div class="col-md-8">
-    								<div class="input-group">
-    									<select id="duration" name="duration" data-parsley-required="true" class="form-control selectpicker">
-    										<option path="duration" value="1">1 Month</option>
-    										<option path="duration" value="2">2 Month</option>
-    										<option path="duration" value="3">3 Month</option>
-    										<option path="duration" value="4">4 Month</option>
-    										<option path="duration" value="5">5 Month</option>
-    										<option path="duration" value="6">6 Month</option>
-    										<option path="duration" value="7">7 Month</option>
-    										<option path="duration" value="8">8 Month</option>
-    										<option path="duration" value="9">9 Month</option>
-    										<option path="duration" value="10">10 Month</option>
-    										<option path="duration" value="11">11 Month</option>
-    										<option path="duration" value="12">12 Month</option>
-    									</select>
-    								</div>
-    							</div>
-						    </div>
                             <div class="form-group">
-                                <label for="duration" class="col-md-4 control-label">Session Duration</label>
-                                <div class="col-md-8">
+                                <label for="duration" class="col-md-4 control-label">Duration
+                                </label>
+                                <div class="col-md-5">
+                                    <select   size="4"   class="form-control ">
+                                        <option path="duration" value="1">1</option>
+                                        <option path="duration" value="2">2</option>
+                                        <option path="duration" value="3">3</option>
+                                        <option path="duration" value="4">4</option>
+                                        <option path="duration" value="5">5</option>
+                                        <option path="duration" value="6">6</option>
+                                        <option path="duration" value="7">7</option>
+                                        <option path="duration" value="8">8</option>
+                                        <option path="duration" value="9">9</option>
+                                        <option path="duration" value="10">10</option>
+                                        <option path="duration" value="11">11</option>
+                                        <option path="duration" value="12">12</option>
+                                        <option path="duration" value="13">13</option>
+                                        <option path="duration" value="14">14</option>
+                                        <option path="duration" value="15">15</option>
+                                        <option path="duration" value="16">16</option>
+                                        <option path="duration" value="17">17</option>
+                                        <option path="duration" value="18">18</option>
+                                        <option path="duration" value="19">19</option>
+                                        <option path="duration" value="20">20</option>
+                                        <option path="duration" value="21">21</option>
+                                        <option path="duration" value="22">22</option>
+                                        <option path="duration" value="23">23</option>
+                                        <option path="duration" value="24">24</option>
+                                    </select>
+                                </div>
+                                <label class="control-label"><b>Months</b></label>
+                            </div>
+                            <div class="form-group">
+                                <label for="sessionDuration" class="col-md-4 control-label"> Total Session Duration </label>
+                                <div class="col-md-2">
                                     <div class="input-group">
-                                        <select id="duration" name="duration" data-parsley-required="true" class="form-control selectpicker">
-                                            <option path="duration" value="1">1 </option>
-                                            <option path="duration" value="2">2 </option>
-                                            <option path="duration" value="3">3 </option>
-                                            <option path="duration" value="4">4 </option>
-                                            <option path="duration" value="5">5 </option>
-                                            <option path="duration" value="6">6 </option>
-                                            <option path="duration" value="7">7 </option>
-                                            <option path="duration" value="8">8 </option>
-                                            <option path="duration" value="9">9 </option>
-                                            <option path="duration" value="10">10 </option>
-                                            <option path="duration" value="11">11 </option>
-                                            <option path="duration" value="12">12 </option>
-                                        </select>
+                                        <input id="sessionDuration" name="sessionDuration"  data-parsley-type="number" class="form-control" data-parsley-required="true" type="text" value="0" maxlength="3"/>
                                     </div>
                                 </div>
+                                <label class="control-label"><b>Mins</b></label>
                             </div>
     						<div class="form-group">
     							<label for="description" class="col-md-4 control-label">Dates</label>

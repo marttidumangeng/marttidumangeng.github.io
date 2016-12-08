@@ -147,18 +147,9 @@
             <div id="top-menu" class="top-menu ">
                 <!-- begin top-menu nav -->
                 <ul class="nav pull-right" >
-                    <li class="has-sub ">
-                        <a href="javascript:;">
-                            <b class="caret pull-right"></b>
-                            <i class="fa fa-dot-circle-o"></i>
-                            <span>Leads</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Dashboard v1</a></li>
-                            <li><a href="#">Dashboard v2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
+                    <li><a href="../lead/list.html"><i class="fa fa-dot-circle-o"></i><span>Leads</span></a></li>
+                   
+                    <!-- <li class="has-sub">
                         <a href="javascript:;">
                             <b class="caret pull-right"></b>
                             <i class="fa fa-inbox"></i> 
@@ -169,37 +160,42 @@
                             <li><a href="#">Compose</a></li>
                             <li><a href="#">Detail</a></li>
                         </ul>
-                    </li>
-                    <li>
+                    </li> -->
+                    <li><a href="../Task/list.html"><i class="fa fa-tasks"></i><span>Tasks</span></a></li>
+                    <li><a href="../Appointment/list.html"><i class="fa fa-calendar-check-o"></i><span>Appointments</span></a></li>
+                    <li><a href="../coachSessionList/list.html"><i class="fa fa-leanpub"></i><span>Session</span></a></li>
+                    <li><a href="javascript:;"><i class="fa fa-comment"></i><span>Feedback</span></a></li>
+                    <li class="has-sub">
                         <a href="javascript:;">
-                            <i class="fa fa-tasks"></i>
-                            <span>Tasks</span>
+                        <b class="caret pull-right"></b>
+                        <i class="fa fa-briefcase"></i>
+                        <span>Package</span>
                         </a>
+                        <ul class="sub-menu">
+                            <li><a href=../lacpackage/fields.html>LA Create</a></li>
+                            <li><a href="../lacpackage/list.html">LA List</a></li>
+                            <li><a href="../laacpackage/fields.html">LAA Create</a></li>
+                            <li><a href="../laacpackage/list.html">LAA List</a></li>
+                            <li><a href="../esyncpackage/fields.html">Esync Create</a></li>
+                            <li><a href="../esyncpackage/list.html">Esync List</a></li>
+                        </ul>
                     </li>
-                    <li>
+                    <li class="has-sub">
                         <a href="javascript:;">
-                            <i class="fa fa-calendar-check-o"></i>
-                            <span>Appointments</span>
+                        <b class="caret pull-right"></b>
+                        <i class="fa fa-puzzle-piece"></i>
+                        <span>Addon</span>
                         </a>
+                        <ul class="sub-menu">
+                            <li><a href=../LaAddOn/fields.html>LA Create</a></li>
+                            <li><a href="../LaAddOn/list.html">LA List</a></li>
+                            <li><a href="../LaaAddOn/fields.html">LAA Create</a></li>
+                            <li><a href="../LaaAddOn/list.html">LAA List</a></li>
+                            <li><a href="../EsyncAddOn/fields.html">Esync Create</a></li>
+                            <li><a href="../EsyncAddOn/list.html">Esync List</a></li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-leanpub"></i>
-                            <span>Session</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-comment"></i>
-                            <span>Feedback</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <i class="fa fa-money"></i>
-                            <span>Payment</span>
-                        </a>
-                    </li>
+                    <li><a href="javascript:;"><i class="fa fa-money"></i><span>Payment</span></a></li>
                 </ul>
                 <!-- end top-menu nav -->
             </div>
@@ -527,7 +523,7 @@
                                                 <h3 class="panel-title">
                                                     <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseActions">
                                                         <i class="fa fa-plus-circle pull-right"></i>
-                                                        Actions  
+                                                        Actions   
                                                     </a>
                                                 </h3>
                                             </div>
@@ -600,7 +596,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="row">
-                                                                <div class="col-sm-11">
+                                                                <div class="col-sm-10">
                                                                     <div class="form-group">
                                                                         <div class="col-sm-12">
                                                                             <textarea class="form-control" rows="3" cols="20"></textarea>
@@ -922,7 +918,7 @@
                                             <!-- End Email tab -->
                                                         <!-- <form class="form-horizontal"> -->
                                                     <div class="tab-pane fade" id="tabPayment">
-                                                        <form class="form-horizontal parsley-validate" name=" mainForm" method="post" role="form" data-       parsley-validate="true">
+                                                        <form class="form-horizontal parsley-validate" name=" mainForm" method="post" role="form" data-parsley-validate="true">
                                                             <div class="row">
                                                                 <div class="col-sm-12">
                                                                     <div class="form-group">
@@ -953,18 +949,18 @@
                                                                  </div>
                                                                 </div> 
                                                                 <div class="col-sm-3">
-                                                                    <select class="form-control selectpicker" id="packageId" data-parsley-required="true">
+                                                                    <select class="form-control selectpicker" name="packageSelect" id="packageId" data-parsley-required="true">
                                                                         <option value="package">package</option>
                                                                         <option value="package1">package1</option>
                                                                         <option value="package2">package2</option>
                                                                         <option value="package3">package3</option>
                                                                     </select>
                                                                 </div>
-                                                                <div class="col-sm-1">
+                                                                <!-- <div class="col-sm-1">
                                                                     <div class="form-group">
                                                                         <input type="button"  class="Add-Row-package btn btn-primary" value="Add"/>
                                                                     </div>
-                                                                </div>
+                                                                </div> -->
                                                             </div>
                                                             <!-- # row for dynamic table start-->
                                                             <div class="row">
@@ -997,7 +993,7 @@
                                                                     </div>
                                                                 </div> 
                                                                 <div class="col-sm-3">
-                                                                    <select class="form-control selectpicker" id="AddonId" data-parsley-required="true">
+                                                                    <select class="form-control selectpicker" name="AddonSelection" id="AddonId" data-parsley-required="true">
                                                                         <option value="Free eBook">Free EBook</option>
                                                                         <option value="eBook">eBook</option>
                                                                         <option value="One Image Coaching">One Image Coaching</option>
@@ -1006,11 +1002,11 @@
                                                                         <option value="Free LA Date">Free LA Date</option>
                                                                     </select>
                                                                 </div>
-                                                                <div class="col-sm-1">
+                                                                <!-- <div class="col-sm-1">
                                                                     <div class="form-group">
                                                                         <input type="button"  class="Add-Row-Addon btn btn-primary" value="Add"/>
                                                                     </div>
-                                                                </div>
+                                                                </div> -->
                                                             </div>
                                                             <!-- # row for dynamic table start-->
                                                             <div class="row">
@@ -1508,12 +1504,17 @@
                           $('#chars').text(length);
                         });
                         // SMS characters remaining code end
-                       
-                    // for dyanimic table package start here
-                     /************* FOR PACKAGE START HERE *********/
-                    var packageList = new Array(); 
-                    $('.Add-Row-package').click(function(){
-                        
+
+                        var packageList = new Array(); 
+                        $('select[name="packageSelect"]').change(function(){
+                            
+
+                            var selectPackage = $("input[name='selectPakage']:checked").val();
+                                if(selectPackage==null){
+                            alert('select the value');
+                             return false;
+                         }
+
                         var packageListLength = packageList.length;
                         var currentPackageListIndex = packageList.length + 1;
                         var package = {};
@@ -1529,10 +1530,7 @@
                         $('input[type=radio][name="selectPakage"][value=' + selectPackage+ ']').attr('checked',false);
                             
                           var packageId = $('#packageId').val();
-                         if(selectPackage==null){
-                            alert('select the value');
-                             return false;
-                         }
+                         
                          for(i =0; i<packageList.length;i++){
                            console.log(packageList[i].product);
                          }
@@ -1552,7 +1550,56 @@
                               // to append markep tr td value in package table 
                               $("#table_id_package tbody").append(markup);
                                  console.log("packageList:"+packageList.length);
-                              });
+
+
+                        });
+
+
+                       
+                    // for dyanimic table package start here
+                     /************* FOR PACKAGE START HERE *********/
+                    // var packageList = new Array(); 
+                    // $('.Add-Row-package').click(function(){
+                        
+                    //     var packageListLength = packageList.length;
+                    //     var currentPackageListIndex = packageList.length + 1;
+                    //     var package = {};
+                    //     package['id'] = currentPackageListIndex;
+                    //     package['product'] = $("input[name='selectPakage']:checked").val();
+                    //     package['packageName'] = $('#packageId').val();
+                    //     var selectPackage = $("input[name='selectPakage']:checked").val();
+                    //     // to add package object in packageList 
+                    //     packageList[packageListLength] = package;
+                    //     console.log("package : "+package);
+                    //     // to disable the package radio button
+                    //     $('input[type=radio][name="selectPakage"][value=' + selectPackage+ ']').attr('disabled',true);
+                    //     $('input[type=radio][name="selectPakage"][value=' + selectPackage+ ']').attr('checked',false);
+                            
+                    //       var packageId = $('#packageId').val();
+                    //      if(selectPackage==null){
+                    //         alert('select the value');
+                    //          return false;
+                    //      }
+                    //      for(i =0; i<packageList.length;i++){
+                    //        console.log(packageList[i].product);
+                    //      }
+
+                    //     var showInPackage = selectPackage+" "+packageId;
+                    //       var markup = "<tr><td style='padding: 3px';><span class='label label-primary package-list-value' value='"+showInPackage+"' name='record'>"+showInPackage+"</span><input type='hidden' value='"+selectPackage+"'></td><td><a class='btnDelete' data-package-list-index='"+currentPackageListIndex+"'> <i class='fa fa-trash fa-2x text-danger' aria-hidden='true'></i></a></td></tr>";
+                    //            // to restrict for coming duplicate value
+                    //             var tds = $('#table_id_package tbody tr td input');
+                    //             console.log(tds);
+                    //               for(i = 0; i < tds.length; ++i) {
+                    //              if(tds[i].value==selectPackage){
+                    //                 return false;
+                    //                 }
+                    //              }
+
+
+                    //           // to append markep tr td value in package table 
+                    //           $("#table_id_package tbody").append(markup);
+                    //              console.log("packageList:"+packageList.length);
+                    //           });
 
                           
                          // to remove package table row on class btnDelete 
@@ -1570,13 +1617,18 @@
                         $(this).closest('tr').remove();
                             console.log($(this).closest('td').val());
                         });
-                         /************* FOR PACKAGE START HERE *********/
+                         /************* FOR PACKAGE end  HERE *********/
                          /// for dyanimic table package end here
                          // for dynamic table for addon start here
 
                         //************** For ADDON Start HERE****************
                          var addonList = new Array(); 
-                         $('.Add-Row-Addon').click(function(){
+                        $('select[name="AddonSelection"]').change(function(){
+                            var selectAddon = $("input[name='selectAddon']:checked").val();
+                            if(selectAddon==null){
+                            alert('select the value');
+                             return false;
+                         }
 
                            var addon ={};
                            var addonListLength = addonList.length;
@@ -1598,10 +1650,7 @@
                         // this for checkbox disable when needed to un comment this.
                         /* $('input[type=radio][name="selectAddon"][value=' + selectAddon+ ']').attr('disabled',true);*/
                         var AddonId = $('#AddonId').val();
-                         if(selectAddon==null){
-                            alert('select the value');
-                             return false;
-                         }
+                         
                         var showInAddon = selectAddon+" "+AddonId;
                         var markup = "<tr><td style='padding: 3px';><span  class='label label-primary' value='"+showInAddon+"' name='record'>"+showInAddon+"</span><input type='hidden' value='"+showInAddon+"'></td><td><a class='btnDelete1' data-addon-list-index='"+currentAddonListIndex+"'> <i class='fa fa-trash fa-2x text-danger' aria-hidden='true'></i></a></td></tr>";
 
@@ -1621,7 +1670,58 @@
 
                            console.log("product:"+addonList);
 
-                             });
+                            
+
+
+                        });
+                        
+                         
+                        //  $('.Add-Row-Addon').click(function(){
+
+                        //    var addon ={};
+                        //    var addonListLength = addonList.length;
+                        //    var currentAddonListIndex = addonList.length + 1;
+
+                        //    addon['id'] = currentAddonListIndex;
+                        //    addon['product'] = $("input[name='selectAddon']:checked").val();
+                        //    addon['addonName'] = $('#AddonId').val();
+                        //     var selectAddon = $("input[name='selectAddon']:checked").val();
+
+
+                        //    addonList[addonListLength] = addon;
+
+                        //    console.log("addon :" +addonList[addonListLength].product);
+                           
+                          
+
+                       
+                        // // this for checkbox disable when needed to un comment this.
+                        // /* $('input[type=radio][name="selectAddon"][value=' + selectAddon+ ']').attr('disabled',true);*/
+                        // var AddonId = $('#AddonId').val();
+                        //  if(selectAddon==null){
+                        //     alert('select the value');
+                        //      return false;
+                        //  }
+                        // var showInAddon = selectAddon+" "+AddonId;
+                        // var markup = "<tr><td style='padding: 3px';><span  class='label label-primary' value='"+showInAddon+"' name='record'>"+showInAddon+"</span><input type='hidden' value='"+showInAddon+"'></td><td><a class='btnDelete1' data-addon-list-index='"+currentAddonListIndex+"'> <i class='fa fa-trash fa-2x text-danger' aria-hidden='true'></i></a></td></tr>";
+
+
+                        //    var tds = $('#table_id_Addon tbody tr td input');
+                                
+                        //           for(i = 0; i < tds.length; ++i) {
+                        //             console.log(tds[i].value);
+                        //          if(tds[i].value==showInAddon){
+                        //             alert("already selected ");
+                                   
+                        //             return false;
+                        //             }
+                        //          }
+
+                        // $("#table_id_Addon tbody").append(markup);
+
+                        //    console.log("product:"+addonList);
+
+                        //      });
                         // to remove package table row
                          $('#table_id_Addon').on('click','.btnDelete1',function(){
 
