@@ -210,9 +210,8 @@
                     <!-- end applied filter nav -->
                     <!-- begin filter nav -->
                     <ul class="nav filters">
-                        <li class="nav-header">Filters</li>
                         <li class="has-sub">
-                            <a href="javascript:;">View</a>
+                            <a href="javascript:;">Filters</a>
                             <ul class="sub-menu">
                                 <li>
                                     <label class="control-label">Status</label>
@@ -222,9 +221,17 @@
                                         <option>In Use Only</option>
                                     </select>
                                 </li>
+                                <li>
+                                    <label class="control-label">Activation Date</label>
+                                    <div class="input-group ">
+                                        <input type="text" class="form-control" id="activationDateFrom" name="start" placeholder="From" />
+                                        <span class="input-group-addon">To</span>
+                                        <input type="text" class="form-control" id="activationDateTo" name="end" placeholder="To" />
+                                    </div>
+                                </li>
                             </ul>
                         </li>
-                        <li class="has-sub">
+                        <!-- <li class="has-sub">
                             <a href="javascript:;">Activation Date</a>
                             <ul class="sub-menu">
                                 <li>
@@ -235,7 +242,7 @@
                                     </div>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- end filter nav -->
                 </div>

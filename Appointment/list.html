@@ -196,7 +196,6 @@
                 <!-- end top-menu nav -->
             </div>
             <!-- end #top-menu -->
-
             <!-- begin #sidebar -->
             <div id="sidebar" class="sidebar">
                 <!-- begin sidebar scrollbar -->
@@ -210,11 +209,10 @@
                     <!-- end applied filter nav -->
                     <!-- begin filter nav -->
                     <ul class="nav filters">
-                        <li class="nav-header">Filters</li>
+                       <!--  <li class="nav-header">Filters</li> -->
                         <li class="has-sub">
-                            <a href="javascript:;">View</a>
+                            <a href="javascript:;">Filters</a>
                             <ul class="sub-menu">
-                                <li><a href="?view=all">All</a></li>
                                 <li><a href="#">Assigned to me</a></li>
                                 <li>
                                     <label class="control-label">Assigned to</label>
@@ -260,12 +258,20 @@
                                         <option>Client Did Not Turn Up</option>
                                         <option>Cancelled</option>
                                         <option>Cancelled (By Us)</option>
-
                                     </select>
+                                </li>
+                                <li>
+                                    <label class="control-label">Appointment Date</label>
+                                    <div class="input-group">
+                                        <input type="text" name="appDate" class="form-control daterange"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-sub">
+                        <!-- <li class="has-sub">
                             <a href="javascript:;">Appointment Date</a>
                             <ul class="sub-menu">
                                 <li>
@@ -277,7 +283,7 @@
                                     </div>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- end filter nav -->
                 </div>

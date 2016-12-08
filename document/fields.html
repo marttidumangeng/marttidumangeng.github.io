@@ -139,18 +139,23 @@
 
                     $('#btnAddFiles').on('click',function(e) {
                         if(!$('[name="checkboxbtn"]').is(":checked")){
-                            alert("select checkbox");
+
+
+                            $('#checkbox-errors').html('<p style=color:red;>Please select at least one documents type</p>');
+                           // alert("please select at least one document type ");
                            return false;
                     }
                 });
 
                 $('[name="checkboxbtn"]').on('click',function(e){
+                    $('#checkbox-errors').html('');
                         console.log($(this).is(":checked"));
                          if ($(this).is(":checked")) {
-                                $('#btnAddFiles').prop('disabled',false);
+
+                               // $('#btnAddFiles').prop('disabled',false);
                          }       
                          else{
-                                $('#btnAddFiles').prop('disabled',true);
+                                //$('#btnAddFiles').prop('disabled',true);
                          }
                     });
 
@@ -310,17 +315,19 @@
                                     <li><a href="../otherPreference/fields.html">Other Services Interest</a></li>
                                 </ul>
                             </li>
+                            <li><a href="../actions/fields.html"> <b></b> <!-- <i class="fa fa-cog"></i> --> <span>Actions</span></a></li> 
                             <li class="has-sub"><a href="javascript:;"> <b class="caret pull-right"></b> <i class="fa fa-graduation-cap"></i> <span>Coach</span></a>
                                 <ul class="sub-menu">
                                     <li><a href="../coachreview/fields.html">CoachReview</a></li>
-                                    <li><a href="../coachSession/fields.html">CoachSession</a></li>
+                                    <li><a href="../coachSession/list.html">CoachSession</a></li>
                                 </ul>
                             </li>
                                 
                             <li><a href="../matches/fields.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Matches</span></a></li>
+                            <li><a href="../matches/FindMatch.html"> <b></b> <i class="fa fa-venus-mars"></i> <span>Find Match</span></a></li>
                             <li><a href="../dates/fields.html"> <b></b> <i class="fa fa-coffee"></i> <span>Dates</span></a></li>
                             <li><a href="../document/fields.html"> <b></b> <i class="fa fa-file"></i> <span>Docs</span></a></li>
-                            <li><a href="../actions/fields.html"> <b></b> <i class="fa fa-cog"></i> <span>Actions</span></a></li> 
+                            
 
                                 
                             
@@ -429,18 +436,19 @@
                                                             <td>Profile Name :</td>
                                                             <td><a href="#" id="profileName" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
                                                             <td>Smokes :</td>
-                                                            <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                            <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Profile Phone :</td>
                                                             <td><a href="#" id="phoneNumber" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
                                                             <td>Drinks :</td>
-                                                            <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                            <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
+                                                        </tr>
                                                         <tr>
                                                             <td>Profile age :</td>
                                                             <td><a href="#" id="profileAge" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
                                                             <td>Profile history :</td>
-                                                            <td><input type="checkbox" data-render="switchery" data-theme="blue" checked /></td>
+                                                            <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
                                                         </tr>
                                                         <tr>
                                                             <td>Profile ethnicity :</td>
@@ -473,28 +481,7 @@
                                 </div>
                                 <form id="fileupload" class="form-horizontal parsley-validate" name="mainForm" method="post" role="form" enctype="multipart/form-data">
                                     <legend>Upload User Docs</legend>
-                                    <div class="row fileupload-buttonbar">
-                                        <div class="col-md-7">
-                                            <div>
-                                                <span class="btn btn-success fileinput-button">
-                                                    <i class="fa fa-plus"></i>
-                                                    <span>Add files...</span>
-                                                    <input type="file" name="files[]"  id="btnAddFiles" multiple="">
-                                                </span>
-                                            </div>
-                                                <!-- The global file processing state -->
-                                            <span class="fileupload-process"></span>
-                                        </div>
-                                            <!-- The global progress state -->
-                                        <div class="col-md-5 fileupload-progress fade">
-                                                <!-- The global progress bar -->
-                                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
-                                            </div>
-                                                <!-- The extended global progress state -->
-                                            <div class="progress-extended">&nbsp;</div>
-                                        </div>
-                                    </div>
+                                   
                                             <!-- The table listing the files available for upload/download -->
                                     <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
                                     <div class="row">
@@ -517,9 +504,34 @@
                                                         <input type="checkbox"  name="checkboxbtn" data-parsley-multiple="checkb" value="radio5"/>Marital Status
                                                     </label>
                                                 </div>
-                                                <div id="checkbox-errors"></div>
+                                               
                                             </div>
+                                             <div id="checkbox-errors"></div>
+                                            <div class="row fileupload-buttonbar">
+                                        <div class="col-md-7">
+                                            <div>
+                                                <span class="btn btn-success fileinput-button">
+                                                    <i class="fa fa-plus"></i>
+                                                    <span>Add files...</span>
+                                                    <input type="file" name="files[]"  id="btnAddFiles" multiple="">
+                                                </span>
+                                            </div>
+                                                <!-- The global file processing state -->
+                                            <span class="fileupload-process"></span>
                                         </div>
+                                            <!-- The global progress state -->
+                                        <div class="col-md-5 fileupload-progress fade">
+                                                <!-- The global progress bar -->
+                                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                                            </div>
+                                                <!-- The extended global progress state -->
+                                            <div class="progress-extended">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                        </div>
+                                        
+
                                     </div>
                                     <div class="row">
                                         <div class="panel">
