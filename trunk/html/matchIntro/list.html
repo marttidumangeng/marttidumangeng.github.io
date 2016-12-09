@@ -442,104 +442,81 @@
                     <div class="col-sm-6 pull-left">
                         <div class="panel">
                             <div class="panel-body"> 
-                               <div class="row">
-                                <div class="col-sm-12 m-b-20 m-t-m-30">
-                                    <div class="btn-group pull-right" role="group">
-                                        <a role="button" class="btn btn-white" href="#">Esynchrony</a>
-                                        <button type="button" class="btn btn-white active">Lunch
-                                            Actually
-                                        </button>
-                                        <a role="button" class="btn btn-white" href="#">Lunch
-                                        Actually Academy</a>
-                                    </div>
-                                </div>
-                                </div>
-
                                 <div class="row">
-                                <div class="col-sm-12">
-                                <div class="row">
-                                 <div class="form-group">
-                                    <div class="col-sm-4">
-                                    <label for="result" class="control-label col-md-4">Result: </label>
-                                    <div class="col-md-8">
-                                        <select class="form-control selectpicker" id="result" data-parsley-required="true">
-                                            <option value="-1">-Result-</option>
-                                            <option value="Did not Pick up">Did not Pick up</option>
-                                            <option value="Not Interested">Not Interested</option>
-                                            <option value="Follow up">Follow up</option>
-                                            <option value="Not Suitable">Not Suitable</option>
-                                            <option value="Spam">Spam</option>
-                                            <option value="Appointment Made">Appointment Made</option>
-                                        </select>
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                             <div class="form-group">
+                                                <div class="col-sm-4">
+                                                    <label for="result" class="control-label col-md-4">Result: </label>
+                                                    <div class="col-md-8">
+                                                        <select class="form-control selectpicker" id="result" data-parsley-required="true">
+                                                            <option value="-1">-Result-</option>
+                                                            <option value="Did not Pick up">Did not Pick up</option>
+                                                            <option value="Not Interested">Not Interested</option>
+                                                            <option value="Follow up">Follow up</option>
+                                                            <option value="Not Suitable">Not Suitable</option>
+                                                            <option value="Spam">Spam</option>
+                                                            <option value="Appointment Made">Appointment Made</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-</div>
-
-                                    <!-- <div class="btn-group" role="group">
-                                        <a role="button" class="btn btn-white" href="#">Esynchrony</a>
-                                        <button type="button" class="btn btn-white active">Lunch
-                                            Actually
-                                        </button>
-                                        <a role="button" class="btn btn-white" href="#">Lunch
-                                        Actually Academy</a>
-                                    </div> -->
-                                </div>
-                                </div>
-
                                 <div class="row">
-                            <div class="col-sm-3">
-                                <div class="form-group">
-                                    <select id="status" name="profile.laMembership.status"
-                                        data-parsley-required="true" class="form-control selectpicker">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <select id="status" name="profile.laMembership.status"
+                                                data-parsley-required="true" class="form-control selectpicker">
 
-                                        <option path="model.profile.laMembership.status"
-                                            value="New Member">New Member</option>
+                                                <option path="model.profile.laMembership.status"
+                                                    value="New Member">New Member</option>
 
-                                        <option path="model.profile.laMembership.status"
-                                            value="Pending Approval">Pending Approval</option>
+                                                <option path="model.profile.laMembership.status"
+                                                    value="Pending Approval">Pending Approval</option>
 
-                                        <option path="model.profile.laMembership.status"
-                                            value="Active">Active</option>
+                                                <option path="model.profile.laMembership.status"
+                                                    value="Active">Active</option>
 
-                                        <option path="model.profile.laMembership.status"
-                                            value="On Hold">On Hold</option>
+                                                <option path="model.profile.laMembership.status"
+                                                    value="On Hold">On Hold</option>
 
-                                        <option path="model.profile.laMembership.status"
-                                            value="Refund">Refund</option>
+                                                <option path="model.profile.laMembership.status"
+                                                    value="Refund">Refund</option>
 
-                                        <option path="model.profile.laMembership.status"
-                                            value="Expired">Expired</option>
+                                                <option path="model.profile.laMembership.status"
+                                                    value="Expired">Expired</option>
 
-                                        <option path="model.profile.laMembership.status"
-                                            value="Terminated">Terminated</option>
+                                                <option path="model.profile.laMembership.status"
+                                                    value="Terminated">Terminated</option>
 
-                                        <option path="model.profile.laMembership.status"
-                                            value="Renewal">Renewal</option>
+                                                <option path="model.profile.laMembership.status"
+                                                    value="Renewal">Renewal</option>
 
-                                    </select>
-                                </div>
-                                <div class="profile-image">
-                                    <img src="../resources/images/photo.jpg"> <i
-                                        class="fa fa-user hide"></i> <input type="file"
-                                        name="userphoto" />
-                                </div>
-                                <div class="form-group">
-                                    <select id="mood" name="profile.laMembership.mood"
-                                        data-parsley-required="true" class="form-control selectpicker">
+                                            </select>
+                                        </div>
+                                        <div class="profile-image">
+                                            <img src="../resources/images/photo.jpg"> <i
+                                                class="fa fa-user hide"></i> <input type="file"
+                                                name="userphoto" />
+                                        </div>
+                                        <div class="form-group">
+                                            <select id="mood" name="profile.laMembership.mood"
+                                                data-parsley-required="true" class="form-control selectpicker">
 
-                                        <option path="model.profile.laMembership.mood" value="Normal">Normal</option>
+                                                <option path="model.profile.laMembership.mood" value="Normal">Normal</option>
 
-                                        <option path="model.profile.laMembership.mood" value="Happy">Happy</option>
+                                                <option path="model.profile.laMembership.mood" value="Happy">Happy</option>
 
-                                        <option path="model.profile.laMembership.mood"
-                                            value="Complaint">Complaint</option>
+                                                <option path="model.profile.laMembership.mood"
+                                                    value="Complaint">Complaint</option>
 
-                                        <option path="model.profile.laMembership.mood" value="Refund">Refund</option>
+                                                <option path="model.profile.laMembership.mood" value="Refund">Refund</option>
 
-                                    </select>
-                                </div>
-                            </div>
+                                            </select>
+                                        </div>
+                                    </div>
                             <div class="col-sm-9">
                             <fieldset>
                                 <legend>Profile</legend>
@@ -550,23 +527,23 @@
                                                 <td><a href="#" id="profileName" data-type="text"
                                                     data-pk="1" data-title="Enter Username">Sohem </a></td>
                                                 <td>Smokes :</td>
-                                                <td><input type="checkbox" data-render="switchery"
-                                                    data-theme="blue" checked /></td>
+                                                <td> Yes <input type="checkbox" data-render="switchery"
+                                                    data-theme="blue" checked /> No</td>
                                             </tr>
                                             <tr>
                                                 <td>Profile Phone :</td>
                                                 <td><a href="#" id="phoneNumber" data-type="text"
                                                     data-pk="1" data-title="Enter Username">12243 </a></td>
                                                 <td>Drinks :</td>
-                                                <td><input type="checkbox" data-render="switchery"
-                                                    data-theme="blue" checked /></td>
+                                                <td> Yes  <input type="checkbox" data-render="switchery"
+                                                    data-theme="blue" checked /> No</td>
                                             <tr>
                                                 <td>Profile age :</td>
                                                 <td><a href="#" id="profileAge" data-type="text"
                                                     data-pk="1" data-title="Enter Username">23 </a></td>
                                                 <td>Profile history :</td>
-                                                <td><input type="checkbox" data-render="switchery"
-                                                    data-theme="blue" checked /></td>
+                                                <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery"
+                                                    data-theme="blue" checked />&nbsp;&nbsp; No</td>
                                             </tr>
                                             <tr>
                                                 <td>Profile ethnicity :</td>
@@ -706,6 +683,7 @@
                                         this).attr(
                                         'data-speed')
                                         : '0.5s';
+                                option.size = 'small';        
                                 var switchery = new Switchery(
                                         this, option);
                             });
