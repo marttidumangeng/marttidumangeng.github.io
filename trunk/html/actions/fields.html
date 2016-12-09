@@ -195,11 +195,11 @@
                         <span>Package</span>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href=../lacpackage/fields.html>LA Create</a></li>
+                            <!-- <li><a href=../lacpackage/fields.html>LA Create</a></li> -->
                             <li><a href="../lacpackage/list.html">LA List</a></li>
-                            <li><a href="../laacpackage/fields.html">LAA Create</a></li>
+                          <!-- /  <li><a href="../laacpackage/fields.html">LAA Create</a></li> -->
                             <li><a href="../laacpackage/list.html">LAA List</a></li>
-                            <li><a href="../esyncpackage/fields.html">Esync Create</a></li>
+                            <!-- <li><a href="../esyncpackage/fields.html">Esync Create</a></li> -->
                             <li><a href="../esyncpackage/list.html">Esync List</a></li>
                         </ul>
                     </li>
@@ -210,11 +210,11 @@
                         <span>Addon</span>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href=../LaAddOn/fields.html>LA Create</a></li>
+                            <!-- <li><a href=../LaAddOn/fields.html>LA Create</a></li> -->
                             <li><a href="../LaAddOn/list.html">LA List</a></li>
-                            <li><a href="../LaaAddOn/fields.html">LAA Create</a></li>
+                            <!-- <li><a href="../LaaAddOn/fields.html">LAA Create</a></li> -->
                             <li><a href="../LaaAddOn/list.html">LAA List</a></li>
-                            <li><a href="../EsyncAddOn/fields.html">Esync Create</a></li>
+                            <!-- <li><a href="../EsyncAddOn/fields.html">Esync Create</a></li> -->
                             <li><a href="../EsyncAddOn/list.html">Esync List</a></li>
                         </ul>
                     </li>
@@ -430,11 +430,10 @@
                                                         <div id="profileWizard">
                                                             <ul class="nav nav-tabs">
                                                                 <li class="active"><a href="#tabLogActions" data-toggle="tab">Call Back Result</a></li>
-                                                                <li><a href="#tabTask" data-toggle="tab">Follow up</a></li>
                                                                 <li><a href="#tabAppointment" data-toggle="tab">Appointment</a></li>
-                                                                 <li><a href="#tabPayment" data-toggle="tab">Payment</a></li>
-                                                                <li><a href="#tabEmail" data-toggle="tab">Email</a></li>
-                                                                <li><a href="#tabSMS" data-toggle="tab">SMS</a></li>
+                                                                 <li><a href="#tabTask" data-toggle="tab">Follow up</a></li>
+                                                                  <li><a href="#tabEmail" data-toggle="tab">Email</a></li>
+                                                                  <li><a href="#tabSMS" data-toggle="tab">SMS</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -514,203 +513,6 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </form>
-                                                    </div>
-                                                    <div class="tab-pane fade" id="tabPayment">
-                                                        <form class="form-horizontal parsley-validate" name=" mainForm" method="post" role="form" data-parsley-validate="true">
-                                                            <div class="row">
-                                                                <div class="col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label class="control-label radio-inline m-r-5">Sales Mode:</label>
-                                                                        <label class="radio-inline">
-                                                                            <input type="radio" name="method" value="phone" /> Phone
-                                                                        </label>
-                                                                        <label class="radio-inline">
-                                                                            <input type="radio" name="method" value="nonPhone" /> Non Phone
-                                                                        </label>
-                                                                    </div>
-                                                              </div>
-                                                            </div> 
-                                                            <div class="row">
-                                                                <div class="col-sm-7">
-                                                                    <div class="form-group">
-                                                                        <label class="control-label radio-inline m-r-5">Select Package:</label>
-                                                                        <label class="radio-inline">
-                                                                            <input type="radio" name="selectPakage"  value="LA" /> LA
-                                                                        </label>
-                                                                        <label class="radio-inline">
-                                                                            <input type="radio" name="selectPakage" value="LAA" /> LAA
-                                                                        </label>
-                                                                        <label class="radio-inline">
-                                                                            <input type="radio" name="selectPakage" value="eSync" /> eSync
-                                                                        </label>
-                                                                        
-                                                                 </div>
-                                                                </div> 
-                                                                <div class="col-sm-3">
-                                                                    <select class="form-control selectpicker" name="packageSelect" id="packageId" data-parsley-required="true">
-                                                                        <option value="package">package</option>
-                                                                        <option value="package1">package1</option>
-                                                                        <option value="package2">package2</option>
-                                                                        <option value="package3">package3</option>
-                                                                    </select>
-                                                                </div>
-                                                                <!-- <div class="col-sm-1">
-                                                                    <div class="form-group">
-                                                                        <input type="button"  class="Add-Row-package btn btn-primary" value="Add"/>
-                                                                    </div>
-                                                                </div> -->
-                                                            </div>
-                                                            <!-- # row for dynamic table start-->
-                                                            <div class="row">
-                                                                <div class="col-sm-8">
-                                                                    <div class="form-group">
-                                                                        <div class="col-md-8">
-                                                                            <table id="table_id_package">
-                                                                                <tbody>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- # row for dynamic table end here -->
-                                                            <div class="row">
-                                                                <div class="col-sm-7">
-                                                                    <div class="form-group">
-                                                                        <label class="control-label radio-inline m-r-5">Select Addon:</label>
-                                                                        <label class="radio-inline">
-                                                                            <input type="radio" name="selectAddon" value="LA" /> LA
-                                                                        </label>
-                                                                        <label class="radio-inline">
-                                                                            <input type="radio" name="selectAddon" value="LAA" /> LAA
-                                                                        </label>
-                                                                        <label class="radio-inline">
-                                                                            <input type="radio" name="selectAddon" value="eSync" /> eSync
-                                                                        </label>
-                                                                       
-                                                                    </div>
-                                                                </div> 
-                                                                <div class="col-sm-3">
-                                                                    <select class="form-control selectpicker" name="AddonSelection" id="AddonId" data-parsley-required="true">
-                                                                        <option value="Free eBook">Free EBook</option>
-                                                                        <option value="eBook">eBook</option>
-                                                                        <option value="One Image Coaching">One Image Coaching</option>
-                                                                        <option value="One Date Coaching">One Date Coaching</option>
-                                                                        <option value="Free Image Coaching">Free Image Coaching</option>
-                                                                        <option value="Free LA Date">Free LA Date</option>
-                                                                    </select>
-                                                                </div>
-                                                                <!-- <div class="col-sm-1">
-                                                                    <div class="form-group">
-                                                                        <input type="button"  class="Add-Row-Addon btn btn-primary" value="Add"/>
-                                                                    </div>
-                                                                </div> -->
-                                                            </div>
-                                                            <!-- # row for dynamic table start-->
-                                                            <div class="row">
-                                                                <div class="col-sm-8">
-                                                                    <div class="form-group">
-                                                                        <div class="col-md-8">
-                                                                            <table id="table_id_Addon">
-                                                                                <tbody>
-                                                                                </tbody>
-                                                                            </table>
-                                                                        </div>
-                                                                    </div>
-                                                                 </div>
-                                                            </div>
-
-                                                            <div class="row">
-                                                               <div class="col-sm-8">
-                                                                   <div class="form-group">
-                                                                    <label for="totalAmount" class="col-md-4 ">Total Amount:</label>
-                                                                       <div class="col-md-8">
-                                                                       <div class="input-group">
-                                                                           <span class="input-group-addon">
-                                                                               <span><i class="fa fa-money" aria-hidden="true"></i></span>
-                                                                           </span>
-                                                                            <input type="text" id="totalAmount" name="totalAmount" class="form-control" data-parsley-required="true" data-parsley-type="number"/>
-                                                                       </div>
-                                                                       </div>
-                                                                  </div>
-                                                               </div>
-                                                            </div>
-                                                            <div class="row">
-                                                               <div class="col-sm-8">
-                                                                   <div class="form-group">
-                                                                       <label for="paymentMethod" class="col-md-4">Payment Method:</label>
-                                                                       <div class="col-md-8">
-                                                                           <select id="paymentMethod" name="paymentMethod" class="form-control selectpicker" data-parsley-required="true">
-                                                                               <option>Paypal</option>
-                                                                               <option>Bank Transfer</option>
-                                                                               <option>Cash</option>
-                                                                               <option>Visa</option>
-                                                                               <option>Master</option>
-                                                                               <option>Amex</option>
-                                                                               <option>Installment6</option>
-                                                                               <option>Installment12</option>
-                                                                               <option>Installment24/option>
-                                                                               <option>Installment36</option>
-                                                                           </select>
-                                                                       </div>
-                                                                   </div>
-                                                               </div>
-                                                            </div>
-                                                            <div class="row">
-                                                               <div class="col-sm-8">
-                                                                   <div class="form-group">
-                                                                       <label class="col-md-4">Payment :</label>
-                                                                       <label class="radio-inline">
-                                                                           <input type="radio" name="payment" value="Deposit" /> Deposit
-                                                                       </label>
-                                                                       <label class="radio-inline">
-                                                                           <input type="radio" name="payment" value="Transaction" /> Transaction
-                                                                       </label>
-                                                                       <label class="radio-inline">
-                                                                           <input type="radio" name="payment" value="fullAmount" /> Full Amount
-                                                                       </label>
-                                                                   </div>
-                                                               </div>
-                                                            </div>
-                                                            <div class="row">
-                                                              <div class="col-sm-8">
-                                                                <div class="form-group">
-                                                                 <label for="firstname" class="col-md-4">Paid Amount:</label>
-                                                                 <div class="col-md-8">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-addon">
-                                                                            <span><i class="fa fa-money" aria-hidden="true"></i></span>
-                                                                        </span>
-                                                                        <input type="text" id="firstname" name="firstname" class="form-control" placeholder="$00.00" data-parsley-required="true" data-parsley-type="number" />
-                                                                       </div>
-                                                                    </div>
-                                                                  </div>
-                                                              </div>
-                                                            </div>
-
-                                                            <div class="row">
-                                                               <div class="col-sm-11">
-                                                                   <div class="form-group">
-                                                                       <div class="col-sm-12">
-                                                                           <textarea class="form-control" placeholder="Type to leave a note" rows="3" cols="20"></textarea>
-                                                                       </div>
-                                                                   </div>
-                                                               </div>
-                                                            </div>
-
-                                                            <div class="row">
-                                                               <div class="col-sm-12">
-                                                                   <div class="form-group pull-right">
-                                                                       <div class="col-sm-12">
-                                                                           <input type="submit" class="btn btn-primary" name="save" value="Save"/>
-                                                                           <input type="button" class="btn btn-default" name="reset" value="Reset"/>
-                                                                       </div>
-                                                                   </div>
-                                                               </div>
-                                                            </div>
-
-                                                            <!-- # row for dynamic table end here -->
                                                         </form>
                                                     </div>
                                                     <div class="tab-pane fade" id="tabTask">

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<title>Central - print receipt</title>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+
+<!-- caching -->
+<meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta name="robots" content="noindex,nofollow">
+
+<!-- icons -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- <link rel="shortcut icon" href="../resources/icons/favicon.ico"
+    type="image/x-icon" /> -->
+<link rel="apple-touch-icon" href="../resources/icons/favicon.ico" />
+<!-- iOS icon -->
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+<!-- ================== BEGIN PACE LOADER ================== -->
+<script src="../resources/venders/pace/js/pace.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../resources/venders/pace/css/pace.minimal.css" />
+<!-- ================== BEGIN BASE CSS STYLE ================== -->
+<link rel="stylesheet" type="text/css" href="../resources/venders/jquery-ui/themes/base/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/venders/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/venders/animate/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap3-editable/css/bootstrap-editable.css" />
+<link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
+<link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
+<link rel="stylesheet" type="text/css" href="../resources/venders/switchery/switchery.min.css" />
+<!-- ================== END BASE CSS STYLE ================== -->
+
+<!-- ================== BEGIN BASE JS ================== -->
+<script src="../resources/venders/jquery/jquery-1.9.1.min.js"></script>
+<script src="../resources/venders/jquery/jquery-migrate-1.1.0.min.js"></script>
+<script src="../resources/venders/jquery-ui/ui/jquery-ui.min.js"></script>
+<script src="../resources/venders/bootstrap/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+            <script src="../resources/venders/crossbrowserjs/html5shiv.js"></script>
+            <script src="../resources/venders/crossbrowserjs/respond.min.js"></script>
+            <script src="../resources/venders/crossbrowserjs/excanvas.min.js"></script>
+        <![endif]-->
+<script src="../resources/venders/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../resources/venders/jquery-cookie/jquery.cookie.js"></script>
+<script src="../resources/venders/parsley/parsley.min.js"></script>
+<script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="../resources/venders/switchery/switchery.min.js"></script>
+
+<script src="../resources/venders/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+
+<!-- ================== END BASE JS ================== -->
+<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+<script src="../resources/scripts/app.min.js"></script>
+<!-- ================== END PAGE LEVEL JS ================== -->
+<script>
+    $(document).ready(function() {
+        App.init();
+    });
+</script>
+</head>
+<body class="layout" style="background-color: white;">
+    <!-- begin #page-loader -->
+    <!-- <div id="page-loader" class="fade in"><span class="spinner"></span> </div>  -->
+    <!-- end #page-loader -->
+
+    <!-- begin #page-container -->
+    <div id="container-fluid">
+        <div id="content">
+            <!-- begin row -->
+                <div class="panel">
+                    <div class="panel-body">
+                        <div class="bgwhite">
+                            <div class="bgwhite" style="background-color: white;">
+                                <div class="col-md-4 col-xs-offset-1">
+                                    <!-- <img class="m-t-5" src="${}/../img/esync_logo.jpg"
+                                        style="width: 100%;" > -->
+                                    <div class="navbar-brand">
+                                        <i class="fa fa-heart-o" aria-hidden="true"></i> Central
+                                    </div>
+                                </div>
+                                <div class="col-xs-2">
+                                   
+                                </div>
+                                <div class="col-xs-4">
+                                    <p class="fontSize40 pull-right">SALES INVOICE</p>
+                                </div>
+                            </div>
+                            <div class="container fontSize20">
+                                <div class="row col-md-12 col-xs-12 topMargin noMarginPadding">
+                                    <div class="form-group noMarginPadding">
+                                        <div class="col-md-5 col-xs-5"></div>
+                                        <div class="col-md-4 col-xs-4 noMarginPadding">
+                                            <label class="pull-right">INVOICE #: </label>
+                                        </div>
+                                        <div class="col-md-3 col-xs-3">
+                                            <label class="pull-left">Invoice-12345</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row col-md-12 col-xs-12 noMarginPadding">
+                                    <div class="form-group noMarginPadding">
+                                        <div class="col-md-5 col-xs-5"></div>
+                                        <div class="col-md-4 col-xs-4 noMarginPadding">
+                                            <label class="pull-right">Paypal Payment on : </label>
+                                        </div>
+                                        <div class="col-md-3 col-xs-3">
+                                            <label class="pull-left">
+                                            04 - 12 - 2016 06:30:12 AM
+                                            <!-- <jsp:useBean id="dateValue" class="java.util.Date" /> <jsp:setProperty 
+                                            name="dateValue" property="time" value="${model.receiptDt}" /> 
+                                            <fmt:formatDatevalue="${dateValue}" pattern="dd-MMM-yy hh:mm:ss aaa" /> -->
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-12 m-l-10">
+                                        <div class="row">
+                                            <label>eSynchrony.com pte Ltd</label>
+                                        </div>
+                                        <div class="row">
+                                            <label>9 Penang Road, Park Mall, #08-09, Singapore 238459</label>
+                                        </div>
+                                        <div class="row">
+                                            <label>Phone +65 6337 5503 Fax +65 6532 3611</label>
+                                        </div>
+                                        <div class="row">
+                                            <label>info@esynchrony.com</label>
+                                        </div>
+                                        <div class="row">
+                                            <label>Reg. No. 200703771N</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-t-30">
+                                    <div class="col-md-12 col-xs-12">
+                                        <label>SOLD TO :</label> <label class="m-l-2">Rahul &nbsp; Soni</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                        <label>I/C No :</label> 82844723<label class="m-l-2"></label>
+                                    </div>
+                                </div>
+                                <div class="row m-t-5">
+                                    <div class="col-md-12 col-xs-12">
+                                        <table
+                                            class="table table-hover table-bordered tableTextAlignCenter tablewidth70">
+                                            <tr class="bggray">
+                                                <td class="tableTextAlignCenter">PAYMENT METHOD</td>
+                                                <td class="tableTextAlignCenter">ORDER NO.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cash</td>
+                                                <td>12345</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row m-t-5">
+                                    <div class="col-md-12 col-xs-12">
+                                        <table class="table table-hover table-bordered tablewidth95">
+                                            <tr class="bggray">
+                                                <td class="tableTextAlignCenter">ITEM CODE</td>
+                                                <td class="tableTextAlignCenter">DESCRIPTION</td>
+                                                <td class="tableTextAlignCenter">UNIT PRICE</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="tableTextAlignCenter">addon34</td>
+                                                <td class="tableTextAlignCenter">LAA_ADDON</td>
+                                                <td class="tableTextAlignRight">
+                                                RS 100.00
+                                                <!-- <fmt:formatNumber
+                                                        value="${model.amount}" type="currency"
+                                                        currencySymbol="${model.currency}" maxFractionDigits="2" /> --></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><span class="pull-right">TOTAL</span></td>
+                                                <td class="tableTextAlignRight">
+                                                RS 500.00
+                                                <!-- <fmt:formatNumber
+                                                        value="${model.amount}" type="currency"
+                                                        currencySymbol="${model.currency}" maxFractionDigits="2" /> --></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+            <!-- end row -->
+        </div>
+        <!-- end #content -->
+        <!-- begin scroll to top btn -->
+        
+        <!-- end scroll to top btn -->
+        
+    </div>
+    <!-- end page container -->
+</body>
+</html>

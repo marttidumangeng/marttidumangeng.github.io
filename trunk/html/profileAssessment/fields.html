@@ -72,6 +72,14 @@
 		App.init();
 	});
 </script>
+
+<!-- FOR personality CHECkBox background color set -->
+<style type="text/css">
+	.groupAddonBGC{
+		background-color: #3093E0;
+		text-align:left;
+	}
+</style>
 </head>
 <!--end head-->
 
@@ -180,11 +188,11 @@
                         <span>Package</span>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href=../lacpackage/fields.html>LA Create</a></li>
+                            <!-- <li><a href=../lacpackage/fields.html>LA Create</a></li> -->
                             <li><a href="../lacpackage/list.html">LA List</a></li>
-                            <li><a href="../laacpackage/fields.html">LAA Create</a></li>
+                            <!-- <li><a href="../laacpackage/fields.html">LAA Create</a></li> -->
                             <li><a href="../laacpackage/list.html">LAA List</a></li>
-                            <li><a href="../esyncpackage/fields.html">Esync Create</a></li>
+                            <!-- <li><a href="../esyncpackage/fields.html">Esync Create</a></li> -->
                             <li><a href="../esyncpackage/list.html">Esync List</a></li>
                         </ul>
                     </li>
@@ -195,11 +203,11 @@
                         <span>Addon</span>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href=../LaAddOn/fields.html>LA Create</a></li>
+                            <!-- <li><a href=../LaAddOn/fields.html>LA Create</a></li> -->
                             <li><a href="../LaAddOn/list.html">LA List</a></li>
-                            <li><a href="../LaaAddOn/fields.html">LAA Create</a></li>
+                            <!-- <li><a href="../LaaAddOn/fields.html">LAA Create</a></li> -->
                             <li><a href="../LaaAddOn/list.html">LAA List</a></li>
-                            <li><a href="../EsyncAddOn/fields.html">Esync Create</a></li>
+                            <!-- <li><a href="../EsyncAddOn/fields.html">Esync Create</a></li> -->
                             <li><a href="../EsyncAddOn/list.html">Esync List</a></li>
                         </ul>
                     </li>
@@ -431,19 +439,19 @@
 																<div class="form-group">
 																	<label for="gender" class="col-md-4 control-label">Client Difficult</label>
 																	<div class="col-md-8">
-																		<input type="checkbox" data-render="switchery" data-theme="blue" checked />
+																		Yes&nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp;No
 																	</div>
 																</div>
 																<div class="form-group">
 																	<label for="gender" class="col-md-4 control-label">Client Monitored</label>
 																	<div class="col-md-8">
-																		<input type="checkbox" data-render="switchery" data-theme="blue" checked />
+																		Yes&nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp;No
 																	</div>
 																</div>
 																<div class="form-group">
 																	<label for="gender" class="col-md-4 control-label">Client Punctualed</label>
 																	<div class="col-md-8">
-																		<input type="checkbox" data-render="switchery"data-theme="blue" checked />
+																		Yes&nbsp;&nbsp;<input type="checkbox" data-render="switchery"data-theme="blue" checked />&nbsp;&nbsp;No
 																	</div>
 																</div>
 															</div>
@@ -585,6 +593,23 @@
 														<div id="collapseThree" class="panel-collapse collapse">
 															<div class="panel-body">
 																<div class="form-group">
+
+                                                                    <label class="col-md-4 control-label radio-inline">Extrovert</label>
+                                                                	<div class="col-md-8">
+                                                                	<span class="input-group-addon groupAddonBGC">
+	                                                                    <label class="radio-inline ">
+	                                                                        <input type="radio" name="EXtrovert" value="Extrovert Level" /> Extrovert Level
+	                                                                    </label>
+	                                                                    <label class="radio-inline ">
+	                                                                        <input type="radio" name="EXtrovert" value="In between" /> In between
+	                                                                    </label>
+	                                                                    <label class="radio-inline ">
+	                                                                        <input type="radio" name="EXtrovert" value="Introvert" /> Introvert
+	                                                                    </label>
+	                                                                    </span>
+                                                                    </div>
+                                                                </div>
+																<!-- <div class="form-group">
 																	<label for="gender" class="col-md-4 control-label">Extrovert</label>
 																	<div class="col-md-8">
 																		<select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
@@ -593,95 +618,149 @@
 																			<option>Introvert</option>
 																		</select>
 																	</div>
-																</div>
+																</div> -->
 																<div class="form-group">
-																	<label for="gender" class="col-md-4 control-label">Organized Level</label>
+                                                                    <label class="col-md-4 control-label radio-inline">Organized Level</label>
+                                                                	<div class="col-md-8">
+                                                                	<span class="input-group-addon groupAddonBGC">
+	                                                                    <label class="radio-inline ">
+	                                                                        <input type="radio" name="Organized" value="Organized" /> Organized
+	                                                                    </label>
+	                                                                    <label class="radio-inline ">
+	                                                                        <input type="radio" name="Organized" value="In between" /> In between
+	                                                                    </label>
+	                                                                    <label class="radio-inline ">
+	                                                                        <input type="radio" name="Organized" value="Medium" /> Medium
+	                                                                    </label>
+	                                                                    </span>
+                                                                    </div>
+                                                                </div>
+																<div class="form-group">
+																	<label for="gender" class="col-md-4 control-label radio-inline">Serious Level</label>
 																	<div class="col-md-8">
-																		<select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
-																			<option selected="selected">Organized</option>
-																			<option>In between</option>
-																			<option>Medium</option>
-																		</select>
+																	<span class="input-group-addon groupAddonBGC">
+																		<label class="radio-inline ">
+                                                                            <input type="radio" name="Serious" value="Serious" />Serious
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Serious" value="In between" />In between
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Serious" value="Light Hearted" />Light Hearted
+                                                                        </label>
+                                                                        </span>
 																	</div>
 																</div>
 																<div class="form-group">
-																	<label for="gender" class="col-md-4 control-label">Serious Level</label>
+																	<label for="gender" class="col-md-4 control-label radio-inline">Outdoor Level</label>
 																	<div class="col-md-8">
-																		<select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
-																			<option selected="selected">Serious</option>
-																			<option>In between</option>
-																			<option>Light Hearted</option>
-																		</select>
+																	<span class="input-group-addon groupAddonBGC">
+																		<label class="radio-inline ">
+                                                                            <input type="radio" name="Outdoor" value="Outdoor / sporting" />Outdoor / sporting
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Outdoor" value="In between" />In between
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Outdoor" value="Indoor/Non Sporting" />Indoor/Non Sporting
+                                                                        </label>
+                                                                        </span>
 																	</div>
 																</div>
 																<div class="form-group">
-																	<label for="gender" class="col-md-4 control-label">Outdoor Level</label>
+																	<label for="gender" class="col-md-4 control-label radio-inline">Generous Level</label>
 																	<div class="col-md-8">
-																		<select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
-																			<option selected="selected">Outdoor / sporting</option>
-																			<option>In between</option>
-																			<option>Indoor/Non Sporting</option>
-																		</select>
+																	<span class="input-group-addon groupAddonBGC">
+																		<label class="radio-inline ">
+                                                                            <input type="radio" name="Geneoruss" value="Geneorus" />Geneorus
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Geneoruss" value="In between" />In between
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Geneoruss" value="Thrifty" />Thrifty
+                                                                        </label>
+                                                                        </span>
 																	</div>
 																</div>
 																<div class="form-group">
-																	<label for="gender" class="col-md-4 control-label">Generous Level</label>
+																	<label for="gender" class="col-md-4 control-label radio-inline">TactFul Level</label>
 																	<div class="col-md-8">
-																		<select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
-																			<option selected="selected">Geneorus</option>
-																			<option>In Between</option>
-																			<option>Thrifty</option>
-																		</select>
+																	<span class="input-group-addon groupAddonBGC">
+																		<label class="radio-inline ">
+                                                                            <input type="radio" name="Tactful" value="Tactful" />Tactful
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Tactful" value="In between" />In between
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Tactful" value="Blunt" />Blunt
+                                                                        </label>
+                                                                        </span>
 																	</div>
 																</div>
 																<div class="form-group">
-																	<label for="gender" class="col-md-4 control-label">TactFul Level</label>
+																	<label for="gender" class="col-md-4 control-label radio-inline">Intellectual Level</label>
 																	<div class="col-md-8">
-																		<select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
-																			<option selected="selected">Tactful</option>
-																			<option>In Between</option>
-																			<option>Blunt</option>
-																		</select>
+																	<span class="input-group-addon groupAddonBGC">
+																		<label class="radio-inline ">
+                                                                            <input type="radio" name="Intellectual" value="Intellectual" />Intellectual
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Intellectual" value="In between" />In between
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Intellectual" value="Simple" />Simple
+                                                                        </label>
+                                                                        </span>
 																	</div>
 																</div>
 																<div class="form-group">
-																	<label for="gender" class="col-md-4 control-label">Intellectual Level</label>
+																	<label for="gender" class="col-md-4 control-label radio-inline">Worldy Level</label>
 																	<div class="col-md-8">
-																		<select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
-																			<option selected="selected">Intellectual</option>
-																			<option>In Between</option>
-																			<option>Simple</option>
-																		</select>
+																	<span class="input-group-addon groupAddonBGC">
+																		<label class="radio-inline ">
+                                                                            <input type="radio" name="Worldy" value="Worldy" />Worldy
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Worldy" value="In between" />In between
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Worldy" value="Localized" />Localized
+                                                                        </label>
+                                                                       </span>
 																	</div>
 																</div>
 																<div class="form-group">
-																	<label for="gender" class="col-md-4 control-label">Worldy Level</label>
+																	<label for="gender" class="col-md-4 control-label radio-inline">Artistic Level</label>
 																	<div class="col-md-8">
-																		<select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
-																			<option selected="selected">Worldly</option>
-																			<option>In Between</option>
-																			<option>Localized</option>
-																		</select>
+																	<span class="input-group-addon groupAddonBGC">
+																		<label class="radio-inline ">
+                                                                            <input type="radio" name="Artistic" value="Artistic" />Artistic
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Artistic" value="In between" />In between
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Artistic" value="Cooporate" />Cooporate
+                                                                        </label>
+                                                                        </span>
 																	</div>
 																</div>
 																<div class="form-group">
-																	<label for="gender" class="col-md-4 control-label">Artistic Level</label>
+																	<label for="gender" class="col-md-4 control-label radio-inline">Western Level</label>
 																	<div class="col-md-8">
-																		<select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
-																			<option selected="selected">Artistic</option>
-																			<option>In Between</option>
-																			<option>Cooporate</option>
-																		</select>
-																	</div>
-																</div>
-																<div class="form-group">
-																	<label for="gender" class="col-md-4 control-label">Western Level</label>
-																	<div class="col-md-8">
-																		<select id="exercise" name="exercise" class="form-control selectpicker" data-parsley-required="true">
-																			<option selected="selected">Westernized</option>
-																			<option>In Between</option>
-																			<option>Traditional</option>
-																		</select>
+																	<span class="input-group-addon groupAddonBGC">
+																		<label class="radio-inline ">
+                                                                            <input type="radio" name="Western" value="Westernized" />Westernized
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Western" value="In between" />In between
+                                                                        </label>
+                                                                        <label class="radio-inline ">
+                                                                            <input type="radio" name="Western" value="Traditional" />Traditional
+                                                                        </label>
+                                                                        </span>
 																	</div>
 																</div>
 															</div>
