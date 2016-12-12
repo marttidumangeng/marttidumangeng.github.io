@@ -520,8 +520,7 @@
                                             <div class="panel-heading">
                                                 <h3 class="panel-title">
                                                     <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseActions">
-                                                        <i class="fa fa-plus-circle pull-right"></i>
-                                                        Actions   
+                                                        <i class="fa fa-plus-circle pull-right"></i>Actions
                                                     </a>
                                                 </h3>
                                             </div>
@@ -532,11 +531,11 @@
                                                         <div id="profileWizard">
                                                             <ul class="nav nav-tabs">
                                                                 <li class="active"><a href="#tabLogActions" data-toggle="tab">Call Back Result</a></li>
+                                                                <li><a href="#tabTask" data-toggle="tab">Follow up</a></li>
                                                                 <li><a href="#tabAppointment" data-toggle="tab">Appointment</a></li>
-                                                                 <li><a href="#tabTask" data-toggle="tab">Follow up</a></li>
-                                                                 <li><a href="#tabPayment" data-toggle="tab">Payment</a></li>
-                                                                  <li><a href="#tabEmail" data-toggle="tab">Email</a></li>
-                                                                  <li><a href="#tabSMS" data-toggle="tab">SMS</a></li>
+                                                                <li><a href="#tabPayment" data-toggle="tab">Payment</a></li>
+                                                                <li><a href="#tabEmail" data-toggle="tab">Email</a></li>
+                                                                <li><a href="#tabSMS" data-toggle="tab">SMS</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -714,7 +713,7 @@
                                                        <form class="form-horizontal">
                                                             <div class="row">
                                                             <div class="row">&nbsp;</div>
-                                                                <div class="col-sm-6">
+                                                                <div class="col-sm-5">
                                                                     <div class="form-group">
                                                                         <div class="col-sm-12">
                                                                             <div class="input-group">
@@ -736,6 +735,12 @@
                                                                                 </span>
                                                                             </div>
                                                                         </div>
+                                                                       
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-3 m-t-5">
+                                                                    <div class="form-group">
+                                                                        <a href="#" data-toggle="modal" data-target='#modalActionAppointment'>View Appointment</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1474,6 +1479,40 @@
                             calendarWeeks: true,
                             startDate: '0'
                         });
+
+                        // view appointment date for previos and next button start here
+                        $('.next-day').on("click", function () {
+
+                        var date = $('#bookOnDate').datepicker('getDate');
+                        console.log("next day : "+date);
+                        if(date=='Invalid Date'){
+                            alert("please select date ");
+                            return false;
+                        
+                        }
+                            
+                        date.setTime(date.getTime() + (1000*60*60*24))
+                        $('#bookOnDate').datepicker("setDate", date);
+                        }); 
+                        $('.prev-day').on("click", function () {
+                        var date = $('#bookOnDate').datepicker('getDate');
+                         if(date=='Invalid Date'){
+                            alert("please select date ");
+                            return false;
+                         }
+                            
+                      
+                        date.setTime(date.getTime() - (1000*60*60*24))
+                        $('#bookOnDate').datepicker("setDate", date);
+                        });
+                        
+                         $('#bookOnDate').datepicker({
+                            format: 'yyyy-mm-dd'
+                           
+                        });
+                         // view appointment date for previos and next button end here
+
+                         
                         $('.time-control').datetimepicker({format:"LT"});
                         $('.selectpicker').selectpicker();
                         // Switchery code start
@@ -1831,6 +1870,106 @@
                 </div>
             </div>
             <!-- End Room Modal Dialog -->
+
+            <!--# start appointment  modal dialog-->
+            <div class="modal fade" id="modalActionAppointment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <label for="confirmaction"  class="confirmaction">
+                                Appointments availibilty                                
+                            </label>
+                        </h4>
+                      </div>
+                      <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <div class="col-sm-2">
+                                            <label for="room-search"> Booked On :</label>
+                                        </div> 
+                                        <div class="col-sm-1">
+                                             <button type="button"   class="btn btn-primary prev-day"> < </button>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input type="text" id="bookOnDate" name="bookOnDate" class="form-control" placeholder="Appoitment Date" data-parsley-required="true"/>   
+                                        </div>
+                                        <div class="col-sm-1">
+                                             <button type="button" class="btn btn-primary next-day"> > </button>
+                                        </div>
+                                        <!-- <div class="col-sm-4">
+                                            <select class="form-control selectpicker" id="reason">
+                                                <option value="Today">Today</option>
+                                                <option value="Week">This Week</option>
+                                                <option value="Next Week">Next Week</option>
+                                                <option value="Month">Month</option>
+                                            </select>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <table id="data-table" class="table table-striped table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Time</th>
+                                                <th>Consultant</th>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="odd gradeX">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 4.0</td>
+                                                <td>Win 95+</td>
+                                            </tr>
+                                            <tr class="even gradeC">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 5.0</td>
+                                                <td>Win 95+</td>
+                                            </tr>
+                                            <tr class="odd gradeA">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 5.5</td>
+                                                <td>Win 95+</td>
+                                            </tr>
+                                            <tr class="even gradeA">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 6</td>
+                                                <td>Win 98+</td>
+                                            </tr>
+                                            <tr class="odd gradeA">
+                                                <td>Trident</td>
+                                                <td>Internet Explorer 7</td>
+                                                <td>Win XP SP2+</td>
+                                            </tr>
+                                            <tr class="even gradeA">
+                                                <td>Trident</td>
+                                                <td>AOL browser (AOL desktop)</td>
+                                                <td>Win XP</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                          </form>
+                      </div>
+                      <div class="modal-footer">
+                            <div class="pull-right">
+                                     <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                                     <a href="#" class="btn btn-primary" id='btnSaveAction'>Select</a>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!--# end appointment modal dialog-->
+
+
         </div>
         <!-- end page container -->
     </body>
