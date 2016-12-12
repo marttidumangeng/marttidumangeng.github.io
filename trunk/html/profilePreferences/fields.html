@@ -7,6 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Central - Preference</title>
+
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 <meta content="" name="description" />
 <meta content="" name="author" />
@@ -41,8 +42,6 @@
 <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
 <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
 <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap3-editable/css/bootstrap-editable.css" />
-<link rel="stylesheet" type="text/css" href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.css" />
-<link rel="stylesheet" type="text/css" href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.skinNice.css" />
 
 <link rel="stylesheet" type="text/css" href="../resources/venders/switchery/switchery.min.css"/>
 	 	
@@ -59,7 +58,7 @@
 <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
 <script src="../resources/venders/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
-<script src="../resources/venders/ionRangeSlider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+
 <script src="../resources/venders/switchery/switchery.min.js"></script>
 <!-- ================== END BASE JS ================== -->
 <!-- ================== BEGIN PAGE LEVEL JS ================== -->
@@ -396,11 +395,10 @@
 										</tbody>
 									</table>
 								</fieldset>
-							</div>
+						</div>
 					</div>
 					<div class="row">
-						<form class="form-horizontal" data-parsley-validate="true" name="mainForm"
-							method="post" role="form" enctype="multipart/form-data">
+						<form class="form-horizontal" data-parsley-validate="true" name="mainForm" method="post" role="form" enctype="multipart/form-data">
 							<fieldset>
 								<legend>Profile Preferences</legend>
 								<div class="row">
@@ -408,11 +406,8 @@
 										<div class="panel panel-inverse">
 											<div class="panel-heading">
 												<h3 class="panel-title">
-													<a class="accordion-toggle accordion-toggle-styled"
-														data-toggle="collapse" data-parent="#accordion"
-														href="#collapseOne"> <i
-														class="fa fa-plus-circle pull-right"></i> Profile
-														Attribute Preferences
+													<a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"> 
+                                                    <i class="fa fa-plus-circle pull-right"></i> Profile  Attribute Preferences
 													</a>
 												</h3>
 											</div>
@@ -460,23 +455,20 @@
 														<div class="row">
 															<div class="col-sm-3">
 																<div class="form-group">
-																	<label for="a" class="col-sm-offset-2 control-label">
-																			Age Range</label>
+																	<label for="a" class="col-sm-offset-2 control-label"> Age Range</label>
 																</div>
 															</div>
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
 																		<div class="input-group ">
-																			<input type="text" class="form-control" name="start" data-parsley-required="true"
-																				placeholder="From" /> <span
-																				class="input-group-addon"></span><input type="text" data-parsley-required="true"
-																				class="form-control" name="end" placeholder="to" />
+																			<input type="text" class="form-control" name="start" data-parsley-required="true" placeholder="From" />
+                                                                            <span class="input-group-addon"></span>
+                                                                            <input type="text" data-parsley-required="true" class="form-control" name="end" placeholder="to" />
 																		</div>
 																	</div>
 																</div>
 															</div>
-
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
@@ -491,8 +483,7 @@
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
-																		<input class="flex-slider" name="ageFlexibility"
-																			type="text" value="" />
+																		<input class="flex-slider" name="ageFlexibility" type="text" value="" />
 																	</div>
 																</div>
 															</div>
@@ -516,16 +507,13 @@
 														<div class="row">
 															<div class="col-sm-3">
 																<div class="form-group">
-																	<label for="a" class="col-sm-offset-2 control-label">Religion
-																	</label>
+																	<label for="a" class="col-sm-offset-2 control-label">Religion </label>
 																</div>
 															</div>
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
-																		<select id="religion" name="religion"
-																			class="form-control selectpicker"
-																			data-parsley-required="true">
+																		<select id="religion" name="religion" class="form-control selectpicker" data-parsley-required="true">
 																			<option selected="selected">Catholic</option>
 																			<option>Christian</option>
 																			<option>Hindu</option>
@@ -539,9 +527,7 @@
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
-																		<select id="religion" name="religion2"
-																			class="form-control selectpicker"
-																			data-parsley-required="true">
+																		<select id="religion" name="religion2" class="form-control selectpicker" data-parsley-required="true">
 																			<option>Catholic</option>
 																			<option>Christian</option>
 																			<option selected="selected">Hindu</option>
@@ -555,8 +541,7 @@
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
-																		<input class="flex-slider" name="religionFlexibility"
-																			type="text" value="" />
+																		<input class="flex-slider" name="religionFlexibility" type="text" value="" />
 																	</div>
 																</div>
 															</div>
@@ -564,16 +549,13 @@
 														<div class="row">
 															<div class="col-sm-3">
 																<div class="form-group">
-																	<label for="a" class="col-sm-offset-2 control-label">
-																			Ethnicity </label>
+																	<label for="ethnicity" class="col-sm-offset-2 control-label">Ethnicity</label>
 																</div>
 															</div>
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
-																		<select id="religion" name="ethnicity"
-																			class="form-control selectpicker"
-																			data-parsley-required="true">
+																		<select id="religion" name="ethnicity" class="form-control selectpicker" data-parsley-required="true">
 																			<option selected="selected">Chinese</option>
 																			<option>Malay</option>
 																			<option>Indonesian</option>
@@ -587,9 +569,7 @@
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
-																		<select id="religion" name="ethnicity2"
-																			class="form-control selectpicker"
-																			data-parsley-required="true">
+																		<select id="religion" name="ethnicity2" class="form-control selectpicker" data-parsley-required="true">
 																			<option>Chinese</option>
 																			<option selected="selected">Malay</option>
 																			<option>Indonesian</option>
@@ -603,8 +583,7 @@
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
-																		<input class="flex-slider"
-																			name="ethnicityFlexibility" type="text" value="" />
+																		<input class="flex-slider" name="ethnicityFlexibility" type="text" value="" />
 																	</div>
 																</div>
 															</div>
@@ -612,39 +591,32 @@
 														<div class="row">
 															<div class="col-sm-3">
 																<div class="form-group">
-																	<label for="a" class="col-sm-offset-2 control-label">
-																			Education Level </label>
+																	<label for="a" class="col-sm-offset-2 control-label"> Education Level </label>
 																</div>
 															</div>
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
-																		<select id="religion" name="education"
-																			class="form-control selectpicker"
-																			data-parsley-required="true">
-																			<option selected="selected">Junior college
-																				& below</option>
+																		<select id="religion" name="education" class="form-control selectpicker" data-parsley-required="true">
+																			<option selected="selected">Junior college &amp; below</option>
 																			<option>Polytechnic</option>
 																			<option>Master Degree</option>
 																			<option>Masters</option>
-																			<option>Phd & Above</option>
+																			<option>Phd &amp; Above</option>
 																			<option>Professional Qualification</option>
 																		</select>
 																	</div>
 																</div>
 															</div>
-
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
-																		<select id="religion" name="education2"
-																			class="form-control selectpicker"
-																			data-parsley-required="true">
-																			<option>Junior college & below</option>
+																		<select id="religion" name="education2" class="form-control selectpicker" data-parsley-required="true">
+																			<option>Junior college &amp; below</option>
 																			<option>Polytechnic</option>
 																			<option>Master Degree</option>
 																			<option selected="selected">Masters</option>
-																			<option>Phd & Above</option>
+																			<option>Phd &amp; Above</option>
 																			<option>Professional Qualification</option>
 																		</select>
 																	</div>
@@ -653,8 +625,7 @@
 															<div class="col-sm-3">
 																<div class="form-group">
 																	<div class="col-md-12">
-																		<input class="flex-slider"
-																			name="educationFlexibility" type="text" value="" />
+																		<input class="flex-slider" name="educationFlexibility" type="text" value="" />
 																	</div>
 																</div>
 															</div>
@@ -758,20 +729,13 @@
 													</div>
 												</div>
 											</div>
-									
 										<!-- First Accordian End here-->
-
 										<!-- Second Accordian start here-->
 										<div class="panel panel-inverse">
 											<div class="panel-heading">
 												<h3 class="panel-title">
-													<a
-														class="accordion-toggle accordion-toggle-styled collapsed"
-														data-toggle="collapse" data-parent="#accordion"
-														href="#collapseTwo"> <i
-														class="fa fa-plus-circle pull-right"></i> Physical
-														Attribute Preferences
-													</a>
+													<a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> 
+                                                    <i class="fa fa-plus-circle pull-right"></i> Physical Attribute Preferences </a>
 												</h3>
 											</div>
 											<div class="row">
@@ -966,9 +930,7 @@
 											</div>
 										</div>
 										<!-- Second Accordian End here-->
-
 										<!-- Third Accordian start here -->
-
 										<div class="panel panel-inverse">
 											<div class="panel-heading">
 												<h3 class="panel-title">
@@ -1163,10 +1125,12 @@
 				</div>
 			</div>
 			<!-- end row -->
-			<link rel="stylesheet" type="text/css"
-				href="../resources/venders/password-indicator/css/password-indicator.css" />
-			<script
-				src="../resources/venders/password-indicator/js/password-indicator.js"></script>
+			<link rel="stylesheet" type="text/css" href="../resources/venders/password-indicator/css/password-indicator.css" />
+            <link rel="stylesheet" type="text/css" href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.css"/>
+            <link rel="stylesheet" type="text/css" href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.skinNice.css"/>
+
+			<script src="../resources/venders/password-indicator/js/password-indicator.js"></script>
+            <script src="../resources/venders/ionRangeSlider/js/ion.rangeSlider.min.js"></script>
 			<script type="text/javascript">
 				$(document).ready(
 						function() {
@@ -1182,12 +1146,10 @@
 							$('#repassword').passwordStrength({
 								targetDiv : '#rePasswordStrength'
 							});
-
+                            
 							$('.flex-slider').ionRangeSlider(
 									{
-										values : [ 'Not Flexible',
-												'Moderately Flexible',
-												'Extremely Flexible' ],
+										values : [ 'Not Flexible','Moderately Flexible','Extremely Flexible' ],
 										type : 'single',
 
 									});
