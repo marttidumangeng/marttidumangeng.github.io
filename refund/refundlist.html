@@ -5,7 +5,7 @@
 <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
-        <title> Refund </title>
+        <title>Central - refund list</title>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
         <meta content="" name="description" />
         <meta content="" name="author" />
@@ -14,17 +14,17 @@
         <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="pragma" content="no-cache" />
         <meta http-equiv="expires" content="0" />
-        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-        <meta name="robots" content="noindex,nofollow">
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta name="robots" content="noindex,nofollow" />
         
         <!-- icons -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link rel="shortcut icon" href="../resources/icons/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="../resources/icons/favicon.ico" />
         <!-- iOS icon -->
 
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" />
         <!-- ================== BEGIN PACE LOADER ================== -->    
         <script src="../resources/venders/pace/js/pace.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../resources/venders/pace/css/pace.minimal.css" />
@@ -38,7 +38,6 @@
         <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-select/css/bootstrap-select.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/style-responsive.min.css" />
-        <link rel="stylesheet" type="text/css" href="../resources/venders/switchery/switchery.min.css" />
         <link rel="stylesheet" type="text/css" href="../resources/css/app.css" />
         <!-- ================== END BASE CSS STYLE ================== -->
         
@@ -57,7 +56,6 @@
         <script src="../resources/venders/parsley/parsley.min.js"></script>
         <script src="../resources/venders/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="../resources/venders/bootstrap-select/js/bootstrap-select.min.js"></script>
-        <script src="../resources/venders/switchery/switchery.min.js"></script>
         <!-- ================== END BASE JS ================== -->
         <!-- ================== BEGIN PAGE LEVEL JS ================== -->
         <script src="../resources/scripts/app.min.js"></script>
@@ -68,13 +66,12 @@
             });
         </script>
     </head>
-    <body class="boxed-layout">
+    <body class="layout">
         <!-- begin #page-loader -->
         <div id="page-loader" class="fade in"><span class="spinner"></span></div>
         <!-- end #page-loader -->
-        
         <!-- begin #page-container -->
-        <div id="page-container" class="page-container fade page-with-top-menu page-header-fixed page-without-sidebar">
+        <div id="page-container" class="page-container fade page-with-top-menu page-header-fixed">
             <!-- begin #header -->
             <div id="header" class="header navbar navbar-default navbar-fixed-top">
                 <!-- begin container-fluid -->
@@ -132,7 +129,7 @@
                                 <li><a href="javascript:;">Calendar</a></li>
                                 <li><a href="javascript:;">Setting</a></li>
                                 <li class="divider"></li>
-                                <li><a href="login.html">Log Out</a></li>
+                                <li><a href="../login.html">Log Out</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -146,19 +143,6 @@
                 <!-- begin top-menu nav -->
                 <ul class="nav pull-right" >
                     <li><a href="../lead/list.html"><i class="fa fa-dot-circle-o"></i><span>Leads</span></a></li>
-                   
-                    <!-- <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret pull-right"></b>
-                            <i class="fa fa-inbox"></i> 
-                            <span>Email</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Inbox</a></li>
-                            <li><a href="#">Compose</a></li>
-                            <li><a href="#">Detail</a></li>
-                        </ul>
-                    </li> -->
                     <li><a href="../Task/list.html"><i class="fa fa-tasks"></i><span>Tasks</span></a></li>
                     <li><a href="../Appointment/list.html"><i class="fa fa-calendar-check-o"></i><span>Appointments</span></a></li>
                     <li><a href="../coachSessionList/list.html"><i class="fa fa-leanpub"></i><span>Session</span></a></li>
@@ -198,146 +182,185 @@
                 <!-- end top-menu nav -->
             </div>
             <!-- end #top-menu -->
-
+            <!-- begin #sidebar -->
+            <div id="sidebar" class="sidebar">
+                <!-- begin sidebar scrollbar -->
+                <div data-scrollbar="true" data-height="100%">
+                    <!-- begin applied filter nav -->
+                    <ul class="nav filters-applied">
+                        <li class="nav-header">Now Filter by</li>
+                        <li><span class="filter-label"></span><span class="filter-value">Assigned to me</span><a href="#"><i class="fa fa-times" aria-hidden="true"></i></a></li>
+                        <li><a href="#" class="clear-all">Clear All</a></li>
+                    </ul>
+                    <!-- end applied filter nav -->
+                    <!-- begin filter nav -->
+                    <ul class="nav filters">
+                       <!--  <li class="nav-header">Filters</li> -->
+                        <li class="has-sub expand">
+                            <a href="javascript:;"><b class="caret pull-right"></b>Filters</a>
+                            <ul class="sub-menu" style="display: block;">
+                                <!-- <li>
+                                    <label class="control-label">Assigned to</label>
+                                    <select name="view" class="form-control selectpicker">
+                                        <option>John Doe</option>
+                                        <option>John Wilson</option>
+                                    </select>
+                                </li> -->
+                                <li>
+                                    <label class="control-label">Refund Reason</label>
+                                    <select name="type" class="form-control selectpicker">
+                                        <option>Reason 1</option>
+                                        <option>Reason 2</option>
+                                        <option>Reason 3</option>
+                                        <option>Reason 4</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label class="control-label">Payment Mode</label>
+                                    <select name="appType" class="form-control selectpicker">
+                                        <option>Payment Mode 1</option>
+                                        <option>Payment Mode 2</option>
+                                        <option>Payment Mode 3</option>
+                                        <option>Payment Mode 4</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label class="control-label">Refund Date</label>
+                                    <div class="input-group">
+                                        <input type="text" name="appDate" class="form-control daterange"/>
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- end filter nav -->
+                </div>
+                <!-- end sidebar scrollbar -->
+            </div>
+            <div class="sidebar-bg"></div>
+            <!-- end #sidebar -->
             <!-- begin #content -->
             <div id="content" class="content">
+                <!-- begin page-header -->
+                <h1 class="page-header">Refunds</h1>
+                <fieldset>
+                    <div class="col-sm-6 pull-right">
+                        <div class="form-group pull-right ">
+                            <div class="text-center">
+                                <a href="../refund/fields.html" class="btn btn-primary">Add Refund</a>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- end page-header -->
                 <!-- begin row -->
                 <div class="row">
-                	<div class="panel">
-                		<div class="panel-body">
-                			<div class="row">
-
-                				<div class="col-sm-6">
-                					<form id="laaAddOn" name="mainForm" role="form" data-parsley-validate="true" class="form-horizontal" action="/a/r/laaaddon/create" method="post">
-                						<fieldset>
-                							<legend>Issue Refund </legend>
-                						</fieldset>
-                						<div class="form-group">
-                							<label for="name" class="col-md-4 control-label">Type Member Name</label>
-                							<div class="col-md-8">
-                								<input id="memberNameId" name="name" class="form-control" data-parsley-required="true" type="text" value="" placeholder="type 'arth' , 'sohem'  " />
-                							</div>
-                						</div>
-                                        <div class="form-group">
-                                            <label for="name" class="col-md-4 control-label">Credit Note No</label>
-                                            <div class="col-md-8">
-                                                <input id="receiptNoId" name="name" class="form-control" data-parsley-required="true" type="text" value="" placeholder="type like  '123','732'" />
-                                            </div>
-                                        </div>
-                						<div class="form-group">
-                                            <label for="status" class="col-md-4 control-label">Refund Reason</label>
-                                            <div class="col-md-8">
-                                                <select id="status" name="status" data-parsley-required="true" class="form-control selectpicker">
-                                                        <option path="status" value="reason-1">reason-1</option>
-                                                        <option path="status" value="reason-2">reason-2</option>
-                                                        <option path="status" value="reason-3">reason-3</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="status" class="col-md-4 control-label">Payment Mode</label>
-                                            <div class="col-md-8">
-                                                <select id="status" name="status" data-parsley-required="true" class="form-control selectpicker">
-                                                        <option path="status" value="Payment-1">Payment-1</option>
-                                                        <option path="status" value="Payment-2">Payment-2</option>
-                                                        <option path="status" value="Payment-3">Payment-3</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                						<div class="form-group">
-                                            <label for="name" class="col-md-4 control-label">Check No</label>
-                                            <div class="col-md-8">
-                                                <input  name="name" class="form-control" data-parsley-required="true" data-parsley-type="alphanum" type="text" id="alphanum" value=""/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="name" class="col-md-4 control-label">Refund Amount</label>
-                                            <div class="col-md-8">
-                                                <input  name="alphanumeric" type="text"  data-parsley-type="number" class="form-control" data-parsley-required="true"   id="number"/>
-                                            </div>
-                                        </div>
-                                         <div class="form-group">
-                                            <label for="name" class="col-md-4 control-label">Refund Date</label>
-                                             <div class="col-md-8">
-                                                <div class="input-group date" id="activationDateFrom">
-                                                    <input type="text" class="form-control" />
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-calendar"></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                						<fieldset>
-                							<div class="form-group">
-                								<div class="col-md-8 col-md-offset-4">
-                									<button type="submit" class="btn btn-primary btn-lg">Save</button>
-                								</div>
-                							</div>
-                						</fieldset>
-                					</form>
-                				</div>
-                               <!--  <div class="col-sm-2 pull-right">
-                                    <button  id="printReceipt" class="btn btn-primary">Print Receipt</button>
-                                </div> -->
-                			</div>
-                		</div>
-                	</div>
-                </div>            
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table table-hover table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Refund Date</th>
+                                                <th>Credit Note No</th>
+                                                <th>Reason</th>
+                                                <th>Payment Mode</th>
+                                                <th>Cheque No</th>
+                                                <th>Refund Amount</th>
+                                                <th>Refund Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>22-12-2016</td>
+                                                <td>22281</td>
+                                                <td>reason1</td>
+                                                <td>payment_mode_1</td>
+                                                <td>23442323</td>
+                                                <td>2000</td>
+                                                <td><a href="../refund/refundDetails.html">View</td>
+                                            </tr>
+                                            <tr>
+                                                <td>22-12-2016</td>
+                                                <td>22282</td>
+                                                <td>reason2</td>
+                                                <td>payment_mode_2</td>
+                                                <td>23442324</td>
+                                                <td>5000</td>
+                                                <td><a href="../refund/refundDetails.html">View</td>
+                                            </tr>
+                                            <tr>
+                                                <td>22-12-2016</td>
+                                                <td>22283</td>
+                                                <td>reason3</td>
+                                                <td>payment_mode_3</td>
+                                                <td>23442325</td>
+                                                <td>10000</td>
+                                                <td><a href="../refund/refundDetails.html">View</td>
+                                            </tr>
+                                            <tr>
+                                                <td>22-12-2016</td>
+                                                <td>22284</td>
+                                                <td>reason4</td>
+                                                <td>payment_mode_4</td>
+                                                <td>23442326</td>
+                                                <td>8000</td>
+                                                <td><a href="../refund/refundDetails.html">View</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <span class="_current_page_start">1</span> - <span class="_current_page_end">4</span> of <span class="_total_records">4 records(s)</span>
+                                </div>
+                                <div class="col-sm-7">
+                                    <ul class="pagination pull-right m-t-5 m-b-5 m-l-0 m-r-0">
+                                        <li class="disabled"><a href="#">Prev</a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li class="disabled"><a href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- end row -->
-                <!-- <link rel="stylesheet" type="text/css" href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.css"/>
-                <link rel="stylesheet" type="text/css" href="../resources/venders/ionRangeSlider/css/ion.rangeSlider.skinNice.css"/>
-                --> 
-                <script src="../resources/venders/ionRangeSlider/js/ion.rangeSlider.min.js"></script>
-				<script type="text/javascript">
-				    $(document).ready(function() {
-                            var memberValues=["member1","rahul","anuj","kunal","dhawal","manoj","sohem","arth","divyang","chandresh","Doe","wilson"];
-                            var receiptValues = ["123231","321345","2222312","2212312","64523234","73244","412312","523423423","823423","935423423"];
-                            $("#memberNameId").autocomplete({source:memberValues})
-                            $("#receiptNoId").autocomplete({source:receiptValues})
-                            // $("#ageSlider").ionRangeSlider({
-                            //     type: "double",
-                            //     grid: true,
-                            //     min: 18,
-                            //     max: 80,
-                            //     from: 20,
-                            //     to: 35
-                            // });
-                         // Switchery code start
-                        // if ($('[data-render=switchery]').length !== 0) {
-                        //     $('[data-render=switchery]').each(function() {
-                        //         var option = {};
-                        //         option.color = '#348fe2';
-                        //         option.size = 'small';
-                        //         option.secondaryColor = ($(this).attr('data-secondary-color')) ? $(this).attr('data-secondary-color'): '#000000';
-                        //         option.className = ($(this).attr('data-classname')) ? $(this).attr('data-classname'): 'switchery';
-                        //         option.disabled = ($(this).attr('data-disabled')) ? true: false;
-                        //         option.disabledOpacity = ($(this).attr('data-disabled-opacity')) ? $(this).attr('data-disabled-opacity'): 0.5;
-                        //         option.speed = ($(this).attr('data-speed')) ? $(this).attr('data-speed'): '0.5s';
-                        //         var switchery = new Switchery(this, option);
-                        //     });
-                        // }
-
-				    	$('#activationDateFrom').datepicker({
-				    		format: 'yyyy-mm-dd',
-				            todayHighlight: true,
-				            calendarWeeks: true,
-				            endDate: '+1y'
-				        });
-				    	// $('#activationDateTo').datepicker({
-				    	// 	format: 'yyyy-mm-dd',
-				     //        todayHighlight: true,
-				     //        calendarWeeks: true,
-				     //        endDate: '+1y'
-				     //    });
-				        $('.selectpicker').selectpicker();
-
-
-                        $('#printReceipt').click(function(){
-                            window.open("../receipt/view.html");
+                <script src="../resources/venders/moment/moment-with-locales.min.js"></script>
+                <link rel="stylesheet" type="text/css" href="../resources/venders/bootstrap-daterangepicker/css/daterangepicker.css" />
+                <script src="../resources/venders/bootstrap-daterangepicker/js/daterangepicker.js"></script>
+                <script type="text/javascript">
+                    jQuery(document).ready(function($) {
+                        $(".daterange").daterangepicker({
+                            autoUpdateInput: false,
+                            opens: "right",
+                            format: "MM/DD/YYYY",
+                            separator: " to ",
+                            minDate: "01/01/2016",
+                            ranges: {
+                               'Today': [moment(), moment()],
+                               'Yesterday'  : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                               'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                               'This Week'  :[moment().startOf('week'),moment().endOf('week')],
+                               'Last Week'  :[moment().subtract(1,'week').startOf('week'),moment().subtract(1,'week').endOf('week')],
+                               'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                               'This Month': [moment().startOf('month'), moment().endOf('month')],
+                               'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+                            }
                         });
-
-				    });
-				</script>
+                        $('.daterange').on('apply.daterangepicker', function(ev, picker) {
+                            $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+                        });
+                        $('.daterange').on('cancel.daterangepicker', function(ev, picker) {
+                            $(this).val('');
+                        });
+                    });
+                </script>
             </div>
             <!-- end #content -->
 
