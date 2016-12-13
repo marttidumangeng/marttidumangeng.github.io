@@ -126,7 +126,7 @@
                             </div>
                         </form>
                     </li>
-                    <li class="dropdown"><a href="javascript:;"
+                    <!-- <li class="dropdown"><a href="javascript:;"
                         data-toggle="dropdown" class="dropdown-toggle f-s-14"> <i
                             class="fa fa-bell-o"></i> <span class="label">5</span>
                     </a>
@@ -144,7 +144,7 @@
                             </a></li>
                             <li class="dropdown-footer text-center"><a
                                 href="javascript:;">View more</a></li>
-                        </ul></li>
+                        </ul></li> -->
                     <li class="dropdown navbar-user"><a href="javascript:;"
                         class="dropdown-toggle" data-toggle="dropdown"> <img
                             src="../resources/images/photo.jpg" alt="" /> <span
@@ -153,10 +153,10 @@
                         <ul class="dropdown-menu animated fadeInLeft">
                             <li class="arrow"></li>
                             <li><a href="javascript:;">Edit Profile</a></li>
-                            <li><a href="javascript:;"><span
+                            <!-- <li><a href="javascript:;"><span
                                     class="badge badge-danger pull-right">2</span> Inbox</a></li>
                             <li><a href="javascript:;">Calendar</a></li>
-                            <li><a href="javascript:;">Setting</a></li>
+                            <li><a href="javascript:;">Setting</a></li> -->
                             <li class="divider"></li>
                             <li><a href="login.html">Log Out</a></li>
                         </ul></li>
@@ -318,25 +318,17 @@
                                         <option path="model.profile.laMembership.status" value="Pending Approval">Pending Approval</option>
                                         <option path="model.profile.laMembership.status" value="Active">Active</option>
                                         <option path="model.profile.laMembership.status" value="On Hold">On Hold</option>
-
-                                        <option path="model.profile.laMembership.status"
-                                            value="Refund">Refund</option>
-
-                                        <option path="model.profile.laMembership.status"
-                                            value="Expired">Expired</option>
-
-                                        <option path="model.profile.laMembership.status"
-                                            value="Terminated">Terminated</option>
-
-                                        <option path="model.profile.laMembership.status"
-                                            value="Renewal">Renewal</option>
+                                        <option path="model.profile.laMembership.status" value="Refund">Refund</option>
+                                        <option path="model.profile.laMembership.status" value="Expired">Expired</option>
+                                        <option path="model.profile.laMembership.status" value="Terminated">Terminated</option>
+                                        <option path="model.profile.laMembership.status" value="Renewal">Renewal</option>
                                     </select>
                                 </div>
                                 <div class="profile-image">
                                     <img src="../resources/images/photo.jpg"> <i
-                                        class="fa fa-user hide"></i> <input type="file"
-                                        name="userphoto" />
+                                        class="fa fa-user hide"></i> 
                                 </div>
+                                <input type="file" name="userphoto" />&nbsp;
                                 <div class="form-group">
                                     <select id="mood" name="profile.laMembership.mood" data-parsley-required="true" class="form-control selectpicker">
                                         <option path="model.profile.laMembership.mood" value="Normal">Normal</option>
@@ -352,53 +344,47 @@
                                         <table id="user" class="table  table">
                                             <tbody>
                                                 <tr>
-                                                <td>Profile Name :</td>
-                                                <td><a href="#" id="profileName" data-type="text" data-pk="1" data-title="Enter Username">Sohem </a></td>
-                                                <td>Smokes :</td>
-                                                <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Profile Phone :</td>
-                                                <td><a href="#" id="phoneNumber" data-type="text" data-pk="1" data-title="Enter Username">12243 </a></td>
-                                                <td>Drinks :</td>
-                                                <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Profile age :</td>
-                                                <td><a href="#" id="profileAge" data-type="text" data-pk="1" data-title="Enter Username">23 </a></td>
-                                                <td>Profile history :</td>
-                                                <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
-                                            </tr>
+                                                    <td>Profile Name :</td>
+                                                    <td><a href="#" id="profileName" data-type="text" data-pk="1" data-title="Enter Profile Name">Sohem </a></td>
+                                                    <td>Smokes :</td>
+                                                    <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profile Phone :</td>
+                                                    <td><a href="#" id="phoneNumber" data-type="text" data-pk="1" data-title="Enter Profile Phone">12243 </a></td>
+                                                    <td>Drinks :</td>
+                                                    <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Profile age :</td>
+                                                    <td><a href="#" id="profileAge" data-type="text" data-pk="1" data-title="Enter Profile Age">23 </a></td>
+                                                    <td>Profile history :</td>
+                                                    <td>Yes &nbsp;&nbsp;<input type="checkbox" data-render="switchery" data-theme="blue" checked />&nbsp;&nbsp; No</td>
+                                                </tr>
                                                 <tr>
                                                     <td>Profile ethnicity :</td>
-                                                    <td><a href="#" id="profileEthnicity" data-type="text"
-                                                        data-pk="1" data-title="Enter Username">Indian </a></td>
+                                                    <td><a href="#" id="profileEthnicity" data-type="text" data-pk="1" data-title="Enter Profile Ethnicity">Indian </a></td>
                                                     <td>Dates Left :</td>
-                                                    <td><id="datesLeft" data-type="text"
-                                                        data-pk="1" data-title="Enter Username">5</td>
+                                                    <td>5</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Marital Status:</td>
-                                                    <td><a href="#" id="maritalStatus" data-type="text" data-pk="1" data-title="Enter Username">Unmarried </a></td>
+                                                    <td><a href="#" id="maritalStatus" data-type="text" data-pk="1" data-title="Enter Marital Status">Unmarried </a></td>
                                                     <td>Complementary Dates :</td>
-                                                    <td><id="freeDates" data-type="text"
-                                                        data-pk="1" data-title="Enter Username">3</td>
+                                                    <td>3</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Profile Income:</td>
                                                     <td><a href="#" id="profileIncome" data-type="text"
-                                                        data-pk="1" data-title="Enter Username">5 lakh </a></td>
+                                                        data-pk="1" data-title="Enter Profile Income">5 lakh </a></td>
                                                     <td>package Name :</td>
                                                     <td>Normal</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Profile Education:</td>
-                                                    <td><a href="#" id="profileEducation" data-type="text"
-                                                        data-pk="1" data-title="Enter Username">PhD and above
-                                                    </a></td>
+                                                    <td><a href="#" id="profileEducation" data-type="text" data-pk="1" data-title="Enter Profile Education">PhD and above</a></td>
                                                     <td>Sign Up date :</td>
-                                                    <td><id="signUpDate" data-type="text"
-                                                        data-pk="1" data-title="Enter Username"> 22-9-2016</td>
+                                                    <td>22-9-2016</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -417,13 +403,12 @@
                                         <div class="panel panel-inverse overflow-hidden">
                                             <div class="panel-heading">
                                                 <h3 class="panel-title">
-                                                    <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseActions">
-                                                        <i class="fa fa-plus-circle pull-right"></i>
-                                                        Actions  
+                                                    <a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion" href="#collapseActions">
+                                                        <i class="fa fa-plus-circle pull-right"></i> Actions  
                                                     </a>
                                                 </h3>
                                             </div>
-                                            <div id="collapseActions" class="panel-collapse collapse">
+                                            <div id="collapseActions" class="panel-collapse collapse in">
                                                 <div class="tab-content">
                                                     <!-- profile wizard start -->
                                                     <div class="row">
@@ -829,13 +814,13 @@
                                                     <div class="panel panel-inverse overflow-hidden">
                                                         <div class="panel-heading">
                                                             <h3 class="panel-title">
-                                                                <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseImportant">
+                                                                <a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion" href="#collapseImportant">
                                                                     <i class="fa fa-minus-circle pull-right"></i> 
                                                                     Important Items
                                                                 </a>
                                                             </h3>
                                                         </div>
-                                                        <div id="collapseImportant" class="panel-collapse">
+                                                        <div id="collapseImportant" class="panel-collapse in">
                                                             <div class="panel-body">
                                                                 <ul class="timeline">
                                                                     <li>
@@ -881,13 +866,13 @@
                                                 <div class="panel panel-inverse overflow-hidden">
                                                     <div class="panel-heading">
                                                         <h3 class="panel-title">
-                                                            <a class="accordion-toggle accordion-toggle-styled collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTimeline">
+                                                            <a class="accordion-toggle accordion-toggle-styled" data-toggle="collapse" data-parent="#accordion" href="#collapseTimeline">
                                                                 <i class="fa fa-plus-circle pull-right"></i> 
                                                                 Time Line
                                                             </a>
                                                         </h3>
                                                     </div>
-                                                    <div id="collapseTimeline" class="panel-collapse collapse">
+                                                    <div id="collapseTimeline" class="panel-collapse collapse in">
                                                         <div class="panel-body timeline-container">
                                                             <!-- begin timeline -->
                                                             <ul class="timeline">
@@ -1277,8 +1262,8 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <div class="col-sm-2">
-                                            <label for="room-search"> Booked On :</label>
+                                        <div class="col-sm-3">
+                                            <label for="room-search" class="label-control"> Booked For:</label>
                                         </div> 
                                         <div class="col-sm-1">
                                              <button type="button"   class="btn btn-primary prev-day"> < </button>
@@ -1307,39 +1292,39 @@
                                             <tr>
                                                 <th>Time</th>
                                                 <th>Consultant</th>
-                                                <th>Name</th>
+                                                <th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr class="odd gradeX">
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 4.0</td>
-                                                <td>Win 95+</td>
+                                                <td>12:00 PM</td>
+                                                <td>Violet Lim</td>
+                                                <td>Appointment Confirmed</td>
                                             </tr>
                                             <tr class="even gradeC">
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 5.0</td>
-                                                <td>Win 95+</td>
+                                                <td>1:00 PM</td>
+                                                <td>Don Loong</td>
+                                                <td>Client Turned Up</td>
                                             </tr>
                                             <tr class="odd gradeA">
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 5.5</td>
-                                                <td>Win 95+</td>
+                                                <td>2:00 PM</td>
+                                                <td>Milenda Chong</td>
+                                                <td>Rescheduled</td>
                                             </tr>
                                             <tr class="even gradeA">
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 6</td>
-                                                <td>Win 98+</td>
+                                                <td>3:00 PM</td>
+                                                <td>Grace Pang</td>
+                                                <td>Rescheduled (By Us)</td>
                                             </tr>
                                             <tr class="odd gradeA">
-                                                <td>Trident</td>
-                                                <td>Internet Explorer 7</td>
-                                                <td>Win XP SP2+</td>
+                                                <td>4:00 PM</td>
+                                                <td>Irene Seah</td>
+                                                <td>Client Did Not Turn Up</td>
                                             </tr>
                                             <tr class="even gradeA">
-                                                <td>Trident</td>
-                                                <td>AOL browser (AOL desktop)</td>
-                                                <td>Win XP</td>
+                                                <td>5:00 PM</td>
+                                                <td>John Doe</td>
+                                                <td>Cancelled</td>
                                             </tr>
                                         </tbody>
                                     </table>
